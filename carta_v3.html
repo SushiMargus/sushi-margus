@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta - Sushi Margus</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#1b1b1b;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:linear-gradient(90deg,#d32f2f,#ff9800);
+    padding:25px;
+}
+
+h1{
+    margin:0;
+}
+
+.menu{
+    max-width:800px;
+    margin:30px auto;
+}
+
+.producto{
+    width:350px;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    color:black;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.producto h2{
+    color:#d32f2f;
+}
+
+a{
+    display:inline-block;
+    margin:30px;
+    padding:12px 25px;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+a:hover{
+    background:#e68900;
+}
+.producto img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.producto{
+    transition:0.3s;
+}
+
+.producto:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.5);
+}
+.contenedor-promos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.promo{
+    background:white;
+    color:black;
+    width:200px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.promo h3{
+    color:#d32f2f;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;               
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.tarjeta {
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.producto img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+
+}
+
+.boton-pedir{
+    display:inline-block;
+    background:#d35400;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.boton-pedir:hover{
+    background:#ff9800;
+    transform:scale(1.05);
+}
+.categoria{
+    width:100%;
+    margin:40px auto;
+}
+
+.categoria h2{
+    color:#ff9800;
+    font-size:28px;
+}
+
+.roll:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.4);
+
+}
+    
+ .roll{
+    width:280px;
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:0.3s;
+    margin:10px;
+
+    text-align:center;
+    overflow:hidden;
+}
+
+.roll img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.roll h3{
+    color:#d32f2f;
+}
+
+.precio{
+    font-size:20px;
+    font-weight:bold;
+    color:#d32f2f;
+}
+.categoria-titulo{
+    background:white;
+    color:black;
+    width:320px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    transition:0.3s;
+    cursor:pointer;
+}
+.categoria-titulo:hover{
+    background:#fff8e1;
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+.categoria-titulo h2{
+    color:#d35400;
+
+}
+
+.oculto{
+    display:none;
+}
+.menu{
+    max-width:100%;
+    margin:30px auto;
+}
+
+.contenedor-rolls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+    width:100%;
+
+}
+.tabla{
+    background:white;
+    color:#222;
+    width:95%;
+    max-width:700px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    box-sizing:border-box;
+}
+
+.tabla h3{
+    color:#d32f2f;
+    margin-top:0;
+    font-size:22px;
+}
+
+.tabla p{
+    font-size:16px;
+    line-height:1.5;
+    margin:10px 0;
+}
+footer{
+    background:#111;
+    padding:40px 20px;
+    margin-top:50px;
+    border-top:3px solid #d35400;
+}
+
+footer h2{
+    color:#ff9800;
+    font-size:30px;
+}
+
+footer p{
+    font-size:17px;
+}
+
+footer .copyright{
+    margin-top:30px;
+    font-size:14px;
+    color:#aaa;
+}
+</style>
+</head>
+
+<body>
+<script>
+
+function mostrarCarta(){
+
+    let inicio = document.getElementById("inicio-carta");
+    let carta = document.getElementById("carta");
+    let nori = document.getElementById("nori");
+
+    inicio.classList.add("oculto");
+    carta.classList.remove("oculto");
+
+    nori.classList.add("oculto");
+
+}
+
+</script>
+<header>
+<h1>🍣 Carta Sushi Margus</h1>
+<p>Nuestros productos favoritos</p>
+</header>
+
+<section class="menu">
+
+<div id="inicio-carta">
+
+    <!-- APERITIVOS -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/aperitivos.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🥟 Aperitivos</h2>
+
+        <p>Deliciosos aperitivos para comenzar.</p>
+
+        <button onclick="mostrarAperitivos()">Ver detalles</button>
+
+</div>
+
+    <!-- GOHAN -->
+<div class="categoria-titulo">
+
+        <img src="imagenes/gohan.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍚 Gohan</h2>
+
+        <p>Deliciosos gohan preparados al momento.</p>
+
+        <button onclick="mostrarGohan()">Ver detalles</button>
+
+</div>
+<!-- SUSHI BURGERS -->
+
+<div class="categoria-titulo">
+
+        <img src="imagenes/sushiburger.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍔 Sushi Burgers</h2>
+
+        <p>Deliciosas burgers al estilo Sushi Margus.</p>
+
+        <button onclick="mostrarSushiBurgers()">Ver detalles</button>
+
+</div>
+
+<!-- HANDROLLS -->
+
+<div class="categoria-titulo">
+
+        <img src="imagenes/handrolls.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🌯 Handrolls</h2>
+
+        <p>Deliciosos handrolls preparados al momento.</p>
+
+        <button onclick="mostrarHandrolls()">Ver detalles</button>
+
+</div>
+    <!-- SUSHI DE CARTA -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/sushidecarta.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍣 Sushi de Carta</h2>
+
+        <p>Descubre nuestros rolls organizados por categorías.</p>
+
+        <button onclick="mostrarCarta()">Ver categorías</button>
+
+</div>
+<!-- TABLAS -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/tablas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍱 Tablas</h2>
+
+        <p>Deliciosas tablas de sushi para compartir.</p>
+
+        <button onclick="mostrarTablas()">Ver detalles</button>
+
+</div>
+<!-- EXTRAS -->
+
+    <div class="categoria-titulo">
+
+       <img src="imagenes/extras.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+       <h2>➕ Extras</h2>
+
+       <p>Salsas, complementos y bebidas.</p>
+
+       <button onclick="mostrarExtras()">Ver detalles</button>
+
+      </div>
+    
+    </div>
+
+
+<!-- TABLAS -->
+
+<div id="tablas" class="oculto">
+
+    <h2>🍱 TABLAS</h2>
+
+    <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+
+    <!-- TABLAS VEGETARIANAS -->
+
+<div class="categoria-titulo">
+
+    <img src="imagenes/tablasvegetarianas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+    <h2>🌱 TABLAS VEGETARIANAS</h2>
+
+    <p>Deliciosas tablas vegetarianas para compartir.</p>
+
+    <button onclick="mostrarTablaVegetariana()">Ver tablas</button>
+
+</div>
+
+
+    <!-- TABLAS FRÍAS -->
+
+    <div class="categoria-titulo">
+
+        <h2>❄️ TABLAS FRÍAS</h2>
+
+        <button onclick="mostrarTablaFria()">Ver tablas</button>
+
+    </div>
+
+
+    <!-- TABLAS CALIENTES -->
+
+    <div class="categoria-titulo">
+
+        <h2>🔥 TABLAS CALIENTES</h2>
+
+        <button onclick="mostrarTablaCaliente()">Ver tablas</button>
+
+    </div>
+
+
+    <!-- TABLAS MIXTAS -->
+
+    <div class="categoria-titulo">
+
+        <h2>🍱 TABLAS MIXTAS</h2>
+
+        <button onclick="mostrarTablaMixta()">Ver tablas</button>
+
+    </div>
+
+</div>
+
+
+<!-- TABLAS VEGETARIANAS -->
+
+<div id="tablaVegetariana" class="oculto">
+    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+
+    <h2>🌱 TABLAS VEGETARIANAS</h2>
+
+    <div class="tabla">
+
+        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> PALTA / QUESO CREMA / PALMITO</p>
+
+    </div>
+
+
+  <div class="tabla">
+
+    <h3><strong>40 PIEZAS  $16.990</strong></h3>
+
+    <p><strong>10 ENVUELTOS EN PALTA:</strong> PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO</p>
+
+    <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> ACEITUNA / QUESO CREMA / PALTA</p>
+
+    <p><strong>10 ENVUELTOS EN NORI:</strong> CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+
+    <p><strong>10 ENVUELTOS EN PANKO:</strong> PALTA / QUESO CREMA / PALMITO</p>
+
+</div>
+
+
+</div>
+<!-- TABLAS FRÍAS -->
+
+<div id="tablaFria" class="oculto">
+
+    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+
+    <h2>❄️ TABLAS FRÍAS</h2>
+
+
+    <!-- 20 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>20 PIEZAS  $9.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+    </div>
+
+
+    <!-- 30 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+
+    <!-- 40 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>40 PIEZAS  $16.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+</div>
+<!-- TABLAS CALIENTES -->
+
+<div id="tablaCaliente" class="oculto">
+
+    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+
+    <h2>🔥 TABLAS CALIENTES</h2>
+
+
+    <!-- 20 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>20 PIEZAS  $10.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+
+    <!-- 30 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>30 PIEZAS  $14.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+
+    <!-- 40 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>40 PIEZAS  $17.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+
+    </div>
+
+
+    <!-- 40 PIEZAS ESPECIAL -->
+
+    <div class="tabla">
+
+        <h3><strong>40 PIEZAS ESPECIAL  $20.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> CAMARÓN / QUESO CREMA / PALMITO</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+</div>
+<!-- TABLAS MIXTAS -->
+
+<div id="tablaMixta" class="oculto">
+
+    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+
+    <h2>🍱 TABLAS MIXTAS</h2>
+
+    <!-- 20 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>20 PIEZAS  $9.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+    </div>
+
+
+    <!-- 30 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+    </div>
+
+
+    <!-- 40 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>40 PIEZAS  $16.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+    </div>
+
+
+    <!-- 50 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>50 PIEZAS  $19.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+
+    </div>
+
+
+    <!-- 50 PIEZAS ESPECIAL -->
+
+    <div class="tabla">
+
+        <h3><strong>50 PIEZAS ESPECIAL  $23.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> CAMARÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / CEBOLLA CARAMELO / ALMENDRAS</p>
+
+        <p><strong>10 ENVUELTOS EN SALMÓN:</strong> PALMITO / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+
+    </div>
+
+
+    <!-- 70 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>70 PIEZAS  $25.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+
+    </div>
+
+
+    <!-- 100 PIEZAS -->
+
+    <div class="tabla">
+
+        <h3><strong>100 PIEZAS  $34.990</strong></h3>
+
+        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN QUESO:</strong> CHAMPIÑÓN TEMPURA / CEBOLLA CARAMELO</p>
+
+        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> CAMARÓN / QUESO CREMA / PALMITO</p>
+
+        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+
+        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+
+        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+
+    </div>
+
+</div>
+<!-- APERITIVOS -->
+
+<div id="aperitivos" class="oculto">
+
+<button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <div class="categoria-titulo">
+             <img src="imagenes/sashimi.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🐟 Sashimi</h2>
+         
+
+         <p>Salmón, Atún y Mixtos</p>
+
+        <button onclick="mostrarSashimi()">Ver detalles</button>
+
+    </div>
+     <div class="categoria-titulo">
+
+             <img src="imagenes/ceviche.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🥑 Ceviche</h2>
+
+         <p>Salmón, Atún y Mixto</p>
+
+        <button onclick="mostrarCeviche()">Ver detalles</button>
+
+    </div>
+    <div class="categoria-titulo">
+
+             <img src="imagenes/tataki.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🐟 Tataki de Atún</h2>
+
+         <p>Atún sellado en cobertura de sésamo.</p>
+
+    <button onclick="mostrarTataki()">Ver detalles</button>
+
+</div>
+    <div class="categoria-titulo">
+
+             <img src="imagenes/niguiris.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🍣 Niguiris</h2>
+
+         <p>6 unidades</p>
+
+    <button onclick="mostrarNiguiris()">Ver detalles</button>
+
+
+
+</div>
+     <div class="categoria-titulo">
+
+             <img src="imagenes/gyozas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🥟 Gyozas</h2>
+
+         <p>Pollo, cerdo, verduras o mixtas.</p>
+
+    <button onclick="mostrarGyozas()">Ver detalles</button>
+
+</div>
+     <div class="categoria-titulo">
+
+             <img src="imagenes/arrollados.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🥢 Arrollados Primavera</h2>
+
+         <p>Crujientes y deliciosos.</p>
+
+    <button onclick="mostrarArrollados()">Ver detalles</button>
+
+</div>
+     <div class="categoria-titulo">
+
+              <img src="imagenes/korokes.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🥔 Korokes</h2>
+
+         <p>Bolitas de papa Furay.</p>
+
+    <button onclick="mostrarKorokes()">Ver detalles</button>
+
+
+</div>
+     <div class="categoria-titulo">
+
+             <img src="imagenes/bastones.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🍤 Bastones Furay</h2>
+
+         <p>Queso crema, pollo, salmón o camarón.</p>
+
+    <button onclick="mostrarBastones()">Ver detalles</button>
+
+</div>
+<!-- PAPAS FRITAS -->
+
+     <div class="categoria-titulo">
+
+             <img src="imagenes/papasfritas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+         <h2>🍟 Papas Fritas</h2>
+
+         <p>Clásicas papas fritas, crujientes y deliciosas.</p>
+
+    <button onclick="mostrarPapasFritas()">Ver detalles</button>
+
+</div>
+</div>
+
+<!-- GOHAN -->
+
+<div id="gohan" class="oculto">
+
+    <h2>🍚 Gohan</h2>
+
+    <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Champiñón Tempura</h3>
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Pollo Teriyaki</h3>
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Camarón</h3>
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Mixto</h3>
+            <p>2 ingredientes a elección</p>
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- SUSHI BURGERS -->
+
+<div id="sushiburgers" class="oculto">
+
+    <h2>🍔 Sushi Burgers</h2>
+
+    <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Champiñón Tempura</h3>
+            <p>Base: Queso Crema • Palta • Cebollín</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Pollo Teriyaki</h3>
+            <p>Base: Queso Crema • Palta • Cebollín</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Camarón</h3>
+            <p>Base: Queso Crema • Palta • Cebollín</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>Base: Queso Crema • Palta • Cebollín</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- HANDROLLS -->
+
+<div id="handrolls" class="oculto">
+
+    <h2>🌯 Handrolls</h2>
+
+    <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <h2>HANDROLL L</h2>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Handroll Veggie</h3>
+            <p>Palta • Queso Crema • Palmito</p>
+            <span class="precio">$3.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Tory</h3>
+            <p>Pollo Teriyaki • Queso Crema • Palta</p>
+            <span class="precio">$4.000</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Sake</h3>
+            <p>Salmón • Queso Crema • Palta</p>
+            <span class="precio">$4.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Ebi</h3>
+            <p>Camarón • Queso Crema • Palta</p>
+            <span class="precio">$4.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Sakebi</h3>
+            <p>Salmón • Queso Crema • Camarón</p>
+            <span class="precio">$5.500</span>
+        </div>
+
+    </div>
+
+
+    <h2>HANDROLL XL</h2>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Handroll Veggie</h3>
+            <p>Palta • Queso Crema • Pimentón • Cebollín • Aceituna</p>
+            <span class="precio">$4.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Tory</h3>
+            <p>Pollo Teriyaki • Queso Crema • Palta • Cebollín • Aceituna</p>
+            <span class="precio">$5.000</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Ebi</h3>
+            <p>Camarón • Queso Crema • Palta • Cebollín • Aceituna</p>
+            <span class="precio">$5.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Sake</h3>
+            <p>Salmón • Queso Crema • Palta • Cebollín • Aceituna</p>
+            <span class="precio">$5.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Handroll Sakebi</h3>
+            <p>Salmón • Queso Crema • Camarón • Cebollín • Palta</p>
+            <span class="precio">$6.500</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- SASHIMI -->
+<div id="sashimi" class="oculto">
+
+
+    <h2>🐟 Sashimi</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+    <div class="roll">
+        <h3>Salmón</h3>
+        <p>3 unidades</p>
+        <span class="precio">$3.990</span>
+    </div>
+
+    <div class="roll">
+        <h3>Salmón</h3>
+        <p>6 unidades</p>
+        <span class="precio">$6.990</span>
+    </div>
+
+    <div class="roll">
+        <h3>Atún</h3>
+        <p>3 unidades</p>
+        <span class="precio">$4.990</span>
+    </div>
+
+    <div class="roll">
+        <h3>Atún</h3>
+        <p>6 unidades</p>
+        <span class="precio">$7.990</span>
+    </div>
+
+    <div class="roll">
+        <h3>Salmón y Atún</h3>
+        <p>Mixtos • 3 unidades</p>
+        <span class="precio">$5.990</span>
+    </div>
+
+    <div class="roll">
+        <h3>Salmón y Atún</h3>
+        <p>Mixtos • 6 unidades</p>
+        <span class="precio">$8.990</span>
+    </div>
+
+     </div>
+
+
+</div>
+<!-- CEVICHE -->
+
+<div id="ceviche" class="oculto">
+
+    <h2>🥑 Ceviche</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <span class="precio">$8.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Atún</h3>
+            <span class="precio">$9.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Mixto</h3>
+            <p>Salmón • Atún • Camarón</p>
+            <span class="precio">$11.990</span>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+<!-- TATAKI DE ATÚN -->
+
+<div id="tataki" class="oculto">
+
+    <h2>🐟 Tataki de Atún</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+
+            <h3>Tataki de Atún</h3>
+
+            <p>Atún sellado en cobertura de sésamo</p>
+
+            <span class="precio">$8.990</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- NIGUIRIS -->
+
+<div id="niguiris" class="oculto">
+
+    <h2>🍣 Niguiris</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Camarón</h3>
+            <p>6 unidades</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>6 unidades</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Atún</h3>
+            <p>6 unidades</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- GYOZAS -->
+
+<div id="gyozas" class="oculto">
+
+    <h2>🥟 Gyozas</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Gyozas de Pollo</h3>
+            <p>5 unidades</p>
+            <span class="precio">$3.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas de Pollo</h3>
+            <p>10 unidades</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas de Cerdo</h3>
+            <p>5 unidades</p>
+            <span class="precio">$3.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas de Cerdo</h3>
+            <p>10 unidades</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas de Verduras</h3>
+            <p>5 unidades</p>
+            <span class="precio">$3.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas de Verduras</h3>
+            <p>10 unidades</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas Mixtas</h3>
+            <p>5 unidades</p>
+            <span class="precio">$3.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Gyozas Mixtas</h3>
+            <p>10 unidades</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- ARROLLADOS PRIMAVERA -->
+
+<div id="arrollados" class="oculto">
+
+    <h2>🥢 Arrollados Primavera</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Arrollados Primavera</h3>
+            <p>5 unidades</p>
+            <span class="precio">$4.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Arrollados Primavera</h3>
+            <p>10 unidades</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- KOROKES -->
+
+<div id="korokes" class="oculto">
+
+    <h2>🥔 Korokes</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Queso Crema</h3>
+            <p>Bolitas de papa Furay • 6 unidades</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Pollo Teriyaki</h3>
+            <p>Bolitas de papa Furay • 6 unidades</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- BASTONES FURAY -->
+
+<div id="bastones" class="oculto">
+
+    <h2>🍤 Bastones Furay</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Pollo Furay</h3>
+            <p>6 unidades</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Camarón Furay</h3>
+            <p>6 unidades</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón Furay</h3>
+            <p>6 unidades</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Queso Furay</h3>
+            <p>6 unidades</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Bastones Mixtos</h3>
+            <p>12 unidades</p>
+            <p>Pollo • Camarón • Salmón • Queso Crema</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+    </div>
+
+</div>
+<!-- PAPAS FRITAS -->
+
+<div id="papasfritas" class="oculto">
+
+    <h2>🍟 Papas Fritas</h2>
+
+    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Chicas</h3>
+            <span class="precio">$2.490</span>
+        </div>
+
+        <div class="roll">
+            <h3>Grandes</h3>
+            <span class="precio">$3.990</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CATEGORIAS -->
+ 
+
+<div id="carta" class="oculto">
+
+    <div class="contenedor-categorias">
+     <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+        <div class="categoria-titulo">
+
+            <img src="imagenes/nori.jpg" 
+            style="width:371px; height:371px; transform:translate(-26px,-26px);">
+
+            <h2>🌿 Envueltos en Nori</h2>
+
+            <p>Rolls tradicionales envueltos en alga nori.</p>
+
+            <button onclick="mostrarNori()">Ver detalles</button>
+            <br><br>
+
+
+        </div>
+
+
+        <div class="categoria-titulo">
+            <img src="imagenes/sesamo.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>🌾 Envueltos en Sésamo</h2>
+
+            <p>Deliciosos rolls envueltos en sésamo.</p>
+
+            <button onclick="mostrarSesamo()">Ver detalles</button>
+
+        </div>
+
+        <div class="categoria-titulo">
+            <img src="imagenes/palta.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>🥑 Envueltos en Palta</h2>
+
+            <p>Rolls frescos envueltos en palta.</p>
+
+            <button onclick="mostrarPalta()">Ver detalles</button>
+
+        </div>
+
+       <div class="categoria-titulo">
+            <img src="imagenes/queso.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>🧀 Envueltos en Queso Crema</h2>
+
+            <p>Rolls suaves envueltos en queso crema.</p>
+
+            <button onclick="mostrarQueso()">Ver detalles</button>
+
+        </div>
+
+        <div class="categoria-titulo">
+            <img src="imagenes/salmon.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>🐟 Envueltos en Salmón</h2>
+
+            <p>Deliciosos rolls envueltos en salmón.</p>
+
+            <button onclick="mostrarSalmon()">Ver detalles</button>
+
+        </div>
+
+        <div class="categoria-titulo">
+            <img src="imagenes/panko.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+             <h2>🔥 Envueltos en Panko o Tempura</h2>
+
+             <p>Deliciosos Hot Rolls crocantes y recién preparados.</p>
+
+             <button onclick="mostrarHotRolls()">Ver detalles</button>
+
+        </div>
+        <div class="categoria-titulo">
+            <img src="imagenes/especial.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>⭐ Rolls Especiales</h2>
+
+            <p>Rolls únicos y especiales de Sushi Margus.</p>
+
+            <button onclick="mostrarEspeciales()">Ver detalles</button>
+
+        </div>
+        <div class="categoria-titulo">
+            <img src="imagenes/sinarroz.jpg" 
+            style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+            <h2>🍚 Sushi Sin Arroz</h2>
+
+            <p>Deliciosos rolls sin arroz, envueltos en queso crema o palta.</p>
+
+            <button onclick="mostrarSinArroz()">Ver detalles</button>
+
+         </div>
+
+     </div>
+
+</div>
+
+<button onclick="volverPortada()">⬅ Volver al inicio</button>
+
+</div>
+
+
+<!-- NORI -->
+
+<div id="nori" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Nori Veggie</h3>
+            <p>Champiñón • Queso Crema • Palta</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Nori Tory</h3>
+            <p>Pollo Teriyaki • Queso Crema • Palta</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Nori Ebi</h3>
+            <p>Camarón • Queso Crema • Palmito</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Nori Sake</h3>
+            <p>Salmón • Queso Crema • Palta</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Nori Sakebi</h3>
+            <p>Salmón • Queso Crema • Camarón</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+
+
+</div>
+
+<!-- SESAMO -->
+
+<div id="sesamo" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>California Veggie</h3>
+            <p>Champiñón • Queso Crema • Palta</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>California Tory</h3>
+            <p>Pollo Teriyaki • Queso Crema • Palta</p>
+            <span class="precio">$4.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>California Ebi</h3>
+            <p>Camarón • Queso Crema • Palmito</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>California Sake</h3>
+            <p>Salmón • Queso Crema • Palta</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>California Sakebi</h3>
+            <p>Salmón • Queso Crema • Camarón</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+
+</div>
+<div id="palta" class="oculto">
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Avocado Veggie</h3>
+            <p>Champiñón • Queso Crema • Pimentón</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Avocado Tory</h3>
+            <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Avocado Ebi</h3>
+            <p>Camarón • Queso Crema • Palmito</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Avocado Sake</h3>
+            <p>Salmón • Queso Crema • Cebollín</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Avocado Sakebi</h3>
+            <p>Salmón • Queso Crema • Camarón</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+    </div>
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+</div>
+<div id="queso" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Cheese Veggie</h3>
+            <p>Champiñón • Cebollín • Palta</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Cheese Tory</h3>
+            <p>Pollo Teriyaki • Cebolla Caramelo • Almendras</p>
+            <span class="precio">$5.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Cheese Ebi</h3>
+            <p>Camarón • Palta • Cebollín</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Cheese Sake</h3>
+            <p>Salmón • Palta • Palmito</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Cheese Sakebi</h3>
+            <p>Salmón • Palta • Camarón</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+
+</div>
+<!-- SALMÓN -->
+
+<div id="salmon" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Sake Avocado</h3>
+            <p>Palta • Queso Crema • Cebollín</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Sake Ebi</h3>
+            <p>Camarón • Queso Crema • Palmito</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Sake Ebi Furay</h3>
+            <p>Camarón Furay • Queso Crema • Cebollín</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Sake Sweet</h3>
+            <p>Palta • Queso Crema • Cebolla Caramelo</p>
+            <span class="precio">$7.490</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+</div>
+<!-- HOT ROLLS -->
+
+<div id="hotrolls" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Veggie Furay</h3>
+            <p>Champiñón • Queso Crema • Palta</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Tory Furay</h3>
+            <p>Pollo Teriyaki • Queso Crema • Palta</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Tory Tempura</h3>
+            <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
+            <span class="precio">$5.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Ebi Furay</h3>
+            <p>Camarón • Queso Crema • Palta</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Ebi Tempura</h3>
+            <p>Camarón • Queso Crema • Cebollín</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Sake Furay</h3>
+            <p>Salmón • Queso Crema • Palta</p>
+            <span class="precio">$6.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Sakebi Furay</h3>
+            <p>Salmón • Queso Crema • Camarón</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+</div>
+<!-- ROLLS ESPECIALES -->
+
+<div id="especiales" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Banana Furay</h3>
+            <p>Pollo Teriyaki • Queso Crema • Cebolla Caramelo</p>
+            <p>Envuelto en plátano apanado</p>
+            <span class="precio">$6.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Arcoiris Roll</h3>
+            <p>Camarón • Queso Crema • Palmito</p>
+            <p>Envuelto en salmón, atún y palta</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Maguro Roll</h3>
+            <p>Salmón • Queso Crema • Palta</p>
+            <p>Envuelto en atún</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Nikkei Roll</h3>
+            <p>Camarón • Queso Crema • Pimentón</p>
+            <p>Envuelto en palta con salsa acevichada</p>
+            <span class="precio">$8.490</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+</div>
+<!-- SUSHI SIN ARROZ -->
+
+<div id="sinarroz" class="oculto">
+
+    <div class="contenedor-rolls">
+
+
+        <div class="roll">
+            <h3>Champiñón Tempura</h3>
+            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+            <p>Champiñón Tempura</p>
+            <span class="precio">$7.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Pollo Teriyaki</h3>
+            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+            <p>Pollo Teriyaki</p>
+            <span class="precio">$7.490</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Camarón Furay</h3>
+            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+            <p>Camarón Furay</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+            <p>Salmón</p>
+            <span class="precio">$7.990</span>
+        </div>
+
+
+        <div class="roll">
+            <h3>Camarón Furay / Salmón</h3>
+            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+            <p>Camarón Furay • Salmón</p>
+            <span class="precio">$8.490</span>
+        </div>
+
+
+    </div>
+
+
+    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+</div>
+<!-- EXTRAS -->
+
+ <div id="extras" class="oculto">
+
+        <h2>➕ EXTRAS</h2>
+
+        
+          <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+        <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Sachet Soya</h3>
+            <span class="precio">$400</span>
+        </div>
+
+        <div class="roll">
+            <h3>Sachet Agridulce</h3>
+            <span class="precio">$400</span>
+        </div>
+
+        <div class="roll">
+            <h3>Jengibre</h3>
+            <span class="precio">$500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salsa Soya</h3>
+            <span class="precio">$600</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salsa Agridulce</h3>
+            <span class="precio">$600</span>
+        </div>
+
+        <div class="roll">
+            <h3>Salsa Acevichada</h3>
+            <span class="precio">$3.990</span>
+        </div>
+
+        <div class="roll">
+            <h3>Palitos</h3>
+            <span class="precio">$200</span>
+        </div>
+
+        <div class="roll">
+            <h3>Ayudapalitos</h3>
+            <span class="precio">$400</span>
+        </div>
+
+        <div class="roll">
+            <h3>Wasabi (Picante)</h3>
+            <span class="precio">$500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Sriracha (Picante)</h3>
+            <span class="precio">$600</span>
+        </div>
+
+        <div class="roll">
+            <h3>Bebida 355 cc</h3>
+            <span class="precio">$1.500</span>
+        </div>
+
+        <div class="roll">
+            <h3>Bebida 1,5 Litros</h3>
+            <span class="precio">$3.000</span>
+        </div>
+
+        </div>
+
+         
+        
+
+         </div>
+
+</section>
+
+
+
+<script>
+
+function mostrarCarta(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+    document.getElementById("tablas").classList.add("oculto");
+
+    document.getElementById("carta").classList.remove("oculto");
+
+}
+
+function mostrarAperitivos(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+
+    document.getElementById("aperitivos").classList.remove("oculto");
+
+}
+
+function mostrarSashimi(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("sashimi").classList.remove("oculto");
+
+}
+function mostrarCeviche(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("ceviche").classList.remove("oculto");
+
+}
+function mostrarTataki(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("tataki").classList.remove("oculto");
+
+}
+function mostrarNiguiris(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("niguiris").classList.remove("oculto");
+
+}
+function mostrarGyozas(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("gyozas").classList.remove("oculto");
+
+}
+function mostrarArrollados(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("arrollados").classList.remove("oculto");
+
+}
+function mostrarKorokes(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("korokes").classList.remove("oculto");
+
+}
+function mostrarBastones(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("bastones").classList.remove("oculto");
+
+}
+function mostrarPapasFritas(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+
+    document.getElementById("papasfritas").classList.remove("oculto");
+
+}
+function mostrarGohan(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+
+    document.getElementById("gohan").classList.remove("oculto");
+
+}
+function mostrarSushiBurgers(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+
+    document.getElementById("sushiburgers").classList.remove("oculto");
+
+}
+function mostrarHandrolls(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+
+    document.getElementById("handrolls").classList.remove("oculto");
+
+}
+function mostrarTablas(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("tablas").classList.remove("oculto");
+
+}
+function mostrarTablaVegetariana(){
+
+    document.getElementById("tablas").classList.add("oculto");
+
+    document.getElementById("tablaVegetariana").classList.remove("oculto");
+
+}
+function mostrarTablaFria(){
+
+    document.getElementById("tablas").classList.add("oculto");
+
+    document.getElementById("tablaFria").classList.remove("oculto");
+
+}
+function mostrarTablaCaliente(){
+
+    document.getElementById("tablas").classList.add("oculto");
+
+    document.getElementById("tablaCaliente").classList.remove("oculto");
+
+}
+function mostrarTablaMixta(){
+
+    document.getElementById("tablas").classList.add("oculto");
+
+    document.getElementById("tablaMixta").classList.remove("oculto");
+
+}
+function mostrarExtras(){
+
+    document.getElementById("inicio-carta").classList.add("oculto");
+
+    document.getElementById("aperitivos").classList.add("oculto");
+    document.getElementById("gohan").classList.add("oculto");
+    document.getElementById("sushiburgers").classList.add("oculto");
+    document.getElementById("handrolls").classList.add("oculto");
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("carta").classList.add("oculto");
+    document.getElementById("nori").classList.add("oculto");
+    document.getElementById("sesamo").classList.add("oculto");
+    document.getElementById("palta").classList.add("oculto");
+    document.getElementById("queso").classList.add("oculto");
+    document.getElementById("salmon").classList.add("oculto");
+    document.getElementById("hotrolls").classList.add("oculto");
+    document.getElementById("especiales").classList.add("oculto");
+    document.getElementById("sinarroz").classList.add("oculto");
+
+    document.getElementById("extras").classList.remove("oculto");
+
+}
+function volverTablas(){
+
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+
+    document.getElementById("tablaFria").classList.add("oculto");
+
+    document.getElementById("tablaCaliente").classList.add("oculto");
+
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("tablas").classList.remove("oculto");
+
+}
+
+function volverInicioCarta(){
+
+    document.getElementById("aperitivos").classList.add("oculto");
+    document.getElementById("gohan").classList.add("oculto");
+    document.getElementById("sushiburgers").classList.add("oculto");
+    document.getElementById("handrolls").classList.add("oculto");
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("carta").classList.add("oculto");
+    document.getElementById("nori").classList.add("oculto");
+    document.getElementById("sesamo").classList.add("oculto");
+    document.getElementById("palta").classList.add("oculto");
+    document.getElementById("queso").classList.add("oculto");
+    document.getElementById("salmon").classList.add("oculto");
+    document.getElementById("hotrolls").classList.add("oculto");
+    document.getElementById("especiales").classList.add("oculto");
+    document.getElementById("sinarroz").classList.add("oculto");
+
+    document.getElementById("extras").classList.add("oculto");
+
+    document.getElementById("inicio-carta").classList.remove("oculto");
+
+}
+function volverAperitivos(){
+
+    document.getElementById("sashimi").classList.add("oculto");
+    document.getElementById("ceviche").classList.add("oculto");
+    document.getElementById("tataki").classList.add("oculto");
+    document.getElementById("niguiris").classList.add("oculto");
+    document.getElementById("gyozas").classList.add("oculto");
+    document.getElementById("arrollados").classList.add("oculto");
+    document.getElementById("korokes").classList.add("oculto");
+    document.getElementById("bastones").classList.add("oculto");
+    document.getElementById("papasfritas").classList.add("oculto");
+
+    document.getElementById("aperitivos").classList.remove("oculto");
+
+
+
+}
+function mostrarNori(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("nori").classList.remove("oculto");
+
+}
+
+
+function mostrarSesamo(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("sesamo").classList.remove("oculto");
+
+}
+function mostrarPalta(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("palta").classList.remove("oculto");
+
+}
+function mostrarQueso(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("queso").classList.remove("oculto");
+
+}
+function mostrarSalmon(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("salmon").classList.remove("oculto");
+
+}
+function mostrarHotRolls(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("hotrolls").classList.remove("oculto");
+
+}
+function mostrarEspeciales(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("especiales").classList.remove("oculto");
+
+}
+function mostrarSinArroz(){
+
+    document.getElementById("carta").classList.add("oculto");
+
+    document.getElementById("sinarroz").classList.remove("oculto");
+
+}
+function volverCategorias(){
+
+    document.getElementById("nori").classList.add("oculto");
+
+    document.getElementById("sesamo").classList.add("oculto");
+
+    document.getElementById("palta").classList.add("oculto");
+
+    document.getElementById("queso").classList.add("oculto");
+
+    document.getElementById("carta").classList.remove("oculto");
+
+    document.getElementById("salmon").classList.add("oculto");
+
+    document.getElementById("hotrolls").classList.add("oculto");
+
+    document.getElementById("especiales").classList.add("oculto");
+
+    document.getElementById("sinarroz").classList.add("oculto");
+
+
+}
+function volverPortada(){
+
+    window.location.href="index.html";
+
+}
+
+</script>
+
+<footer>
+
+    <h2>🍣 Sushi Margus</h2>
+
+    <p>Rolls preparados al momento, con ingredientes frescos y mucho sabor.</p>
+
+    <p>📍 Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar</p>
+
+    <p>📱 +56 9 7371 3769</p>
+
+    <p>🕐 Lunes a Jueves: 15:00 - 22:30</p>
+
+    <p>🕐 Viernes y Sábado: 13:00 - 22:30</p>
+
+    <a href="https://wa.me/56973713769"
+       class="boton"
+       target="_blank">
+       📲 WhatsApp
+    </a>
+
+    <a href="https://www.instagram.com/sushi_margus/"
+       class="boton"
+       target="_blank">
+       📸 Instagram
+    </a>
+
+    <p class="copyright">
+        © 2026 Sushi Margus - Todos los derechos reservados
+    </p>
+
+</footer>
+</body>
+
+
+
+
+
+
