@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -220,4 +221,228 @@ if(nori.style.display === "flex"){
 </script>
 
 
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta - Sushi Margus</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#1b1b1b;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:linear-gradient(90deg,#d32f2f,#ff9800);
+    padding:25px;
+}
+
+h1{
+    margin:0;
+}
+
+.menu{
+    max-width:800px;
+    margin:30px auto;
+}
+
+.producto{
+    width:350px;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    color:black;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.producto h2{
+    color:#d32f2f;
+}
+
+a{
+    display:inline-block;
+    margin:30px;
+    padding:12px 25px;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+a:hover{
+    background:#e68900;
+}
+.producto img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.producto{
+    transition:0.3s;
+}
+
+.producto:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.5);
+}
+.contenedor-promos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.promo{
+    background:white;
+    color:black;
+    width:200px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.promo h3{
+    color:#d32f2f;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;               
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🍣 Carta Sushi Margus</h1>
+<p>Nuestros productos favoritos</p>
+</header>
+
+
+<section class="menu">
+
+
+<section class="promociones">
+
+<h2>🍣 Promociones</h2>
+
+<div class="contenedor-promos">
+
+    <div class="promo">
+        <h3>20 Piezas</h3>
+        <p>$9.990</p>
+        <button>Ver detalle</button>
+    </div>
+
+
+    <div class="promo">
+        <h3>30 Piezas</h3>
+        <p>$13.990</p>
+        <button>Ver detalle</button>
+    </div>
+
+
+    <div class="promo">
+        <h3>40 Piezas</h3>
+        <p>$16.990</p>
+        <button>Ver detalle</button>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section class="categoria">
+
+<div class="categoria-titulo">
+
+<h2>🌿 Envueltos en Nori</h2>
+
+<p>Rolls tradicionales envueltos en alga nori</p>
+
+<button onclick="mostrarNori()">Ver detalles</button>
+
+</div>
+
+
+<div id="nori" class="contenedor-rolls oculto">
+
+
+<div class="roll">
+
+<img src="imagenes/nori-ebi.jpg" alt="Nori Ebi">
+
+<h3>Nori Ebi</h3>
+
+<p>Camarón, queso crema y palmito.</p>
+
+<p class="precio">$4.990</p>
+
+<a href="#" class="boton-pedir">Pedir ahora</a>
+
+</div>
+
+
+
+<div class="roll">
+
+<img src="imagenes/nori-sake.jpg" alt="Nori Sake">
+
+<h3>Nori Sake</h3>
+
+<p>Salmón, queso crema y palta.</p>
+
+<p class="precio">$4.990</p>
+
+<a href="#" class="boton-pedir">Pedir ahora</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<a href="index.html">⬅ Volver al inicio</a>
+
+
+</section>
+
+
+<script>
+
+function mostrarNori(){
+
+let nori = document.getElementById("nori");
+
+if(nori.style.display === "flex"){
+    nori.style.display = "none";
+}else{
+    nori.style.display = "flex";
+}
+
+}
+
+</script>
+
+
+>>>>>>> origin/main
 </body>
