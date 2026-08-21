@@ -429,7 +429,21 @@ button:hover{
         transform: none;
     }
 
+
 }
+header h1{
+    margin-bottom:25px;
+}
+
 .descripcion-portada{
     font-size:16px;
+    margin-top:0;
+}
+header h1{
+    margin-bottom:0 !important;
+}
+
+.descripcion-portada{
+    font-size:12px !important;
+    margin-top:0 !important;
 }

@@ -263,25 +263,147 @@ footer .copyright{
     margin-top:30px;
     font-size:14px;
     color:#aaa;
+
+}
+    #boton-carrito {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff7300, #d90000);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 23px;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+#contador-carrito {
+    background: white;
+    color: #d90000;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+/* VENTANA DEL CARRITO */
+
+.carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-contenido {
+    background: #1b1b1b;
+    color: white;
+    width: 90%;
+    max-width: 450px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+}
+
+.carrito-contenido h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #ff9800;
+    font-size: 26px;
+}
+
+.producto-carrito {
+    background: #292929;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.producto-carrito strong {
+    display: block;
+    font-size: 18px;
+    color: #ff9800;
+    margin-bottom: 5px;
+}
+
+.producto-carrito p {
+    margin: 6px 0;
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controles-cantidad button {
+    border: none;
+    border-radius: 8px;
+    min-width: 42px;
+    height: 42px;
+    background: #ff7300;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.controles-cantidad span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.controles-cantidad button:last-child {
+    background: #d90000;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+}
+
+.btn-carrito {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #555;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.enviar-pedido {
+    background: #25D366;
+    font-weight: bold;
+    margin-top: 10px;
 }
 </style>
 </head>
 
-<body>
-<script>
-
-function mostrarCarta(){
-
-    let inicio = document.getElementById("inicio-carta");
-    let carta = document.getElementById("carta");
-    let nori = document.getElementById("nori");
-
-    inicio.classList.add("oculto");
-    carta.classList.remove("oculto");
-
-    nori.classList.add("oculto");
-
-}
+<body> 
 
 </script>
 <header>
@@ -1473,6 +1595,10 @@ function mostrarCarta(){
             <h3>Nori Veggie</h3>
             <p>Champiñón • Queso Crema • Palta</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Veggie', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1938,107 +2064,142 @@ function mostrarCarta(){
 
 <script>
 
+function irArriba(){
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
 function mostrarCarta(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
-    document.getElementById("tablas").classList.add("oculto");
 
     document.getElementById("carta").classList.remove("oculto");
+
+    irArriba();
 
 }
 
 function mostrarAperitivos(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
-
     document.getElementById("aperitivos").classList.remove("oculto");
 
+    irArriba();
 }
+
 
 function mostrarSashimi(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("sashimi").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarCeviche(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("ceviche").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTataki(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("tataki").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarNiguiris(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("niguiris").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarGyozas(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("gyozas").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarArrollados(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("arrollados").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarKorokes(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("korokes").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarBastones(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("bastones").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarPapasFritas(){
 
     document.getElementById("aperitivos").classList.add("oculto");
-
     document.getElementById("papasfritas").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarGohan(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
-
     document.getElementById("gohan").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarSushiBurgers(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
-
     document.getElementById("sushiburgers").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarHandrolls(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
-
     document.getElementById("handrolls").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTablas(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
@@ -2046,35 +2207,46 @@ function mostrarTablas(){
 
     document.getElementById("tablas").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTablaVegetariana(){
 
     document.getElementById("tablas").classList.add("oculto");
-
     document.getElementById("tablaVegetariana").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTablaFria(){
 
     document.getElementById("tablas").classList.add("oculto");
-
     document.getElementById("tablaFria").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTablaCaliente(){
 
     document.getElementById("tablas").classList.add("oculto");
-
     document.getElementById("tablaCaliente").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarTablaMixta(){
 
     document.getElementById("tablas").classList.add("oculto");
-
     document.getElementById("tablaMixta").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarExtras(){
 
     document.getElementById("inicio-carta").classList.add("oculto");
@@ -2102,20 +2274,22 @@ function mostrarExtras(){
 
     document.getElementById("extras").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function volverTablas(){
 
     document.getElementById("tablaVegetariana").classList.add("oculto");
-
     document.getElementById("tablaFria").classList.add("oculto");
-
     document.getElementById("tablaCaliente").classList.add("oculto");
-
     document.getElementById("tablaMixta").classList.add("oculto");
 
     document.getElementById("tablas").classList.remove("oculto");
 
+    irArriba();
 }
+
 
 function volverInicioCarta(){
 
@@ -2144,7 +2318,10 @@ function volverInicioCarta(){
 
     document.getElementById("inicio-carta").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function volverAperitivos(){
 
     document.getElementById("sashimi").classList.add("oculto");
@@ -2159,92 +2336,331 @@ function volverAperitivos(){
 
     document.getElementById("aperitivos").classList.remove("oculto");
 
-
-
+    irArriba();
 }
+
+
 function mostrarNori(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("nori").classList.remove("oculto");
 
+    irArriba();
 }
 
 
 function mostrarSesamo(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("sesamo").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarPalta(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("palta").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarQueso(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("queso").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarSalmon(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("salmon").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarHotRolls(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("hotrolls").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarEspeciales(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("especiales").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function mostrarSinArroz(){
 
     document.getElementById("carta").classList.add("oculto");
-
     document.getElementById("sinarroz").classList.remove("oculto");
 
+    irArriba();
 }
+
+
 function volverCategorias(){
 
     document.getElementById("nori").classList.add("oculto");
-
     document.getElementById("sesamo").classList.add("oculto");
-
     document.getElementById("palta").classList.add("oculto");
-
     document.getElementById("queso").classList.add("oculto");
+    document.getElementById("salmon").classList.add("oculto");
+    document.getElementById("hotrolls").classList.add("oculto");
+    document.getElementById("especiales").classList.add("oculto");
+    document.getElementById("sinarroz").classList.add("oculto");
 
     document.getElementById("carta").classList.remove("oculto");
 
-    document.getElementById("salmon").classList.add("oculto");
-
-    document.getElementById("hotrolls").classList.add("oculto");
-
-    document.getElementById("especiales").classList.add("oculto");
-
-    document.getElementById("sinarroz").classList.add("oculto");
-
-
+    irArriba();
 }
+
+
 function volverPortada(){
 
-    window.location.href="index.html";
+    window.location.href = "index.html";
+
+}
+
+function abrirCarrito() {
+    document.getElementById("carrito").style.display = "flex";
+}
+function cerrarCarrito() {
+    document.getElementById("carrito").style.display = "none";
+}
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+
+    let productoExistente = carrito.find(function(producto) {
+        return producto.nombre === nombre;
+    });
+
+    if (productoExistente) {
+
+        productoExistente.cantidad++;
+
+    } else {
+
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+
+    }
+
+    actualizarCarrito();
+}
+
+
+function aumentarCantidad(index) {
+
+    carrito[index].cantidad++;
+
+    actualizarCarrito();
+}
+
+
+function disminuirCantidad(index) {
+
+    carrito[index].cantidad--;
+
+    if (carrito[index].cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+
+    actualizarCarrito();
+}
+
+
+function eliminarProducto(index) {
+
+    carrito.splice(index, 1);
+
+    actualizarCarrito();
+}
+
+
+function actualizarCarrito() {
+
+    let productos = document.getElementById("productos-carrito");
+    let total = document.getElementById("total-carrito");
+    let contador = document.getElementById("contador-carrito");
+
+    productos.innerHTML = "";
+
+    let totalCompra = 0;
+    let cantidadTotal = 0;
+
+    if (carrito.length === 0) {
+
+        productos.innerHTML = "<p>Tu carrito está vacío.</p>";
+
+    }
+
+    carrito.forEach(function(producto, index) {
+
+        let subtotal = producto.precio * producto.cantidad;
+
+        totalCompra += subtotal;
+        cantidadTotal += producto.cantidad;
+
+        productos.innerHTML += `
+            <div class="producto-carrito">
+
+                <strong>${producto.nombre}</strong>
+
+                <p>
+                    $${producto.precio.toLocaleString("es-CL")}
+                </p>
+
+                <div class="controles-cantidad">
+
+                    <button onclick="disminuirCantidad(${index})">
+                        −
+                    </button>
+
+                    <span>${producto.cantidad}</span>
+
+                    <button onclick="aumentarCantidad(${index})">
+                        +
+                    </button>
+
+                    <button onclick="eliminarProducto(${index})">
+                        🗑️
+                    </button>
+
+                </div>
+
+                <p>
+                    Subtotal: $${subtotal.toLocaleString("es-CL")}
+                </p>
+
+            </div>
+        `;
+
+    });
+
+    total.textContent = "$" + totalCompra.toLocaleString("es-CL");
+
+    contador.textContent = cantidadTotal;
+}
+function enviarPedido() {
+
+    if (carrito.length === 0) {
+
+        alert("Tu carrito está vacío.");
+
+        return;
+    }
+
+    let nombre = document.getElementById("nombre-cliente").value.trim();
+    let tipoPedido = document.getElementById("tipo-pedido").value;
+    let direccion = document.getElementById("direccion-cliente").value.trim();
+    let formaPago = document.getElementById("forma-pago").value;
+    let observaciones = document.getElementById("observaciones-pedido").value.trim();
+
+
+    if (nombre === "") {
+
+        alert("Por favor ingresa tu nombre.");
+
+        return;
+    }
+
+
+    if (tipoPedido === "") {
+
+        alert("Por favor selecciona el tipo de pedido.");
+
+        return;
+    }
+
+
+    if (tipoPedido === "Delivery" && direccion === "") {
+
+        alert("Por favor ingresa tu dirección.");
+
+        return;
+    }
+
+
+    if (formaPago === "") {
+
+        alert("Por favor selecciona la forma de pago.");
+
+        return;
+    }
+
+
+    let mensaje = "🍣 *PEDIDO SUSHI MARGUS*%0A%0A";
+
+    mensaje += "👤 *Nombre:* " + nombre + "%0A";
+    mensaje += "📦 *Pedido:* " + tipoPedido + "%0A";
+
+    if (tipoPedido === "Delivery") {
+        mensaje += "📍 *Dirección:* " + direccion + "%0A";
+    }
+
+    mensaje += "💳 *Forma de pago:* " + formaPago + "%0A%0A";
+
+    mensaje += "🛒 *DETALLE DEL PEDIDO*%0A%0A";
+
+
+    let totalCompra = 0;
+
+
+    carrito.forEach(function(producto) {
+
+        let subtotal = producto.precio * producto.cantidad;
+
+        totalCompra += subtotal;
+
+        mensaje += "• " + producto.nombre +
+                   " x" + producto.cantidad +
+                   " - $" + subtotal.toLocaleString("es-CL") +
+                   "%0A";
+
+    });
+
+
+    mensaje += "%0A💰 *TOTAL: $" +
+               totalCompra.toLocaleString("es-CL") +
+               "*";
+
+
+    if (observaciones !== "") {
+
+        mensaje += "%0A%0A📝 *Observaciones:* " +
+                   observaciones;
+
+    }
+
+
+    let numeroWhatsApp = "56973713769";
+
+
+    let url = "https://wa.me/" +
+              numeroWhatsApp +
+              "?text=" +
+              mensaje;
+
+
+    window.open(url, "_blank");
 
 }
 
@@ -2281,4 +2697,122 @@ function volverPortada(){
     </p>
 
 </footer>
+<!-- BOTÓN DEL CARRITO -->
+
+<button id="boton-carrito" onclick="abrirCarrito()">
+    🛒 <span id="contador-carrito">0</span>
+</button>
+<!-- VENTANA DEL CARRITO -->
+<div id="carrito" class="carrito">
+    <div class="carrito-contenido">
+
+        <h2>🛒 Tu carrito</h2>
+
+<div class="datos-pedido">
+
+    <input
+        type="text"
+        id="nombre-cliente"
+        placeholder="👤 Tu nombre"
+    >
+
+    <select id="tipo-pedido">
+        <option value="">📦 Tipo de pedido</option>
+        <option value="Delivery">🛵 Delivery</option>
+        <option value="Retiro en local">🏪 Retiro en local</option>
+    </select>
+
+    <input
+        type="text"
+        id="direccion-cliente"
+        placeholder="📍 Dirección"
+    >
+
+    <select id="forma-pago">
+        <option value="">💳 Forma de pago</option>
+        <option value="Transferencia">Transferencia</option>
+        <option value="Efectivo">Efectivo</option>
+        <option value="Débito">Débito</option>
+    </select>
+
+    <textarea
+        id="observaciones-pedido"
+        placeholder="📝 Observaciones (opcional)"
+        rows="3"
+    ></textarea>
+
+</div>
+
+<div id="productos-carrito">
+            <p>Tu carrito está vacío.</p>
+        </div>
+
+        <div class="carrito-total">
+            <strong>Total:</strong>
+            <span id="total-carrito">$0</span>
+        </div>
+<button class="btn-carrito" onclick="cerrarCarrito()">
+    Seguir comprando
+</button>
+<button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
+    📱 Pedir por WhatsApp
+</button>
+    </div>
+</div>
+</body>
+
+<footer>
+
+    <h2>🍣 Sushi Margus</h2>
+
+    <p>Rolls preparados al momento, con ingredientes frescos y mucho sabor.</p>
+
+    <p>📍 Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar</p>
+
+    <p>📱 +56 9 7371 3769</p>
+
+    <p>🕐 Lunes a Jueves: 15:00 - 22:30</p>
+
+    <p>🕐 Viernes y Sábado: 13:00 - 22:30</p>
+
+    <a href="https://wa.me/56973713769"
+       class="boton"
+       target="_blank">
+       📲 WhatsApp
+    </a>
+
+    <a href="https://www.instagram.com/sushi_margus/"
+       class="boton"
+       target="_blank">
+       📸 Instagram
+    </a>
+
+    <p class="copyright">
+        © 2026 Sushi Margus - Todos los derechos reservados
+    </p>
+
+</footer>
+</button>
+<!-- VENTANA DEL CARRITO -->
+<div id="carrito" class="carrito">
+    <div class="carrito-contenido">
+
+        <h2>🛒 Tu carrito</h2>
+
+        <div id="productos-carrito">
+            <p>Tu carrito está vacío.</p>
+        </div>
+
+        <div class="carrito-total">
+            <strong>Total:</strong>
+            <span id="total-carrito">$0</span>
+        </div>
+<button class="btn-carrito" onclick="cerrarCarrito()">
+    Seguir comprando
+</button>
+<button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
+    📱 Pedir por WhatsApp
+</button>
+    </div>
+</div>
 </body>
