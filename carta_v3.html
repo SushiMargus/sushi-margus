@@ -396,9 +396,78 @@ footer .copyright{
 }
 
 .enviar-pedido {
-    background: #25D366;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
     font-weight: bold;
     margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(18, 140, 126, 0.30);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.enviar-pedido:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 5px rgba(18, 140, 126, 0.25);
+}
+/* Campos del pedido */
+
+.campo-pedido {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin: 8px 0;
+    border: 2px solid #ff7300;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.campo-pedido:focus {
+    border-color: #d90000;
+    box-shadow: 0 0 6px rgba(217, 0, 0, 0.25);
+}
+
+.campo-pedido::placeholder {
+    color: #777;
+}
+
+textarea.campo-pedido {
+    min-height: 25px;
+    resize: vertical;
+}
+.boton-tipo.seleccionado {
+    background: linear-gradient(135deg, #ff7300, #d90000);
+    color: white;
+    border-color: #d90000;
+    transform: scale(1.06);
+    box-shadow: 0 6px 15px rgba(217, 0, 0, 0.35);
+    animation: pulsarTipo 0.35s ease;
+}
+.tipo-pedido-botones {
+    display: flex;
+    gap: 18px;
+    margin: 8px 0;
+}
+
+@keyframes pulsarTipo {
+    0% {
+        transform: scale(0.95);
+    }
+
+    60% {
+        transform: scale(1.10);
+    }
+
+    100% {
+        transform: scale(1.06);
+    }
 }
 </style>
 </head>
@@ -2663,7 +2732,25 @@ function enviarPedido() {
     window.open(url, "_blank");
 
 }
+function seleccionarTipoPedido(tipo, boton) {
 
+    document.getElementById("tipo-pedido").value = tipo;
+
+    document.querySelectorAll(".boton-tipo").forEach(function(botonTipo) {
+        botonTipo.classList.remove("seleccionado");
+    });
+
+    boton.classList.add("seleccionado");
+
+    const direccion = document.getElementById("direccion-cliente");
+
+    if (tipo === "Delivery") {
+        direccion.style.display = "block";
+    } else {
+        direccion.style.display = "none";
+        direccion.value = "";
+    }
+}
 </script>
 
 <footer>
@@ -2697,107 +2784,74 @@ function enviarPedido() {
     </p>
 
 </footer>
+
 <!-- BOTÓN DEL CARRITO -->
 
 <button id="boton-carrito" onclick="abrirCarrito()">
     🛒 <span id="contador-carrito">0</span>
 </button>
+
 <!-- VENTANA DEL CARRITO -->
+
 <div id="carrito" class="carrito">
+
     <div class="carrito-contenido">
 
         <h2>🛒 Tu carrito</h2>
 
-<div class="datos-pedido">
+        <div class="datos-pedido">
 
-    <input
-        type="text"
-        id="nombre-cliente"
-        placeholder="👤 Tu nombre"
-    >
+            <input
+                type="text"
+                id="nombre-cliente"
+                class="campo-pedido"
+                placeholder="👤 Tu nombre"
+            >
 
-    <select id="tipo-pedido">
-        <option value="">📦 Tipo de pedido</option>
-        <option value="Delivery">🛵 Delivery</option>
-        <option value="Retiro en local">🏪 Retiro en local</option>
-    </select>
+            <div class="tipo-pedido-botones">
 
-    <input
-        type="text"
-        id="direccion-cliente"
-        placeholder="📍 Dirección"
-    >
+                <button type="button"
+                        class="boton-tipo"
+                        onclick="seleccionarTipoPedido('Delivery', this)">
+                    🛵 Delivery
+                </button>
 
-    <select id="forma-pago">
-        <option value="">💳 Forma de pago</option>
-        <option value="Transferencia">Transferencia</option>
-        <option value="Efectivo">Efectivo</option>
-        <option value="Débito">Débito</option>
-    </select>
+                <button type="button"
+                        class="boton-tipo"
+                        onclick="seleccionarTipoPedido('Retiro en local', this)">
+                    🏪 Retiro en local
+                </button>
 
-    <textarea
-        id="observaciones-pedido"
-        placeholder="📝 Observaciones (opcional)"
-        rows="3"
-    ></textarea>
+            </div>
 
-</div>
+            <select id="tipo-pedido" class="campo-pedido" style="display:none;">
+                <option value="">Tipo de pedido</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Retiro en local">Retiro en local</option>
+            </select>
 
-<div id="productos-carrito">
-            <p>Tu carrito está vacío.</p>
+            <input
+                type="text"
+                id="direccion-cliente"
+                class="campo-pedido"
+                placeholder="📍 Dirección"
+            >
+
+            <select id="forma-pago" class="campo-pedido">
+                <option value="">💳 Forma de pago</option>
+                <option value="Transferencia">🏦 Transferencia</option>
+                <option value="Efectivo">💵 Efectivo</option>
+                <option value="Débito">💳 Débito</option>
+            </select>
+
+            <textarea
+                id="observaciones-pedido"
+                class="campo-pedido"
+                placeholder="📝 Observaciones (opcional)"
+                rows="1"
+            ></textarea>
+
         </div>
-
-        <div class="carrito-total">
-            <strong>Total:</strong>
-            <span id="total-carrito">$0</span>
-        </div>
-<button class="btn-carrito" onclick="cerrarCarrito()">
-    Seguir comprando
-</button>
-<button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
-    📱 Pedir por WhatsApp
-</button>
-    </div>
-</div>
-</body>
-
-<footer>
-
-    <h2>🍣 Sushi Margus</h2>
-
-    <p>Rolls preparados al momento, con ingredientes frescos y mucho sabor.</p>
-
-    <p>📍 Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar</p>
-
-    <p>📱 +56 9 7371 3769</p>
-
-    <p>🕐 Lunes a Jueves: 15:00 - 22:30</p>
-
-    <p>🕐 Viernes y Sábado: 13:00 - 22:30</p>
-
-    <a href="https://wa.me/56973713769"
-       class="boton"
-       target="_blank">
-       📲 WhatsApp
-    </a>
-
-    <a href="https://www.instagram.com/sushi_margus/"
-       class="boton"
-       target="_blank">
-       📸 Instagram
-    </a>
-
-    <p class="copyright">
-        © 2026 Sushi Margus - Todos los derechos reservados
-    </p>
-
-</footer>
-</button>
-<!-- VENTANA DEL CARRITO -->
-<div id="carrito" class="carrito">
-    <div class="carrito-contenido">
-
-        <h2>🛒 Tu carrito</h2>
 
         <div id="productos-carrito">
             <p>Tu carrito está vacío.</p>
@@ -2807,12 +2861,18 @@ function enviarPedido() {
             <strong>Total:</strong>
             <span id="total-carrito">$0</span>
         </div>
-<button class="btn-carrito" onclick="cerrarCarrito()">
-    Seguir comprando
-</button>
-<button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
-    📱 Pedir por WhatsApp
-</button>
+
+        <button class="btn-carrito" onclick="cerrarCarrito()">
+            Seguir comprando
+        </button>
+
+        <button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
+            📱 Pedir por WhatsApp
+        </button>
+
     </div>
+
 </div>
+
 </body>
+</html>
