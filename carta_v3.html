@@ -218,6 +218,7 @@ button {
     flex-wrap:wrap;
     gap:40px;
     width:100%;
+    margin:0 auto;
 
 }
 .tabla{
@@ -469,6 +470,25 @@ textarea.campo-pedido {
         transform: scale(1.06);
     }
 }
+.envoltura {
+    width: 100%;
+    padding: 11px 14px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    background: #ff7300;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.envoltura:focus {
+    border-color: #ff7300;
+}
+
 </style>
 </head>
 
@@ -945,116 +965,157 @@ textarea.campo-pedido {
     </div>
 
 </div>
+<!-- ============================= -->
 <!-- APERITIVOS -->
+<!-- ============================= -->
 
 <div id="aperitivos" class="oculto">
 
-<button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+    <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <!-- SASHIMI -->
 
     <div class="categoria-titulo">
-             <img src="imagenes/sashimi.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <h2>🐟 Sashimi</h2>
-         
+        <img src="imagenes/sashimi.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <p>Salmón, Atún y Mixtos</p>
+        <h2>🐟 Sashimi</h2>
+
+        <p>Salmón, Atún y Mixtos</p>
 
         <button onclick="mostrarSashimi()">Ver detalles</button>
 
     </div>
-     <div class="categoria-titulo">
 
-             <img src="imagenes/ceviche.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <h2>🥑 Ceviche</h2>
+    <!-- CEVICHE -->
 
-         <p>Salmón, Atún y Mixto</p>
+    <div class="categoria-titulo">
+
+        <img src="imagenes/ceviche.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🥑 Ceviche</h2>
+
+        <p>Salmón, Atún y Mixto</p>
 
         <button onclick="mostrarCeviche()">Ver detalles</button>
 
     </div>
+
+
+    <!-- TATAKI -->
+
     <div class="categoria-titulo">
 
-             <img src="imagenes/tataki.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+        <img src="imagenes/tataki.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <h2>🐟 Tataki de Atún</h2>
+        <h2>🐟 Tataki de Atún</h2>
 
-         <p>Atún sellado en cobertura de sésamo.</p>
+        <p>Atún sellado en cobertura de sésamo.</p>
 
-    <button onclick="mostrarTataki()">Ver detalles</button>
+        <button onclick="mostrarTataki()">Ver detalles</button>
 
-</div>
+    </div>
+
+
+    <!-- NIGUIRIS -->
+
     <div class="categoria-titulo">
 
-             <img src="imagenes/niguiris.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+        <img src="imagenes/niguiris.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <h2>🍣 Niguiris</h2>
+        <h2>🍣 Niguiris</h2>
 
-         <p>6 unidades</p>
+        <p>6 unidades</p>
 
-    <button onclick="mostrarNiguiris()">Ver detalles</button>
+        <button onclick="mostrarNiguiris()">Ver detalles</button>
 
-
-
-</div>
-     <div class="categoria-titulo">
-
-             <img src="imagenes/gyozas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
-
-         <h2>🥟 Gyozas</h2>
-
-         <p>Pollo, cerdo, verduras o mixtas.</p>
-
-    <button onclick="mostrarGyozas()">Ver detalles</button>
-
-</div>
-     <div class="categoria-titulo">
-
-             <img src="imagenes/arrollados.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
-
-         <h2>🥢 Arrollados Primavera</h2>
-
-         <p>Crujientes y deliciosos.</p>
-
-    <button onclick="mostrarArrollados()">Ver detalles</button>
-
-</div>
-     <div class="categoria-titulo">
-
-              <img src="imagenes/korokes.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
-
-         <h2>🥔 Korokes</h2>
-
-         <p>Bolitas de papa Furay.</p>
-
-    <button onclick="mostrarKorokes()">Ver detalles</button>
+    </div>
 
 
-</div>
-     <div class="categoria-titulo">
+    <!-- GYOZAS -->
 
-             <img src="imagenes/bastones.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+    <div class="categoria-titulo">
 
-         <h2>🍤 Bastones Furay</h2>
+        <img src="imagenes/gyozas.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <p>Queso crema, pollo, salmón o camarón.</p>
+        <h2>🥟 Gyozas</h2>
 
-    <button onclick="mostrarBastones()">Ver detalles</button>
+        <p>Pollo, cerdo, verduras o mixtas.</p>
 
-</div>
-<!-- PAPAS FRITAS -->
+        <button onclick="mostrarGyozas()">Ver detalles</button>
 
-     <div class="categoria-titulo">
+    </div>
 
-             <img src="imagenes/papasfritas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-         <h2>🍟 Papas Fritas</h2>
+    <!-- ARROLLADOS PRIMAVERA -->
 
-         <p>Clásicas papas fritas, crujientes y deliciosas.</p>
+    <div class="categoria-titulo">
 
-    <button onclick="mostrarPapasFritas()">Ver detalles</button>
+        <img src="imagenes/arrollados.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-</div>
+        <h2>🥢 Arrollados Primavera</h2>
+
+        <p>Crujientes y deliciosos.</p>
+
+        <button onclick="mostrarArrollados()">Ver detalles</button>
+
+    </div>
+
+
+    <!-- KOROKES -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/korokes.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🥔 Korokes</h2>
+
+        <p>Bolitas de papa Furay.</p>
+
+        <button onclick="mostrarKorokes()">Ver detalles</button>
+
+    </div>
+
+
+    <!-- BASTONES FURAY -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/bastones.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍤 Bastones Furay</h2>
+
+        <p>Queso crema, pollo, salmón o camarón.</p>
+
+        <button onclick="mostrarBastones()">Ver detalles</button>
+
+    </div>
+
+
+    <!-- PAPAS FRITAS -->
+
+    <div class="categoria-titulo">
+
+        <img src="imagenes/papasfritas.jpg"
+        style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+        <h2>🍟 Papas Fritas</h2>
+
+        <p>Clásicas papas fritas, crujientes y deliciosas.</p>
+
+        <button onclick="mostrarPapasFritas()">Ver detalles</button>
+
+    </div>
+
 </div>
 
 <!-- GOHAN -->
@@ -1068,39 +1129,90 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Champiñón Tempura</h3>
+
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Champiñón Tempura', 5490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Pollo Teriyaki</h3>
+
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Pollo Teriyaki', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Camarón</h3>
+
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Camarón', 6490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Salmón</h3>
+
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Salmón', 6490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Mixto</h3>
+
             <p>2 ingredientes a elección</p>
+
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
             <span class="precio">$7.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Mixto', 7990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- SUSHI BURGERS -->
 
 <div id="sushiburgers" class="oculto">
@@ -1112,32 +1224,72 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Champiñón Tempura</h3>
+
             <p>Base: Queso Crema • Palta • Cebollín</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sushi Burger Champiñón Tempura', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Pollo Teriyaki</h3>
+
             <p>Base: Queso Crema • Palta • Cebollín</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sushi Burger Pollo Teriyaki', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Camarón</h3>
+
             <p>Base: Queso Crema • Palta • Cebollín</p>
+
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sushi Burger Camarón', 6990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Salmón</h3>
+
             <p>Base: Queso Crema • Palta • Cebollín</p>
+
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sushi Burger Salmón', 6990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- HANDROLLS -->
 
 <div id="handrolls" class="oculto">
@@ -1146,38 +1298,83 @@ textarea.campo-pedido {
 
     <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
+
     <h2>HANDROLL L</h2>
 
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Handroll Veggie</h3>
             <p>Palta • Queso Crema • Palmito</p>
+
             <span class="precio">$3.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Veggie L', 3500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
+
             <span class="precio">$4.000</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Tory L', 4000)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Sake</h3>
             <p>Salmón • Queso Crema • Palta</p>
+
             <span class="precio">$4.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Sake L', 4500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Ebi</h3>
             <p>Camarón • Queso Crema • Palta</p>
+
             <span class="precio">$4.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Ebi L', 4500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
+
             <span class="precio">$5.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Sakebi L', 5500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
@@ -1188,86 +1385,167 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Handroll Veggie</h3>
             <p>Palta • Queso Crema • Pimentón • Cebollín • Aceituna</p>
+
             <span class="precio">$4.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Veggie XL', 4500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta • Cebollín • Aceituna</p>
+
             <span class="precio">$5.000</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Tory XL', 5000)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Ebi</h3>
             <p>Camarón • Queso Crema • Palta • Cebollín • Aceituna</p>
+
             <span class="precio">$5.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Ebi XL', 5500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Sake</h3>
             <p>Salmón • Queso Crema • Palta • Cebollín • Aceituna</p>
+
             <span class="precio">$5.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Sake XL', 5500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Handroll Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón • Cebollín • Palta</p>
+
             <span class="precio">$6.500</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Handroll Sakebi XL', 6500)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
-<!-- SASHIMI -->
-<div id="sashimi" class="oculto">
 
+<!-- SASHIMI -->
+
+<div id="sashimi" class="oculto">
 
     <h2>🐟 Sashimi</h2>
 
-    <button onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
+    <button onclick="volverAperitivos()">
+        ⬅ Volver a Aperitivos
+    </button>
 
     <div class="contenedor-rolls">
 
-    <div class="roll">
-        <h3>Salmón</h3>
-        <p>3 unidades</p>
-        <span class="precio">$3.990</span>
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>3 unidades</p>
+            <span class="precio">$3.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Salmón 3 unidades', 3990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <p>6 unidades</p>
+            <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Salmón 6 unidades', 6990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+
+        <div class="roll">
+            <h3>Atún</h3>
+            <p>3 unidades</p>
+            <span class="precio">$4.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Atún 3 unidades', 4990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+
+        <div class="roll">
+            <h3>Atún</h3>
+            <p>6 unidades</p>
+            <span class="precio">$7.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Atún 6 unidades', 7990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+
+        <div class="roll">
+            <h3>Salmón y Atún</h3>
+            <p>Mixtos • 3 unidades</p>
+            <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Mixto 3 unidades', 5990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+
+        <div class="roll">
+            <h3>Salmón y Atún</h3>
+            <p>Mixtos • 6 unidades</p>
+            <span class="precio">$8.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Sashimi Mixto 6 unidades', 8990)">
+                🛒 Agregar
+            </button>
+        </div>
+
     </div>
-
-    <div class="roll">
-        <h3>Salmón</h3>
-        <p>6 unidades</p>
-        <span class="precio">$6.990</span>
-    </div>
-
-    <div class="roll">
-        <h3>Atún</h3>
-        <p>3 unidades</p>
-        <span class="precio">$4.990</span>
-    </div>
-
-    <div class="roll">
-        <h3>Atún</h3>
-        <p>6 unidades</p>
-        <span class="precio">$7.990</span>
-    </div>
-
-    <div class="roll">
-        <h3>Salmón y Atún</h3>
-        <p>Mixtos • 3 unidades</p>
-        <span class="precio">$5.990</span>
-    </div>
-
-    <div class="roll">
-        <h3>Salmón y Atún</h3>
-        <p>Mixtos • 6 unidades</p>
-        <span class="precio">$8.990</span>
-    </div>
-
-     </div>
-
 
 </div>
 <!-- CEVICHE -->
@@ -1283,22 +1561,35 @@ textarea.campo-pedido {
         <div class="roll">
             <h3>Salmón</h3>
             <span class="precio">$8.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Salmón', 8990)">
+                🛒 Agregar
+            </button>
         </div>
 
         <div class="roll">
             <h3>Atún</h3>
             <span class="precio">$9.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Atún', 9990)">
+                🛒 Agregar
+            </button>
         </div>
 
         <div class="roll">
             <h3>Mixto</h3>
             <p>Salmón • Atún • Camarón</p>
             <span class="precio">$11.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Mixto', 11990)">
+                🛒 Agregar
+            </button>
         </div>
 
     </div>
-
-
 
 </div>
 
@@ -1321,12 +1612,16 @@ textarea.campo-pedido {
 
             <span class="precio">$8.990</span>
 
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Tataki de Atún', 8990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
-
 <!-- NIGUIRIS -->
 
 <div id="niguiris" class="oculto">
@@ -1338,26 +1633,56 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Camarón</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Niguiris Camarón (6 unidades)', 6990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Salmón</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Niguiris Salmón (6 unidades)', 6990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Atún</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$7.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Niguiris Atún (6 unidades)', 7990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- GYOZAS -->
 
 <div id="gyozas" class="oculto">
@@ -1372,53 +1697,101 @@ textarea.campo-pedido {
             <h3>Gyozas de Pollo</h3>
             <p>5 unidades</p>
             <span class="precio">$3.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Pollo (5 unidades)', 3490)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas de Pollo</h3>
             <p>10 unidades</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Pollo (10 unidades)', 4990)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas de Cerdo</h3>
             <p>5 unidades</p>
             <span class="precio">$3.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Cerdo (5 unidades)', 3490)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas de Cerdo</h3>
             <p>10 unidades</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Cerdo (10 unidades)', 4990)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas de Verduras</h3>
             <p>5 unidades</p>
             <span class="precio">$3.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Verduras (5 unidades)', 3490)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas de Verduras</h3>
             <p>10 unidades</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas de Verduras (10 unidades)', 4990)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas Mixtas</h3>
             <p>5 unidades</p>
             <span class="precio">$3.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas Mixtas (5 unidades)', 3490)">
+                🛒 Agregar
+            </button>
         </div>
+
 
         <div class="roll">
             <h3>Gyozas Mixtas</h3>
             <p>10 unidades</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gyozas Mixtas (10 unidades)', 4990)">
+                🛒 Agregar
+            </button>
         </div>
 
     </div>
 
 </div>
+
 <!-- ARROLLADOS PRIMAVERA -->
 
 <div id="arrollados" class="oculto">
@@ -1430,20 +1803,40 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Arrollados Primavera</h3>
+
             <p>5 unidades</p>
+
             <span class="precio">$4.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Arrollados Primavera (5 unidades)', 4490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Arrollados Primavera</h3>
+
             <p>10 unidades</p>
+
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Arrollados Primavera (10 unidades)', 6490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- KOROKES -->
 
 <div id="korokes" class="oculto">
@@ -1455,20 +1848,40 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Queso Crema</h3>
+
             <p>Bolitas de papa Furay • 6 unidades</p>
+
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Korokes Queso Crema (6 unidades)', 5490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Pollo Teriyaki</h3>
+
             <p>Bolitas de papa Furay • 6 unidades</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Korokes Pollo Teriyaki (6 unidades)', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- BASTONES FURAY -->
 
 <div id="bastones" class="oculto">
@@ -1480,39 +1893,90 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Pollo Furay</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Pollo Furay (6 unidades)', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Camarón Furay</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Camarón Furay (6 unidades)', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Salmón Furay</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Salmón Furay (6 unidades)', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Queso Furay</h3>
+
             <p>6 unidades</p>
+
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Queso Furay (6 unidades)', 5990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Bastones Mixtos</h3>
+
             <p>12 unidades</p>
+
             <p>Pollo • Camarón • Salmón • Queso Crema</p>
+
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Bastones Mixtos (12 unidades)', 6990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
+
 <!-- PAPAS FRITAS -->
 
 <div id="papasfritas" class="oculto">
@@ -1524,19 +1988,35 @@ textarea.campo-pedido {
     <div class="contenedor-rolls">
 
         <div class="roll">
+
             <h3>Chicas</h3>
+
             <span class="precio">$2.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Papas Fritas Chicas', 2490)">
+                🛒 Agregar
+            </button>
+
         </div>
 
+
         <div class="roll">
+
             <h3>Grandes</h3>
+
             <span class="precio">$3.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Papas Fritas Grandes', 3990)">
+                🛒 Agregar
+            </button>
+
         </div>
 
     </div>
 
 </div>
-
 
 <!-- CATEGORIAS -->
  
@@ -1675,6 +2155,10 @@ textarea.campo-pedido {
             <h3>Nori Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Tory', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1682,6 +2166,10 @@ textarea.campo-pedido {
             <h3>Nori Ebi</h3>
             <p>Camarón • Queso Crema • Palmito</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Ebi', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1689,6 +2177,10 @@ textarea.campo-pedido {
             <h3>Nori Sake</h3>
             <p>Salmón • Queso Crema • Palta</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Sake', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1696,6 +2188,10 @@ textarea.campo-pedido {
             <h3>Nori Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Sakebi', 6990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1719,6 +2215,10 @@ textarea.campo-pedido {
             <h3>California Veggie</h3>
             <p>Champiñón • Queso Crema • Palta</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('California Veggie', 4990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1726,6 +2226,10 @@ textarea.campo-pedido {
             <h3>California Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
             <span class="precio">$4.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('California Tory', 4990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1733,6 +2237,10 @@ textarea.campo-pedido {
             <h3>California Ebi</h3>
             <p>Camarón • Queso Crema • Palmito</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('California Ebi', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1740,6 +2248,10 @@ textarea.campo-pedido {
             <h3>California Sake</h3>
             <p>Salmón • Queso Crema • Palta</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('California Sake', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1747,6 +2259,10 @@ textarea.campo-pedido {
             <h3>California Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('California Sakebi', 5990)">
+    🛒 Agregar
+</button> 
         </div>
 
 
@@ -1755,7 +2271,7 @@ textarea.campo-pedido {
 
     <button onclick="volverCategorias()">⬅ Volver categorías</button>
 
-
+<!-- AVOCADO -->
 </div>
 <div id="palta" class="oculto">
 
@@ -1765,6 +2281,10 @@ textarea.campo-pedido {
             <h3>Avocado Veggie</h3>
             <p>Champiñón • Queso Crema • Pimentón</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Veggie', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1772,6 +2292,10 @@ textarea.campo-pedido {
             <h3>Avocado Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Tory', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1779,6 +2303,10 @@ textarea.campo-pedido {
             <h3>Avocado Ebi</h3>
             <p>Camarón • Queso Crema • Palmito</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Ebi', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1786,19 +2314,29 @@ textarea.campo-pedido {
             <h3>Avocado Sake</h3>
             <p>Salmón • Queso Crema • Cebollín</p>
             <span class="precio">$5.990</span>
-        </div>
 
+            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Sake', 5990)">
+    🛒 Agregar
+</button>
+
+        </div>
 
         <div class="roll">
             <h3>Avocado Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Sakebi', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
     </div>
 
     <button onclick="volverCategorias()">⬅ Volver categorías</button>
+
+    <!-- CHESSE -->
 
 </div>
 <div id="queso" class="oculto">
@@ -1810,6 +2348,10 @@ textarea.campo-pedido {
             <h3>Cheese Veggie</h3>
             <p>Champiñón • Cebollín • Palta</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Veggie', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1817,6 +2359,10 @@ textarea.campo-pedido {
             <h3>Cheese Tory</h3>
             <p>Pollo Teriyaki • Cebolla Caramelo • Almendras</p>
             <span class="precio">$5.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Tory', 5490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1824,6 +2370,10 @@ textarea.campo-pedido {
             <h3>Cheese Ebi</h3>
             <p>Camarón • Palta • Cebollín</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Ebi', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1831,6 +2381,10 @@ textarea.campo-pedido {
             <h3>Cheese Sake</h3>
             <p>Salmón • Palta • Palmito</p>
             <span class="precio">$5.990</span>
+
+           <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Sake', 5990)">
+    🛒 Agregar
+</button> 
         </div>
 
 
@@ -1838,6 +2392,10 @@ textarea.campo-pedido {
             <h3>Cheese Sakebi</h3>
             <p>Salmón • Palta • Camarón</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Sakebi', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1859,6 +2417,10 @@ textarea.campo-pedido {
             <h3>Sake Avocado</h3>
             <p>Palta • Queso Crema • Cebollín</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Avocado', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1866,6 +2428,10 @@ textarea.campo-pedido {
             <h3>Sake Ebi</h3>
             <p>Camarón • Queso Crema • Palmito</p>
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Ebi', 6990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1873,6 +2439,10 @@ textarea.campo-pedido {
             <h3>Sake Ebi Furay</h3>
             <p>Camarón Furay • Queso Crema • Cebollín</p>
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Ebi Furay', 6990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1880,6 +2450,10 @@ textarea.campo-pedido {
             <h3>Sake Sweet</h3>
             <p>Palta • Queso Crema • Cebolla Caramelo</p>
             <span class="precio">$7.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Sweet', 7490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1900,6 +2474,10 @@ textarea.campo-pedido {
             <h3>Veggie Furay</h3>
             <p>Champiñón • Queso Crema • Palta</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Veggie Furay', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1907,6 +2485,10 @@ textarea.campo-pedido {
             <h3>Tory Furay</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Tory Furay', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1914,6 +2496,10 @@ textarea.campo-pedido {
             <h3>Tory Tempura</h3>
             <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
             <span class="precio">$5.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Tory Tempura', 5990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1921,6 +2507,10 @@ textarea.campo-pedido {
             <h3>Ebi Furay</h3>
             <p>Camarón • Queso Crema • Palta</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Ebi Furay', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1928,6 +2518,10 @@ textarea.campo-pedido {
             <h3>Ebi Tempura</h3>
             <p>Camarón • Queso Crema • Cebollín</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Ebi Tempura', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1935,6 +2529,10 @@ textarea.campo-pedido {
             <h3>Sake Furay</h3>
             <p>Salmón • Queso Crema • Palta</p>
             <span class="precio">$6.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Furay', 6490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1942,6 +2540,10 @@ textarea.campo-pedido {
             <h3>Sakebi Furay</h3>
             <p>Salmón • Queso Crema • Camarón</p>
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Sakebi Furay', 6990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1963,6 +2565,10 @@ textarea.campo-pedido {
             <p>Pollo Teriyaki • Queso Crema • Cebolla Caramelo</p>
             <p>Envuelto en plátano apanado</p>
             <span class="precio">$6.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Banana Furay', 6990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1971,6 +2577,10 @@ textarea.campo-pedido {
             <p>Camarón • Queso Crema • Palmito</p>
             <p>Envuelto en salmón, atún y palta</p>
             <span class="precio">$7.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Arcoiris Roll', 7990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1979,6 +2589,10 @@ textarea.campo-pedido {
             <p>Salmón • Queso Crema • Palta</p>
             <p>Envuelto en atún</p>
             <span class="precio">$7.990</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Maguro Roll', 7990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -1987,6 +2601,10 @@ textarea.campo-pedido {
             <p>Camarón • Queso Crema • Pimentón</p>
             <p>Envuelto en palta con salsa acevichada</p>
             <span class="precio">$8.490</span>
+
+            <button class="btn-agregar" onclick="agregarAlCarrito('Nikkei Roll', 8490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2008,6 +2626,18 @@ textarea.campo-pedido {
             <p>Queso Crema • Palta • Pimentón • Cebollín</p>
             <p>Champiñón Tempura</p>
             <span class="precio">$7.490</span>
+
+ <select class="envoltura">
+    <option value="">Elige tu envoltura</option>
+    <option value="Palta">🥑 Envuelto en Palta</option>
+    <option value="Queso">🧀 Envuelto en Queso</option>
+    <option value="Salmón">🐟 Envuelto en Salmón +$1.500</option>
+</select>
+
+<button class="btn-agregar"
+        onclick="agregarSinArroz(this, 'Champiñón Tempura', 7490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2016,6 +2646,18 @@ textarea.campo-pedido {
             <p>Queso Crema • Palta • Pimentón • Cebollín</p>
             <p>Pollo Teriyaki</p>
             <span class="precio">$7.490</span>
+
+            <select class="envoltura">
+    <option value="">🥢 Elegir envoltura</option>
+    <option value="Palta">🥑 Envuelto en Palta</option>
+    <option value="Queso">🧀 Envuelto en Queso</option>
+    <option value="Salmón">🐟 Envuelto en Salmón +$1.500</option>
+</select>
+
+<button class="btn-agregar"
+        onclick="agregarSinArroz(this, 'Pollo Teriyaki', 7490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2024,6 +2666,18 @@ textarea.campo-pedido {
             <p>Queso Crema • Palta • Pimentón • Cebollín</p>
             <p>Camarón Furay</p>
             <span class="precio">$7.990</span>
+
+            <select class="envoltura">
+    <option value="">🥢 Elegir envoltura</option>
+    <option value="Palta">🥑 Envuelto en Palta</option>
+    <option value="Queso">🧀 Envuelto en Queso</option>
+    <option value="Salmón">🐟 Envuelto en Salmón +$1.500</option>
+</select>
+
+<button class="btn-agregar"
+        onclick="agregarSinArroz(this, 'Camarón Furay', 7990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2032,6 +2686,18 @@ textarea.campo-pedido {
             <p>Queso Crema • Palta • Pimentón • Cebollín</p>
             <p>Salmón</p>
             <span class="precio">$7.990</span>
+
+            <select class="envoltura">
+    <option value="">🥢 Elegir envoltura</option>
+    <option value="Palta">🥑 Envuelto en Palta</option>
+    <option value="Queso">🧀 Envuelto en Queso</option>
+    <option value="Salmón">🐟 Envuelto en Salmón +$1.500</option>
+</select>
+
+<button class="btn-agregar"
+        onclick="agregarSinArroz(this, 'Salmón', 7990)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2040,6 +2706,18 @@ textarea.campo-pedido {
             <p>Queso Crema • Palta • Pimentón • Cebollín</p>
             <p>Camarón Furay • Salmón</p>
             <span class="precio">$8.490</span>
+
+            <select class="envoltura">
+    <option value="">🥢 Elegir envoltura</option>
+    <option value="Palta">🥑 Envuelto en Palta</option>
+    <option value="Queso">🧀 Envuelto en Queso</option>
+    <option value="Salmón">🐟 Envuelto en Salmón +$1.500</option>
+</select>
+
+<button class="btn-agregar"
+        onclick="agregarSinArroz(this, 'Camarón Furay / Salmón', 8490)">
+    🛒 Agregar
+</button>
         </div>
 
 
@@ -2750,6 +3428,29 @@ function seleccionarTipoPedido(tipo, boton) {
         direccion.style.display = "none";
         direccion.value = "";
     }
+}
+
+function agregarSinArroz(boton, producto, precioBase) {
+
+    const envoltura = boton.previousElementSibling.value;
+
+    if (!envoltura) {
+        alert("Por favor, elige una envoltura.");
+        return;
+    }
+
+    let recargo = 0;
+
+    if (envoltura === "Salmón") {
+        recargo = 1500;
+    }
+
+    const precioFinal = precioBase + recargo;
+
+    agregarAlCarrito(
+        producto + " - Envuelto en " + envoltura,
+        precioFinal
+    );
 }
 </script>
 
