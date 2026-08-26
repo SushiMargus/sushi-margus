@@ -487,6 +487,28 @@ textarea.campo-pedido {
 
 .envoltura:focus {
     border-color: #ff7300;
+
+}
+.tabla .mensaje-cambios {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    color: #3d006e !important;
+    margin: 10px 0 !important;
+}
+.tabla .btn-agregar {
+    margin-top: 8px;
+}
+.categorias-tablas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.categorias-tablas .categoria-titulo {
+    width: 280px;
+    box-sizing: border-box;
 }
 
 </style>
@@ -611,92 +633,160 @@ textarea.campo-pedido {
     <button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
 
-    <!-- TABLAS VEGETARIANAS -->
+    <div class="categorias-tablas">
 
-<div class="categoria-titulo">
 
-    <img src="imagenes/tablasvegetarianas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+        <!-- TABLAS VEGETARIANAS -->
 
-    <h2>🌱 TABLAS VEGETARIANAS</h2>
+        <div class="categoria-titulo">
 
-    <p>Deliciosas tablas vegetarianas para compartir.</p>
+            <h2>🌱 TABLAS VEGETARIANAS</h2>
 
-    <button onclick="mostrarTablaVegetariana()">Ver tablas</button>
+
+            <button onclick="mostrarTablaVegetariana()">Ver tablas</button>
+
+        </div>
+
+
+        <!-- TABLAS FRÍAS -->
+
+        <div class="categoria-titulo">
+
+            <h2>❄️ TABLAS FRÍAS</h2>
+
+            <button onclick="mostrarTablaFria()">Ver tablas</button>
+
+        </div>
+
+
+        <!-- TABLAS CALIENTES -->
+
+        <div class="categoria-titulo">
+
+            <h2>🔥 TABLAS CALIENTES</h2>
+
+            <button onclick="mostrarTablaCaliente()">Ver tablas</button>
+
+        </div>
+
+
+        <!-- TABLAS MIXTAS -->
+
+        <div class="categoria-titulo">
+
+            <h2>🍱 TABLAS MIXTAS</h2>
+
+            <button onclick="mostrarTablaMixta()">Ver tablas</button>
+
+        </div>
+
+    </div>
 
 </div>
-
-
-    <!-- TABLAS FRÍAS -->
-
-    <div class="categoria-titulo">
-
-        <h2>❄️ TABLAS FRÍAS</h2>
-
-        <button onclick="mostrarTablaFria()">Ver tablas</button>
-
-    </div>
-
-
-    <!-- TABLAS CALIENTES -->
-
-    <div class="categoria-titulo">
-
-        <h2>🔥 TABLAS CALIENTES</h2>
-
-        <button onclick="mostrarTablaCaliente()">Ver tablas</button>
-
-    </div>
-
-
-    <!-- TABLAS MIXTAS -->
-
-    <div class="categoria-titulo">
-
-        <h2>🍱 TABLAS MIXTAS</h2>
-
-        <button onclick="mostrarTablaMixta()">Ver tablas</button>
-
-    </div>
-
-</div>
-
 
 <!-- TABLAS VEGETARIANAS -->
 
 <div id="tablaVegetariana" class="oculto">
+
     <button onclick="volverTablas()">⬅ Volver a Tablas</button>
 
-    <h2>🌱 TABLAS VEGETARIANAS</h2>
+    <h2>🌱 TABLAS VEGETARIAS</h2>
+
+
+    <!-- 30 PIEZAS -->
 
     <div class="tabla">
 
-        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+        <h3><strong>30 PIEZAS $13.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> PALTA / QUESO CREMA / PALMITO</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            PALTA / QUESO CREMA / PALMITO
+        
+                <br>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Vegetariana 30 piezas',
+                13990,
+                '10 envueltos en palta: Pimentón / Queso crema / Cebolla caramelo<br>10 envueltos en nori: Champiñón tempura / Queso crema / Cebollín<br>10 envueltos en panko: Palta / Queso crema / Palmito'
+            )">
+
+            🛒 Agregar
+
+        </button>
+        
+        </p>
+
+           <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+          </p>
+
 
     </div>
 
 
-  <div class="tabla">
+    <!-- 40 PIEZAS -->
 
-    <h3><strong>40 PIEZAS  $16.990</strong></h3>
+    <div class="tabla">
 
-    <p><strong>10 ENVUELTOS EN PALTA:</strong> PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO</p>
+        <h3><strong>40 PIEZAS $16.990</strong></h3>
 
-    <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> ACEITUNA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            PIMENTÓN / QUESO CREMA / CEBOLLA CARAMELO
+        </p>
 
-    <p><strong>10 ENVUELTOS EN NORI:</strong> CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            ACEITUNA / QUESO CREMA / PALTA
+        </p>
 
-    <p><strong>10 ENVUELTOS EN PANKO:</strong> PALTA / QUESO CREMA / PALMITO</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            CHAMPIÑÓN TEMPURA / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            PALTA / QUESO CREMA / PALMITO
+        
+            <br>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Vegetariana 40 piezas',
+                16990,
+                '10 envueltos en palta: Pimentón / Queso crema / Cebolla caramelo<br>10 envueltos en sésamo: Aceituna / Queso crema / Palta<br>10 envueltos en nori: Champiñón tempura / Queso crema / Cebollín<br>10 envueltos en panko: Palta / Queso crema / Palmito'
+            )">
+
+            🛒 Agregar
+
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        
+         </p>
+        </p>
+
+
+    </div>
 
 </div>
 
-
-</div>
 <!-- TABLAS FRÍAS -->
 
 <div id="tablaFria" class="oculto">
@@ -710,11 +800,31 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>20 PIEZAS  $9.990</strong></h3>
+        <h3><strong>20 PIEZAS $9.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Fría 20 piezas',
+                9990,
+                '10 envueltos en palta: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -723,13 +833,36 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+        <h3><strong>30 PIEZAS $13.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Fría 30 piezas',
+                13990,
+                '10 envueltos en palta: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -738,19 +871,47 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>40 PIEZAS  $16.990</strong></h3>
+        <h3><strong>40 PIEZAS $16.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            SALMÓN FURAY / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            POLLO TERIYAKI / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Fría 40 piezas',
+                16990,
+                '10 envueltos en palta: Salmón furay / Queso crema / Cebollín<br>10 envueltos en queso: Pollo teriyaki / Palta<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
 </div>
+
+
 <!-- TABLAS CALIENTES -->
 
 <div id="tablaCaliente" class="oculto">
@@ -764,11 +925,31 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>20 PIEZAS  $10.990</strong></h3>
+        <h3><strong>20 PIEZAS $10.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Caliente 20 piezas',
+                10990,
+                '10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -777,13 +958,36 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>30 PIEZAS  $14.990</strong></h3>
+        <h3><strong>30 PIEZAS $14.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            SALMÓN / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Caliente 30 piezas',
+                14990,
+                '10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón<br>10 envueltos en panko: Salmón / Queso crema / Palta<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -792,15 +996,41 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>40 PIEZAS  $17.990</strong></h3>
+        <h3><strong>40 PIEZAS $17.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            SALMÓN / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+        <p>
+            <strong>10 GYOZAS MIXTAS:</strong>
+            EMPANADITAS JAPONESAS
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Caliente 40 piezas',
+                17990,
+                '10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón<br>10 envueltos en panko: Salmón / Queso crema / Palta<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín<br>10 gyozas mixtas: Empanaditas japonesas'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -809,19 +1039,47 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>40 PIEZAS ESPECIAL  $20.990</strong></h3>
+        <h3><strong>40 PIEZAS ESPECIAL $20.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> CAMARÓN / QUESO CREMA / PALMITO</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            CAMARÓN / QUESO CREMA / PALMITO
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            SALMÓN / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Caliente 40 piezas Especial',
+                20990,
+                '10 envueltos en panko: Camarón / Queso crema / Palmito<br>10 envueltos en panko: Salmón / Queso crema / Palta<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Palta<br>10 envueltos en tempura: Pollo teriyaki / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
 </div>
+
+
 <!-- TABLAS MIXTAS -->
 
 <div id="tablaMixta" class="oculto">
@@ -830,15 +1088,36 @@ textarea.campo-pedido {
 
     <h2>🍱 TABLAS MIXTAS</h2>
 
+
     <!-- 20 PIEZAS -->
 
     <div class="tabla">
 
-        <h3><strong>20 PIEZAS  $9.990</strong></h3>
+        <h3><strong>20 PIEZAS $9.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 20 piezas',
+                9990,
+                '10 envueltos en palta: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -847,13 +1126,36 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>30 PIEZAS  $13.990</strong></h3>
+        <h3><strong>30 PIEZAS $13.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 30 piezas',
+                13990,
+                '10 envueltos en palta: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -862,15 +1164,41 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>40 PIEZAS  $16.990</strong></h3>
+        <h3><strong>40 PIEZAS $16.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            POLLO TERIYAKI / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 40 piezas',
+                16990,
+                '10 envueltos en queso: Pollo teriyaki / Palta<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -879,17 +1207,46 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>50 PIEZAS  $19.990</strong></h3>
+        <h3><strong>50 PIEZAS $19.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            SALMÓN FURAY / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+        <p>
+            <strong>10 GYOZAS MIXTAS:</strong>
+            EMPANADITAS JAPONESAS
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 50 piezas',
+                19990,
+                '10 envueltos en palta: Salmón furay / Queso crema / Cebollín<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín<br>10 gyozas mixtas: Empanaditas japonesas'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -898,17 +1255,46 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>50 PIEZAS ESPECIAL  $23.990</strong></h3>
+        <h3><strong>50 PIEZAS ESPECIAL $23.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> CAMARÓN TEMPURA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            CAMARÓN TEMPURA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / CEBOLLA CARAMELO / ALMENDRAS</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            POLLO TERIYAKI / CEBOLLA CARAMELO / ALMENDRAS
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SALMÓN:</strong> PALMITO / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SALMÓN:</strong>
+            PALMITO / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            SALMÓN / QUESO CREMA / PALTA
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 50 piezas Especial',
+                23990,
+                '10 envueltos en palta: Camarón tempura / Queso crema / Cebollín<br>10 envueltos en queso: Pollo teriyaki / Cebolla caramelo / Almendras<br>10 envueltos en salmón: Palmito / Queso crema / Palta<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Palta<br>10 envueltos en panko: Salmón / Queso crema / Palta'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -917,21 +1303,56 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>70 PIEZAS  $25.990</strong></h3>
+        <h3><strong>70 PIEZAS $25.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            SALMÓN FURAY / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            POLLO TERIYAKI / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
 
-        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+        <p>
+            <strong>10 GYOZAS MIXTAS:</strong>
+            EMPANADITAS JAPONESAS
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 70 piezas',
+                25990,
+                '10 envueltos en palta: Salmón furay / Queso crema / Cebollín<br>10 envueltos en queso: Pollo teriyaki / Palta<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón<br>10 gyozas mixtas: Empanaditas japonesas'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
@@ -940,34 +1361,77 @@ textarea.campo-pedido {
 
     <div class="tabla">
 
-        <h3><strong>100 PIEZAS  $34.990</strong></h3>
+        <h3><strong>100 PIEZAS $34.990</strong></h3>
 
-        <p><strong>10 ENVUELTOS EN PALTA:</strong> SALMÓN FURAY / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PALTA:</strong>
+            SALMÓN FURAY / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> POLLO TERIYAKI / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            POLLO TERIYAKI / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN QUESO:</strong> CHAMPIÑÓN TEMPURA / CEBOLLA CARAMELO</p>
+        <p>
+            <strong>10 ENVUELTOS EN QUESO:</strong>
+            CHAMPIÑÓN TEMPURA / CEBOLLA CARAMELO
+        </p>
 
-        <p><strong>10 ENVUELTOS EN NORI:</strong> POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN NORI:</strong>
+            POLLO TERIYAKI / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> KANIKAMA / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            KANIKAMA / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 ENVUELTOS EN SÉSAMO:</strong> CAMARÓN / QUESO CREMA / PALMITO</p>
+        <p>
+            <strong>10 ENVUELTOS EN SÉSAMO:</strong>
+            CAMARÓN / QUESO CREMA / PALMITO
+        </p>
 
-        <p><strong>10 ENVUELTOS EN TEMPURA:</strong> KANIKAMA / QUESO CREMA / CEBOLLÍN</p>
+        <p>
+            <strong>10 ENVUELTOS EN TEMPURA:</strong>
+            KANIKAMA / QUESO CREMA / CEBOLLÍN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> POLLO TERIYAKI / QUESO CREMA / PIMENTÓN</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            POLLO TERIYAKI / QUESO CREMA / PIMENTÓN
+        </p>
 
-        <p><strong>10 ENVUELTOS EN PANKO:</strong> SALMÓN / QUESO CREMA / PALTA</p>
+        <p>
+            <strong>10 ENVUELTOS EN PANKO:</strong>
+            SALMÓN / QUESO CREMA / PALTA
+        </p>
 
-        <p><strong>10 GYOZAS MIXTAS:</strong> EMPANADITAS JAPONESAS</p>
+        <p>
+            <strong>10 GYOZAS MIXTAS:</strong>
+            EMPANADITAS JAPONESAS
+        </p>
+
+        <button class="btn-agregar"
+            onclick="agregarAlCarrito(
+                'Tabla Mixta 100 piezas',
+                34990,
+                '10 envueltos en palta: Salmón furay / Queso crema / Cebollín<br>10 envueltos en queso: Pollo teriyaki / Palta<br>10 envueltos en queso: Champiñón tempura / Cebolla caramelo<br>10 envueltos en nori: Pollo teriyaki / Queso crema / Cebollín<br>10 envueltos en sésamo: KaniKama / Queso crema / Palta<br>10 envueltos en sésamo: Camarón / Queso crema / Palmito<br>10 envueltos en tempura: KaniKama / Queso crema / Cebollín<br>10 envueltos en panko: Pollo teriyaki / Queso crema / Pimentón<br>10 envueltos en panko: Salmón / Queso crema / Palta<br>10 gyozas mixtas: Empanaditas japonesas'
+            )">
+            🛒 Agregar
+        </button>
+
+        <p class="mensaje-cambios">
+        <strong>LOS CAMBIOS EN TABLAS TIENEN RECARGO,</strong>
+         <strong>SOLICÍTALO DIRECTAMENTE POR WHATSAAP.</strong>
+        </p>
 
     </div>
 
 </div>
-<!-- ============================= -->
+
 <!-- APERITIVOS -->
-<!-- ============================= -->
 
 <div id="aperitivos" class="oculto">
 
