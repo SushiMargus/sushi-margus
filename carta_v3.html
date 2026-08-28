@@ -1295,6 +1295,21 @@ textarea.campo-pedido {
 
 </div>
 
+<!-- CEVICHE -->
+
+<div class="categoria-titulo">
+
+    <img src="imagenes/ceviche.jpg"
+    style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+    <h2>🐟 Ceviche</h2>
+
+    <p>Frescos ceviches preparados al momento.</p>
+
+    <button onclick="mostrarCeviche()">Ver detalles</button>
+
+</div>
+
     <!-- GOHAN -->
 <div class="categoria-titulo">
 
@@ -1445,6 +1460,50 @@ textarea.campo-pedido {
                 Ver tablas
             </button>
 
+        </div>
+
+    </div>
+
+</div>
+<!-- CEVICHE -->
+
+<div id="ceviche" class="oculto">
+
+    <h2>🥑 Ceviche</h2>
+
+    <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Salmón</h3>
+            <span class="precio">$8.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Salmón', 8990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Atún</h3>
+            <span class="precio">$9.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Atún', 9990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Mixto</h3>
+            <p>Salmón • Atún • Camarón</p>
+            <span class="precio">$11.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Ceviche Mixto', 11990)">
+                🛒 Agregar
+            </button>
         </div>
 
     </div>
@@ -2224,22 +2283,6 @@ textarea.campo-pedido {
         </div>
 
 
-        <!-- CEVICHE -->
-        <div class="categoria-titulo">
-
-            <img src="imagenes/ceviche.jpg">
-
-            <h2>🥑 Ceviche</h2>
-
-            <p>Salmón, Atún y Mixto</p>
-
-            <button class="btn-detalles" onclick="mostrarCeviche()">
-                Ver detalles
-            </button>
-
-        </div>
-
-
         <!-- TATAKI -->
         <div class="categoria-titulo">
 
@@ -2783,50 +2826,7 @@ textarea.campo-pedido {
     </div>
 
 </div>
-<!-- CEVICHE -->
 
-<div id="ceviche" class="oculto">
-
-    <h2>🥑 Ceviche</h2>
-
-    <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
-
-    <div class="contenedor-rolls">
-
-        <div class="roll">
-            <h3>Salmón</h3>
-            <span class="precio">$8.990</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Ceviche Salmón', 8990)">
-                🛒 Agregar
-            </button>
-        </div>
-
-        <div class="roll">
-            <h3>Atún</h3>
-            <span class="precio">$9.990</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Ceviche Atún', 9990)">
-                🛒 Agregar
-            </button>
-        </div>
-
-        <div class="roll">
-            <h3>Mixto</h3>
-            <p>Salmón • Atún • Camarón</p>
-            <span class="precio">$11.990</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Ceviche Mixto', 11990)">
-                🛒 Agregar
-            </button>
-        </div>
-
-    </div>
-
-</div>
 
 
 <!-- TATAKI DE ATÚN -->
@@ -4135,12 +4135,11 @@ function mostrarSashimi(){
 
 function mostrarCeviche(){
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document.getElementById("inicio-carta").classList.add("oculto");
     document.getElementById("ceviche").classList.remove("oculto");
 
     irArriba();
 }
-
 
 function mostrarTataki(){
 
