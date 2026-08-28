@@ -1,15 +1,17 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#1b1b1b;
+    background:#0d0d0d;
     color:white;
     text-align:center;
 }
 
 /* ENCABEZADO */
 header{
-    background:linear-gradient(90deg,#ff0000,#ff9800);
-    padding:25px;
+    background:linear-gradient(135deg,#090909,#1a1a1a);
+    padding:30px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.6);
+    border-bottom:3px solid #f5c542;
 }
 
 h1{
@@ -24,8 +26,8 @@ h1{
 
 
 /* BOTONES */
-button{
-    background:#ff9800;
+    button{
+    background:#d32f2f;
     color:white;
     border:none;
     padding:10px 20px;
@@ -35,7 +37,8 @@ button{
 }
 
 button:hover{
-    background:#e68900;
+    background:#f5c542;
+    color:#111;
 }
 
 
@@ -261,35 +264,52 @@ button:hover{
 
 
 .categoria-titulo {
-    background-color: #262626;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    overflow: hidden;
+    background:linear-gradient(145deg,#1a1a1a,#101010);
+    color:white;
+    border:1px solid #333;
+    border-radius:18px;
+    padding:15px;
+    text-align:center;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.6);
+    transition:.3s;
 }
 
 
 .categoria-titulo img{
-    width:300px;
-    height:300px;
+    width:100%;
+    height:220px;
     object-fit:cover;
-    border-radius:15px;
+    border-radius:14px;
     display:block;
-    margin:0 auto 15px;
+    margin:0;
+}
+@media (max-width:600px){
+
+    #inicio-carta .categoria-titulo img{
+        width:100%;
+        height:auto;
+        aspect-ratio:1 / 1;
+        object-fit:cover;
+        transform:none !important;
+        border-radius:12px;
+    }
+
 }
 
 
 .categoria-titulo:hover{
-    background:#fff8e1;
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.5);
+    background:#202020;
+    transform:translateY(-5px);
+    border-color:#d32f2f;
+    box-shadow:0 12px 30px rgba(0,0,0,.7);
 }
-
 
 .categoria-titulo h2{
-    color:#d35400;
+    color:#f5c542;
+    font-size:20px;
+    margin:12px 0 5px;
 }
-
 
 /* CONTENEDOR DE CATEGORIAS */
 .contenedor-categorias{
@@ -446,4 +466,22 @@ header h1{
 .descripcion-portada{
     font-size:12px !important;
     margin-top:0 !important;
+}
+/* PRUEBA DISEÑO CARTA SUSHI MARGUS */
+
+#inicio-carta .categoria-titulo {
+    background:#111111 !important;
+    color:white !important;
+    border:2px solid #d32f2f !important;
+    border-radius:18px !important;
+    box-shadow:0 8px 25px rgba(0,0,0,.7) !important;
+}
+
+#inicio-carta .categoria-titulo h2 {
+    color:#f5c542 !important;
+}
+
+#inicio-carta .categoria-titulo:hover {
+    background:#1b1b1b !important;
+    border-color:#f5c542 !important;
 }
