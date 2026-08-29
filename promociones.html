@@ -10,113 +10,401 @@
 
 <style>
 
+/* =========================
+   ESTILO GENERAL
+========================= */
+
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#1b1b1b;
+    background:#0d0d0d;
     color:white;
     text-align:center;
 }
 
-nav{
-    background:#d35400;
-    padding:15px;
-}
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:yellow;
-}
+/* =========================
+   ENCABEZADO
+========================= */
 
 header{
+
     background:
-    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.75)
+    ),
     url("fondo-sushi.jpg");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
-    padding:50px 20px;
+    padding:45px 20px 55px;
+
+    border-bottom:3px solid #f5c542;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.7);
 }
 
 h1{
-    font-size:45px;
-    margin:10px;
+
+    font-size:42px;
+
+    margin:10px 0;
+
+    color:#f5c542;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9);
 }
 
 header p{
-    font-size:22px;
+
+    font-size:20px;
+
+    color:#eee;
+
+    margin:10px auto;
+
+    max-width:600px;
+
 }
+
+
+/* =========================
+   CONTENEDOR PROMOCIONES
+========================= */
 
 .promociones{
+
     display:flex;
+
     justify-content:center;
+
+    align-items:stretch;
+
     gap:25px;
+
     flex-wrap:wrap;
-    padding:40px 20px;
+
+    padding:45px 20px;
+
 }
+
+
+/* =========================
+   TARJETAS
+========================= */
 
 .promocion{
-    background:white;
-    color:black;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #0f0f0f
+        );
+
+    color:white;
+
     width:300px;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+
+    min-height:250px;
+
+    padding:25px 20px;
+
+    border-radius:18px;
+
+    border:1px solid #d32f2f;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.6),
+        inset 0 0 15px rgba(245,197,66,.04);
+
+    box-sizing:border-box;
+
+    transition:.3s;
+
 }
+
+
+/* BORDE DORADO SUPERIOR */
+
+.promocion::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-1px;
+    left:15%;
+    right:15%;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        #d32f2f,
+        #f5c542,
+        #d32f2f
+    );
+
+    border-radius:10px;
+
+}
+
+
+/* EFECTO AL PASAR / TOCAR */
+
+.promocion:hover{
+
+    transform:translateY(-6px) scale(1.02);
+
+    border-color:#f5c542;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.8),
+        0 0 15px rgba(245,197,66,.15);
+
+}
+
+
+/* =========================
+   TITULOS PROMOCIONES
+========================= */
 
 .promocion h2{
-    color:#d35400;
+
+    color:#f5c542;
+
+    font-size:23px;
+
+    margin-top:5px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.8);
+
 }
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.promocion p{
+
+    color:#eee;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    margin:10px 0;
+
+}
+
+.promocion strong{
+
+    color:white;
+
+}
+
+
+/* =========================
+   PRECIO
+========================= */
 
 .precio{
+
+    display:inline-block;
+
     font-size:28px;
+
     font-weight:bold;
-    color:#d32f2f;
+
+    color:#f5c542;
+
+    margin:10px 0;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.7);
+
 }
+
+
+/* =========================
+   BOTÓN VOLVER
+========================= */
 
 .boton{
+
     display:inline-block;
-    background:#ff9800;
+
+    background:#d32f2f;
+
     color:white;
+
     text-decoration:none;
-    padding:15px 30px;
-    border-radius:12px;
-    font-size:18px;
-    margin:20px;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    border:1px solid #f5c542;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.5);
+
+    transition:.3s;
+
+    margin:10px;
+
 }
 
+
+/* EFECTO DEGRADADO */
+
 .boton:hover{
-    background:#e68900;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d90000,
+            #ffcc00
+        );
+
+    color:#111;
+
+    transform:scale(1.05);
+
 }
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
 footer{
-    background:#111;
+
+    background:#050505;
+
     padding:40px 20px;
-    margin-top:50px;
-    border-top:3px solid #d35400;
+
+    margin-top:25px;
+
+    border-top:2px solid #d32f2f;
+
+    box-shadow:
+        0 -5px 20px rgba(0,0,0,.6);
+
 }
 
 footer h2{
-    color:#ff9800;
-    font-size:30px;
+
+    color:#f5c542;
+
+    font-size:28px;
+
+    margin-top:0;
+
 }
 
 footer p{
-    font-size:17px;
+
+    font-size:16px;
+
+    color:#eee;
+
+    line-height:1.5;
+
 }
 
 footer .copyright{
+
     margin-top:30px;
+
     font-size:14px;
-    color:#aaa;
+
+    color:#777;
+
 }
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width:600px){
+
+    header{
+
+        padding:35px 15px 45px;
+
+    }
+
+    h1{
+
+        font-size:32px;
+
+    }
+
+    header p{
+
+        font-size:16px;
+
+        line-height:1.5;
+
+    }
+
+    .promociones{
+
+        padding:30px 15px;
+
+        gap:20px;
+
+    }
+
+    .promocion{
+
+        width:100%;
+
+        max-width:340px;
+
+        padding:22px 18px;
+
+    }
+
+    .promocion h2{
+
+        font-size:21px;
+
+    }
+
+    .precio{
+
+        font-size:26px;
+
+    }
+
+    .boton{
+
+        font-size:16px;
+
+        padding:12px 22px;
+
+    }
+
+}
+
 </style>
 
 </head>
@@ -124,164 +412,154 @@ footer .copyright{
 
 <body>
 
-<nav>
 
-<a href="index.html">Inicio</a>
-
-<a href="carta_v3.html">Carta</a>
-
-<a href="promociones.html">Promociones</a>
-
-<a href="#">Contacto</a>
-
-</nav>
-
+<!-- =========================
+     PORTADA PROMOCIONES
+========================= -->
 
 <header>
 
-<h1>🔥 Promociones Sushi Margus 🔥</h1>
+    <h1>PROMOCIONES</h1>
 
-<p>Disfruta nuestros sabores favoritos a precios especiales</p>
+    <p>
+        Disfruta nuestros sabores favoritos
+        a precios especiales
+    </p>
 
 </header>
 
 
+<!-- =========================
+     PROMOCIONES
+========================= -->
+
 <section class="promociones">
 
 
-<div class="promocion">
+    <!-- LUNES -->
 
-<h2>🔥 PROMO LUNES</h2>
+    <div class="promocion">
 
-<p><strong>20% DE DESCUENTO</strong></p>
+        <h2> PROMO LUNES</h2>
 
-<p>En Sushi de Carta</p>
+        <p><strong>20% DE DESCUENTO</strong></p>
 
-<p>🔥 Válido para Hot Rolls</p>
+        <p>En Sushi de Carta</p>
 
-<p class="precio">20% OFF</p>
+        <p> Válido para Hot Rolls</p>
 
-<p>💵 Pago en efectivo o transferencia</p>
+        <p class="precio">20% OFF</p>
 
-</div>
+        <p> Pago en efectivo o transferencia</p>
 
-
-<div class="promocion">
-
-<h2>🌯 PROMO MARTES</h2>
-
-<p><strong>3 HANDROLLS</strong></p>
-
-<p>Pollo + Queso Crema + Palta</p>
-
-<p class="precio">$9.000</p>
-
-<p>💵 Pago en efectivo o transferencia</p>
-
-</div>
+    </div>
 
 
-<div class="promocion">
+    <!-- MARTES -->
 
-<h2>🍣 PROMO MIÉRCOLES</h2>
+    <div class="promocion">
 
-<p><strong>15% DE DESCUENTO</strong></p>
+        <h2> PROMO MARTES</h2>
 
-<p>En Sushi de Carta</p>
+        <p><strong>3 HANDROLLS</strong></p>
 
-<p class="precio">15% OFF</p>
+        <p>
+            Pollo + Queso Crema + Palta
+        </p>
 
-<p>💵 Pago en efectivo o transferencia</p>
+        <p class="precio">$9.000</p>
 
-</div>
+        <p> Pago en efectivo o transferencia</p>
 
-
-<div class="promocion">
-
-<h2>🍔 PROMO JUEVES</h2>
-
-<p><strong>10% DE DESCUENTO</strong></p>
-
-<p>En Sushi Burgers</p>
-
-<p class="precio">10% OFF</p>
-
-<p>💵 Pago en efectivo o transferencia</p>
-
-</div>
+    </div>
 
 
-<div class="promocion">
+    <!-- MIÉRCOLES -->
 
-<h2>🍱 PROMO VIERNES</h2>
+    <div class="promocion">
 
-<p><strong>10% DE DESCUENTO</strong></p>
+        <h2> PROMO MIÉRCOLES</h2>
 
-<p>En todas las Tablas</p>
+        <p><strong>15% DE DESCUENTO</strong></p>
 
-<p class="precio">10% OFF</p>
+        <p>En Sushi de Carta</p>
 
-<p>💵 Pago en efectivo o transferencia</p>
+        <p class="precio">15% OFF</p>
 
-</div>
+        <p> Pago en efectivo o transferencia</p>
+
+    </div>
 
 
-<div class="promocion">
+    <!-- JUEVES -->
 
-<h2>🍱 PROMO SÁBADO</h2>
+    <div class="promocion">
 
-<p><strong>10% DE DESCUENTO</strong></p>
+        <h2> PROMO JUEVES</h2>
 
-<p>En todas las Tablas</p>
+        <p><strong>10% DE DESCUENTO</strong></p>
 
-<p class="precio">10% OFF</p>
+        <p>En Sushi Burgers</p>
 
-<p>💵 Pago en efectivo o transferencia</p>
+        <p class="precio">10% OFF</p>
 
-</div>
+        <p> Pago en efectivo o transferencia</p>
+
+    </div>
+
+
+    <!-- VIERNES -->
+
+    <div class="promocion">
+
+        <h2> PROMO VIERNES</h2>
+
+        <p><strong>10% DE DESCUENTO</strong></p>
+
+        <p>En todas las Tablas</p>
+
+        <p class="precio">10% OFF</p>
+
+        <p> Pago en efectivo o transferencia</p>
+
+    </div>
+
+
+    <!-- SÁBADO -->
+
+    <div class="promocion">
+
+        <h2> PROMO SÁBADO</h2>
+
+        <p><strong>10% DE DESCUENTO</strong></p>
+
+        <p>En todas las Tablas</p>
+
+        <p class="precio">10% OFF</p>
+
+        <p> Pago en efectivo o transferencia</p>
+
+    </div>
 
 
 </section>
 
 
-</section>
+<!-- =========================
+     VOLVER
+========================= -->
 
-<a href="index.html" class="boton">
-⬅ Volver al inicio
+<a
+    href="index.html"
+    class="boton"
+>
+    ⬅ Volver al inicio
 </a>
 
-
-<footer>
-
-    <h2>🍣 Sushi Margus</h2>
-
-    <p>Rolls preparados al momento, con ingredientes frescos y mucho sabor.</p>
-
-    <p>📍 Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar</p>
-
-    <p>📱 +56 9 7371 3769</p>
-
-    <p>🕐 Lunes a Jueves: 15:00 - 22:30</p>
-
-    <p>🕐 Viernes y Sábado: 13:00 - 22:30</p>
-
-    <a href="https://wa.me/56973713769"
-       class="boton"
-       target="_blank">
-       📲 WhatsApp
-    </a>
-
-    <a href="https://www.instagram.com/sushi_margus/"
-       class="boton"
-       target="_blank">
-       📸 Instagram
-    </a>
-
-    <p class="copyright">
-        © 2026 Sushi Margus - Todos los derechos reservados
-    </p>
 
 </footer>
 
 
 </body>
+
+</html>

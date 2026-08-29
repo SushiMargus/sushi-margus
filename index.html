@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sushi Margus</title>
-
-<style>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sushi Margus</title><style>
 
 /* =========================
    ESTILO GENERAL
@@ -33,8 +24,6 @@ nav{
     text-align:center;
     box-shadow:0 5px 15px rgba(0,0,0,.7);
     border-bottom:2px solid #d32f2f;
-    position:relative;
-    z-index:10;
 }
 
 nav a{
@@ -48,6 +37,46 @@ nav a{
 
 nav a:hover{
     color:#f5c542;
+}
+
+
+/* =========================
+   PROMOCIONES
+========================= */
+
+.promociones-barra{
+    width:100%;
+    height:40px;
+    background:#d90000;
+    border-bottom:2px solid #f5c542;
+    box-sizing:border-box;
+}
+
+.promociones-barra a{
+    display:flex;
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.promociones-barra a:hover{
+    background:linear-gradient(
+        135deg,
+        #d90000,
+        #ffcc00
+    );
+
+    color:#111;
 }
 
 
@@ -75,7 +104,6 @@ header{
     box-sizing:border-box;
 
     border-bottom:3px solid #f5c542;
-
 }
 
 
@@ -107,7 +135,6 @@ header h1 img{
     color:white;
 
     text-shadow:0 2px 5px rgba(0,0,0,.8);
-
 }
 
 
@@ -140,17 +167,19 @@ header h1 img{
     box-shadow:0 5px 15px rgba(0,0,0,.5);
 
     transition:.3s;
-
 }
 
 .boton:hover{
 
-    background:#f5c542;
+    background:linear-gradient(
+        135deg,
+        #ffcc00,
+        #d90000
+    );
 
     color:#111;
 
     transform:scale(1.05);
-
 }
 
 
@@ -169,7 +198,6 @@ footer{
     border-top:2px solid #d32f2f;
 
     box-shadow:0 -5px 20px rgba(0,0,0,.5);
-
 }
 
 footer h2{
@@ -179,7 +207,6 @@ footer h2{
     font-size:28px;
 
     margin-top:0;
-
 }
 
 footer p{
@@ -187,7 +214,6 @@ footer p{
     font-size:16px;
 
     color:#eee;
-
 }
 
 footer .copyright{
@@ -197,7 +223,6 @@ footer .copyright{
     font-size:14px;
 
     color:#777;
-
 }
 
 
@@ -205,18 +230,23 @@ footer .copyright{
    CELULAR
 ========================= */
 
-@media (max-width:600px){
+@media(max-width:600px){
 
     nav{
         padding:12px 5px;
     }
 
     nav a{
-
         margin:8px;
-
         font-size:15px;
+    }
 
+    .promociones-barra{
+        height:38px;
+    }
+
+    .promociones-barra a{
+        font-size:14px;
     }
 
     header{
@@ -224,14 +254,13 @@ footer .copyright{
         padding:40px 15px 60px;
 
         min-height:320px;
-
     }
 
     header h1 img{
 
         width:300px;
-        max-width:90%;
 
+        max-width:90%;
     }
 
     .descripcion-portada{
@@ -241,7 +270,6 @@ footer .copyright{
         line-height:1.5;
 
         margin-top:15px;
-
     }
 
     .boton{
@@ -255,157 +283,121 @@ footer .copyright{
         margin:10px auto;
 
         box-sizing:border-box;
-
     }
 
     footer h2{
-
         font-size:24px;
-
     }
 
     footer p{
-
         font-size:15px;
-
         line-height:1.5;
-
     }
 
 }
 
 </style>
-
 </head>
-
-
 <body>
 
 
-<!-- =========================
-     MENÚ
-========================= -->
-
-<nav>
-
-    <a href="index.html">Inicio</a>
-
-    <a href="carta_v3.html">Carta</a>
-
-    <a href="promociones.html">Promociones</a>
-
 </nav>
+<!-- ========================= PROMOCIONES========================= -->
+ <div class="promociones-barra">
+    <a href="promociones.html">
+    PROMOCIONES 
+</a>
 
-
-<!-- =========================
-     PORTADA
-========================= -->
-
-<header>
-
+</div>
+<!-- ========================= PORTADA========================= -->
+ <header>
     <h1>
 
-        <img
-            src="LOGO SUSHI MARGUS VECTORES.png"
-            alt="Sushi Margus"
-            width="350"
-        >
-
-    </h1>
-
-
-    <p class="descripcion-portada">
-
-        Los mejores rolls,
-        preparados al momento con ingredientes frescos y mucho sabor
-
-    </p>
-
-
-    <a
-        href="carta_v3.html"
-        class="boton"
+    <img
+        src="LOGO SUSHI MARGUS VECTORES.png"
+        alt="Sushi Margus"
+        width="350"
     >
 
-        🍣 Ver Carta
+</h1>
 
-    </a>
 
+<p class="descripcion-portada">
+
+    Los mejores rolls,
+    preparados al momento con ingredientes frescos y mucho sabor
+
+</p>
+
+
+<a
+    href="carta_v3.html"
+    class="boton"
+>
+
+     Ver Carta
+
+</a>
 
 </header>
+<!-- ========================= PIE DE PÁGINA========================= -->
+ <footer>
 
 
-<!-- =========================
-     PIE DE PÁGINA
-========================= -->
 
-<footer>
-
-    <h2>🍣 Sushi Margus</h2>
+<p>
+     Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar
+</p>
 
 
-    <p>
-        📍 Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar
-    </p>
+<p>
+     +56 9 7371 3769
+</p>
 
 
-    <p>
-        📱 +56 9 7371 3769
-    </p>
+<p>
+     Lunes a Jueves: 15:00 - 22:30
+</p>
 
 
-    <p>
-        🕐 Lunes a Jueves: 15:00 - 22:30
-    </p>
+<p>
+     Viernes y Sábado: 13:00 - 22:30
+</p>
 
 
-    <p>
-        🕐 Viernes y Sábado: 13:00 - 22:30
-    </p>
+<a
+    href="https://wa.me/56973713769"
+    class="boton"
+    target="_blank"
+>
+
+     WhatsApp
+
+</a>
 
 
-    <a
-        href="https://wa.me/56973713769"
-        class="boton"
-        target="_blank"
-    >
+<a
+    href="https://www.instagram.com/sushi_margus/"
+    class="boton"
+    target="_blank"
+>
 
-        📲 WhatsApp
+     Instagram
 
-    </a>
-
-
-    <a
-        href="https://www.instagram.com/sushi_margus/"
-        class="boton"
-        target="_blank"
-    >
-
-        📸 Instagram
-
-    </a>
+</a>
+<a
+    href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
+    class="boton"
+    target="_blank"
+>
+     Google Maps
+</a>
 
 
-    <a
-        href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
-        class="boton"
-        target="_blank"
-    >
+<p class="copyright">
 
-        📍 Google Maps
+    © 2026 Sushi Margus - Todos los derechos reservados
 
-    </a>
+</p>
 
-
-    <p class="copyright">
-
-        © 2026 Sushi Margus - Todos los derechos reservados
-
-    </p>
-
-</footer>
-
-
-</body>
-
-</html>
+</footer></body></html>
