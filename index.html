@@ -15,73 +15,7 @@ body{
 
 
 /* =========================
-   NAVEGACIÓN
-========================= */
-
-nav{
-    background:#080808;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.7);
-    border-bottom:2px solid #d32f2f;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#f5c542;
-}
-
-
-/* =========================
-   PROMOCIONES
-========================= */
-
-.promociones-barra{
-    width:100%;
-    height:40px;
-    background:#d90000;
-    border-bottom:2px solid #f5c542;
-    box-sizing:border-box;
-}
-
-.promociones-barra a{
-    display:flex;
-    width:100%;
-    height:100%;
-    align-items:center;
-    justify-content:center;
-
-    color:white;
-    text-decoration:none;
-
-    font-size:16px;
-    font-weight:bold;
-    letter-spacing:1px;
-
-    transition:.3s;
-}
-
-.promociones-barra a:hover{
-    background:linear-gradient(
-        135deg,
-        #d90000,
-        #ffcc00
-    );
-
-    color:#111;
-}
-
-
-/* =========================
-   ENCABEZADO
+   PORTADA
 ========================= */
 
 header{
@@ -169,6 +103,11 @@ header h1 img{
     transition:.3s;
 }
 
+
+/* =========================
+   EFECTO DEGRADADO
+========================= */
+
 .boton:hover{
 
     background:linear-gradient(
@@ -184,6 +123,24 @@ header h1 img{
 
 
 /* =========================
+   BOTÓN VER CARTA
+========================= */
+
+.boton-carta{
+
+    display:block;
+
+    width:80%;
+
+    max-width:300px;
+
+    margin:10px auto;
+
+    box-sizing:border-box;
+}
+
+
+/* =========================
    PIE DE PÁGINA
 ========================= */
 
@@ -191,7 +148,7 @@ footer{
 
     background:#050505;
 
-    padding:40px 20px;
+    padding:30px 20px 40px;
 
     margin-top:0;
 
@@ -200,21 +157,68 @@ footer{
     box-shadow:0 -5px 20px rgba(0,0,0,.5);
 }
 
+
+/* =========================
+   BOTONES PRIMERO
+========================= */
+
+.botones-portada{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:0 auto 30px;
+
+    max-width:900px;
+}
+
+
+.botones-portada .boton{
+
+    display:inline-block;
+
+    width:auto;
+
+    margin:0;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
 footer h2{
 
     color:#f5c542;
 
     font-size:28px;
 
-    margin-top:0;
+    margin-top:10px;
+
 }
+
 
 footer p{
 
     font-size:16px;
 
     color:#eee;
+
+    line-height:1.5;
+
 }
+
+
+/* =========================
+   COPYRIGHT
+========================= */
 
 footer .copyright{
 
@@ -223,6 +227,7 @@ footer .copyright{
     font-size:14px;
 
     color:#777;
+
 }
 
 
@@ -232,36 +237,23 @@ footer .copyright{
 
 @media(max-width:600px){
 
-    nav{
-        padding:12px 5px;
-    }
-
-    nav a{
-        margin:8px;
-        font-size:15px;
-    }
-
-    .promociones-barra{
-        height:38px;
-    }
-
-    .promociones-barra a{
-        font-size:14px;
-    }
-
     header{
 
         padding:40px 15px 60px;
 
         min-height:320px;
+
     }
+
 
     header h1 img{
 
         width:300px;
 
         max-width:90%;
+
     }
+
 
     .descripcion-portada{
 
@@ -270,48 +262,90 @@ footer .copyright{
         line-height:1.5;
 
         margin-top:15px;
+
+        margin-bottom:20px;
+
     }
 
-    .boton{
 
-        display:block;
+    /* VER CARTA */
+
+    .boton-carta{
 
         width:80%;
 
         max-width:300px;
 
+        padding:13px 20px;
+
         margin:10px auto;
 
-        box-sizing:border-box;
     }
+
+
+    /* CUATRO BOTONES */
+
+    .botones-portada{
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        flex-wrap:wrap;
+
+        gap:8px;
+
+        padding:0 5px;
+
+        margin-bottom:25px;
+
+    }
+
+
+    .botones-portada .boton{
+
+        display:inline-block;
+
+        width:auto;
+
+        padding:11px 13px;
+
+        font-size:14px;
+
+        margin:0;
+
+    }
+
+
+    footer{
+
+        padding:25px 15px 35px;
+
+    }
+
 
     footer h2{
+
         font-size:24px;
+
     }
 
+
     footer p{
+
         font-size:15px;
+
         line-height:1.5;
+
     }
 
 }
 
-</style>
-</head>
-<body>
-
-
-</nav>
-<!-- ========================= PROMOCIONES========================= -->
- <div class="promociones-barra">
-    <a href="promociones.html">
-    PROMOCIONES 
-</a>
-
-</div>
-<!-- ========================= PORTADA========================= -->
- <header>
-    <h1>
+</style></head><body><!-- =========================
+     PORTADA
+========================= --><header><h1>
 
     <img
         src="LOGO SUSHI MARGUS VECTORES.png"
@@ -330,68 +364,102 @@ footer .copyright{
 </p>
 
 
+<!-- VER CARTA -->
+
 <a
     href="carta_v3.html"
-    class="boton"
+    class="boton boton-carta"
 >
 
-     Ver Carta
+    Ver Carta
 
 </a>
 
-</header>
-<!-- ========================= PIE DE PÁGINA========================= -->
- <footer>
+</header><!-- =========================
+     PIE DE PÁGINA
+========================= --><footer><!-- =========================
+     CUATRO BOTONES
+     ANTES DE LA DIRECCIÓN
+========================= -->
 
+<div class="botones-portada">
+
+    <!-- PROMOCIONES -->
+
+    <a
+        href="promociones.html"
+        class="boton"
+    >
+
+        Promociones
+
+    </a>
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/56973713769"
+        class="boton"
+        target="_blank"
+    >
+
+        WhatsApp
+
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+        href="https://www.instagram.com/sushi_margus/"
+        class="boton"
+        target="_blank"
+    >
+
+        Instagram
+
+    </a>
+
+
+    <!-- GOOGLE MAPS -->
+
+    <a
+        href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
+        class="boton"
+        target="_blank"
+    >
+
+        Google Maps
+
+    </a>
+
+
+
+
+
+</div>
+
+
+<!-- =========================
+     INFORMACIÓN
+========================= -->
 
 
 <p>
-     Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar
+    Avenida 21 de Mayo 47C, Recreo Alto, Viña del Mar
 </p>
 
 
 <p>
-     +56 9 7371 3769
+    Lunes a Jueves: 15:00 - 22:30
 </p>
 
 
 <p>
-     Lunes a Jueves: 15:00 - 22:30
+    Viernes y Sábado: 13:00 - 22:30
 </p>
-
-
 <p>
-     Viernes y Sábado: 13:00 - 22:30
+    +56 9 7371 3769
 </p>
-
-
-<a
-    href="https://wa.me/56973713769"
-    class="boton"
-    target="_blank"
->
-
-     WhatsApp
-
-</a>
-
-
-<a
-    href="https://www.instagram.com/sushi_margus/"
-    class="boton"
-    target="_blank"
->
-
-     Instagram
-
-</a>
-<a
-    href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
-    class="boton"
-    target="_blank"
->
-     Google Maps
-</a>
 
 
 <p class="copyright">
