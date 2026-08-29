@@ -1263,6 +1263,110 @@ textarea.campo-pedido {
     }
 
 }
+/* =========================================
+   AJUSTE FINAL PARA CELULARES
+   TARJETAS DE ROLLS
+========================================= */
+
+@media (max-width:600px){
+
+    .contenedor-rolls{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        padding:0 10px;
+        gap:15px;
+        box-sizing:border-box;
+    }
+
+    .roll{
+        width:calc(100% - 10px) !important;
+        max-width:380px;
+        margin:5px auto !important;
+        padding:15px !important;
+        box-sizing:border-box;
+        text-align:center;
+        overflow:hidden;
+    }
+
+    .roll img{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        max-height:280px;
+        object-fit:contain;
+        display:block;
+        margin:0 auto 12px;
+    }
+
+    .roll h3{
+        font-size:20px;
+        line-height:1.3;
+        margin:10px 0;
+        word-wrap:break-word;
+        overflow-wrap:break-word;
+    }
+
+    .roll p{
+        font-size:15px;
+        line-height:1.5;
+        margin:8px 0;
+        word-wrap:break-word;
+        overflow-wrap:break-word;
+        white-space:normal;
+    }
+
+    .roll strong{
+        line-height:1.4;
+    }
+
+    .precio{
+        font-size:20px;
+        margin:10px 0;
+    }
+
+    .roll button{
+        margin-top:10px;
+        width:auto;
+        max-width:100%;
+    }
+
+}
+/* =========================================
+   TABLAS - AJUSTE PARA CELULAR
+========================================= */
+
+@media (max-width:600px){
+
+    .tabla{
+        width:calc(100% - 20px) !important;
+        max-width:none !important;
+        margin:15px auto !important;
+        padding:15px !important;
+        box-sizing:border-box;
+        border-radius:15px;
+    }
+
+    .tabla h3{
+        font-size:21px;
+        line-height:1.3;
+        margin-bottom:12px;
+    }
+
+    .tabla p{
+        font-size:15px;
+        line-height:1.5;
+        margin:8px 0;
+        overflow-wrap:break-word;
+        word-wrap:break-word;
+    }
+
+    .tabla button{
+        margin-top:10px;
+    }
+
+}
 </style>
 </head>
 
