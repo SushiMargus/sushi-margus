@@ -236,7 +236,25 @@ a:hover{
     margin:10px 0 5px;
 }
 
+/* =========================================
+   IMÁGENES DE TABLAS 1080 x 220
+========================================= */
 
+.categorias-tablas .categoria-titulo{
+    width:380px;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.categorias-tablas .categoria-titulo img{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:14px;
+}
 /* =========================================
    CATEGORÍAS PRINCIPALES - INICIO CARTA
 ========================================= */
@@ -571,7 +589,7 @@ a:hover{
 
 
 /* =========================================
-   CATEGORÍAS DE TABLAS
+ /* CATEGORÍAS DE TABLAS
 ========================================= */
 
 .categorias-tablas{
@@ -583,11 +601,19 @@ a:hover{
 }
 
 .categorias-tablas .categoria-titulo{
-    width:280px;
+    width:380px;
+    max-width:100%;
     box-sizing:border-box;
 }
 
-
+/* IMÁGENES DE TABLAS 1080 x 220 */
+.categorias-tablas .categoria-titulo img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:12px;
+}
 /* =========================================
    BOTONES VOLVER
 ========================================= */
@@ -1240,6 +1266,16 @@ footer .copyright{
     color:#111 !important;
     transform:scale(1.05);
 }
+/* IMÁGENES DE HANDROLLS */
+.roll img{
+    width:100%;
+    height:auto;
+    aspect-ratio:1 / 1;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:12px;
+}
 </style>
 </head>
 
@@ -1372,9 +1408,11 @@ footer .copyright{
 
 <!-- TABLAS -->
 
+<!-- TABLAS -->
+
 <div id="tablas" class="oculto">
 
-    <h2> TABLAS</h2>
+    <h2>TABLAS</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
@@ -1388,7 +1426,10 @@ footer .copyright{
 
         <div class="categoria-titulo">
 
-            <h2> TABLAS VEGETARIANAS</h2>
+            <img src="imagenes/tablas vegetarianas.png"
+                 alt="Tablas Vegetarianas">
+
+            <h2>TABLAS VEGETARIANAS</h2>
 
             <button class="btn-detalles"
                 onclick="mostrarTablaVegetariana()">
@@ -1401,6 +1442,9 @@ footer .copyright{
         <!-- TABLAS FRÍAS -->
 
         <div class="categoria-titulo">
+
+            <img src="imagenes/tablas frias.png"
+                 alt="Tablas Frías">
 
             <h2>TABLAS FRÍAS</h2>
 
@@ -1416,7 +1460,10 @@ footer .copyright{
 
         <div class="categoria-titulo">
 
-            <h2> TABLAS CALIENTES</h2>
+            <img src="imagenes/tablas calientes.png"
+                 alt="Tablas Calientes">
+
+            <h2>TABLAS CALIENTES</h2>
 
             <button class="btn-detalles"
                 onclick="mostrarTablaCaliente()">
@@ -1430,7 +1477,10 @@ footer .copyright{
 
         <div class="categoria-titulo">
 
-            <h2> TABLAS MIXTAS</h2>
+            <img src="imagenes/tablas mixtas.png"
+                 alt="Tablas Mixtas">
+
+            <h2>TABLAS MIXTAS</h2>
 
             <button class="btn-detalles"
                 onclick="mostrarTablaMixta()">
@@ -2552,7 +2602,7 @@ footer .copyright{
 
     <h2>Handrolls</h2>
 
-<button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
+    <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
 
     <h2>HANDROLL L</h2>
@@ -2560,6 +2610,8 @@ footer .copyright{
     <div class="contenedor-rolls">
 
         <div class="roll">
+
+            <img src="imagenes/handroll veggie l.jpg" alt="Handroll Veggie L">
 
             <h3>Handroll Veggie</h3>
             <p>Palta • Queso Crema • Palmito</p>
@@ -2576,6 +2628,8 @@ footer .copyright{
 
         <div class="roll">
 
+            <img src="imagenes/handroll tory l.jpg" alt="Handroll Tory L">
+
             <h3>Handroll Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
 
@@ -2590,6 +2644,8 @@ footer .copyright{
 
 
         <div class="roll">
+
+            <img src="imagenes/handroll sake l.jpg" alt="Handroll Sake L">
 
             <h3>Handroll Sake</h3>
             <p>Salmón • Queso Crema • Palta</p>
@@ -2606,6 +2662,8 @@ footer .copyright{
 
         <div class="roll">
 
+            <img src="imagenes/handroll ebi l.jpg" alt="Handroll Ebi L">
+
             <h3>Handroll Ebi</h3>
             <p>Camarón • Queso Crema • Palta</p>
 
@@ -2620,6 +2678,8 @@ footer .copyright{
 
 
         <div class="roll">
+
+            <img src="imagenes/handroll sakebi l.jpg" alt="Handroll Sakebi L">
 
             <h3>Handroll Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
@@ -2642,6 +2702,8 @@ footer .copyright{
 
         <div class="roll">
 
+            <img src="imagenes/handroll veggie xl.jpg" alt="Handroll Veggie XL">
+
             <h3>Handroll Veggie</h3>
             <p>Palta • Queso Crema • Pimentón • Cebollín • Aceituna</p>
 
@@ -2656,6 +2718,8 @@ footer .copyright{
 
 
         <div class="roll">
+
+            <img src="imagenes/handroll tory xl.jpg" alt="Handroll Tory XL">
 
             <h3>Handroll Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta • Cebollín • Aceituna</p>
@@ -2672,6 +2736,8 @@ footer .copyright{
 
         <div class="roll">
 
+            <img src="imagenes/handroll ebi xl.jpg" alt="Handroll Ebi XL">
+
             <h3>Handroll Ebi</h3>
             <p>Camarón • Queso Crema • Palta • Cebollín • Aceituna</p>
 
@@ -2687,6 +2753,8 @@ footer .copyright{
 
         <div class="roll">
 
+            <img src="imagenes/handroll sake xl.jpg" alt="Handroll Sake XL">
+
             <h3>Handroll Sake</h3>
             <p>Salmón • Queso Crema • Palta • Cebollín • Aceituna</p>
 
@@ -2701,6 +2769,8 @@ footer .copyright{
 
 
         <div class="roll">
+
+            <img src="imagenes/handroll sakebi xl.jpg" alt="Handroll Sakebi XL">
 
             <h3>Handroll Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón • Cebollín • Palta</p>
