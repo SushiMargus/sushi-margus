@@ -1262,7 +1262,84 @@ footer .copyright{
     color:#111 !important;
     transform:scale(1.05);
 }
+/* ==========================================
+   SELECTOR GOHAN MIXTO - VENTANA
+========================================== */
 
+.selector-gohan{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:90%;
+    max-width:500px;
+    max-height:90vh;
+    overflow-y:auto;
+    padding:25px;
+    background:#111;
+    border:2px solid #d32f2f;
+    border-radius:18px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.8);
+    box-sizing:border-box;
+    text-align:center;
+    z-index:9999;
+}
+
+.selector-gohan h3{
+    color:#ffd600;
+    margin-top:0;
+    font-size:24px;
+}
+
+.selector-gohan p{
+    color:white;
+    margin-bottom:20px;
+}
+
+.ingredientes-gohan{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.ingredientes-gohan button{
+    padding:14px 8px;
+    border:none;
+    border-radius:10px;
+    background:#d32f2f;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.ingredientes-gohan button:hover{
+    background:#b71c1c;
+}
+
+.selector-gohan .btn-volver{
+    width:100%;
+    margin-top:5px;
+}
+
+@media (max-width:600px){
+
+    .selector-gohan{
+        width:94%;
+        padding:20px 15px;
+    }
+
+    .ingredientes-gohan{
+        grid-template-columns:1fr;
+    }
+
+    .ingredientes-gohan button{
+        padding:14px;
+        font-size:16px;
+    }
+
+}
 
 /* =========================================
    COLORES DEFINITIVOS DE TABLAS
@@ -1306,7 +1383,7 @@ footer .copyright{
 
 <div id="inicio-carta">
  
-<button class="btn-volver" onclick="volverPortada()">🏠 Volver al Inicio</button>
+<button class="btn-volver" onclick="window.location.href='index.html'">🏠 Volver al Inicio</button>
 
     <!-- APERITIVOS -->
 
@@ -2626,117 +2703,6 @@ footer .copyright{
     </div>
 
 </div>
-<!-- GOHAN -->
-
-<div id="gohan" class="oculto">
-
-    <h2>Gohan</h2>
-
-    <button class="btn-volver" onclick="volverInicioCarta()">
-        ⬅ Volver a Inicio de Carta
-    </button>
-
-    <div class="contenedor-rolls">
-
-        <!-- GOHAN CHAMPIÑÓN -->
-
-        <div class="roll">
-
-            <h3>Champiñón Tempura</h3>
-
-            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
-
-            <span class="precio">$5.490</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Gohan Champiñón Tempura', 5490)">
-                🛒 Agregar
-            </button>
-
-        </div>
-
-
-        <!-- GOHAN POLLO -->
-
-        <div class="roll">
-
-            <h3>Pollo Teriyaki</h3>
-
-            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
-
-            <span class="precio">$5.990</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Gohan Pollo Teriyaki', 5990)">
-                🛒 Agregar
-            </button>
-
-        </div>
-
-
-        <!-- GOHAN CAMARÓN -->
-
-        <div class="roll">
-
-            <h3>Camarón</h3>
-
-            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
-
-            <span class="precio">$6.490</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Gohan Camarón', 6490)">
-                🛒 Agregar
-            </button>
-
-        </div>
-
-
-        <!-- GOHAN SALMÓN -->
-
-        <div class="roll">
-
-            <h3>Salmón</h3>
-
-            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
-
-            <span class="precio">$6.490</span>
-
-            <button class="btn-agregar"
-                onclick="agregarAlCarrito('Gohan Salmón', 6490)">
-                🛒 Agregar
-            </button>
-
-        </div>
-
-
-        <!-- GOHAN MIXTO -->
-
-        <div class="roll">
-
-            <h3>Mixto</h3>
-
-            <p>
-                <strong>2 ingredientes a elección</strong>
-            </p>
-
-            <p>
-                Base: Queso Crema • Cebollín • Palta • Sésamo
-            </p>
-
-            <span class="precio">$7.990</span>
-
-            <button class="btn-agregar"
-                onclick="abrirSelectorGohan()">
-                🥢 Elegir ingredientes
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
 <!-- SASHIMI -->
 
 <div id="sashimi" class="oculto">
@@ -2822,7 +2788,6 @@ footer .copyright{
     </div>
 
 </div>
-
 
 
 <!-- TATAKI DE ATÚN -->
@@ -3248,6 +3213,7 @@ footer .copyright{
     </div>
 
 </div>
+
 <!-- CEVICHE -->
 
 <div id="ceviche" class="oculto">
@@ -3292,7 +3258,167 @@ footer .copyright{
     </div>
 
 </div>
- 
+<!-- GOHAN -->
+
+<div id="gohan" class="oculto">
+
+    <h2>Gohan</h2>
+
+    <button class="btn-volver" onclick="volverInicioCarta()">
+        ⬅ Volver a Inicio de Carta
+    </button>
+
+    <div class="contenedor-rolls">
+
+        <!-- GOHAN CHAMPIÑÓN -->
+
+        <div class="roll">
+
+            <h3>Champiñón Tempura</h3>
+
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
+            <span class="precio">$5.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Champiñón Tempura', 5490)">
+                🛒 Agregar
+            </button>
+
+        </div>
+
+
+        <!-- GOHAN POLLO -->
+
+        <div class="roll">
+
+            <h3>Pollo Teriyaki</h3>
+
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
+            <span class="precio">$5.990</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Pollo Teriyaki', 5990)">
+                🛒 Agregar
+            </button>
+
+        </div>
+
+
+        <!-- GOHAN CAMARÓN -->
+
+        <div class="roll">
+
+            <h3>Camarón</h3>
+
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
+            <span class="precio">$6.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Camarón', 6490)">
+                🛒 Agregar
+            </button>
+
+        </div>
+
+
+        <!-- GOHAN SALMÓN -->
+
+        <div class="roll">
+
+            <h3>Salmón</h3>
+
+            <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
+
+            <span class="precio">$6.490</span>
+
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Gohan Salmón', 6490)">
+                🛒 Agregar
+            </button>
+
+        </div>
+
+
+        <!-- GOHAN MIXTO -->
+
+<div class="roll">
+
+    <h3>Mixto</h3>
+
+    <p>
+        <strong>2 ingredientes a elección</strong>
+    </p>
+
+    <p>
+        Base: Queso Crema • Cebollín • Palta • Sésamo
+    </p>
+
+    <span class="precio">$7.990</span>
+
+    <button class="btn-agregar"
+        onclick="abrirSelectorGohan()">
+        🥢 Elegir ingredientes
+    </button>
+
+</div>
+
+
+<!-- SELECTOR GOHAN MIXTO -->
+
+<div id="selector-gohan" class="selector-gohan oculto">
+
+    <h3>🥢 Elige 2 ingredientes</h3>
+
+    <p id="mensaje-selector-gohan">
+        Selecciona el primer ingrediente
+    </p>
+
+    <div class="ingredientes-gohan">
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Champiñón')">
+            Champiñón
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Pollo Teriyaki')">
+            Pollo Teriyaki
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Pollo Furai')">
+            Pollo Furai
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Camarón Cocido')">
+            Camarón Cocido
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Camarón Furai')">
+            Camarón Furai
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Salmón Furai')">
+            Salmón Furai
+        </button>
+
+        <button type="button" onclick="seleccionarIngredienteGohan('Salmón Fresco')">
+            Salmón Fresco
+        </button>
+
+    </div>
+
+    <button
+        type="button"
+        class="btn-volver"
+        onclick="cerrarSelectorGohan()">
+        ✖ Cancelar
+    </button>
+
+</div>
+</div>
+</div>
+
 <!-- SUSHI DE CARTA -->
 
 <div id="carta" class="oculto">
@@ -4388,7 +4514,110 @@ function mostrarGohan(){
     irArriba();
 
 }
+/* ==========================================
+   SELECTOR GOHAN MIXTO
+========================================== */
 
+let ingredientesGohan = [];
+
+
+function abrirSelectorGohan(){
+
+    ingredientesGohan = [];
+
+    const selector =
+        document.getElementById("selector-gohan");
+
+    const mensaje =
+        document.getElementById("mensaje-selector-gohan");
+
+    if(!selector){
+        return;
+    }
+
+    if(mensaje){
+        mensaje.textContent =
+            "Selecciona el primer ingrediente";
+    }
+
+    selector.classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
+function seleccionarIngredienteGohan(ingrediente){
+
+    if(ingredientesGohan.includes(ingrediente)){
+
+        alert(
+            "Ya seleccionaste ese ingrediente. Elige uno diferente."
+        );
+
+        return;
+
+    }
+
+    ingredientesGohan.push(ingrediente);
+
+
+    if(ingredientesGohan.length === 1){
+
+        const mensaje =
+            document.getElementById("mensaje-selector-gohan");
+
+        if(mensaje){
+
+            mensaje.textContent =
+                "Primer ingrediente: " +
+                ingrediente +
+                " — Ahora elige el segundo";
+
+        }
+
+        return;
+
+    }
+
+
+    if(ingredientesGohan.length === 2){
+
+        const detalles =
+            "Ingredientes: " +
+            ingredientesGohan[0] +
+            " + " +
+            ingredientesGohan[1];
+
+
+        agregarAlCarrito(
+            "Gohan Mixto",
+            7990,
+            detalles
+        );
+
+
+        cerrarSelectorGohan();
+
+    }
+
+}
+
+
+function cerrarSelectorGohan(){
+
+    const selector =
+        document.getElementById("selector-gohan");
+
+    if(selector){
+
+        selector.classList.add("oculto");
+
+    }
+
+    ingredientesGohan = [];
+
+}
 
 /* ==========================================
    SUSHI BURGERS
@@ -4463,9 +4692,6 @@ function mostrarTablas(){
 function mostrarExtras(){
 
     ocultarSeccionesPrincipales();
-
-    ocultarSubcategoriasAperitivos();
-    ocultarCategoriasSushi();
 
     const elemento = document.getElementById("extras");
 
