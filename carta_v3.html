@@ -5636,12 +5636,19 @@ function enviarPedido(){
 
     }
 
-
-    /*
-       EL NÚMERO DE WHATSAPP SE DEJA
-       SIN MODIFICAR HASTA QUE TENGAMOS
-       TU NÚMERO ACTUAL.
+/*
+       WHATSAPP
     */
+
+    const numeroWhatsApp = "56973713769";
+
+    const urlWhatsApp =
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        mensaje;
+
+    window.open(urlWhatsApp, "_blank");
 
 }
 
