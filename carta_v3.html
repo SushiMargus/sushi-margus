@@ -235,7 +235,15 @@ a:hover{
     font-size:20px;
     margin:10px 0 5px;
 }
-
+.descripcion-papas{
+    color:white !important;
+    font-size:16px;
+    font-weight:400 !important;
+}
+.categoria-burger-furay{
+    width:350px !important;
+    box-sizing:border-box;
+}
 
 /* =========================================
    CATEGORÍAS PRINCIPALES - INICIO CARTA
@@ -1448,6 +1456,7 @@ footer .copyright{
     border-bottom:2px solid #d32f2f;
     width:90%;
 }
+
 </style>
 </head>
 
@@ -1561,6 +1570,36 @@ footer .copyright{
         <button onclick="mostrarTablas()">Ver detalles</button>
 
 </div>
+<!-- BURRITOS -->
+<div class="categoria-titulo">
+
+    <img src="imagenes/burritos.jpg">
+
+    <h2>BURRITOS</h2>
+
+    <p>Deliciosos burritos con ingredientes frescos y sabrosos.</p>
+
+    <button class="btn-detalles" onclick="mostrarBurritos()">
+        Ver detalles
+    </button>
+
+</div>
+
+<!-- BURGER FURAY -->
+<div class="categoria-titulo categoria-burger-furay">
+
+    <img src="imagenes/burgerfuray.jpg">
+
+    <h2>BURGER FURAY</h2>
+
+    <p>Deliciosas burgers con un crocante apanado estilo Sushi Margus.</p>
+
+    <button class="btn-detalles" onclick="mostrarBurgerFuray()">
+        Ver detalles
+    </button>
+
+</div>
+
 <!-- EXTRAS -->
 
     <div class="categoria-titulo">
@@ -2777,11 +2816,10 @@ footer .copyright{
 
             <h2>PAPAS FRITAS<h2>
 
-            <p>Clásicas papas fritas, crujientes y deliciosas.</p>
+           <p class="descripcion-papas">
+            Clásicas papas fritas, crujientes y deliciosas.</p>
 
-            <button class="btn-detalles" onclick="mostrarPapasFritas()">
-                Ver detalles
-            </button>
+            <button class="btn-detalles" onclick="mostrarPapasFritas()">Ver detalles</button>
 
         </div>
 
@@ -3502,6 +3540,114 @@ footer .copyright{
 
 </div>
 </div>
+</div>
+<!-- BURRITOS -->
+<div id="burritos" class="oculto">
+
+    <h2>BURRITOS</h2>
+
+    <button class="btn-volver" onclick="volverInicioCarta()">
+        ⬅ Volver a Inicio de Carta
+    </button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Champiñón Tempura</h3>
+            <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
+            <span class="precio">$4.490</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burrito Champiñón Tempura', 4490)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Pollo Teriyaki</h3>
+            <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
+            <span class="precio">$4.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burrito Pollo Teriyaki', 4990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón Furay</h3>
+            <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
+            <span class="precio">$5.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burrito Salmón Furay', 5990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Camarón Furay</h3>
+            <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
+            <span class="precio">$5.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burrito Camarón Furay', 5990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+    </div>
+
+</div>
+<!-- BURGER FURAY -->
+<div id="burgerFuray" class="oculto">
+
+    <h2>BURGER FURAY</h2>
+
+    <button class="btn-volver" onclick="volverInicioCarta()">
+        ⬅ Volver a Inicio de Carta
+    </button>
+
+    <div class="contenedor-rolls">
+
+        <div class="roll">
+            <h3>Champiñón Tempura</h3>
+            <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
+            <span class="precio">$4.490</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burger Furay Champiñón Tempura', 4490)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Pollo Furay</h3>
+            <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
+            <span class="precio">$4.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burger Furay Pollo Furay', 4990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Salmón Furay</h3>
+            <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
+            <span class="precio">$5.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burger Furay Salmón Furay', 5990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+        <div class="roll">
+            <h3>Camarón Furay</h3>
+            <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
+            <span class="precio">$5.990</span>
+            <button class="btn-agregar"
+                onclick="agregarAlCarrito('Burger Furay Camarón Furay', 5990)">
+                🛒 Agregar
+            </button>
+        </div>
+
+    </div>
+
 </div>
 
 <!-- SUSHI DE CARTA -->
@@ -4409,6 +4555,7 @@ footer .copyright{
 
 </div>
 
+
 <script>
 
 /* ==========================================
@@ -4436,6 +4583,8 @@ function ocultarSeccionesPrincipales(){
         "sushiBurgers",
         "handrolls",
         "tablas",
+        "burritos", 
+        "burgerFuray",
         "extras",
         "carta"
 
@@ -4760,6 +4909,33 @@ function mostrarTablas(){
     ocultarCategoriasSushi();
 
     const elemento = document.getElementById("tablas");
+
+    if(elemento){
+        elemento.classList.remove("oculto");
+    }
+
+    irArriba();
+
+}
+function mostrarBurritos(){
+
+    ocultarSeccionesPrincipales();
+    ocultarCategoriasSushi();
+
+    const elemento = document.getElementById("burritos");
+
+    if(elemento){
+        elemento.classList.remove("oculto");
+    }
+
+    irArriba();
+}
+function mostrarBurgerFuray(){
+
+    ocultarSeccionesPrincipales();
+    ocultarCategoriasSushi();
+
+    const elemento = document.getElementById("burgerFuray");
 
     if(elemento){
         elemento.classList.remove("oculto");
