@@ -576,14 +576,6 @@ a:hover{
 #tablaFria > button:first-child,
 #tablaCaliente > button:first-child,
 #tablaMixta > button:first-child{
-    background:linear-gradient(135deg,#d32f2f,#b71c1c);
-    color:white;
-    border:2px solid #f5c542;
-    border-radius:10px;
-    padding:10px 18px;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
     margin-bottom:15px;
 }
 
@@ -716,6 +708,14 @@ a:hover{
     cursor:pointer;
     box-shadow:0 4px 12px rgba(0,0,0,.4);
     z-index:1000;
+
+    transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+#boton-carrito:hover{
+    transform:translateY(-5px);
+    background:linear-gradient(135deg,#ff3b3b,#d90000);
+    box-shadow:0 8px 20px rgba(0,0,0,.6);
 }
 
 #contador-carrito{
@@ -800,7 +800,7 @@ a:hover{
     border-radius:8px;
     min-width:42px;
     height:42px;
-    background:#d32f2f;
+    background:#ff0000;
     color:white;
     font-size:22px;
     font-weight:bold;
@@ -833,13 +833,20 @@ a:hover{
     width:100%;
     margin-top:15px;
     padding:14px;
-    border:none;
+    border:1px solid #f5c542;
     border-radius:8px;
-    background:#555;
+    background:linear-gradient(135deg,#d90000,#8b0000);
     color:white;
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
+    transition:.25s ease;
+}
+
+.btn-carrito:hover{
+    background:linear-gradient(135deg,#ff9101,#d90000);
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,.4);
 }
 
 .enviar-pedido{
@@ -847,18 +854,67 @@ a:hover{
     color:white;
     font-weight:bold;
     margin-top:10px;
-    border:none;
+    border:2px solid #f5c542;
     border-radius:12px;
     padding:15px;
     font-size:16px;
     box-shadow:0 4px 10px rgba(18,140,126,.30);
-    transition:.15s;
+    transition:.25s ease;
+}
+
+.enviar-pedido:hover{
+    background:linear-gradient(135deg,#00ff37,#0fa98f);
+    transform:translateY(-2px);
+    box-shadow:0 7px 15px rgba(18,140,126,.45);
 }
 
 .enviar-pedido:active{
     transform:scale(.96);
 }
 
+.enviar-pedido:active{
+    transform:scale(.96);
+}
+/* BOTONES TIPO DE PEDIDO */
+
+.boton-tipo{
+    flex:1;
+    padding:12px;
+    border:1px solid #f5c542;
+    border-radius:10px;
+    background:linear-gradient(135deg,#1b1b1b,#333);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.boton-tipo:hover{
+    background:linear-gradient(135deg,#d32f2f,#8b0000);
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,.4);
+}
+/* BOTONES TIPO DE PEDIDO */
+
+.boton-tipo{
+    flex:1;
+    padding:12px;
+    border:1px solid #f5c542;
+    border-radius:10px;
+    background:linear-gradient(135deg,#ff9900,#a00000);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.boton-tipo:hover{
+    background:linear-gradient(135deg,#bd0101,#ff7b00);
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,.4);
+}
 
 /* =========================================
    CAMPOS DEL PEDIDO
@@ -868,7 +924,7 @@ a:hover{
     width:100%;
     padding:14px 16px;
     margin:8px 0;
-    border:2px solid #d32f2f;
+    border:2px solid #9f2fd3;
     border-radius:12px;
     background:#fff;
     color:#333;
@@ -1080,7 +1136,11 @@ footer .copyright{
         max-width:max-content !important;
         margin:15px auto 20px !important;
     }
-
+#carta .carta-volver{
+    background:linear-gradient(145deg,#d32f2f,#b71c1c) !important;
+    color:white !important;
+    border:none !important;
+}
 
     /* ROLLS */
 
@@ -1378,7 +1438,16 @@ footer .copyright{
     word-break:normal;
     box-sizing:border-box;
 }
-
+.titulo-tamano-handroll{
+    color:#2bff00 !important;
+    text-align:center !important;
+    font-size:28px;
+    font-weight:900;
+    margin:30px auto 20px;
+    padding-bottom:8px;
+    border-bottom:2px solid #d32f2f;
+    width:90%;
+}
 </style>
 </head>
 
@@ -1403,7 +1472,7 @@ footer .copyright{
         <img src="imagenes/aperitivos.jpg"
         style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2>Aperitivos</h2>
+        <h2>APERITIVOS</h2>
 
         <p>Deliciosos aperitivos para comenzar.</p>
 
@@ -1418,7 +1487,7 @@ footer .copyright{
     <img src="imagenes/ceviche.jpg"
     style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-    <h2>Ceviche</h2>
+    <h2>CEVICHE</h2>
 
     <p>Frescos ceviches preparados al momento.</p>
 
@@ -1431,7 +1500,7 @@ footer .copyright{
 
         <img src="imagenes/gohan.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2>Gohan</h2>
+        <h2>GOHAN</h2>
 
         <p>Deliciosos gohan preparados al momento.</p>
 
@@ -1444,7 +1513,7 @@ footer .copyright{
 
         <img src="imagenes/sushiburger.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2>Sushi Burgers</h2>
+        <h2>SUSHI BURGERS</h2>
 
         <p>Deliciosas burgers al estilo Sushi Margus.</p>
 
@@ -1458,7 +1527,7 @@ footer .copyright{
 
         <img src="imagenes/handrolls.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2> Handrolls</h2>
+        <h2> HANDROLLS</h2>
 
         <p>Deliciosos handrolls preparados al momento.</p>
 
@@ -1472,7 +1541,7 @@ footer .copyright{
         <img src="imagenes/sushidecarta.jpg"
         style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2> Sushi de Carta</h2>
+        <h2> SUSHI DE CARTA</h2>
 
         <p>Descubre nuestros rolls organizados por categorías.</p>
 
@@ -1485,7 +1554,7 @@ footer .copyright{
 
         <img src="imagenes/tablas.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-        <h2> Tablas</h2>
+        <h2> TABLAS</h2>
 
         <p>Deliciosas tablas de sushi para compartir.</p>
 
@@ -1498,7 +1567,7 @@ footer .copyright{
 
        <img src="imagenes/extras.jpg"style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
 
-       <h2> Extras</h2>
+       <h2> EXTRAS</h2>
 
        <p>Salsas, complementos y bebidas.</p>
 
@@ -1599,7 +1668,10 @@ footer .copyright{
 
 <div id="tablaVegetariana" class="oculto">
 
-    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+<button class="btn-volver" onclick="volverTablas()">
+    ⬅ Volver a Tablas
+</button>
+</button>
 
 
 
@@ -1689,7 +1761,7 @@ footer .copyright{
 
 <div id="tablaFria" class="oculto">
 
-    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+   <button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
 
     <h2>TABLAS FRÍAS</h2>
 
@@ -1813,7 +1885,7 @@ footer .copyright{
 
 <div id="tablaCaliente" class="oculto">
 
-    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+<button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
 
     <h2>TABLAS CALIENTES</h2>
 
@@ -1981,7 +2053,7 @@ footer .copyright{
 
 <div id="tablaMixta" class="oculto">
 
-    <button onclick="volverTablas()">⬅ Volver a Tablas</button>
+   <button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
 
     <h2>TABLAS MIXTAS</h2>
 
@@ -2331,12 +2403,12 @@ footer .copyright{
 
 <div id="handrolls" class="oculto">
 
-    <h2>Handrolls</h2>
+    <h2>HANDROLLS</h2>
 
 <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
 
-    <h2>HANDROLL L</h2>
+   <h2 class="titulo-tamano-handroll">HANDROLL L</h2>
 
     <div class="contenedor-rolls">
 
@@ -2417,7 +2489,7 @@ footer .copyright{
     </div>
 
 
-    <h2>HANDROLL XL</h2>
+    <h2 class="titulo-tamano-handroll">HANDROLL XL</h2>
 
     <div class="contenedor-rolls">
 
@@ -2501,9 +2573,11 @@ footer .copyright{
 <!-- SUSHI BURGERS -->
 
    <div id="sushiBurgers" class="oculto">
-      <h2>🍔 Sushi Burgers</h2>  
+      <h2>SUSHI BURGERS</h2>  
 
-<button onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>  
+<button class="btn-volver" onclick="volverInicioCarta()">
+    ⬅ Volver a Inicio de Carta
+</button>
 
 <div class="contenedor-rolls">  
 
@@ -2589,7 +2663,7 @@ footer .copyright{
 
             <img src="imagenes/sashimi.jpg">
 
-            <h2> Sashimi</h2>
+            <h2> SASHIMI</h2>
 
             <p>Salmón, Atún y Mixtos</p>
 
@@ -2605,7 +2679,7 @@ footer .copyright{
 
             <img src="imagenes/tataki.jpg">
 
-            <h2>Tataki de Atún</h2>
+            <h2>TATAKI DE ATÚN</h2>
 
             <p>Atún sellado en cobertura de sésamo.</p>
 
@@ -2621,7 +2695,7 @@ footer .copyright{
 
             <img src="imagenes/niguiris.jpg">
 
-            <h2> Niguiris</h2>
+            <h2> NIGUIRIS</h2>
 
             <p>6 unidades</p>
 
@@ -2637,7 +2711,7 @@ footer .copyright{
 
             <img src="imagenes/gyozas.jpg">
 
-            <h2> Gyozas</h2>
+            <h2> GYOZAS</h2>
 
             <p>Pollo, cerdo, verduras o mixtas.</p>
 
@@ -2653,7 +2727,7 @@ footer .copyright{
 
             <img src="imagenes/arrollados.jpg">
 
-            <h2> Arrollados Primavera</h2>
+            <h2> ARROLLADOS PRIMAVERA</h2>
 
             <p>Crujientes y deliciosos.</p>
 
@@ -2669,7 +2743,7 @@ footer .copyright{
 
             <img src="imagenes/korokes.jpg">
 
-            <h2>Korokes</h2>
+            <h2>KOROKES</h2>
 
             <p>Bolitas de papa Furay.</p>
 
@@ -2685,7 +2759,7 @@ footer .copyright{
 
             <img src="imagenes/bastones.jpg">
 
-            <h2>Bastones Furay</h2>
+            <h2>BASTONES FURAY</h2>
 
             <p>Queso crema, pollo, salmón o camarón.</p>
 
@@ -2701,7 +2775,7 @@ footer .copyright{
 
             <img src="imagenes/papasfritas.jpg">
 
-            <h2>Papas Fritas</h2>
+            <h2>PAPAS FRITAS<h2>
 
             <p>Clásicas papas fritas, crujientes y deliciosas.</p>
 
@@ -2718,7 +2792,7 @@ footer .copyright{
 
 <div id="sashimi" class="oculto">
 
-    <h2>Sashimi</h2>
+    <h2>SASHIMI</h2>
 
    <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -2805,7 +2879,7 @@ footer .copyright{
 
 <div id="tataki" class="oculto">
 
-    <h2>Tataki de Atún</h2>
+    <h2>TATAKI DE ATÚN</h2>
 
 <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -2833,7 +2907,7 @@ footer .copyright{
 
 <div id="niguiris" class="oculto">
 
-    <h2>Niguiris</h2>
+    <h2>NIGUIRIS</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -2894,7 +2968,7 @@ footer .copyright{
 
 <div id="gyozas" class="oculto">
 
-    <h2>Gyozas</h2>
+    <h2>GYOZAS</h2>
 
 <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3003,7 +3077,7 @@ footer .copyright{
 
 <div id="arrollados" class="oculto">
 
-    <h2>Arrollados Primavera</h2>
+    <h2>ARROLLADOS PRIMAVERA</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3048,7 +3122,7 @@ footer .copyright{
 
 <div id="korokes" class="oculto">
 
-    <h2>Korokes</h2>
+    <h2>KOROKES</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3093,7 +3167,7 @@ footer .copyright{
 
 <div id="bastones" class="oculto">
 
-    <h2>Bastones Furay</h2>
+    <h2>BASTONES FURAY</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3188,7 +3262,7 @@ footer .copyright{
 
 <div id="papasfritas" class="oculto">
 
-    <h2>Papas Fritas</h2>
+    <h2>PAPAS FRITAS</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3229,7 +3303,7 @@ footer .copyright{
 
 <div id="ceviche" class="oculto">
 
-    <h2> Ceviche</h2>
+    <h2>CEVICHE</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
@@ -3273,7 +3347,7 @@ footer .copyright{
 
 <div id="gohan" class="oculto">
 
-    <h2>Gohan</h2>
+    <h2>GOHAN</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
@@ -3647,7 +3721,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+<button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 
 
@@ -3718,7 +3792,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+  <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 <!-- AVOCADO -->
 </div>
@@ -3783,7 +3857,7 @@ footer .copyright{
 
     </div>
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+ <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
     <!-- CHESSE -->
 
@@ -3851,7 +3925,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+   <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 
 </div>
@@ -3909,7 +3983,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+    <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 </div>
 <!-- HOT ROLLS -->
@@ -3999,7 +4073,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+   <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 </div>
 <!-- ROLLS ESPECIALES -->
@@ -4060,7 +4134,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+  <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 </div>
 <!-- SUSHI SIN ARROZ -->
@@ -4173,7 +4247,7 @@ footer .copyright{
     </div>
 
 
-    <button onclick="volverCategorias()">⬅ Volver categorías</button>
+ <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 </div>
 <!-- EXTRAS -->
