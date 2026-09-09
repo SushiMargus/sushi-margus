@@ -4677,10 +4677,15 @@ function ocultarCategoriasSushi(){
 
 
 /* ==========================================
+/* ==========================================
    CARTA PRINCIPAL
 ========================================== */
 
-function mostrarCarta(){
+function mostrarCarta(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("inicio-carta");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4694,7 +4699,6 @@ function mostrarCarta(){
     }
 
     irArriba();
-
 }
 
 
@@ -4702,7 +4706,11 @@ function mostrarCarta(){
    APERITIVOS
 ========================================== */
 
-function mostrarAperitivos(){
+function mostrarAperitivos(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("aperitivos");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4715,7 +4723,6 @@ function mostrarAperitivos(){
     }
 
     irArriba();
-
 }
 
 
@@ -4723,7 +4730,11 @@ function mostrarAperitivos(){
    CEVICHE
 ========================================== */
 
-function mostrarCeviche(){
+function mostrarCeviche(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("ceviche");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4737,7 +4748,6 @@ function mostrarCeviche(){
     }
 
     irArriba();
-
 }
 
 
@@ -4745,7 +4755,11 @@ function mostrarCeviche(){
    GOHAN
 ========================================== */
 
-function mostrarGohan(){
+function mostrarGohan(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("gohan");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4759,8 +4773,9 @@ function mostrarGohan(){
     }
 
     irArriba();
-
 }
+
+
 /* ==========================================
    SELECTOR GOHAN MIXTO
 ========================================== */
@@ -4790,7 +4805,6 @@ function abrirSelectorGohan(){
     selector.classList.remove("oculto");
 
     irArriba();
-
 }
 
 
@@ -4803,7 +4817,6 @@ function seleccionarIngredienteGohan(ingrediente){
         );
 
         return;
-
     }
 
     ingredientesGohan.push(ingrediente);
@@ -4824,7 +4837,6 @@ function seleccionarIngredienteGohan(ingrediente){
         }
 
         return;
-
     }
 
 
@@ -4845,9 +4857,7 @@ function seleccionarIngredienteGohan(ingrediente){
 
 
         cerrarSelectorGohan();
-
     }
-
 }
 
 
@@ -4866,11 +4876,16 @@ function cerrarSelectorGohan(){
 
 }
 
+
 /* ==========================================
    SUSHI BURGERS
 ========================================== */
 
-function mostrarSushiBurgers(){
+function mostrarSushiBurgers(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("sushiBurgers");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4884,7 +4899,6 @@ function mostrarSushiBurgers(){
     }
 
     irArriba();
-
 }
 
 
@@ -4892,7 +4906,11 @@ function mostrarSushiBurgers(){
    HANDROLLS
 ========================================== */
 
-function mostrarHandrolls(){
+function mostrarHandrolls(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("handrolls");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4906,7 +4924,6 @@ function mostrarHandrolls(){
     }
 
     irArriba();
-
 }
 
 
@@ -4914,7 +4931,11 @@ function mostrarHandrolls(){
    TABLAS
 ========================================== */
 
-function mostrarTablas(){
+function mostrarTablas(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("tablas");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4928,9 +4949,18 @@ function mostrarTablas(){
     }
 
     irArriba();
-
 }
-function mostrarBurritos(){
+
+
+/* ==========================================
+   BURRITOS
+========================================== */
+
+function mostrarBurritos(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("burritos");
+    }
 
     ocultarSeccionesPrincipales();
     ocultarCategoriasSushi();
@@ -4943,7 +4973,17 @@ function mostrarBurritos(){
 
     irArriba();
 }
-function mostrarBurgerFuray(){
+
+
+/* ==========================================
+   BURGER FURAY
+========================================== */
+
+function mostrarBurgerFuray(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("burgerFuray");
+    }
 
     ocultarSeccionesPrincipales();
     ocultarCategoriasSushi();
@@ -4955,7 +4995,6 @@ function mostrarBurgerFuray(){
     }
 
     irArriba();
-
 }
 
 
@@ -4963,7 +5002,11 @@ function mostrarBurgerFuray(){
    EXTRAS
 ========================================== */
 
-function mostrarExtras(){
+function mostrarExtras(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("extras");
+    }
 
     ocultarSeccionesPrincipales();
 
@@ -4974,9 +5017,7 @@ function mostrarExtras(){
     }
 
     irArriba();
-
 }
-
 
 /* ==========================================
    SUBCATEGORÍAS DE APERITIVOS
@@ -5914,7 +5955,210 @@ function enviarPedido(){
     window.open(urlWhatsApp, "_blank");
 
 }
+/* ==========================================
+   BOTÓN ATRÁS DEL CELULAR
+   NAVEGACIÓN INTERNA DE LA CARTA
+========================================== */
 
+let vistaActual = "inicio-carta";
+let restaurandoHistorial = false;
+
+
+/* Guardar la vista actual en el historial */
+
+function guardarVista(vista){
+
+    if(restaurandoHistorial) return;
+
+    if(vistaActual === vista) return;
+
+    vistaActual = vista;
+
+    history.pushState(
+        {
+            sushiMargus: true,
+            vista: vista
+        },
+        "",
+        window.location.href
+    );
+}
+
+
+/* Cuando se presiona el botón ATRÁS del celular */
+
+window.addEventListener("popstate", function(event){
+
+    restaurandoHistorial = true;
+
+    if(event.state && event.state.sushiMargus){
+
+        const vista = event.state.vista;
+
+        switch(vista){
+
+            case "inicio-carta":
+                mostrarCarta();
+                break;
+
+            case "aperitivos":
+                mostrarAperitivos();
+                break;
+
+            case "ceviche":
+                mostrarCeviche();
+                break;
+
+            case "gohan":
+                mostrarGohan();
+                break;
+
+            case "sushiBurgers":
+                mostrarSushiBurgers();
+                break;
+
+            case "handrolls":
+                mostrarHandrolls();
+                break;
+
+            case "tablas":
+                mostrarTablas();
+                break;
+
+            case "burritos":
+                mostrarBurritos();
+                break;
+
+            case "burgerFuray":
+                mostrarBurgerFuray();
+                break;
+
+            case "extras":
+                mostrarExtras();
+                break;
+
+            case "carta":
+                mostrarCartaSushi();
+                break;
+
+            case "sashimi":
+                mostrarSashimi();
+                break;
+
+            case "tataki":
+                mostrarTataki();
+                break;
+
+            case "niguiris":
+                mostrarNiguiris();
+                break;
+
+            case "gyozas":
+                mostrarGyozas();
+                break;
+
+            case "arrollados":
+                mostrarArrollados();
+                break;
+
+            case "korokes":
+                mostrarKorokes();
+                break;
+
+            case "bastones":
+                mostrarBastones();
+                break;
+
+            case "papasfritas":
+                mostrarPapasFritas();
+                break;
+
+            case "tablaVegetariana":
+                mostrarTablaVegetariana();
+                break;
+
+            case "tablaFria":
+                mostrarTablaFria();
+                break;
+
+            case "tablaCaliente":
+                mostrarTablaCaliente();
+                break;
+
+            case "tablaMixta":
+                mostrarTablaMixta();
+                break;
+
+            case "nori":
+                mostrarNori();
+                break;
+
+            case "sesamo":
+                mostrarSesamo();
+                break;
+
+            case "palta":
+                mostrarPalta();
+                break;
+
+            case "queso":
+                mostrarQueso();
+                break;
+
+            case "salmon":
+                mostrarSalmon();
+                break;
+
+            case "hotrolls":
+                mostrarHotRolls();
+                break;
+
+            case "especiales":
+                mostrarEspeciales();
+                break;
+
+            case "sinarroz":
+                mostrarSinArroz();
+                break;
+
+            default:
+                mostrarCarta();
+        }
+
+        vistaActual = vista;
+    }
+
+    else{
+
+        // Si ya no quedan vistas internas,
+        // dejamos que el navegador continúe
+        // con su historial normal.
+
+        mostrarCarta();
+
+    }
+
+    restaurandoHistorial = false;
+
+});
+
+
+/* Vista inicial */
+
+window.addEventListener("load", function(){
+
+    history.replaceState(
+        {
+            sushiMargus: true,
+            vista: "inicio-carta"
+        },
+        "",
+        window.location.href
+    );
+
+    vistaActual = "inicio-carta";
+
+});
 </script>
 
 </footer>
