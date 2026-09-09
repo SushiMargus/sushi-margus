@@ -5227,18 +5227,21 @@ function volverAperitivos(){
    SUSHI DE CARTA
 ========================================== */
 
-function mostrarCartaSushi(){
+function mostrarCartaSushi(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("carta");
+
+    }
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("carta");
-
-    if(elemento){
-        elemento.classList.remove("oculto");
-    }
+    document.getElementById("carta").classList.remove("oculto");
 
     irArriba();
 
@@ -5252,6 +5255,7 @@ function mostrarCartaSushi(){
 function mostrarNori(){
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("nori").classList.remove("oculto");
