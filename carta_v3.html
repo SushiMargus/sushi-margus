@@ -4358,119 +4358,325 @@ footer .copyright{
   <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
 </div>
-<!-- SUSHI SIN ARROZ -->
-
-<div id="sinarroz" class="oculto">
-
-    <div class="contenedor-rolls">
+<!-- SUSHI SIN ARROZ --><div id="sinarroz" class="oculto"><div class="contenedor-rolls">
 
 
-        <div class="roll">
-            <h3>Champiñón Tempura</h3>
-            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
-            <p>Champiñón Tempura</p>
-            <span class="precio">$7.490</span>
+    <div class="roll">
 
- <select class="envoltura">
-    <option value="">Elige tu envoltura</option>
-    <option value="Palta">Envuelto en Palta</option>
-    <option value="Queso">Envuelto en Queso</option>
-    <option value="Salmón">Envuelto en Salmón +$1.500</option>
-</select>
+        <h3>Champiñón Tempura</h3>
 
-<button class="btn-agregar"
-        onclick="agregarSinArroz(this, 'Champiñón Tempura', 7490)">
-    🛒 Agregar
-</button>
+        <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+
+        <p>Champiñón Tempura</p>
+
+        <span class="precio">$7.490</span>
+
+
+        <div class="selector-envoltura">
+
+            <button type="button"
+                    class="boton-envoltura"
+                    onclick="abrirEnvoltura(this)">
+
+                Elige tu envoltura
+                <span>▼</span>
+
+            </button>
+
+            <div class="opciones-envoltura oculto">
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Palta')">
+
+                    Envuelto en Palta
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Queso')">
+
+                    Envuelto en Queso
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Salmón')">
+
+                    Envuelto en Salmón +$1.500
+
+                </button>
+
+            </div>
+
         </div>
 
 
-        <div class="roll">
-            <h3>Pollo Teriyaki</h3>
-            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
-            <p>Pollo Teriyaki</p>
-            <span class="precio">$7.490</span>
+        <button class="btn-agregar"
+                onclick="agregarSinArroz(this, 'Champiñón Tempura', 7490)">
 
-            <select class="envoltura">
-    <option value="">Elegir envoltura</option>
-    <option value="Palta">Envuelto en Palta</option>
-    <option value="Queso">Envuelto en Queso</option>
-    <option value="Salmón">Envuelto en Salmón +$1.500</option>
-</select>
+            🛒 Agregar
 
-<button class="btn-agregar"
-        onclick="agregarSinArroz(this, 'Pollo Teriyaki', 7490)">
-    🛒 Agregar
-</button>
-        </div>
-
-
-        <div class="roll">
-            <h3>Camarón Furay</h3>
-            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
-            <p>Camarón Furay</p>
-            <span class="precio">$7.990</span>
-
-            <select class="envoltura">
-    <option value="">Elegir envoltura</option>
-    <option value="Palta">Envuelto en Palta</option>
-    <option value="Queso">Envuelto en Queso</option>
-    <option value="Salmón">Envuelto en Salmón +$1.500</option>
-</select>
-
-<button class="btn-agregar"
-        onclick="agregarSinArroz(this, 'Camarón Furay', 7990)">
-    🛒 Agregar
-</button>
-        </div>
-
-
-        <div class="roll">
-            <h3>Salmón</h3>
-            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
-            <p>Salmón</p>
-            <span class="precio">$7.990</span>
-
-            <select class="envoltura">
-    <option value="">Elegir envoltura</option>
-    <option value="Palta">Envuelto en Palta</option>
-    <option value="Queso">Envuelto en Queso</option>
-    <option value="Salmón">Envuelto en Salmón +$1.500</option>
-</select>
-
-<button class="btn-agregar"
-        onclick="agregarSinArroz(this, 'Salmón', 7990)">
-    🛒 Agregar
-</button>
-        </div>
-
-
-        <div class="roll">
-            <h3>Camarón Furay / Salmón</h3>
-            <p>Queso Crema • Palta • Pimentón • Cebollín</p>
-            <p>Camarón Furay • Salmón</p>
-            <span class="precio">$8.490</span>
-
-            <select class="envoltura">
-    <option value="">Elegir envoltura</option>
-    <option value="Palta">Envuelto en Palta</option>
-    <option value="Queso">Envuelto en Queso</option>
-    <option value="Salmón">Envuelto en Salmón +$1.500</option>
-</select>
-
-<button class="btn-agregar"
-        onclick="agregarSinArroz(this, 'Camarón Furay / Salmón', 8490)">
-    🛒 Agregar
-</button>
-        </div>
-
+        </button>
 
     </div>
 
 
- <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+
+    <div class="roll">
+
+        <h3>Pollo Teriyaki</h3>
+
+        <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+
+        <p>Pollo Teriyaki</p>
+
+        <span class="precio">$7.490</span>
+
+
+        <div class="selector-envoltura">
+
+            <button type="button"
+                    class="boton-envoltura"
+                    onclick="abrirEnvoltura(this)">
+
+                Elige tu envoltura
+                <span>▼</span>
+
+            </button>
+
+            <div class="opciones-envoltura oculto">
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Palta')">
+
+                    Envuelto en Palta
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Queso')">
+
+                    Envuelto en Queso
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Salmón')">
+
+                    Envuelto en Salmón +$1.500
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn-agregar"
+                onclick="agregarSinArroz(this, 'Pollo Teriyaki', 7490)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+
+    <div class="roll">
+
+        <h3>Camarón Furay</h3>
+
+        <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+
+        <p>Camarón Furay</p>
+
+        <span class="precio">$7.990</span>
+
+
+        <div class="selector-envoltura">
+
+            <button type="button"
+                    class="boton-envoltura"
+                    onclick="abrirEnvoltura(this)">
+
+                Elige tu envoltura
+                <span>▼</span>
+
+            </button>
+
+            <div class="opciones-envoltura oculto">
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Palta')">
+
+                    Envuelto en Palta
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Queso')">
+
+                    Envuelto en Queso
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Salmón')">
+
+                    Envuelto en Salmón +$1.500
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn-agregar"
+                onclick="agregarSinArroz(this, 'Camarón Furay', 7990)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+
+    <div class="roll">
+
+        <h3>Salmón</h3>
+
+        <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+
+        <p>Salmón</p>
+
+        <span class="precio">$7.990</span>
+
+
+        <div class="selector-envoltura">
+
+            <button type="button"
+                    class="boton-envoltura"
+                    onclick="abrirEnvoltura(this)">
+
+                Elige tu envoltura
+                <span>▼</span>
+
+            </button>
+
+            <div class="opciones-envoltura oculto">
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Palta')">
+
+                    Envuelto en Palta
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Queso')">
+
+                    Envuelto en Queso
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Salmón')">
+
+                    Envuelto en Salmón +$1.500
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn-agregar"
+                onclick="agregarSinArroz(this, 'Salmón', 7990)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+
+    <div class="roll">
+
+        <h3>Camarón Furay / Salmón</h3>
+
+        <p>Queso Crema • Palta • Pimentón • Cebollín</p>
+
+        <p>Camarón Furay • Salmón</p>
+
+        <span class="precio">$8.490</span>
+
+
+        <div class="selector-envoltura">
+
+            <button type="button"
+                    class="boton-envoltura"
+                    onclick="abrirEnvoltura(this)">
+
+                Elige tu envoltura
+                <span>▼</span>
+
+            </button>
+
+            <div class="opciones-envoltura oculto">
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Palta')">
+
+                    Envuelto en Palta
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Queso')">
+
+                    Envuelto en Queso
+
+                </button>
+
+                <button type="button"
+                        onclick="elegirEnvoltura(this, 'Salmón')">
+
+                    Envuelto en Salmón +$1.500
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="btn-agregar"
+                onclick="agregarSinArroz(this, 'Camarón Furay / Salmón', 8490)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
 
 </div>
+
+
+<button class="btn-volver"
+        onclick="volverCategorias()">
+
+    ⬅ Volver categorías
+
+</button>
+
+</div>
+
 <!-- EXTRAS -->
 
 <div id="extras" class="oculto">
@@ -5778,6 +5984,80 @@ function actualizarCarrito(){
 
 
 /* ==========================================
+   SELECTOR DE ENVOLTURA
+========================================== */
+
+function abrirEnvoltura(boton){
+
+    const menu =
+        boton.nextElementSibling;
+
+
+    document
+        .querySelectorAll(".opciones-envoltura")
+        .forEach(function(opcion){
+
+            if(opcion !== menu){
+
+                opcion.classList.add("oculto");
+
+            }
+
+        });
+
+
+    menu.classList.toggle("oculto");
+
+}
+
+
+function elegirEnvoltura(boton, valor){
+
+    const selector =
+        boton.closest(".selector-envoltura");
+
+
+    if(!selector){
+        return;
+    }
+
+
+    const botonPrincipal =
+        selector.querySelector(".boton-envoltura");
+
+
+    selector.dataset.valor = valor;
+
+
+    if(valor === "Salmón"){
+
+        botonPrincipal.innerHTML =
+            'Envuelto en Salmón +$1.500 <span>▼</span>';
+
+    }else{
+
+        botonPrincipal.innerHTML =
+            'Envuelto en ' +
+            valor +
+            ' <span>▼</span>';
+
+    }
+
+
+    const menu =
+        selector.querySelector(".opciones-envoltura");
+
+
+    if(menu){
+
+        menu.classList.add("oculto");
+
+    }
+
+}
+
+
+/* ==========================================
    SUSHI SIN ARROZ
 ========================================== */
 
@@ -5792,8 +6072,17 @@ function agregarSinArroz(
     }
 
 
+    const roll =
+        boton.closest(".roll");
+
+
+    if(!roll){
+        return;
+    }
+
+
     const selector =
-        boton.previousElementSibling;
+        roll.querySelector(".selector-envoltura");
 
 
     if(!selector){
@@ -5808,7 +6097,7 @@ function agregarSinArroz(
 
 
     const envoltura =
-        selector.value;
+        selector.dataset.valor;
 
 
     if(!envoltura){
@@ -5848,7 +6137,6 @@ function agregarSinArroz(
     );
 
 }
-
 
 /* ==========================================
    TIPO DE PEDIDO
