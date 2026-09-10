@@ -5224,7 +5224,7 @@ function volverAperitivos(){
 
 
 /* ==========================================
-   SUSHI DE CARTA
+   CARTA DE SUSHI
 ========================================== */
 
 function mostrarCartaSushi(guardarHistorial = true){
@@ -5248,11 +5248,13 @@ function mostrarCartaSushi(guardarHistorial = true){
 }
 
 
-/* ==========================================
-   CATEGORÍAS SUSHI
-========================================== */
+function mostrarNori(guardarHistorial = true){
 
-function mostrarNori(){
+    if(guardarHistorial){
+
+        guardarVista("nori");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
 
@@ -5265,9 +5267,16 @@ function mostrarNori(){
 }
 
 
-function mostrarSesamo(){
+function mostrarSesamo(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("sesamo");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("sesamo").classList.remove("oculto");
@@ -5277,9 +5286,16 @@ function mostrarSesamo(){
 }
 
 
-function mostrarPalta(){
+function mostrarPalta(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("palta");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("palta").classList.remove("oculto");
@@ -5289,9 +5305,16 @@ function mostrarPalta(){
 }
 
 
-function mostrarQueso(){
+function mostrarQueso(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("queso");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("queso").classList.remove("oculto");
@@ -5301,9 +5324,16 @@ function mostrarQueso(){
 }
 
 
-function mostrarSalmon(){
+function mostrarSalmon(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("salmon");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("salmon").classList.remove("oculto");
@@ -5313,9 +5343,16 @@ function mostrarSalmon(){
 }
 
 
-function mostrarHotRolls(){
+function mostrarHotRolls(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("hotrolls");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("hotrolls").classList.remove("oculto");
@@ -5325,9 +5362,16 @@ function mostrarHotRolls(){
 }
 
 
-function mostrarEspeciales(){
+function mostrarEspeciales(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("especiales");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("especiales").classList.remove("oculto");
@@ -5337,9 +5381,16 @@ function mostrarEspeciales(){
 }
 
 
-function mostrarSinArroz(){
+function mostrarSinArroz(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("sinarroz");
+
+    }
 
     document.getElementById("carta").classList.add("oculto");
+
     ocultarCategoriasSushi();
 
     document.getElementById("sinarroz").classList.remove("oculto");
@@ -5348,10 +5399,6 @@ function mostrarSinArroz(){
 
 }
 
-
-/* ==========================================
-   VOLVER A CATEGORÍAS SUSHI
-========================================== */
 
 function volverCategorias(){
 
