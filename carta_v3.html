@@ -999,23 +999,48 @@ textarea.campo-pedido{
 
 .envoltura{
     width:100%;
-    padding:11px 14px;
+    max-width:320px;
+
+    padding:12px 42px 12px 15px;
     margin-top:10px;
     margin-bottom:8px;
-    border:2px solid #f5c542;
+
+    background:#1a1a1a !important;
+    color:white !important;
+
+    border:2px solid #f5c542 !important;
     border-radius:10px;
-    background:#d32f2f;
-    color:white;
+
     font-size:15px;
     font-weight:bold;
+
     cursor:pointer;
     outline:none;
+
+    appearance:none;
+    -webkit-appearance:none;
+
+    box-sizing:border-box;
 }
 
-.envoltura:focus{
-    border-color:#f5c542;
+.envoltura:focus,
+.envoltura:active{
+    background:#1a1a1a !important;
+    color:white !important;
+
+    border:2px solid #f5c542 !important;
+
+    box-shadow:0 0 8px rgba(245,197,66,.5);
 }
 
+.envoltura option{
+    background:#1a1a1a !important;
+    color:white !important;
+}
+
+.envoltura option:first-child{
+    color:#f5c542 !important;
+}
 
 /* =========================================
    FOOTER
@@ -1480,10 +1505,10 @@ footer .copyright{
 
     padding: 12px 42px 12px 15px;
 
-    background: #1a1a1a;
-    color: #ffffff;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
 
-    border: 2px solid #f5c542;
+    border: 2px solid #f5c542 !important;
     border-radius: 10px;
 
     font-size: 15px;
@@ -1493,7 +1518,8 @@ footer .copyright{
 
     outline: none;
 
-    appearance: auto;
+    appearance: none;
+    -webkit-appearance: none;
 
     box-sizing: border-box;
 
@@ -1502,9 +1528,13 @@ footer .copyright{
 
 /* Cuando se toca el selector */
 
-.envoltura:focus{
+.envoltura:focus,
+.envoltura:active{
 
-    border-color: #d32f2f;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+
+    border: 2px solid #f5c542 !important;
 
     box-shadow:
         0 0 8px rgba(245, 197, 66, 0.5);
@@ -1516,10 +1546,8 @@ footer .copyright{
 
 .envoltura option{
 
-    background: #1a1a1a;
-    color: #ffffff;
-
-    padding: 10px;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
 
 }
 
@@ -1528,10 +1556,142 @@ footer .copyright{
 
 .envoltura option:first-child{
 
-    color: #f5c542;
+    color: #f5c542 !important;
 
 }
+/* ==========================================
+   SELECTOR ENVOLTURA - SUSHI SIN ARROZ
+========================================== */
 
+.selector-envoltura{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 10px auto;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.boton-envoltura{
+    width: 100%;
+    padding: 12px 15px;
+
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+
+    border: 2px solid #f5c542 !important;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* CUANDO SE ABRE */
+
+.boton-envoltura:focus,
+.boton-envoltura:active{
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+
+    border-color: #f5c542 !important;
+
+    outline: none;
+}
+
+
+/* VENTANA DE OPCIONES */
+
+.opciones-envoltura{
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: calc(100% + 5px);
+
+    background: #1a1a1a !important;
+
+    border: 2px solid #f5c542 !important;
+    border-radius: 10px;
+
+    padding: 5px;
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+}
+
+
+/* OPCIONES */
+
+.opciones-envoltura button{
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* AL TOCAR UNA OPCIÓN */
+
+.opciones-envoltura button:hover,
+.opciones-envoltura button:active{
+    background:linear-gradient(135deg,#ffcc00,#d90000) !important;
+    color: #000000 !important;
+}
+
+
+/* OCULTAR */
+
+.opciones-envoltura.oculto{
+    display: none !important;
+}
+/* ==========================================
+    ENVOLTURA - EVITAR QUE LA VENTANA SE CORTE
+ ========================================== */
+
+.selector-envoltura{
+    position: relative;
+    z-index: 1000;
+}
+
+/* Permitir que la ventana sobresalga de la tarjeta */
+
+.roll{
+    overflow: visible !important;
+}
+
+.contenedor-rolls{
+    overflow: visible !important;
+}
+
+/* La ventana queda por encima de todo */
+
+.opciones-envoltura{
+    z-index: 99999 !important;
+}
 </style>
 </head>
 
