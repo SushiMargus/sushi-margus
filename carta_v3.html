@@ -6393,19 +6393,26 @@ function enviarPedido(){
 
         if(producto.detalles){
 
-            let detallesWhatsApp =
-                producto.detalles
-                .replace(
-                    /<br>/g,
-                    "%0A"
-                );
+    /* Las tablas se envían sin detalle de rollitos
+       ni envolturas */
+
+    if(!producto.nombre.toLowerCase().includes("tabla")){
+
+        let detallesWhatsApp =
+            producto.detalles
+            .replace(
+                /<br>/g,
+                "%0A"
+            );
 
 
-            mensaje +=
-                detallesWhatsApp +
-                "%0A";
+        mensaje +=
+            detallesWhatsApp +
+            "%0A";
 
-        }
+    }
+
+}
 
 
         mensaje += "%0A";
