@@ -5377,8 +5377,112 @@ function mostrarTablas(guardarHistorial = true){
     }
 
     irArriba();
+
 }
 
+
+/* ==========================================
+   TABLA VEGETARIANA
+========================================== */
+
+function mostrarTablaVegetariana(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("tablaVegetariana");
+    }
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("tablaVegetariana").classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
+/* ==========================================
+   TABLA FRÍA
+========================================== */
+
+function mostrarTablaFria(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("tablaFria");
+    }
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("tablaFria").classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
+/* ==========================================
+   TABLA CALIENTE
+========================================== */
+
+function mostrarTablaCaliente(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("tablaCaliente");
+    }
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    document.getElementById("tablaCaliente").classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
+/* ==========================================
+   TABLA MIXTA
+========================================== */
+
+function mostrarTablaMixta(guardarHistorial = true){
+
+    if(guardarHistorial){
+        guardarVista("tablaMixta");
+    }
+
+    document.getElementById("tablas").classList.add("oculto");
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+
+    document.getElementById("tablaMixta").classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
+/* ==========================================
+   VOLVER A CATEGORÍAS TABLAS
+========================================== */
+
+function volverTablas(){
+
+    document.getElementById("tablaVegetariana").classList.add("oculto");
+    document.getElementById("tablaFria").classList.add("oculto");
+    document.getElementById("tablaCaliente").classList.add("oculto");
+    document.getElementById("tablaMixta").classList.add("oculto");
+
+    mostrarTablas();
+
+}
 
 /* ==========================================
    BURRITOS
@@ -5549,64 +5653,6 @@ function mostrarPapasFritas(){
     document.getElementById("aperitivos").classList.add("oculto");
 
     document.getElementById("papasfritas").classList.remove("oculto");
-
-    irArriba();
-
-}
-
-
-/* ==========================================
-   TABLAS
-========================================== */
-
-function mostrarTablaVegetariana(){
-
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaVegetariana").classList.remove("oculto");
-
-    irArriba();
-
-}
-
-
-function mostrarTablaFria(){
-
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaFria").classList.remove("oculto");
-
-    irArriba();
-
-}
-
-
-function mostrarTablaCaliente(){
-
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.remove("oculto");
-
-    irArriba();
-
-}
-
-
-function mostrarTablaMixta(){
-
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.remove("oculto");
-
-    irArriba();
-
-}
-
-
-function volverTablas(){
-
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
-
-    document.getElementById("tablas").classList.remove("oculto");
 
     irArriba();
 
