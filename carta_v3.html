@@ -7,9 +7,9 @@
 
 <style>
 
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
+/* =========================================================
+   1. CONFIGURACIÓN GENERAL
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -18,7 +18,7 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#1b1b1b;
+    background:#000000;
     color:white;
     text-align:center;
 }
@@ -28,12 +28,12 @@ h1{
 }
 
 
-/* =========================================
-   ENCABEZADO
-========================================= */
+/* =========================================================
+   2. ENCABEZADO
+========================================================= */
 
 header{
-    background:linear-gradient(135deg,#090909,#1a1a1a);
+    background:linear-gradient(135deg,#000000,#000000);
     padding:25px;
     border-bottom:3px solid #f5c542;
 }
@@ -48,9 +48,9 @@ header h1{
 }
 
 
-/* =========================================
-   MENÚ GENERAL
-========================================= */
+/* =========================================================
+   3. MENÚ GENERAL
+========================================================= */
 
 .menu{
     width:100%;
@@ -59,12 +59,12 @@ header h1{
 }
 
 
-/* =========================================
-   BOTONES GENERALES
-========================================= */
+/* =========================================================
+   4. BOTONES GENERALES
+========================================================= */
 
 button{
-    background:#d32f2f;
+    background:linear-gradient(135deg,#d32f2f,#a50000);
     color:white;
     border:none;
     padding:10px 20px;
@@ -80,9 +80,9 @@ button:hover{
 }
 
 
-/* =========================================
-   PRODUCTOS
-========================================= */
+/* =========================================================
+   5. PRODUCTOS
+========================================================= */
 
 .producto{
     width:350px;
@@ -113,9 +113,9 @@ button:hover{
 }
 
 
-/* =========================================
-   PROMOCIONES
-========================================= */
+/* =========================================================
+   6. PROMOCIONES
+========================================================= */
 
 .contenedor-promos{
     display:flex;
@@ -134,13 +134,13 @@ button:hover{
 }
 
 .promo h3{
-    color:#d32f2f;
+    color:#fc0000;
 }
 
 
-/* =========================================
-   ENLACES
-========================================= */
+/* =========================================================
+   7. ENLACES Y BOTÓN PEDIR
+========================================================= */
 
 a{
     display:inline-block;
@@ -157,11 +157,6 @@ a:hover{
     background:#f5c542;
     color:#111;
 }
-
-
-/* =========================================
-   BOTÓN PEDIR
-========================================= */
 
 .boton-pedir{
     display:inline-block;
@@ -180,9 +175,9 @@ a:hover{
 }
 
 
-/* =========================================
-   CATEGORÍAS
-========================================= */
+/* =========================================================
+   8. CATEGORÍAS
+========================================================= */
 
 .categoria{
     width:100%;
@@ -190,22 +185,29 @@ a:hover{
 }
 
 .categoria h2{
-    color:#f5c542;
+    color:#f8aa00;
     font-size:28px;
 }
 
+.contenedor-categorias{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
 
-/* =========================================
-   TARJETAS DE CATEGORÍAS
-========================================= */
+
+/* =========================================================
+   9. TARJETAS DE CATEGORÍAS
+========================================================= */
 
 .categoria-titulo{
-    background:linear-gradient(145deg,#1b1b1b,#0d0d0d);
+    background:linear-gradient(145deg,#000000,#000000);
     color:white;
     width:320px;
     margin:30px auto;
     padding:15px;
-    border:1px solid #333;
+    border:1px solid #ff8800;
     border-radius:18px;
     box-shadow:0 8px 25px rgba(0,0,0,.7);
     transition:.3s;
@@ -214,8 +216,8 @@ a:hover{
 }
 
 .categoria-titulo:hover{
-    background:#202020;
-    border-color:#d32f2f;
+    background:#0f0f0f;
+    border-color:#ff0000;
     transform:translateY(-6px);
     box-shadow:0 15px 30px rgba(0,0,0,.7);
 }
@@ -231,23 +233,27 @@ a:hover{
 }
 
 .categoria-titulo h2{
-    color:#f5c542;
-    font-size:20px;
+    color:#ff8800;
+    font-size:25px;
     margin:10px 0 5px;
 }
+
 .descripcion-papas{
     color:white !important;
     font-size:16px;
     font-weight:400 !important;
 }
+
 .categoria-burger-furay{
     width:100%;
     max-width:100%;
     box-sizing:border-box;
 }
-/* =========================================
-   CATEGORÍAS PRINCIPALES - INICIO CARTA
-========================================= */
+
+
+/* =========================================================
+   10. INICIO DE LA CARTA
+========================================================= */
 
 #inicio-carta{
     display:grid;
@@ -265,18 +271,18 @@ a:hover{
     flex-direction:column;
     justify-content:flex-start;
     min-height:390px;
-    background:#111 !important;
-    border:2px solid #d32f2f !important;
+    background:#000000 !important;
+    border:2px solid #ff8800 !important;
 }
 
 #inicio-carta .categoria-titulo:hover{
-    background:#1b1b1b !important;
-    border-color:#f5c542 !important;
+    background:#0e0e0e !important;
+    border-color:#ff0000 !important;
 }
 
 #inicio-carta .categoria-titulo h2{
-    color:#f5c542;
-    font-size:20px;
+    color:#ff8800;
+    font-size:30px;
     margin:10px 0 5px;
 }
 
@@ -314,9 +320,6 @@ a:hover{
     border-radius:14px;
 }
 
-
-/* BOTÓN VOLVER DE INICIO DE CARTA */
-
 #inicio-carta > button:first-child{
     grid-column:1 / -1;
     width:auto;
@@ -327,101 +330,9 @@ a:hover{
 }
 
 
-/* =========================================
-   CONTENEDOR DE CATEGORÍAS
-========================================= */
-
-.contenedor-categorias{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-
-/* =========================================
-   ROLLS
-========================================= */
-
-.contenedor-rolls{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:40px;
-    width:100%;
-    margin:0 auto;
-}
-
-.roll{
-    width:280px;
-    background:linear-gradient(145deg,#202020,#0d0d0d);
-    color:white;
-    padding:15px;
-    border:1px solid #333;
-    border-radius:16px;
-    box-shadow:0 6px 18px rgba(0,0,0,.7);
-    transition:.3s;
-    margin:10px;
-    text-align:center;
-    overflow:hidden;
-}
-
-.roll:hover{
-    transform:translateY(-6px);
-    border-color:#d32f2f;
-    box-shadow:0 12px 28px rgba(0,0,0,.8);
-}
-
-.roll img{
-    width:100%;
-    height:auto;
-    aspect-ratio:1 / 1;
-    object-fit:contain;
-    display:block;
-    margin:0 auto 12px;
-    border-radius:12px;
-}
-
-.roll h3{
-    color:#f5c542;
-    font-size:20px;
-    margin:12px 0 8px;
-}
-
-.roll p{
-    line-height:1.4;
-}
-
-.precio{
-    font-size:21px;
-    font-weight:bold;
-    color:#f5c542;
-    margin:10px 0;
-}
-
-.roll .btn-agregar{
-    background:linear-gradient(135deg,#d32f2f,#a50000);
-    color:white;
-    border:1px solid #f5c542;
-    border-radius:9px;
-    padding:10px 18px;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.25s;
-}
-
-.roll .btn-agregar:hover{
-    background:linear-gradient(135deg,#f5c542,#d32f2f);
-    color:#111;
-    transform:scale(1.04);
-}
-
-
-/* =========================================
-   APERITIVOS
-========================================= */
+/* =========================================================
+   11. APERITIVOS Y CARTA
+========================================================= */
 
 #aperitivos .contenedor-categorias,
 #carta .contenedor-categorias{
@@ -459,9 +370,90 @@ a:hover{
 }
 
 
-/* =========================================
-   TABLAS
-========================================= */
+/* =========================================================
+   12. ROLLS
+========================================================= */
+
+.contenedor-rolls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+    width:100%;
+    margin:0 auto;
+    overflow:visible !important;
+}
+
+.roll{
+    width:280px;
+    background:linear-gradient(145deg,#000000,#000000);
+    color:white;
+    padding:15px;
+    border:1px solid #ff6600;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.7);
+    transition:.3s;
+    margin:10px;
+    text-align:center;
+    overflow:visible !important;
+}
+
+.roll:hover{
+    transform:translateY(-6px);
+    border-color:#ff0000;
+    box-shadow:0 12px 28px rgba(0,0,0,.8);
+}
+
+.roll img{
+    width:100%;
+    height:auto;
+    aspect-ratio:1 / 1;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:12px;
+}
+
+.roll h3{
+    color:#ff8800;
+    font-size:30px;
+    margin:12px 0 8px;
+}
+
+.roll p{
+    line-height:1.4;
+}
+
+.precio{
+    font-size:21px;
+    font-weight:bold;
+    color:#fcfbfa;
+    margin:10px 0;
+}
+
+.roll .btn-agregar{
+    background:linear-gradient(135deg,#d32f2f,#a50000);
+    color:white;
+    border:1px solid #f5c542;
+    border-radius:9px;
+    padding:10px 18px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.roll .btn-agregar:hover{
+    background:linear-gradient(135deg,#f5c542,#d32f2f);
+    color:#111;
+    transform:scale(1.04);
+}
+
+
+/* =========================================================
+   13. TABLAS
+========================================================= */
 
 #tablaVegetariana,
 #tablaFria,
@@ -469,38 +461,27 @@ a:hover{
 #tablaMixta{
     width:100%;
     text-align:center;
-    box-sizing:border-box;
 }
 
-
-/* TARJETA DE TABLA */
-
 .tabla{
-    background:#1b1b1b;
-    color:white;
-    border:2px solid #d32f2f;
+    background:#000000;
+    color:rgb(255, 255, 255);
+    border:2px solid #ff0000;
     border-radius:15px;
     width:700px;
     max-width:calc(100% - 24px);
     margin:20px auto;
     padding:20px;
     box-shadow:0 4px 12px rgba(0,0,0,.4);
-    box-sizing:border-box;
     text-align:center;
 }
 
-
-/* TÍTULO DE LA TABLA */
-
 .tabla h3{
-    color:#f5c542 !important;
+    color:#f8f8f7 !important;
     text-align:center !important;
-    font-size:22px;
+    font-size:35px;
     margin:0 0 15px;
 }
-
-
-/* DETALLES DE LA TABLA */
 
 .tabla p{
     color:white !important;
@@ -513,47 +494,78 @@ a:hover{
 }
 
 
-/* =========================================
-   TÍTULOS DE ENVOLTURA
-========================================= */
+/* =========================================================
+   14. TÍTULOS E INGREDIENTES DE TABLAS
+========================================================= */
 
-/* 
-   SOLO el nombre de la envoltura será rojo.
-   Los ingredientes permanecen blancos.
-*/
+/* Nombre de la envoltura */
 
 .tabla p:not(.mensaje-cambios) > strong{
-    color:#d32f2f !important;
+    color:#ff0000 !important;
+    display:block;
+    text-align:center;
+    margin-bottom:5px;
 }
 
 
-/* =========================================
-   MENSAJE DE CAMBIOS
-========================================= */
+/* Ingredientes */
 
-.tabla .mensaje-cambios{
-    color:#f5c542 !important;
-    font-size:11px !important;
-    font-weight:bold !important;
-    text-align:center !important;
-    line-height:1.2 !important;
-    margin:15px auto 0 !important;
-    width:100%;
-    white-space:nowrap;
-}
-
-.tabla .mensaje-cambios > strong{
-    color:#f5c542 !important;
-}
-
-.tabla .mensaje-cambios > strong{
+.tabla p:not(.mensaje-cambios){
     color:white !important;
 }
 
 
-/* =========================================
-   BOTÓN AGREGAR DE TABLAS
-========================================= */
+/* =========================================================
+   15. AVISO DE CAMBIOS EN TABLAS
+========================================================= */
+
+.tabla p.mensaje-cambios,
+.tabla p.mensaje-cambios > strong{
+    color:#f5c542 !important;
+    text-align:center !important;
+    font-size:11px !important;
+    font-weight:bold !important;
+    line-height:1.2 !important;
+    margin:15px auto 0 !important;
+    width:100%;
+    white-space:normal !important;
+    overflow-wrap:break-word;
+    word-break:normal;
+}
+
+
+/* =========================================================
+   16. CATEGORÍAS DE TABLAS
+========================================================= */
+
+.categorias-tablas{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    width:100%;
+}
+
+.categorias-tablas .categoria-titulo{
+    width:380px;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.categorias-tablas .categoria-titulo img{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:14px;
+}
+
+
+/* =========================================================
+   17. BOTONES DE TABLAS
+========================================================= */
 
 .tabla .btn-agregar{
     display:inline-block;
@@ -575,11 +587,6 @@ a:hover{
     transform:scale(1.03);
 }
 
-
-/* =========================================
-   BOTÓN VOLVER DE TABLAS
-========================================= */
-
 #tablaVegetariana > button:first-child,
 #tablaFria > button:first-child,
 #tablaCaliente > button:first-child,
@@ -588,49 +595,9 @@ a:hover{
 }
 
 
-/* =========================================
-   CATEGORÍAS DE TABLAS
-========================================= */
-
-.categorias-tablas{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    width:100%;
-}
-
-.categorias-tablas .categoria-titulo{
-    width:380px;
-    max-width:100%;
-    box-sizing:border-box;
-}
-
-
-/* =========================================
-   IMÁGENES DE TABLAS 1080 x 220
-========================================= */
-
-.categorias-tablas .categoria-titulo{
-    width:380px;
-    max-width:100%;
-    box-sizing:border-box;
-}
-
-.categorias-tablas .categoria-titulo img{
-    width:100%;
-    height:auto;
-    aspect-ratio:auto;
-    object-fit:contain;
-    display:block;
-    margin:0 auto 12px;
-    border-radius:14px;
-}
-
-
-/* =========================================
-   BOTONES VOLVER
-========================================= */
+/* =========================================================
+   18. BOTONES VOLVER
+========================================================= */
 
 .btn-volver{
     background:linear-gradient(135deg,#d90000,#8b0000);
@@ -651,9 +618,9 @@ a:hover{
 }
 
 
-/* =========================================
-   BOTÓN DETALLES
-========================================= */
+/* =========================================================
+   19. BOTÓN DETALLES
+========================================================= */
 
 .btn-detalles{
     background:linear-gradient(135deg,#d90000,#b71c1c);
@@ -674,9 +641,39 @@ a:hover{
 }
 
 
-/* =========================================
-   OCULTAR / MOSTRAR
-========================================= */
+/* =========================================================
+   20. BOTONES PRINCIPALES
+   CARTA / WHATSAPP / INSTAGRAM
+========================================================= */
+
+.btn-carta,
+.btn-whatsapp,
+.btn-instagram{
+    display:inline-block;
+    background:linear-gradient(135deg,#d90000,#f5c542) !important;
+    color:white !important;
+    border:1px solid #f5c542 !important;
+    padding:10px 20px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-carta:hover,
+.btn-whatsapp:hover,
+.btn-instagram:hover{
+    background:linear-gradient(135deg,#f5c542,#d90000) !important;
+    color:#111 !important;
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   21. OCULTAR / MOSTRAR SECCIONES
+========================================================= */
 
 .oculto{
     display:none !important;
@@ -698,9 +695,9 @@ a:hover{
 }
 
 
-/* =========================================
-   CARRITO FLOTANTE
-========================================= */
+/* =========================================================
+   22. CARRITO FLOTANTE
+========================================================= */
 
 #boton-carrito{
     position:fixed;
@@ -716,8 +713,9 @@ a:hover{
     cursor:pointer;
     box-shadow:0 4px 12px rgba(0,0,0,.4);
     z-index:1000;
-
-    transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+    transition:transform .25s ease,
+               background .25s ease,
+               box-shadow .25s ease;
 }
 
 #boton-carrito:hover{
@@ -736,9 +734,9 @@ a:hover{
 }
 
 
-/* =========================================
-   VENTANA DEL CARRITO
-========================================= */
+/* =========================================================
+   23. VENTANA DEL CARRITO
+========================================================= */
 
 .carrito{
     display:none;
@@ -752,8 +750,6 @@ a:hover{
     justify-content:center;
     align-items:center;
 }
-
-/* CUANDO EL CARRITO ESTÁ ABIERTO */
 
 .carrito.abierto{
     display:flex;
@@ -852,10 +848,15 @@ a:hover{
 }
 
 .btn-carrito:hover{
-    background:linear-gradient(135deg,#ff9101,#d90000);
+    background:linear-gradient(135deg,#f5c542,#d90000);
     transform:translateY(-2px);
     box-shadow:0 5px 12px rgba(0,0,0,.4);
 }
+
+
+/* =========================================================
+   24. BOTÓN ENVIAR PEDIDO
+========================================================= */
 
 .enviar-pedido{
     background:linear-gradient(135deg,#25D366,#128C7E);
@@ -880,10 +881,16 @@ a:hover{
     transform:scale(.96);
 }
 
-.enviar-pedido:active{
-    transform:scale(.96);
+
+/* =========================================================
+   25. TIPO DE PEDIDO
+========================================================= */
+
+.tipo-pedido-botones{
+    display:flex;
+    gap:18px;
+    margin:8px 0;
 }
-/* BOTONES TIPO DE PEDIDO */
 
 .boton-tipo{
     flex:1;
@@ -903,30 +910,36 @@ a:hover{
     transform:translateY(-2px);
     box-shadow:0 5px 12px rgba(0,0,0,.4);
 }
-/* BOTONES TIPO DE PEDIDO */
 
-.boton-tipo{
-    flex:1;
-    padding:12px;
-    border:1px solid #f5c542;
-    border-radius:10px;
-    background:linear-gradient(135deg,#ff9900,#a00000);
+.boton-tipo.seleccionado{
+    background:linear-gradient(135deg,#d32f2f,#8b0000);
     color:white;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.25s ease;
+    border-color:#f5c542;
+    transform:scale(1.06);
+    box-shadow:0 6px 15px rgba(217,0,0,.35);
+    animation:pulsarTipo .35s ease;
 }
 
-.boton-tipo:hover{
-    background:linear-gradient(135deg,#bd0101,#ff7b00);
-    transform:translateY(-2px);
-    box-shadow:0 5px 12px rgba(0,0,0,.4);
+@keyframes pulsarTipo{
+
+    0%{
+        transform:scale(.95);
+    }
+
+    60%{
+        transform:scale(1.10);
+    }
+
+    100%{
+        transform:scale(1.06);
+    }
+
 }
 
-/* =========================================
-   CAMPOS DEL PEDIDO
-========================================= */
+
+/* =========================================================
+   26. CAMPOS DEL PEDIDO
+========================================================= */
 
 .campo-pedido{
     width:100%;
@@ -957,69 +970,101 @@ textarea.campo-pedido{
 }
 
 
-/* =========================================
-   TIPO DE PEDIDO
-========================================= */
+/* =========================================================
+   27. SUSHI SIN ARROZ
+   SELECTOR DE ENVOLTURA
+========================================================= */
 
-.tipo-pedido-botones{
+.selector-envoltura{
+    position:relative;
+    width:100%;
+    max-width:320px;
+    margin:10px auto;
+    z-index:1000;
+}
+
+.boton-envoltura{
+    width:100%;
+    padding:12px 15px;
+    background:#1a1a1a !important;
+    color:#ffffff !important;
+    border:2px solid #f5c542 !important;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    box-sizing:border-box;
     display:flex;
-    gap:18px;
-    margin:8px 0;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.boton-tipo.seleccionado{
-    background:linear-gradient(135deg,#d32f2f,#8b0000);
-    color:white;
-    border-color:#f5c542;
-    transform:scale(1.06);
-    box-shadow:0 6px 15px rgba(217,0,0,.35);
-    animation:pulsarTipo .35s ease;
+.boton-envoltura:focus,
+.boton-envoltura:active{
+    background:linear-gradient(135deg,#f5c542,#d90000) !important;
+    color:white !important;
+    border-color:#f5c542 !important;
+    outline:none;
 }
 
-@keyframes pulsarTipo{
+.opciones-envoltura{
+    position:absolute;
+    left:0;
+    right:0;
+    top:calc(100% + 5px);
+    background:#1a1a1a !important;
+    border:2px solid #f5c542 !important;
+    border-radius:10px;
+    padding:5px;
+    z-index:99999 !important;
+    box-sizing:border-box;
+}
 
-    0%{
-        transform:scale(.95);
-    }
+.opciones-envoltura button{
+    width:100%;
+    padding:11px 12px;
+    background:#1a1a1a !important;
+    color:#ffffff !important;
+    border:none;
+    border-radius:7px;
+    font-size:14px;
+    font-weight:bold;
+    text-align:left;
+    cursor:pointer;
+}
 
-    60%{
-        transform:scale(1.10);
-    }
+.opciones-envoltura button:hover,
+.opciones-envoltura button:active{
+    background:#f5c542 !important;
+    color:#000000 !important;
+}
 
-    100%{
-        transform:scale(1.06);
-    }
-
+.opciones-envoltura.oculto{
+    display:none !important;
 }
 
 
-/* =========================================
-   ENVOLTURA
-========================================= */
+/* =========================================================
+   28. SELECTOR NATIVO DE ENVOLTURA
+   (POR SI ALGÚN PRODUCTO TODAVÍA LO UTILIZA)
+========================================================= */
 
 .envoltura{
     width:100%;
     max-width:320px;
-
     padding:12px 42px 12px 15px;
     margin-top:10px;
     margin-bottom:8px;
-
     background:#1a1a1a !important;
     color:white !important;
-
     border:2px solid #f5c542 !important;
     border-radius:10px;
-
     font-size:15px;
     font-weight:bold;
-
     cursor:pointer;
     outline:none;
-
     appearance:none;
     -webkit-appearance:none;
-
     box-sizing:border-box;
 }
 
@@ -1027,9 +1072,7 @@ textarea.campo-pedido{
 .envoltura:active{
     background:#1a1a1a !important;
     color:white !important;
-
     border:2px solid #f5c542 !important;
-
     box-shadow:0 0 8px rgba(245,197,66,.5);
 }
 
@@ -1042,12 +1085,29 @@ textarea.campo-pedido{
     color:#f5c542 !important;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+
+/* =========================================================
+   29. TÍTULO DE TAMAÑO DE HANDROLL
+========================================================= */
+
+.titulo-tamano-handroll{
+    color:#2bff00 !important;
+    text-align:center !important;
+    font-size:50px;
+    font-weight:900;
+    margin:30px auto 20px;
+    padding-bottom:8px;
+    border-bottom:2px solid #ff0000;
+    width:90%;
+}
+
+
+/* =========================================================
+   30. FOOTER
+========================================================= */
 
 footer{
-    background:#111;
+    background:#000000;
     padding:40px 20px;
     margin-top:50px;
     border-top:3px solid #d32f2f;
@@ -1069,9 +1129,9 @@ footer .copyright{
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* =========================================================
+   31. TABLET
+========================================================= */
 
 @media (min-width:601px) and (max-width:900px){
 
@@ -1089,13 +1149,15 @@ footer .copyright{
 }
 
 
-/* =========================================
-   CELULAR
-========================================= */
+/* =========================================================
+   32. CELULAR
+========================================================= */
 
 @media (max-width:600px){
 
-    /* INICIO DE CARTA */
+    /* -----------------------------------------
+       INICIO DE CARTA
+    ----------------------------------------- */
 
     #inicio-carta{
         grid-template-columns:repeat(2,1fr);
@@ -1131,22 +1193,30 @@ footer .copyright{
         object-fit:cover;
         border-radius:12px;
     }
+
+
+    /* -----------------------------------------
+       CATEGORÍAS GENERALES
+    ----------------------------------------- */
+
     .categoria-titulo{
-    width:94%;
-    max-width:350px;
-    box-sizing:border-box;
-}
+        width:94%;
+        max-width:350px;
+        box-sizing:border-box;
+    }
 
-.categoria-titulo img{
-    width:100% !important;
-    height:auto !important;
-    aspect-ratio:1 / 1;
-    object-fit:cover;
-    transform:none !important;
-}
+    .categoria-titulo img{
+        width:100% !important;
+        height:auto !important;
+        aspect-ratio:1 / 1;
+        object-fit:cover;
+        transform:none !important;
+    }
 
 
-    /* APERITIVOS Y CARTA */
+    /* -----------------------------------------
+       APERITIVOS Y CARTA
+    ----------------------------------------- */
 
     #aperitivos .contenedor-categorias,
     #carta .contenedor-categorias{
@@ -1166,7 +1236,9 @@ footer .copyright{
     }
 
 
-    /* BOTONES VOLVER */
+    /* -----------------------------------------
+       BOTONES VOLVER
+    ----------------------------------------- */
 
     #carta .contenedor-categorias > .btn-volver{
         flex:none !important;
@@ -1182,13 +1254,17 @@ footer .copyright{
         max-width:max-content !important;
         margin:15px auto 20px !important;
     }
-#carta .carta-volver{
-    background:linear-gradient(145deg,#d32f2f,#b71c1c) !important;
-    color:white !important;
-    border:none !important;
-}
 
-    /* ROLLS */
+    #carta .carta-volver{
+        background:linear-gradient(145deg,#d32f2f,#b71c1c) !important;
+        color:white !important;
+        border:none !important;
+    }
+
+
+    /* -----------------------------------------
+       ROLLS
+    ----------------------------------------- */
 
     .contenedor-rolls{
         display:flex;
@@ -1239,9 +1315,9 @@ footer .copyright{
     }
 
 
-    /* =================================
-       TABLAS EN CELULAR
-    ================================= */
+    /* -----------------------------------------
+       TABLAS
+    ----------------------------------------- */
 
     .tabla{
         width:calc(100% - 20px) !important;
@@ -1265,40 +1341,32 @@ footer .copyright{
         text-align:center !important;
     }
 
-    /* TÍTULOS DE ENVOLTURA EN ROJO */
     .tabla p:not(.mensaje-cambios) > strong{
         color:#d32f2f !important;
+        display:block;
+        text-align:center;
+        margin-bottom:5px;
     }
 
-    /* INGREDIENTES EN BLANCO */
     .tabla p:not(.mensaje-cambios){
         color:white !important;
     }
 
-/* AVISO DE CAMBIOS */
-.tabla .mensaje-cambios{
-    color:#f5c542 !important;
-    font-size:9px !important;
-    font-weight:bold !important;
-    line-height:1.2 !important;
-    text-align:center !important;
-    margin:12px auto 0 !important;
-    width:100%;
-    white-space:nowrap;
-}
+    .tabla .mensaje-cambios{
+        color:#f5c542 !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+        line-height:1.2 !important;
+        text-align:center !important;
+        margin:12px auto 0 !important;
+        width:100%;
+        white-space:normal !important;
+    }
 
-.tabla .mensaje-cambios > strong{
-    color:#f5c542 !important;
-}
 
-.tabla p strong{
-    display:block;
-    text-align:center;
-    margin-bottom:5px;
-}
-    /* =================================
-       CARRITO EN CELULAR
-    ================================= */
+    /* -----------------------------------------
+       CARRITO
+    ----------------------------------------- */
 
     .carrito-contenido{
         width:94%;
@@ -1333,364 +1401,14 @@ footer .copyright{
     }
 
 
-    /* =================================
+    /* -----------------------------------------
        TIPO DE PEDIDO
-    ================================= */
+    ----------------------------------------- */
 
     .tipo-pedido-botones{
         gap:10px;
     }
 
-}
-
-
-/* =========================================
-   BOTONES PRINCIPALES
-   VER CARTA / WHATSAPP / INSTAGRAM
-========================================= */
-
-.btn-carta,
-.btn-whatsapp,
-.btn-instagram{
-    display:inline-block;
-    background:linear-gradient(135deg,#d90000,#ffcc00) !important;
-    color:white !important;
-    border:1px solid #ffcc00 !important;
-    padding:10px 20px;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
-    text-decoration:none;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn-carta:hover,
-.btn-whatsapp:hover,
-.btn-instagram:hover{
-    background:linear-gradient(135deg,#ffcc00,#d90000) !important;
-    color:#111 !important;
-    transform:scale(1.05);
-}
-/* ==========================================
-   SELECTOR GOHAN MIXTO - VENTANA
-========================================== */
-
-.selector-gohan{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    width:90%;
-    max-width:500px;
-    max-height:90vh;
-    overflow-y:auto;
-    padding:25px;
-    background:#111;
-    border:2px solid #d32f2f;
-    border-radius:18px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.8);
-    box-sizing:border-box;
-    text-align:center;
-    z-index:9999;
-}
-
-.selector-gohan h3{
-    color:#ffd600;
-    margin-top:0;
-    font-size:24px;
-}
-
-.selector-gohan p{
-    color:white;
-    margin-bottom:20px;
-}
-
-.ingredientes-gohan{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-bottom:20px;
-}
-
-.ingredientes-gohan button{
-    padding:14px 8px;
-    border:none;
-    border-radius:10px;
-    background:#d32f2f;
-    color:white;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.ingredientes-gohan button:hover{
-    background:#b71c1c;
-}
-
-.selector-gohan .btn-volver{
-    width:100%;
-    margin-top:5px;
-}
-
-@media (max-width:600px){
-
-    .selector-gohan{
-        width:94%;
-        padding:20px 15px;
-    }
-
-    .ingredientes-gohan{
-        grid-template-columns:1fr;
-    }
-
-    .ingredientes-gohan button{
-        padding:14px;
-        font-size:16px;
-    }
-
-}
-
-/* =========================================
-   COLORES DEFINITIVOS DE TABLAS
-   ========================================= */
-
-/* TÍTULO DE LA TABLA */
-.tabla h3{
-    color:#fdad00 !important;
-    text-align:center !important;
-}
-
-/* TÍTULOS "ENVUELTOS EN..." */
-.tabla p:not(.mensaje-cambios) > strong{
-    color:#d32f2f !important;
-    display:block;
-    text-align:center;
-    margin-bottom:5px;
-}
-
-/* INGREDIENTES */
-.tabla p:not(.mensaje-cambios){
-    color:white !important;
-}
-
-/* AVISO DE CAMBIOS */
-.tabla p.mensaje-cambios,
-.tabla p.mensaje-cambios > strong{
-    color:#f5c542 !important;
-    text-align:center !important;
-    white-space:normal !important;
-    overflow-wrap:break-word;
-    word-break:normal;
-    box-sizing:border-box;
-}
-.titulo-tamano-handroll{
-    color:#2bff00 !important;
-    text-align:center !important;
-    font-size:28px;
-    font-weight:900;
-    margin:30px auto 20px;
-    padding-bottom:8px;
-    border-bottom:2px solid #d32f2f;
-    width:90%;
-}
-/* ==========================================
-   ENVOLTURAS - SUSHI SIN ARROZ
-========================================== */
-
-.envoltura{
-
-    width: 100%;
-    max-width: 320px;
-
-    padding: 12px 42px 12px 15px;
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-    border: 2px solid #f5c542 !important;
-    border-radius: 10px;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    outline: none;
-
-    appearance: none;
-    -webkit-appearance: none;
-
-    box-sizing: border-box;
-
-}
-
-
-/* Cuando se toca el selector */
-
-.envoltura:focus,
-.envoltura:active{
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-    border: 2px solid #f5c542 !important;
-
-    box-shadow:
-        0 0 8px rgba(245, 197, 66, 0.5);
-
-}
-
-
-/* Opciones del selector */
-
-.envoltura option{
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-}
-
-
-/* Primera opción */
-
-.envoltura option:first-child{
-
-    color: #f5c542 !important;
-
-}
-/* ==========================================
-   SELECTOR ENVOLTURA - SUSHI SIN ARROZ
-========================================== */
-
-.selector-envoltura{
-    position: relative;
-    width: 100%;
-    max-width: 320px;
-    margin: 10px auto;
-}
-
-
-/* BOTÓN PRINCIPAL */
-
-.boton-envoltura{
-    width: 100%;
-    padding: 12px 15px;
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-    border: 2px solid #f5c542 !important;
-    border-radius: 10px;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    cursor: pointer;
-    box-sizing: border-box;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* CUANDO SE ABRE */
-
-.boton-envoltura:focus,
-.boton-envoltura:active{
-    background:linear-gradient(135deg,#ffcc00,#d90000) !important;
-    color: #ffffff !important;
-
-    border-color: #f5c542 !important;
-
-    outline: none;
-}
-
-
-/* VENTANA DE OPCIONES */
-
-.opciones-envoltura{
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    top: calc(100% + 5px);
-
-    background: #1a1a1a !important;
-
-    border: 2px solid #f5c542 !important;
-    border-radius: 10px;
-
-    padding: 5px;
-
-    z-index: 9999;
-
-    box-sizing: border-box;
-}
-
-
-/* OPCIONES */
-
-.opciones-envoltura button{
-    width: 100%;
-
-    padding: 11px 12px;
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-    border: none;
-
-    border-radius: 7px;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    text-align: left;
-
-    cursor: pointer;
-}
-
-
-/* AL TOCAR UNA OPCIÓN */
-
-.opciones-envoltura button:hover,
-.opciones-envoltura button:active{
-    background: #f5c542 !important;
-    color: #000000 !important;
-}
-
-
-/* OCULTAR */
-
-.opciones-envoltura.oculto{
-    display: none !important;
-}
-/* ==========================================
-    ENVOLTURA - EVITAR QUE LA VENTANA SE CORTE
- ========================================== */
-
-.selector-envoltura{
-    position: relative;
-    z-index: 1000;
-}
-
-/* Permitir que la ventana sobresalga de la tarjeta */
-
-.roll{
-    overflow: visible !important;
-}
-
-.contenedor-rolls{
-    overflow: visible !important;
-}
-
-/* La ventana queda por encima de todo */
-
-.opciones-envoltura{
-    z-index: 99999 !important;
 }
 </style>
 </head>
@@ -2037,8 +1755,6 @@ footer .copyright{
 
    <button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
 
-    <h2>TABLAS FRÍAS</h2>
-
 
     <!-- 20 PIEZAS -->
 
@@ -2160,8 +1876,6 @@ footer .copyright{
 <div id="tablaCaliente" class="oculto">
 
 <button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
-
-    <h2>TABLAS CALIENTES</h2>
 
 
     <!-- 20 PIEZAS -->
@@ -2328,8 +2042,6 @@ footer .copyright{
 <div id="tablaMixta" class="oculto">
 
    <button class="btn-volver" onclick="volverTablas()">⬅ Volver a Tablas</button>
-
-    <h2>TABLAS MIXTAS</h2>
 
 
     <!-- 20 PIEZAS -->
@@ -2677,8 +2389,6 @@ footer .copyright{
 
 <div id="handrolls" class="oculto">
 
-    <h2>HANDROLLS</h2>
-
 <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
 
@@ -2847,7 +2557,7 @@ footer .copyright{
 <!-- SUSHI BURGERS -->
 
    <div id="sushiBurgers" class="oculto">
-      <h2>SUSHI BURGERS</h2>  
+     
 
 <button class="btn-volver" onclick="volverInicioCarta()">
     ⬅ Volver a Inicio de Carta
@@ -3065,15 +2775,13 @@ footer .copyright{
 
 <div id="sashimi" class="oculto">
 
-    <h2>SASHIMI</h2>
-
    <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
 
     <div class="contenedor-rolls">
 
         <div class="roll">
-            <h3>Salmón</h3>
+            <h3>Sashimi de Salmón</h3>
             <p>3 unidades</p>
             <span class="precio">$3.990</span>
 
@@ -3085,7 +2793,7 @@ footer .copyright{
 
 
         <div class="roll">
-            <h3>Salmón</h3>
+            <h3>Sashimi de Salmón</h3>
             <p>6 unidades</p>
             <span class="precio">$6.990</span>
 
@@ -3097,7 +2805,7 @@ footer .copyright{
 
 
         <div class="roll">
-            <h3>Atún</h3>
+            <h3>Sashimi de Atún</h3>
             <p>3 unidades</p>
             <span class="precio">$4.990</span>
 
@@ -3109,7 +2817,7 @@ footer .copyright{
 
 
         <div class="roll">
-            <h3>Atún</h3>
+            <h3>Sashimi de Atún</h3>
             <p>6 unidades</p>
             <span class="precio">$7.990</span>
 
@@ -3121,8 +2829,8 @@ footer .copyright{
 
 
         <div class="roll">
-            <h3>Salmón y Atún</h3>
-            <p>Mixtos • 3 unidades</p>
+            <h3>Sashimi Mixto</h3>
+            <p>Salmón y Atún • 3 unidades</p>
             <span class="precio">$5.990</span>
 
             <button class="btn-agregar"
@@ -3133,8 +2841,8 @@ footer .copyright{
 
 
         <div class="roll">
-            <h3>Salmón y Atún</h3>
-            <p>Mixtos • 6 unidades</p>
+            <h3>Sashimi Mixto</h3>
+            <p>Salmón y Atún • 6 unidades</p>
             <span class="precio">$8.990</span>
 
             <button class="btn-agregar"
@@ -3151,8 +2859,6 @@ footer .copyright{
 <!-- TATAKI DE ATÚN -->
 
 <div id="tataki" class="oculto">
-
-    <h2>TATAKI DE ATÚN</h2>
 
 <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3180,7 +2886,6 @@ footer .copyright{
 
 <div id="niguiris" class="oculto">
 
-    <h2>NIGUIRIS</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3188,7 +2893,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Camarón</h3>
+            <h3>Niguiri de Camarón</h3>
 
             <p>6 unidades</p>
 
@@ -3204,7 +2909,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Salmón</h3>
+            <h3>Niguiri de Salmón</h3>
 
             <p>6 unidades</p>
 
@@ -3220,7 +2925,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Atún</h3>
+            <h3>Niguiri de Atún</h3>
 
             <p>6 unidades</p>
 
@@ -3240,8 +2945,6 @@ footer .copyright{
 <!-- GYOZAS -->
 
 <div id="gyozas" class="oculto">
-
-    <h2>GYOZAS</h2>
 
 <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3350,8 +3053,6 @@ footer .copyright{
 
 <div id="arrollados" class="oculto">
 
-    <h2>ARROLLADOS PRIMAVERA</h2>
-
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
     <div class="contenedor-rolls">
@@ -3395,15 +3096,13 @@ footer .copyright{
 
 <div id="korokes" class="oculto">
 
-    <h2>KOROKES</h2>
-
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
     <div class="contenedor-rolls">
 
         <div class="roll">
 
-            <h3>Queso Crema</h3>
+            <h3>Koroke Queso Crema</h3>
 
             <p>Bolitas de papa Furay • 6 unidades</p>
 
@@ -3419,7 +3118,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Pollo Teriyaki</h3>
+            <h3>Koroke Pollo Teriyaki</h3>
 
             <p>Bolitas de papa Furay • 6 unidades</p>
 
@@ -3440,7 +3139,6 @@ footer .copyright{
 
 <div id="bastones" class="oculto">
 
-    <h2>BASTONES FURAY</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3448,7 +3146,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Pollo Furay</h3>
+            <h3>Bastones  Pollo Furay</h3>
 
             <p>6 unidades</p>
 
@@ -3464,7 +3162,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Camarón Furay</h3>
+            <h3>Bastones Camarón Furay</h3>
 
             <p>6 unidades</p>
 
@@ -3480,7 +3178,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Salmón Furay</h3>
+            <h3>Bastones Salmón Furay</h3>
 
             <p>6 unidades</p>
 
@@ -3496,7 +3194,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Queso Furay</h3>
+            <h3>Bastones Queso Furay</h3>
 
             <p>6 unidades</p>
 
@@ -3535,7 +3233,6 @@ footer .copyright{
 
 <div id="papasfritas" class="oculto">
 
-    <h2>PAPAS FRITAS</h2>
 
     <button class="btn-volver" onclick="volverAperitivos()">⬅ Volver a Aperitivos</button>
 
@@ -3543,7 +3240,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Chicas</h3>
+            <h3>Papas Fritas Chicas</h3>
 
             <span class="precio">$2.490</span>
 
@@ -3557,7 +3254,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Grandes</h3>
+            <h3>Papas Fritas Grandes</h3>
 
             <span class="precio">$3.990</span>
 
@@ -3576,14 +3273,13 @@ footer .copyright{
 
 <div id="ceviche" class="oculto">
 
-    <h2>CEVICHE</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">⬅ Volver a Inicio de Carta</button>
 
     <div class="contenedor-rolls">
 
         <div class="roll">
-            <h3>Salmón</h3>
+            <h3>Ceviche de Salmón</h3>
             <span class="precio">$8.990</span>
 
             <button class="btn-agregar"
@@ -3593,7 +3289,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Atún</h3>
+            <h3>Ceviche de Atún</h3>
             <span class="precio">$9.990</span>
 
             <button class="btn-agregar"
@@ -3603,7 +3299,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Mixto</h3>
+            <h3>Ceviche Mixto</h3>
             <p>Salmón • Atún • Camarón</p>
             <span class="precio">$11.990</span>
 
@@ -3620,7 +3316,6 @@ footer .copyright{
 
 <div id="gohan" class="oculto">
 
-    <h2>GOHAN</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
@@ -3632,7 +3327,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Champiñón Tempura</h3>
+            <h3>Gohan Champiñón Tempura</h3>
 
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
 
@@ -3650,7 +3345,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Pollo Teriyaki</h3>
+            <h3>Gohan Pollo Teriyaki</h3>
 
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
 
@@ -3668,7 +3363,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Camarón</h3>
+            <h3>Gohan Camarón</h3>
 
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
 
@@ -3685,7 +3380,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Atún</h3>
+            <h3>Gohan Atún</h3>
 
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
 
@@ -3703,7 +3398,7 @@ footer .copyright{
 
         <div class="roll">
 
-            <h3>Salmón</h3>
+            <h3>Gohan Salmón</h3>
 
             <p>Base: Queso Crema • Cebollín • Palta • Sésamo</p>
 
@@ -3721,7 +3416,7 @@ footer .copyright{
 
 <div class="roll">
 
-    <h3>Mixto</h3>
+    <h3>Gohan Mixto</h3>
 
     <p>
         <strong>2 ingredientes a elección</strong>
@@ -3796,8 +3491,6 @@ footer .copyright{
 <!-- BURRITOS -->
 <div id="burritos" class="oculto">
 
-    <h2>BURRITOS</h2>
-
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
     </button>
@@ -3805,7 +3498,7 @@ footer .copyright{
     <div class="contenedor-rolls">
 
         <div class="roll">
-            <h3>Champiñón Tempura</h3>
+            <h3>Burrito Champiñón Tempura</h3>
             <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
             <span class="precio">$4.490</span>
             <button class="btn-agregar"
@@ -3815,7 +3508,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Pollo Teriyaki</h3>
+            <h3>Burrito Pollo Teriyaki</h3>
             <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
             <span class="precio">$4.990</span>
             <button class="btn-agregar"
@@ -3825,7 +3518,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Salmón Furay</h3>
+            <h3>Burrito Salmón Furay</h3>
             <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
             <span class="precio">$5.990</span>
             <button class="btn-agregar"
@@ -3835,7 +3528,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Camarón Furay</h3>
+            <h3>Burrito Camarón Furay</h3>
             <p>Tomate • Palta • Lechuga • Poroto Negro • Choclo • Salsa de ajo</p>
             <span class="precio">$5.990</span>
             <button class="btn-agregar"
@@ -3850,8 +3543,6 @@ footer .copyright{
 <!-- BURGER FURAY -->
 <div id="burgerFuray" class="oculto">
 
-    <h2>BURGER FURAY</h2>
-
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
     </button>
@@ -3859,7 +3550,7 @@ footer .copyright{
     <div class="contenedor-rolls">
 
         <div class="roll">
-            <h3>Champiñón Tempura</h3>
+            <h3>Burger Champiñón Furay</h3>
             <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
             <span class="precio">$4.490</span>
             <button class="btn-agregar"
@@ -3869,7 +3560,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Pollo Furay</h3>
+            <h3>Burger Pollo Furay</h3>
             <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
             <span class="precio">$4.990</span>
             <button class="btn-agregar"
@@ -3879,7 +3570,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Salmón Furay</h3>
+            <h3>Burger Salmón Furay</h3>
             <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
             <span class="precio">$5.990</span>
             <button class="btn-agregar"
@@ -3889,7 +3580,7 @@ footer .copyright{
         </div>
 
         <div class="roll">
-            <h3>Camarón Furay</h3>
+            <h3>Burger Camarón Furay</h3>
             <p>Pan Frica • Tomate • Palta • Cebolla • Lechuga • Salsa de Ajo</p>
             <span class="precio">$5.990</span>
             <button class="btn-agregar"
@@ -4858,7 +4549,6 @@ footer .copyright{
 
 <div id="extras" class="oculto">
 
-    <h2>EXTRAS</h2>
 
     <button class="btn-volver" onclick="volverInicioCarta()">
         ⬅ Volver a Inicio de Carta
