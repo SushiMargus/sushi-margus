@@ -4745,10 +4745,13 @@ function ocultarSeccionesPrincipales(){
 
     secciones.forEach(function(id){
 
-        const elemento = document.getElementById(id);
+        const elemento =
+            document.getElementById(id);
 
         if(elemento){
+
             elemento.classList.add("oculto");
+
         }
 
     });
@@ -4763,6 +4766,7 @@ function ocultarSeccionesPrincipales(){
 function ocultarSubcategoriasAperitivos(){
 
     const secciones = [
+
         "sashimi",
         "tataki",
         "niguiris",
@@ -4771,14 +4775,18 @@ function ocultarSubcategoriasAperitivos(){
         "korokes",
         "bastones",
         "papasfritas"
+
     ];
 
     secciones.forEach(function(id){
 
-        const elemento = document.getElementById(id);
+        const elemento =
+            document.getElementById(id);
 
         if(elemento){
+
             elemento.classList.add("oculto");
+
         }
 
     });
@@ -4793,6 +4801,7 @@ function ocultarSubcategoriasAperitivos(){
 function ocultarCategoriasSushi(){
 
     const secciones = [
+
         "nori",
         "sesamo",
         "palta",
@@ -4801,14 +4810,18 @@ function ocultarCategoriasSushi(){
         "hotrolls",
         "especiales",
         "sinarroz"
+
     ];
 
     secciones.forEach(function(id){
 
-        const elemento = document.getElementById(id);
+        const elemento =
+            document.getElementById(id);
 
         if(elemento){
+
             elemento.classList.add("oculto");
+
         }
 
     });
@@ -4817,28 +4830,37 @@ function ocultarCategoriasSushi(){
 
 
 /* ==========================================
-/* ==========================================
    CARTA PRINCIPAL
 ========================================== */
 
 function mostrarCarta(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("inicio-carta");
+
     }
+
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("inicio-carta");
+    const elemento =
+        document.getElementById("inicio-carta");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -4849,20 +4871,29 @@ function mostrarCarta(guardarHistorial = true){
 function mostrarAperitivos(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("aperitivos");
+
     }
+
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
 
-    const elemento = document.getElementById("aperitivos");
+    const elemento =
+        document.getElementById("aperitivos");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -4873,21 +4904,31 @@ function mostrarAperitivos(guardarHistorial = true){
 function mostrarCeviche(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("ceviche");
+
     }
+
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("ceviche");
+    const elemento =
+        document.getElementById("ceviche");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -4898,21 +4939,31 @@ function mostrarCeviche(guardarHistorial = true){
 function mostrarGohan(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("gohan");
+
     }
+
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("gohan");
+    const elemento =
+        document.getElementById("gohan");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -4934,17 +4985,22 @@ function abrirSelectorGohan(){
         document.getElementById("mensaje-selector-gohan");
 
     if(!selector){
+
         return;
+
     }
 
     if(mensaje){
+
         mensaje.textContent =
             "Selecciona el primer ingrediente";
+
     }
 
     selector.classList.remove("oculto");
 
     irArriba();
+
 }
 
 
@@ -4957,15 +5013,17 @@ function seleccionarIngredienteGohan(ingrediente){
         );
 
         return;
+
     }
 
     ingredientesGohan.push(ingrediente);
 
-
     if(ingredientesGohan.length === 1){
 
         const mensaje =
-            document.getElementById("mensaje-selector-gohan");
+            document.getElementById(
+                "mensaje-selector-gohan"
+            );
 
         if(mensaje){
 
@@ -4977,8 +5035,8 @@ function seleccionarIngredienteGohan(ingrediente){
         }
 
         return;
-    }
 
+    }
 
     if(ingredientesGohan.length === 2){
 
@@ -4988,16 +5046,16 @@ function seleccionarIngredienteGohan(ingrediente){
             " + " +
             ingredientesGohan[1];
 
-
         agregarAlCarrito(
             "Gohan Mixto",
             7990,
             detalles
         );
 
-
         cerrarSelectorGohan();
+
     }
+
 }
 
 
@@ -5024,21 +5082,31 @@ function cerrarSelectorGohan(){
 function mostrarSushiBurgers(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("sushiBurgers");
+
     }
+
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("sushiBurgers");
+    const elemento =
+        document.getElementById("sushiBurgers");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -5049,21 +5117,31 @@ function mostrarSushiBurgers(guardarHistorial = true){
 function mostrarHandrolls(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("handrolls");
+
     }
+
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("handrolls");
+    const elemento =
+        document.getElementById("handrolls");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -5074,18 +5152,27 @@ function mostrarHandrolls(guardarHistorial = true){
 function mostrarTablas(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("tablas");
+
     }
+
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("tablas");
+    const elemento =
+        document.getElementById("tablas");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
@@ -5100,15 +5187,33 @@ function mostrarTablas(guardarHistorial = true){
 function mostrarTablaVegetariana(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("tablaVegetariana");
+
     }
 
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
-    document.getElementById("tablaVegetariana").classList.remove("oculto");
+    document
+        .getElementById("tablas")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaFria")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaVegetariana")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5122,15 +5227,33 @@ function mostrarTablaVegetariana(guardarHistorial = true){
 function mostrarTablaFria(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("tablaFria");
+
     }
 
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
-    document.getElementById("tablaFria").classList.remove("oculto");
+    document
+        .getElementById("tablas")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaVegetariana")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaFria")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5144,15 +5267,33 @@ function mostrarTablaFria(guardarHistorial = true){
 function mostrarTablaCaliente(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("tablaCaliente");
+
     }
 
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
-    document.getElementById("tablaCaliente").classList.remove("oculto");
+    document
+        .getElementById("tablas")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaVegetariana")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaFria")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5166,15 +5307,33 @@ function mostrarTablaCaliente(guardarHistorial = true){
 function mostrarTablaMixta(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("tablaMixta");
+
     }
 
-    document.getElementById("tablas").classList.add("oculto");
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
-    document.getElementById("tablaMixta").classList.remove("oculto");
+    document
+        .getElementById("tablas")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaVegetariana")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaFria")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5187,14 +5346,29 @@ function mostrarTablaMixta(guardarHistorial = true){
 
 function volverTablas(){
 
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
+    document
+        .getElementById("tablaVegetariana")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaFria")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.add("oculto");
 
     mostrarTablas();
 
 }
+
 
 /* ==========================================
    BURRITOS
@@ -5203,19 +5377,29 @@ function volverTablas(){
 function mostrarBurritos(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("burritos");
+
     }
 
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
+
     ocultarSeccionesPrincipales();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("burritos");
+    const elemento =
+        document.getElementById("burritos");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -5226,19 +5410,29 @@ function mostrarBurritos(guardarHistorial = true){
 function mostrarBurgerFuray(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("burgerFuray");
+
     }
 
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
+
     ocultarSeccionesPrincipales();
+
     ocultarCategoriasSushi();
 
-    const elemento = document.getElementById("burgerFuray");
+    const elemento =
+        document.getElementById("burgerFuray");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
 
 
@@ -5249,19 +5443,29 @@ function mostrarBurgerFuray(guardarHistorial = true){
 function mostrarExtras(guardarHistorial = true){
 
     if(guardarHistorial){
+
         guardarVista("extras");
+
     }
+
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
 
-    const elemento = document.getElementById("extras");
+    const elemento =
+        document.getElementById("extras");
 
     if(elemento){
+
         elemento.classList.remove("oculto");
+
     }
 
     irArriba();
+
 }
+
 
 /* ==========================================
    SUBCATEGORÍAS DE APERITIVOS
@@ -5269,11 +5473,18 @@ function mostrarExtras(guardarHistorial = true){
 
 function mostrarSashimi(){
 
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("sashimi").classList.remove("oculto");
+    document
+        .getElementById("sashimi")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5282,11 +5493,17 @@ function mostrarSashimi(){
 
 function mostrarTataki(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("tataki").classList.remove("oculto");
+    document
+        .getElementById("tataki")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5295,11 +5512,17 @@ function mostrarTataki(){
 
 function mostrarNiguiris(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("niguiris").classList.remove("oculto");
+    document
+        .getElementById("niguiris")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5308,11 +5531,17 @@ function mostrarNiguiris(){
 
 function mostrarGyozas(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("gyozas").classList.remove("oculto");
+    document
+        .getElementById("gyozas")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5321,11 +5550,17 @@ function mostrarGyozas(){
 
 function mostrarArrollados(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("arrollados").classList.remove("oculto");
+    document
+        .getElementById("arrollados")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5334,11 +5569,17 @@ function mostrarArrollados(){
 
 function mostrarKorokes(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("korokes").classList.remove("oculto");
+    document
+        .getElementById("korokes")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5347,11 +5588,17 @@ function mostrarKorokes(){
 
 function mostrarBastones(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("bastones").classList.remove("oculto");
+    document
+        .getElementById("bastones")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5360,11 +5607,17 @@ function mostrarBastones(){
 
 function mostrarPapasFritas(){
 
+    mostrarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.add("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.add("oculto");
 
-    document.getElementById("papasfritas").classList.remove("oculto");
+    document
+        .getElementById("papasfritas")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5377,17 +5630,34 @@ function mostrarPapasFritas(){
 
 function volverInicioCarta(){
 
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
-    document.getElementById("tablaVegetariana").classList.add("oculto");
-    document.getElementById("tablaFria").classList.add("oculto");
-    document.getElementById("tablaCaliente").classList.add("oculto");
-    document.getElementById("tablaMixta").classList.add("oculto");
+    document
+        .getElementById("tablaVegetariana")
+        .classList.add("oculto");
 
-    document.getElementById("inicio-carta").classList.remove("oculto");
+    document
+        .getElementById("tablaFria")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaCaliente")
+        .classList.add("oculto");
+
+    document
+        .getElementById("tablaMixta")
+        .classList.add("oculto");
+
+    document
+        .getElementById("inicio-carta")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5400,9 +5670,14 @@ function volverInicioCarta(){
 
 function volverAperitivos(){
 
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
     ocultarSubcategoriasAperitivos();
 
-    document.getElementById("aperitivos").classList.remove("oculto");
+    document
+        .getElementById("aperitivos")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5421,13 +5696,18 @@ function mostrarCartaSushi(guardarHistorial = true){
 
     }
 
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
 
     ocultarCategoriasSushi();
 
-    document.getElementById("carta").classList.remove("oculto");
+    document
+        .getElementById("carta")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5442,11 +5722,18 @@ function mostrarNori(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    /* MOSTRAR CARRITO */
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("nori").classList.remove("oculto");
+    document
+        .getElementById("nori")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5461,11 +5748,17 @@ function mostrarSesamo(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("sesamo").classList.remove("oculto");
+    document
+        .getElementById("sesamo")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5480,11 +5773,17 @@ function mostrarPalta(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("palta").classList.remove("oculto");
+    document
+        .getElementById("palta")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5499,11 +5798,17 @@ function mostrarQueso(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("queso").classList.remove("oculto");
+    document
+        .getElementById("queso")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5518,11 +5823,17 @@ function mostrarSalmon(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("salmon").classList.remove("oculto");
+    document
+        .getElementById("salmon")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5537,11 +5848,17 @@ function mostrarHotRolls(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("hotrolls").classList.remove("oculto");
+    document
+        .getElementById("hotrolls")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5556,11 +5873,17 @@ function mostrarEspeciales(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("especiales").classList.remove("oculto");
+    document
+        .getElementById("especiales")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5575,11 +5898,17 @@ function mostrarSinArroz(guardarHistorial = true){
 
     }
 
-    document.getElementById("carta").classList.add("oculto");
+    mostrarBotonCarrito();
+
+    document
+        .getElementById("carta")
+        .classList.add("oculto");
 
     ocultarCategoriasSushi();
 
-    document.getElementById("sinarroz").classList.remove("oculto");
+    document
+        .getElementById("sinarroz")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5588,9 +5917,14 @@ function mostrarSinArroz(guardarHistorial = true){
 
 function volverCategorias(){
 
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
     ocultarCategoriasSushi();
 
-    document.getElementById("carta").classList.remove("oculto");
+    document
+        .getElementById("carta")
+        .classList.remove("oculto");
 
     irArriba();
 
@@ -5603,16 +5937,22 @@ function volverCategorias(){
 
 function volverPortada(){
 
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
     ocultarSeccionesPrincipales();
 
     ocultarSubcategoriasAperitivos();
+
     ocultarCategoriasSushi();
 
     const portada =
         document.getElementById("portada");
 
     if(portada){
+
         portada.classList.remove("oculto");
+
     }
 
     irArriba();
@@ -5627,7 +5967,41 @@ function volverPortada(){
 let carrito = [];
 
 
-/* ABRIR CARRITO */
+/* ==========================================
+   MOSTRAR / OCULTAR BOTÓN DEL CARRITO
+========================================== */
+
+function mostrarBotonCarrito(){
+
+    const boton =
+        document.getElementById("boton-carrito");
+
+    if(boton){
+
+        boton.classList.remove("oculto");
+
+    }
+
+}
+
+
+function ocultarBotonCarrito(){
+
+    const boton =
+        document.getElementById("boton-carrito");
+
+    if(boton){
+
+        boton.classList.add("oculto");
+
+    }
+
+}
+
+
+/* ==========================================
+   ABRIR CARRITO
+========================================== */
 
 function abrirCarrito(){
 
@@ -5649,7 +6023,9 @@ function abrirCarrito(){
 }
 
 
-/* CERRAR CARRITO */
+/* ==========================================
+   CERRAR CARRITO
+========================================== */
 
 function cerrarCarrito(){
 
@@ -5683,7 +6059,6 @@ function agregarAlCarrito(
 
         });
 
-
     if(productoExistente){
 
         productoExistente.cantidad++;
@@ -5701,7 +6076,6 @@ function agregarAlCarrito(
 
     }
 
-
     actualizarCarrito();
 
 }
@@ -5714,7 +6088,9 @@ function agregarAlCarrito(
 function aumentarCantidad(index){
 
     if(!carrito[index]){
+
         return;
+
     }
 
     carrito[index].cantidad++;
@@ -5727,7 +6103,9 @@ function aumentarCantidad(index){
 function disminuirCantidad(index){
 
     if(!carrito[index]){
+
         return;
+
     }
 
     if(carrito[index].cantidad > 1){
@@ -5748,7 +6126,9 @@ function disminuirCantidad(index){
 function eliminarProducto(index){
 
     if(!carrito[index]){
+
         return;
+
     }
 
     carrito.splice(index,1);
@@ -5765,28 +6145,34 @@ function eliminarProducto(index){
 function actualizarCarrito(){
 
     const contenedor =
-        document.getElementById("productos-carrito");
+        document.getElementById(
+            "productos-carrito"
+        );
 
     const totalElemento =
-        document.getElementById("total-carrito");
+        document.getElementById(
+            "total-carrito"
+        );
 
     const contador =
-        document.getElementById("contador-carrito");
-
+        document.getElementById(
+            "contador-carrito"
+        );
 
     if(!contenedor){
 
-        console.error("No existe #productos-carrito");
+        console.error(
+            "No existe #productos-carrito"
+        );
 
         return;
 
     }
 
-
     contenedor.innerHTML = "";
 
-
     let total = 0;
+
     let cantidadTotal = 0;
 
 
@@ -5853,24 +6239,35 @@ function actualizarCarrito(){
                     <button
                         type="button"
                         onclick="disminuirCantidad(${index})">
+
                         −
+
                     </button>
 
+
                     <span>
+
                         ${producto.cantidad}
+
                     </span>
+
 
                     <button
                         type="button"
                         onclick="aumentarCantidad(${index})">
+
                         +
+
                     </button>
+
 
                     <button
                         type="button"
                         class="btn-eliminar"
                         onclick="eliminarProducto(${index})">
+
                         🗑️
+
                     </button>
 
                 </div>
@@ -5910,7 +6307,6 @@ function abrirEnvoltura(boton){
     const menu =
         boton.nextElementSibling;
 
-
     document
         .querySelectorAll(".opciones-envoltura")
         .forEach(function(opcion){
@@ -5923,7 +6319,6 @@ function abrirEnvoltura(boton){
 
         });
 
-
     menu.classList.toggle("oculto");
 
 }
@@ -5932,16 +6327,21 @@ function abrirEnvoltura(boton){
 function elegirEnvoltura(boton, valor){
 
     const selector =
-        boton.closest(".selector-envoltura");
-
+        boton.closest(
+            ".selector-envoltura"
+        );
 
     if(!selector){
+
         return;
+
     }
 
 
     const botonPrincipal =
-        selector.querySelector(".boton-envoltura");
+        selector.querySelector(
+            ".boton-envoltura"
+        );
 
 
     selector.dataset.valor = valor;
@@ -5963,7 +6363,9 @@ function elegirEnvoltura(boton, valor){
 
 
     const menu =
-        selector.querySelector(".opciones-envoltura");
+        selector.querySelector(
+            ".opciones-envoltura"
+        );
 
 
     if(menu){
@@ -5986,7 +6388,9 @@ function agregarSinArroz(
 ){
 
     if(!boton){
+
         return;
+
     }
 
 
@@ -5995,12 +6399,16 @@ function agregarSinArroz(
 
 
     if(!roll){
+
         return;
+
     }
 
 
     const selector =
-        roll.querySelector(".selector-envoltura");
+        roll.querySelector(
+            ".selector-envoltura"
+        );
 
 
     if(!selector){
@@ -6056,6 +6464,7 @@ function agregarSinArroz(
 
 }
 
+
 /* ==========================================
    TIPO DE PEDIDO
 ========================================== */
@@ -6066,11 +6475,15 @@ function seleccionarTipoPedido(
 ){
 
     const tipoPedido =
-        document.getElementById("tipo-pedido");
+        document.getElementById(
+            "tipo-pedido"
+        );
 
 
     if(tipoPedido){
+
         tipoPedido.value = tipo;
+
     }
 
 
@@ -6078,34 +6491,44 @@ function seleccionarTipoPedido(
         .querySelectorAll(".boton-tipo")
         .forEach(function(botonTipo){
 
-            botonTipo.classList.remove("seleccionado");
+            botonTipo.classList.remove(
+                "seleccionado"
+            );
 
         });
 
 
     if(boton){
 
-        boton.classList.add("seleccionado");
+        boton.classList.add(
+            "seleccionado"
+        );
 
     }
 
 
     const direccion =
-        document.getElementById("direccion-cliente");
+        document.getElementById(
+            "direccion-cliente"
+        );
 
 
     if(!direccion){
+
         return;
+
     }
 
 
     if(tipo === "Delivery"){
 
-        direccion.style.display = "block";
+        direccion.style.display =
+            "block";
 
     }else{
 
-        direccion.style.display = "none";
+        direccion.style.display =
+            "none";
 
         direccion.value = "";
 
@@ -6151,26 +6574,32 @@ function enviarPedido(){
 
         if(producto.detalles){
 
-    /* Las tablas se envían sin detalle de rollitos
-       ni envolturas */
+            /*
+                Las tablas se envían sin detalle
+                de rollitos ni envolturas
+            */
 
-    if(!producto.nombre.toLowerCase().includes("tabla")){
+            if(
+                !producto.nombre
+                    .toLowerCase()
+                    .includes("tabla")
+            ){
 
-        let detallesWhatsApp =
-            producto.detalles
-            .replace(
-                /<br>/g,
-                "%0A"
-            );
+                let detallesWhatsApp =
+                    producto.detalles
+                    .replace(
+                        /<br>/g,
+                        "%0A"
+                    );
 
 
-        mensaje +=
-            detallesWhatsApp +
-            "%0A";
+                mensaje +=
+                    detallesWhatsApp +
+                    "%0A";
 
-    }
+            }
 
-}
+        }
 
 
         mensaje += "%0A";
@@ -6200,7 +6629,9 @@ function enviarPedido(){
 
 
     const tipoPedido =
-        document.getElementById("tipo-pedido");
+        document.getElementById(
+            "tipo-pedido"
+        );
 
 
     if(
@@ -6217,7 +6648,9 @@ function enviarPedido(){
 
 
     const direccion =
-        document.getElementById("direccion-cliente");
+        document.getElementById(
+            "direccion-cliente"
+        );
 
 
     if(
@@ -6234,7 +6667,9 @@ function enviarPedido(){
 
 
     const formaPago =
-        document.getElementById("forma-pago");
+        document.getElementById(
+            "forma-pago"
+        );
 
 
     if(
@@ -6251,7 +6686,9 @@ function enviarPedido(){
 
 
     const observaciones =
-        document.getElementById("observaciones-pedido");
+        document.getElementById(
+            "observaciones-pedido"
+        );
 
 
     if(
@@ -6266,11 +6703,14 @@ function enviarPedido(){
 
     }
 
-/*
-       WHATSAPP
+
+    /*
+        WHATSAPP
     */
 
-    const numeroWhatsApp = "56973713769";
+    const numeroWhatsApp =
+        "56973713769";
+
 
     const urlWhatsApp =
         "https://wa.me/" +
@@ -6278,213 +6718,373 @@ function enviarPedido(){
         "?text=" +
         mensaje;
 
-    window.open(urlWhatsApp, "_blank");
+
+    window.open(
+        urlWhatsApp,
+        "_blank"
+    );
 
 }
+
+
 /* ==========================================
    BOTÓN ATRÁS DEL CELULAR
    NAVEGACIÓN INTERNA DE LA CARTA
 ========================================== */
 
-let vistaActual = "inicio-carta";
-let restaurandoHistorial = false;
+let vistaActual =
+    "inicio-carta";
 
 
-/* Guardar la vista actual en el historial */
+let restaurandoHistorial =
+    false;
+
+
+/* ==========================================
+   GUARDAR VISTA ACTUAL
+========================================== */
 
 function guardarVista(vista){
 
-    if(restaurandoHistorial) return;
+    if(restaurandoHistorial){
 
-    if(vistaActual === vista) return;
+        return;
+
+    }
+
+
+    if(vistaActual === vista){
+
+        return;
+
+    }
+
 
     vistaActual = vista;
 
+
     history.pushState(
+
         {
             sushiMargus: true,
             vista: vista
         },
+
         "",
+
         window.location.href
+
     );
+
 }
 
 
-/* Cuando se presiona el botón ATRÁS del celular */
+/* ==========================================
+   BOTÓN ATRÁS DEL CELULAR
+========================================== */
 
-window.addEventListener("popstate", function(event){
+window.addEventListener(
+    "popstate",
+    function(event){
 
-    restaurandoHistorial = true;
+        restaurandoHistorial = true;
 
-    if(event.state && event.state.sushiMargus){
 
-        const vista = event.state.vista;
+        if(
+            event.state &&
+            event.state.sushiMargus
+        ){
 
-        switch(vista){
+            const vista =
+                event.state.vista;
 
-            case "inicio-carta":
-                mostrarCarta();
-                break;
 
-            case "aperitivos":
-                mostrarAperitivos();
-                break;
+            switch(vista){
 
-            case "ceviche":
-                mostrarCeviche();
-                break;
+                case "inicio-carta":
 
-            case "gohan":
-                mostrarGohan();
-                break;
+                    mostrarCarta();
 
-            case "sushiBurgers":
-                mostrarSushiBurgers();
-                break;
+                    break;
 
-            case "handrolls":
-                mostrarHandrolls();
-                break;
 
-            case "tablas":
-                mostrarTablas();
-                break;
+                case "aperitivos":
 
-            case "burritos":
-                mostrarBurritos();
-                break;
+                    mostrarAperitivos();
 
-            case "burgerFuray":
-                mostrarBurgerFuray();
-                break;
+                    break;
 
-            case "extras":
-                mostrarExtras();
-                break;
 
-            case "carta":
-                mostrarCartaSushi();
-                break;
+                case "ceviche":
 
-            case "sashimi":
-                mostrarSashimi();
-                break;
+                    mostrarCeviche();
 
-            case "tataki":
-                mostrarTataki();
-                break;
+                    break;
 
-            case "niguiris":
-                mostrarNiguiris();
-                break;
 
-            case "gyozas":
-                mostrarGyozas();
-                break;
+                case "gohan":
 
-            case "arrollados":
-                mostrarArrollados();
-                break;
+                    mostrarGohan();
 
-            case "korokes":
-                mostrarKorokes();
-                break;
+                    break;
 
-            case "bastones":
-                mostrarBastones();
-                break;
 
-            case "papasfritas":
-                mostrarPapasFritas();
-                break;
+                case "sushiBurgers":
 
-            case "tablaVegetariana":
-                mostrarTablaVegetariana();
-                break;
+                    mostrarSushiBurgers();
 
-            case "tablaFria":
-                mostrarTablaFria();
-                break;
+                    break;
 
-            case "tablaCaliente":
-                mostrarTablaCaliente();
-                break;
 
-            case "tablaMixta":
-                mostrarTablaMixta();
-                break;
+                case "handrolls":
 
-            case "nori":
-                mostrarNori();
-                break;
+                    mostrarHandrolls();
 
-            case "sesamo":
-                mostrarSesamo();
-                break;
+                    break;
 
-            case "palta":
-                mostrarPalta();
-                break;
 
-            case "queso":
-                mostrarQueso();
-                break;
+                case "tablas":
 
-            case "salmon":
-                mostrarSalmon();
-                break;
+                    mostrarTablas();
 
-            case "hotrolls":
-                mostrarHotRolls();
-                break;
+                    break;
 
-            case "especiales":
-                mostrarEspeciales();
-                break;
 
-            case "sinarroz":
-                mostrarSinArroz();
-                break;
+                case "burritos":
 
-            default:
-                mostrarCarta();
+                    mostrarBurritos();
+
+                    break;
+
+
+                case "burgerFuray":
+
+                    mostrarBurgerFuray();
+
+                    break;
+
+
+                case "extras":
+
+                    mostrarExtras();
+
+                    break;
+
+
+                case "carta":
+
+                    mostrarCartaSushi();
+
+                    break;
+
+
+                case "sashimi":
+
+                    mostrarSashimi();
+
+                    break;
+
+
+                case "tataki":
+
+                    mostrarTataki();
+
+                    break;
+
+
+                case "niguiris":
+
+                    mostrarNiguiris();
+
+                    break;
+
+
+                case "gyozas":
+
+                    mostrarGyozas();
+
+                    break;
+
+
+                case "arrollados":
+
+                    mostrarArrollados();
+
+                    break;
+
+
+                case "korokes":
+
+                    mostrarKorokes();
+
+                    break;
+
+
+                case "bastones":
+
+                    mostrarBastones();
+
+                    break;
+
+
+                case "papasfritas":
+
+                    mostrarPapasFritas();
+
+                    break;
+
+
+                case "tablaVegetariana":
+
+                    mostrarTablaVegetariana();
+
+                    break;
+
+
+                case "tablaFria":
+
+                    mostrarTablaFria();
+
+                    break;
+
+
+                case "tablaCaliente":
+
+                    mostrarTablaCaliente();
+
+                    break;
+
+
+                case "tablaMixta":
+
+                    mostrarTablaMixta();
+
+                    break;
+
+
+                case "nori":
+
+                    mostrarNori();
+
+                    break;
+
+
+                case "sesamo":
+
+                    mostrarSesamo();
+
+                    break;
+
+
+                case "palta":
+
+                    mostrarPalta();
+
+                    break;
+
+
+                case "queso":
+
+                    mostrarQueso();
+
+                    break;
+
+
+                case "salmon":
+
+                    mostrarSalmon();
+
+                    break;
+
+
+                case "hotrolls":
+
+                    mostrarHotRolls();
+
+                    break;
+
+
+                case "especiales":
+
+                    mostrarEspeciales();
+
+                    break;
+
+
+                case "sinarroz":
+
+                    mostrarSinArroz();
+
+                    break;
+
+
+                default:
+
+                    mostrarCarta();
+
+            }
+
+
+            vistaActual = vista;
+
         }
 
-        vistaActual = vista;
+        else{
+
+            /*
+                Si ya no quedan vistas internas,
+                mostramos la carta principal.
+            */
+
+            mostrarCarta();
+
+        }
+
+
+        restaurandoHistorial = false;
+
     }
+);
 
-    else{
 
-        // Si ya no quedan vistas internas,
-        // dejamos que el navegador continúe
-        // con su historial normal.
+/* ==========================================
+   VISTA INICIAL
+========================================== */
 
-        mostrarCarta();
+window.addEventListener(
+    "load",
+    function(){
+
+        history.replaceState(
+
+            {
+                sushiMargus: true,
+                vista: "inicio-carta"
+            },
+
+            "",
+
+            window.location.href
+
+        );
+
+
+        vistaActual =
+            "inicio-carta";
+
+
+        /*
+
+            AL CARGAR LA PÁGINA,
+            EL CARRITO COMIENZA OCULTO.
+
+        */
+
+        ocultarBotonCarrito();
 
     }
+);
 
-    restaurandoHistorial = false;
-
-});
-
-
-/* Vista inicial */
-
-window.addEventListener("load", function(){
-
-    history.replaceState(
-        {
-            sushiMargus: true,
-            vista: "inicio-carta"
-        },
-        "",
-        window.location.href
-    );
-
-    vistaActual = "inicio-carta";
-
-});
 </script>
 
 </footer>
