@@ -1,12 +1,22 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sushi Margus</title><style>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sushi Margus</title>
+
+    <style>
 
 /* =========================
    ESTILO GENERAL
 ========================= */
 
 body{
-    background:#0d0d0d;
+    background:#000000;
     color:white;
     font-family:Arial, sans-serif;
     text-align:center;
@@ -80,7 +90,7 @@ header h1 img{
 
     display:inline-block;
 
-        background:linear-gradient(135deg,#d90000,#8b0000);
+    background:linear-gradient(135deg,#d90000,#8b0000);
 
     color:white;
 
@@ -105,7 +115,7 @@ header h1 img{
 
 
 /* =========================
-   EFECTO DEGRADADO
+   EFECTO AL PASAR EL MOUSE
 ========================= */
 
 .boton:hover{
@@ -140,6 +150,147 @@ header h1 img{
 }
 
 
+/* ==========================================
+   BOTONES REDES Y CONTACTO
+========================================== */
+
+.botones-portada{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+    width:100%;
+    margin:25px auto;
+}
+
+
+/* BOTÓN */
+
+.botones-portada .boton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    min-width:150px;
+
+    padding:11px 18px;
+
+    background:#000;
+    color:white;
+
+    border:2px solid #d32f2f;
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:bold;
+
+    box-shadow:0 0 8px rgba(211,47,47,0.35);
+
+    transition:all 0.3s ease;
+}
+
+
+/* LOGOS */
+
+.logo-red{
+    width:25px;
+    height:25px;
+
+    flex-shrink:0;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.botones-portada .boton:hover{
+    color:#f5c542;
+
+    border-color:#f5c542;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 10px rgba(245,197,66,0.7),
+        0 0 20px rgba(211,47,47,0.4);
+}
+
+
+/* EFECTO AL PRESIONAR */
+
+.botones-portada .boton:active{
+    transform:scale(0.96);
+}
+
+
+/* CELULAR */
+
+@media (max-width:600px){
+
+    .botones-portada{
+        gap:10px;
+        padding:0 10px;
+        box-sizing:border-box;
+    }
+
+    .botones-portada .boton{
+        min-width:140px;
+        padding:10px 14px;
+        font-size:15px;
+    }
+
+    .logo-red{
+        width:23px;
+        height:23px;
+    }
+
+}
+
+
+/* =========================
+   BOTÓN PROMOCIONES
+========================= */
+
+.boton-promociones{
+
+    display:block;
+
+    width:80%;
+
+    max-width:300px;
+
+    margin:10px auto 30px;
+
+    box-sizing:border-box;
+
+background:linear-gradient(135deg,#d90000,#8b0000);
+    color:#ffffff;
+
+    border:1px solid #f5c542;
+
+    box-shadow:
+        0 5px 18px rgba(245,197,66,.25);
+}
+
+
+.boton-promociones:hover{
+
+    background:linear-gradient(
+        135deg,
+        #ffcc00,
+        #d90000
+    );
+
+    color:white;
+
+    transform:scale(1.05);
+}
+
+
 /* =========================
    PIE DE PÁGINA
 ========================= */
@@ -159,38 +310,6 @@ footer{
 
 
 /* =========================
-   BOTONES PRIMERO
-========================= */
-
-.botones-portada{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin:0 auto 30px;
-
-    max-width:900px;
-}
-
-
-.botones-portada .boton{
-
-    display:inline-block;
-
-    width:auto;
-
-    margin:0;
-}
-
-
-/* =========================
    INFORMACIÓN
 ========================= */
 
@@ -201,7 +320,6 @@ footer h2{
     font-size:28px;
 
     margin-top:10px;
-
 }
 
 
@@ -212,7 +330,6 @@ footer p{
     color:#eee;
 
     line-height:1.5;
-
 }
 
 
@@ -227,7 +344,6 @@ footer .copyright{
     font-size:14px;
 
     color:#777;
-
 }
 
 
@@ -268,7 +384,9 @@ footer .copyright{
     }
 
 
-    /* VER CARTA */
+    /* =====================
+       VER CARTA
+    ===================== */
 
     .boton-carta{
 
@@ -283,7 +401,9 @@ footer .copyright{
     }
 
 
-    /* CUATRO BOTONES */
+    /* =====================
+       REDES Y CONTACTO
+    ===================== */
 
     .botones-portada{
 
@@ -299,7 +419,7 @@ footer .copyright{
 
         padding:0 5px;
 
-        margin-bottom:25px;
+        margin-bottom:15px;
 
     }
 
@@ -318,6 +438,27 @@ footer .copyright{
 
     }
 
+
+    /* =====================
+       PROMOCIONES
+    ===================== */
+
+    .boton-promociones{
+
+        width:80%;
+
+        max-width:300px;
+
+        padding:13px 20px;
+
+        margin:10px auto 25px;
+
+    }
+
+
+    /* =====================
+       FOOTER
+    ===================== */
 
     footer{
 
@@ -343,69 +484,57 @@ footer .copyright{
 
 }
 
-</style>
+    </style>
+
 </head>
+
+
 <body>
-    <!-- =========================PORTADA========================= -->
-     <header><h1>
 
-    <img src="LOGO SUSHI MARGUS VECTORES.png"
-        alt="Sushi Margus"
-        width="350"
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<header>
+
+    <h1>
+
+        <img
+            src="LOGO SUSHI MARGUS VECTORES.png"
+            alt="Sushi Margus"
+            width="350"
+        >
+
+    </h1>
+
+
+    <p class="descripcion-portada">
+
+        Los mejores rolls,
+        preparados al momento con ingredientes frescos y mucho sabor
+
+    </p>
+
+
+    <!-- VER CARTA -->
+
+    <a
+        href="carta_v3.html"
+        class="boton boton-carta"
     >
+        Ver Carta
+    </a>
 
-</h1>
-
-
-<p class="descripcion-portada">
-
-    Los mejores rolls,
-    preparados al momento con ingredientes frescos y mucho sabor
-
-</p>
+</header>
 
 
-<!-- VER CARTA -->
 
-<a
-    href="carta_v3.html"
-    class="boton boton-carta"
->
-
-    Ver Carta
-
-</a>
-
-</header><!-- =========================
-     PIE DE PÁGINA
-========================= --><footer><!-- =========================
-     CUATRO BOTONES
-     ANTES DE LA DIRECCIÓN
+<!-- =========================
+     REDES Y CONTACTO
 ========================= -->
 
 <div class="botones-portada">
-
-    <!-- PROMOCIONES -->
-
-    <a
-        href="promociones.html"
-        class="boton"
-    >
-
-        Promociones
-
-    </a>
-    <!-- WHATSAPP -->
-
-    <a
-        href="https://wa.me/56973713769"
-        class="boton"
-        target="_blank"
-    >
-
-        WhatsApp
-
-    </a>
 
 
     <!-- INSTAGRAM -->
@@ -414,10 +543,45 @@ footer .copyright{
         href="https://www.instagram.com/sushi_margus/"
         class="boton"
         target="_blank"
+        rel="noopener"
     >
+        <svg class="logo-red instagram-logo" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4"
+                    fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2"
+                    fill="currentColor"/>
+        </svg>
 
         Instagram
+    </a>
 
+
+    <!-- TIKTOK -->
+
+    <a
+        href="https://www.tiktok.com/@sushi.margus"
+        class="boton"
+        target="_blank"
+        rel="noopener"
+    >
+        <svg class="logo-red tiktok-logo" viewBox="0 0 24 24">
+            <path
+                d="M15.5 4c.3 2.1 1.5 3.6 3.5 4.2v3
+                   c-1.3 0-2.5-.4-3.5-1v5.1
+                   c0 3-2.4 5.4-5.4 5.4
+                   S4.7 18.3 4.7 15.3
+                   c0-3 2.4-5.4 5.4-5.4
+                   .4 0 .8 0 1.2.1v3
+                   c-.4-.1-.8-.2-1.2-.2
+                   -1.3 0-2.4 1.1-2.4 2.4
+                   s1.1 2.4 2.4 2.4
+                   2.4-1.1 2.4-2.4V4h3z"
+                fill="currentColor"/>
+        </svg>
+
+        TikTok
     </a>
 
 
@@ -427,40 +591,115 @@ footer .copyright{
         href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
         class="boton"
         target="_blank"
+        rel="noopener"
     >
+        <svg class="logo-red maps-logo" viewBox="0 0 24 24">
+            <path
+                d="M12 2C7.6 2 4 5.4 4 9.5
+                   C4 15.2 12 22 12 22
+                   S20 15.2 20 9.5
+                   C20 5.4 16.4 2 12 2z"
+                fill="currentColor"/>
+
+            <circle cx="12" cy="9.5" r="3"
+                    fill="#0d0d0d"/>
+        </svg>
 
         Google Maps
-
     </a>
 
 
+    <!-- WHATSAPP -->
 
+    <a
+        href="https://wa.me/56973713769"
+        class="boton"
+        target="_blank"
+        rel="noopener"
+    >
+        <svg class="logo-red whatsapp-logo" viewBox="0 0 24 24">
+            <path
+                d="M12 2C6.5 2 2 6.3 2 11.7
+                   c0 2.1.7 4 1.9 5.6L2.8 22
+                   l4.9-1.1c1.3.7 2.8 1.1 4.3 1.1
+                   5.5 0 10-4.3 10-10.3
+                   C22 6.3 17.5 2 12 2z"
+                fill="currentColor"/>
 
+            <path
+                d="M8.3 7.5c.3-.3.7-.3 1-.1
+                   l1.1 1.8c.2.3.2.6 0 .9
+                   l-.7.7c.7 1.2 1.7 2.2 3 2.9
+                   l.7-.7c.2-.2.6-.3.9-.1
+                   l1.8 1c.3.2.4.6.2.9
+                   -.4.8-1.1 1.3-2 1.3
+                   -3.2-.1-6.9-3.8-7-7
+                   0-.8.4-1.6 1-2z"
+                fill="#0d0d0d"/>
+        </svg>
+
+        WhatsApp
+    </a>
 
 </div>
 
 
 <!-- =========================
-     INFORMACIÓN
+     PROMOCIONES
 ========================= -->
 
-<p>
-    Lunes a Jueves: 15:00 - 22:30
-</p>
+<a
+    href="promociones.html"
+    class="boton boton-promociones"
+>
+    🔥 Promociones
+</a>
 
 
-<p>
-    Viernes y Sábado: 13:00 - 22:30
-</p>
-<p>
-    +56 9 7371 3769
-</p>
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
 
 
-<p class="copyright">
+    <h2>
+        Horarios de atención
+    </h2>
 
-    © 2026 Sushi Margus - Todos los derechos reservados
 
-</p>
+    <p>
 
-</footer></body></html>
+        Lunes a Jueves:
+        15:00 - 22:30
+
+        <br>
+
+        Viernes y Sábado:
+        13:00 - 22:30
+
+    </p>
+
+
+    <p>
+
+        📞 +56 9 7371 3769
+
+    </p>
+
+
+    <p class="copyright">
+
+        © 2026 Sushi Margus -
+        Todos los derechos reservados
+
+    </p>
+
+
+</footer>
+
+
+</body>
+
+</html>
