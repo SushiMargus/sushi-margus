@@ -30,6 +30,8 @@ body{
 
 header{
 
+    position:relative;
+
     background:
         linear-gradient(
             rgba(0,0,0,.55),
@@ -41,13 +43,106 @@ header{
     background-position:center;
     background-repeat:no-repeat;
 
-    padding:50px 30px 80px;
+    padding:70px 30px 45px;
 
     min-height:350px;
 
     box-sizing:border-box;
 
-    border-bottom:3px solid #f5c542;
+    border-bottom:3px solid #ffa600;
+}
+
+
+/* =========================
+   BOTONES SUPERIORES
+========================= */
+
+.botones-superiores{
+
+    position:absolute;
+
+    top:15px;
+    left:0;
+    right:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    box-sizing:border-box;
+
+    z-index:10;
+}
+
+
+.boton-superior{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#000;
+
+    border:2px solid #d32f2f;
+
+    box-shadow:0 0 10px rgba(211,47,47,.35);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+
+/* PROMOCIONES */
+
+.boton-promociones-superior{
+
+    border-color:#ff0000;
+
+    color:white;
+}
+
+
+/* CONTACTO */
+
+.boton-contacto-superior{
+
+    border-color:#ff0000;
+
+    color:white;
+}
+
+
+.boton-superior:hover{
+
+    transform:translateY(-2px);
+
+    border-color:#f5c542;
+
+    color:#f5c542;
+
+    box-shadow:
+        0 0 10px rgba(245,197,66,.6),
+        0 0 20px rgba(211,47,47,.3);
 }
 
 
@@ -59,8 +154,11 @@ header h1{
     margin:0;
 }
 
+
 header h1 img{
+
     max-width:90%;
+
     height:auto;
 }
 
@@ -83,14 +181,18 @@ header h1 img{
 
 
 /* =========================
-   BOTONES
+   BOTONES GENERALES
 ========================= */
 
 .boton{
 
     display:inline-block;
 
-    background:linear-gradient(135deg,#d90000,#8b0000);
+    background:linear-gradient(
+        135deg,
+        #d90000,
+        #8b0000
+    );
 
     color:white;
 
@@ -106,7 +208,7 @@ header h1 img{
 
     font-weight:bold;
 
-    border:1px solid #f5c542;
+    border:1px solid #ffa600;
 
     box-shadow:0 5px 15px rgba(0,0,0,.5);
 
@@ -115,14 +217,14 @@ header h1 img{
 
 
 /* =========================
-   EFECTO AL PASAR EL MOUSE
+   EFECTO BOTONES
 ========================= */
 
 .boton:hover{
 
     background:linear-gradient(
         135deg,
-        #ffcc00,
+        #ffa600,
         #d90000
     );
 
@@ -151,27 +253,37 @@ header h1 img{
 
 
 /* ==========================================
-   BOTONES REDES Y CONTACTO
+   BOTONES REDES
 ========================================== */
 
 .botones-portada{
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     flex-wrap:wrap;
+
     gap:12px;
 
     width:100%;
-    margin:25px auto;
+
+    margin:15px auto;
 }
 
 
-/* BOTÓN */
+/* BOTONES DE REDES */
 
 .botones-portada .boton{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
 
     min-width:150px;
@@ -179,25 +291,32 @@ header h1 img{
     padding:11px 18px;
 
     background:#000;
+
     color:white;
 
     border:2px solid #d32f2f;
+
     border-radius:12px;
 
     text-decoration:none;
 
     font-size:16px;
+
     font-weight:bold;
 
-    box-shadow:0 0 8px rgba(211,47,47,0.35);
+    box-shadow:
+        0 0 8px rgba(211,47,47,0.35);
 
     transition:all 0.3s ease;
 }
 
 
-/* LOGOS */
+/* =========================
+   LOGOS REDES
+========================= */
 
 .logo-red{
+
     width:25px;
     height:25px;
 
@@ -205,9 +324,12 @@ header h1 img{
 }
 
 
-/* EFECTO AL PASAR EL MOUSE */
+/* =========================
+   EFECTO REDES
+========================= */
 
 .botones-portada .boton:hover{
+
     color:#f5c542;
 
     border-color:#f5c542;
@@ -220,74 +342,209 @@ header h1 img{
 }
 
 
-/* EFECTO AL PRESIONAR */
-
 .botones-portada .boton:active{
+
     transform:scale(0.96);
 }
 
 
-/* CELULAR */
+/* =========================
+   MODAL CONTACTO
+========================= */
 
-@media (max-width:600px){
+.modal-contacto{
 
-    .botones-portada{
-        gap:10px;
-        padding:0 10px;
-        box-sizing:border-box;
-    }
+    display:none;
 
-    .botones-portada .boton{
-        min-width:140px;
-        padding:10px 14px;
-        font-size:15px;
-    }
+    position:fixed;
 
-    .logo-red{
-        width:23px;
-        height:23px;
-    }
+    z-index:1000;
 
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.82);
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    box-sizing:border-box;
 }
 
 
 /* =========================
-   BOTÓN PROMOCIONES
+   VENTANA CONTACTO
 ========================= */
 
-.boton-promociones{
+.contenido-contacto{
 
-    display:block;
+    position:relative;
 
-    width:80%;
+    width:90%;
 
-    max-width:300px;
+    max-width:380px;
 
-    margin:10px auto 30px;
+    background:#050505;
+
+    border:2px solid #f5c542;
+
+    border-radius:15px;
+
+    padding:30px 20px;
 
     box-sizing:border-box;
 
-background:linear-gradient(135deg,#d90000,#8b0000);
-    color:#ffffff;
-
-    border:1px solid #f5c542;
-
     box-shadow:
-        0 5px 18px rgba(245,197,66,.25);
+        0 0 20px rgba(245,197,66,.35),
+        0 0 40px rgba(211,47,47,.25);
+
+    animation:aparecerContacto .25s ease;
 }
 
 
-.boton-promociones:hover{
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes aparecerContacto{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.90);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+    }
+}
+
+
+/* =========================
+   TÍTULO CONTACTO
+========================= */
+
+.contenido-contacto h2{
+
+    margin-top:0;
+
+    margin-bottom:25px;
+
+    color:#f5c542;
+
+    font-size:26px;
+}
+
+
+/* =========================
+   INFORMACIÓN CONTACTO
+========================= */
+
+.contacto-info{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   HORARIO
+========================= */
+
+.contacto-horario{
+
+    border-top:1px solid #333;
+
+    border-bottom:1px solid #333;
+
+    padding:15px 0;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   BOTÓN WHATSAPP CONTACTO
+========================= */
+
+.boton-whatsapp-contacto{
+
+    display:inline-block;
 
     background:linear-gradient(
         135deg,
-        #ffcc00,
-        #d90000
+        #d90000,
+        #8b0000
     );
 
     color:white;
 
-    transform:scale(1.05);
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    border:1px solid #f5c542;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+
+.boton-whatsapp-contacto:hover{
+
+    background:#f5c542;
+
+    color:#000;
+
+    transform:scale(1.04);
+}
+
+
+/* =========================
+   BOTÓN CERRAR
+========================= */
+
+.cerrar-contacto{
+
+    position:absolute;
+
+    top:8px;
+
+    right:13px;
+
+    font-size:28px;
+
+    color:#f5c542;
+
+    cursor:pointer;
+
+    line-height:1;
+}
+
+
+.cerrar-contacto:hover{
+
+    color:#d90000;
 }
 
 
@@ -310,7 +567,7 @@ footer{
 
 
 /* =========================
-   INFORMACIÓN
+   INFORMACIÓN FOOTER
 ========================= */
 
 footer h2{
@@ -355,12 +612,40 @@ footer .copyright{
 
     header{
 
-        padding:40px 15px 60px;
+        padding:60px 15px 35px;
 
         min-height:320px;
 
     }
 
+
+    /* =====================
+       BOTONES SUPERIORES
+    ===================== */
+
+    .botones-superiores{
+
+        top:10px;
+
+        padding:0 10px;
+
+    }
+
+
+    .boton-superior{
+
+        padding:8px 11px;
+
+        font-size:13px;
+
+        border-radius:9px;
+
+    }
+
+
+    /* =====================
+       LOGO
+    ===================== */
 
     header h1 img{
 
@@ -370,6 +655,10 @@ footer .copyright{
 
     }
 
+
+    /* =====================
+       DESCRIPCIÓN
+    ===================== */
 
     .descripcion-portada{
 
@@ -402,7 +691,7 @@ footer .copyright{
 
 
     /* =====================
-       REDES Y CONTACTO
+       REDES
     ===================== */
 
     .botones-portada{
@@ -419,6 +708,8 @@ footer .copyright{
 
         padding:0 5px;
 
+        margin-top:12px;
+
         margin-bottom:15px;
 
     }
@@ -426,7 +717,7 @@ footer .copyright{
 
     .botones-portada .boton{
 
-        display:inline-block;
+        display:inline-flex;
 
         width:auto;
 
@@ -439,19 +730,38 @@ footer .copyright{
     }
 
 
+    .logo-red{
+
+        width:23px;
+
+        height:23px;
+
+    }
+
+
     /* =====================
-       PROMOCIONES
+       MODAL CONTACTO
     ===================== */
 
-    .boton-promociones{
+    .contenido-contacto{
 
-        width:80%;
+        width:92%;
 
-        max-width:300px;
+        padding:28px 17px;
 
-        padding:13px 20px;
+    }
 
-        margin:10px auto 25px;
+
+    .contenido-contacto h2{
+
+        font-size:23px;
+
+    }
+
+
+    .contacto-info{
+
+        font-size:15px;
 
     }
 
@@ -490,13 +800,46 @@ footer .copyright{
 
 
 <body>
-
-
-<!-- =========================
+ <!-- =========================
      PORTADA
 ========================= -->
 
 <header>
+
+
+    <!-- =========================
+         BOTONES SUPERIORES
+    ========================= -->
+
+    <div class="botones-superiores">
+
+
+        <!-- PROMOCIONES -->
+
+        <a
+            href="promociones.html"
+            class="boton-superior boton-promociones-superior"
+        >
+            🔥 Promociones
+        </a>
+
+
+        <!-- CONTACTO -->
+
+        <button
+            type="button"
+            class="boton-superior boton-contacto-superior"
+            onclick="abrirContacto()"
+        >
+            📞 Contacto
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         LOGO
+    ========================= -->
 
     <h1>
 
@@ -509,6 +852,10 @@ footer .copyright{
     </h1>
 
 
+    <!-- =========================
+         DESCRIPCIÓN
+    ========================= -->
+
     <p class="descripcion-portada">
 
         Los mejores rolls,
@@ -517,7 +864,9 @@ footer .copyright{
     </p>
 
 
-    <!-- VER CARTA -->
+    <!-- =========================
+         VER CARTA
+    ========================= -->
 
     <a
         href="carta_v3.html"
@@ -526,18 +875,21 @@ footer .copyright{
         Ver Carta
     </a>
 
+
 </header>
 
 
 
 <!-- =========================
-     REDES Y CONTACTO
+     REDES SOCIALES
 ========================= -->
 
 <div class="botones-portada">
 
 
-    <!-- INSTAGRAM -->
+    <!-- =====================
+         INSTAGRAM
+    ===================== -->
 
     <a
         href="https://www.instagram.com/sushi_margus/"
@@ -545,20 +897,50 @@ footer .copyright{
         target="_blank"
         rel="noopener"
     >
-        <svg class="logo-red instagram-logo" viewBox="0 0 24 24">
-            <rect x="3" y="3" width="18" height="18" rx="5"
-                  fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4"
-                    fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2"
-                    fill="currentColor"/>
+
+        <svg
+            class="logo-red instagram-logo"
+            viewBox="0 0 24 24"
+        >
+
+            <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            />
+
+            <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            />
+
+            <circle
+                cx="17.5"
+                cy="6.5"
+                r="1.2"
+                fill="currentColor"
+            />
+
         </svg>
 
         Instagram
+
     </a>
 
 
-    <!-- TIKTOK -->
+
+    <!-- =====================
+         TIKTOK
+    ===================== -->
 
     <a
         href="https://www.tiktok.com/@sushi.margus"
@@ -566,7 +948,12 @@ footer .copyright{
         target="_blank"
         rel="noopener"
     >
-        <svg class="logo-red tiktok-logo" viewBox="0 0 24 24">
+
+        <svg
+            class="logo-red tiktok-logo"
+            viewBox="0 0 24 24"
+        >
+
             <path
                 d="M15.5 4c.3 2.1 1.5 3.6 3.5 4.2v3
                    c-1.3 0-2.5-.4-3.5-1v5.1
@@ -578,14 +965,20 @@ footer .copyright{
                    -1.3 0-2.4 1.1-2.4 2.4
                    s1.1 2.4 2.4 2.4
                    2.4-1.1 2.4-2.4V4h3z"
-                fill="currentColor"/>
+                fill="currentColor"
+            />
+
         </svg>
 
         TikTok
+
     </a>
 
 
-    <!-- GOOGLE MAPS -->
+
+    <!-- =====================
+         GOOGLE MAPS
+    ===================== -->
 
     <a
         href="https://maps.app.goo.gl/Tmw36prmEz8pbrnj8?g_st=aw"
@@ -593,23 +986,38 @@ footer .copyright{
         target="_blank"
         rel="noopener"
     >
-        <svg class="logo-red maps-logo" viewBox="0 0 24 24">
+
+        <svg
+            class="logo-red maps-logo"
+            viewBox="0 0 24 24"
+        >
+
             <path
                 d="M12 2C7.6 2 4 5.4 4 9.5
                    C4 15.2 12 22 12 22
                    S20 15.2 20 9.5
                    C20 5.4 16.4 2 12 2z"
-                fill="currentColor"/>
+                fill="currentColor"
+            />
 
-            <circle cx="12" cy="9.5" r="3"
-                    fill="#0d0d0d"/>
+            <circle
+                cx="12"
+                cy="9.5"
+                r="3"
+                fill="#0d0d0d"
+            />
+
         </svg>
 
         Google Maps
+
     </a>
 
 
-    <!-- WHATSAPP -->
+
+    <!-- =====================
+         WHATSAPP
+    ===================== -->
 
     <a
         href="https://wa.me/56973713769"
@@ -617,14 +1025,20 @@ footer .copyright{
         target="_blank"
         rel="noopener"
     >
-        <svg class="logo-red whatsapp-logo" viewBox="0 0 24 24">
+
+        <svg
+            class="logo-red whatsapp-logo"
+            viewBox="0 0 24 24"
+        >
+
             <path
                 d="M12 2C6.5 2 2 6.3 2 11.7
                    c0 2.1.7 4 1.9 5.6L2.8 22
                    l4.9-1.1c1.3.7 2.8 1.1 4.3 1.1
                    5.5 0 10-4.3 10-10.3
                    C22 6.3 17.5 2 12 2z"
-                fill="currentColor"/>
+                fill="currentColor"
+            />
 
             <path
                 d="M8.3 7.5c.3-.3.7-.3 1-.1
@@ -635,25 +1049,123 @@ footer .copyright{
                    -.4.8-1.1 1.3-2 1.3
                    -3.2-.1-6.9-3.8-7-7
                    0-.8.4-1.6 1-2z"
-                fill="#0d0d0d"/>
+                fill="#0d0d0d"
+            />
+
         </svg>
 
         WhatsApp
+
     </a>
+
 
 </div>
 
 
+
 <!-- =========================
-     PROMOCIONES
+     VENTANA CONTACTO
 ========================= -->
 
-<a
-    href="promociones.html"
-    class="boton boton-promociones"
+<div
+    id="modalContacto"
+    class="modal-contacto"
+    onclick="cerrarContactoFondo(event)"
 >
-    🔥 Promociones
-</a>
+
+
+    <div class="contenido-contacto">
+
+
+        <!-- =====================
+             CERRAR
+        ===================== -->
+
+        <span
+            class="cerrar-contacto"
+            onclick="cerrarContacto()"
+        >
+            ×
+        </span>
+
+
+
+        <!-- =====================
+             TÍTULO
+        ===================== -->
+
+        <h2>
+            📞 Contacto
+        </h2>
+
+
+
+        <!-- =====================
+             HORARIO
+        ===================== -->
+
+        <div class="contacto-horario">
+
+            <div class="contacto-info">
+
+                🕐 <strong>Horario de atención</strong>
+
+                <br><br>
+
+                Lunes a Jueves:
+                <br>
+
+                15:00 - 22:30
+
+                <br><br>
+
+                Viernes y Sábado:
+                <br>
+
+                13:00 - 22:30
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             WHATSAPP
+        ===================== -->
+
+        <div class="contacto-info">
+
+            📱 <strong>WhatsApp</strong>
+
+            <br>
+
+            +56 9 7371 3769
+
+        </div>
+
+
+
+        <!-- =====================
+             BOTÓN WHATSAPP
+        ===================== -->
+
+        <a
+            href="https://wa.me/56973713769"
+            class="boton-whatsapp-contacto"
+            target="_blank"
+            rel="noopener"
+        >
+
+            💬 Escribir por WhatsApp
+
+        </a>
+
+
+    </div>
+
+
+</div>
 
 
 
@@ -662,31 +1174,6 @@ footer .copyright{
 ========================= -->
 
 <footer>
-
-
-    <h2>
-        Horarios de atención
-    </h2>
-
-
-    <p>
-
-        Lunes a Jueves:
-        15:00 - 22:30
-
-        <br>
-
-        Viernes y Sábado:
-        13:00 - 22:30
-
-    </p>
-
-
-    <p>
-
-        📞 +56 9 7371 3769
-
-    </p>
 
 
     <p class="copyright">
@@ -700,6 +1187,78 @@ footer .copyright{
 </footer>
 
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   ABRIR CONTACTO
+========================= */
+
+function abrirContacto(){
+
+    document.getElementById("modalContacto").style.display = "flex";
+
+}
+
+
+
+/* =========================
+   CERRAR CONTACTO
+========================= */
+
+function cerrarContacto(){
+
+    document.getElementById("modalContacto").style.display = "none";
+
+}
+
+
+
+/* =========================
+   CERRAR AL TOCAR FONDO
+========================= */
+
+function cerrarContactoFondo(event){
+
+    if(
+        event.target ===
+        document.getElementById("modalContacto")
+    ){
+
+        cerrarContacto();
+
+    }
+
+}
+
+
+
+/* =========================
+   CERRAR CON ESC
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            cerrarContacto();
+
+        }
+
+    }
+);
+
+
+</script>
+
+
 </body>
 
-</html>
+</html>   
