@@ -1452,7 +1452,7 @@ footer .copyright{
 
     background:#0d0d0d;
 
-    border:2px solid #f5c542;
+    border:2px solid #ff8800;
 
     border-radius:18px;
 
@@ -1488,6 +1488,11 @@ footer .copyright{
     cursor:pointer;
 
 }
+.cerrar-acevichado:hover {
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color: #ffffff;
+    border-color: #ff8800;
+}
 
 
 /* ICONO */
@@ -1505,11 +1510,11 @@ footer .copyright{
 
 .contenido-acevichado h2{
 
-    color:#f5c542;
+    color:#ff8800;
 
     margin:5px 0 12px;
 
-    font-size:25px;
+    font-size:30px;
 
 }
 
@@ -1518,14 +1523,17 @@ footer .copyright{
 
 .contenido-acevichado p{
 
-    color:white;
+    color:#ffffff;
 
-    font-size:16px;
+    font-size:18px;
 
     line-height:1.5;
 
     margin:0 0 15px;
-
+.descripcion-acevichado {
+    text-align: center;
+    margin-top: 0;
+}
 }
 
 
@@ -1533,9 +1541,9 @@ footer .copyright{
 
 .precio-acevichado{
 
-    color:#f5c542;
+    color:#ffffff;
 
-    font-size:22px;
+    font-size:30px;
 
     font-weight:bold;
 
@@ -1556,7 +1564,7 @@ footer .copyright{
 
     border-radius:10px;
 
-    background:#d32f2f;
+   background:linear-gradient(135deg,#d90000,#b71c1c);
 
     color:white;
 
@@ -1568,6 +1576,22 @@ footer .copyright{
 
     margin-bottom:10px;
 
+
+}
+.btn-si-acevichado {
+    background:linear-gradient(135deg,#d90000,#b71c1c);
+    color: #ffffff;
+    border: 2px solid #ff8800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-si-acevichado:hover {
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color: #ffffff;
+    border-color: #ff8800;
 }
 
 
@@ -1579,7 +1603,7 @@ footer .copyright{
 
     padding:11px;
 
-    border:1px solid #555;
+    border:1px solid #ff8800;
 
     border-radius:10px;
 
@@ -1591,6 +1615,27 @@ footer .copyright{
 
     cursor:pointer;
 
+}
+.btn-no-acevichado:hover {
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color: #ffffff;
+    border-color: #ff8800;
+}
+/* =========================
+   MODAL ACEVICHA TU ROLL
+========================= */
+
+.contenido-acevichado {
+    transition: .3s;
+    border: 1px solid #ff0000;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.7);
+}
+
+.contenido-acevichado:hover {
+    transform: translateY(-6px);
+    border-color: #00ff22;
+    box-shadow: 0 12px 28px rgba(0,0,0,.8);
 }
 </style>
 </head>
@@ -3973,9 +4018,11 @@ footer .copyright{
             <p>Champiñón • Queso Crema • Palta</p>
             <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Veggie', 5490)">
-    🛒 Agregar
-</button>
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Nori Veggie', 5490)">
+                🛒 Agregar
+            </button>
         </div>
 
 
@@ -3984,9 +4031,11 @@ footer .copyright{
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
             <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Tory', 5490)">
-    🛒 Agregar
-</button>
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Nori Tory', 5490)">
+                🛒 Agregar
+            </button>
         </div>
 
 
@@ -3995,9 +4044,11 @@ footer .copyright{
             <p>Camarón • Queso Crema • Palmito</p>
             <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Ebi', 5990)">
-    🛒 Agregar
-</button>
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Nori Ebi', 5990)">
+                🛒 Agregar
+            </button>
         </div>
 
 
@@ -4006,9 +4057,11 @@ footer .copyright{
             <p>Salmón • Queso Crema • Palta</p>
             <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Sake', 5990)">
-    🛒 Agregar
-</button>
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Nori Sake', 5990)">
+                🛒 Agregar
+            </button>
         </div>
 
 
@@ -4017,17 +4070,24 @@ footer .copyright{
             <p>Salmón • Queso Crema • Camarón</p>
             <span class="precio">$6.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nori Sakebi', 6990)">
-    🛒 Agregar
-</button>
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Nori Sakebi', 6990)">
+                🛒 Agregar
+            </button>
         </div>
 
 
     </div>
 
 
-<button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
 
+        ⬅ Volver categorías
+
+    </button>
 
 
 </div>
@@ -7296,16 +7356,20 @@ let rollPendiente = null;
 
 
 /* ==========================================
-   ABRIR MODAL
+   ABRIR MODAL ACEVICHADO
 ========================================== */
 
-function pruebaAcevichado(){
+function mostrarModalAcevichado(
+    nombre,
+    precio,
+    detalles = ""
+){
 
     rollPendiente = {
 
-        nombre: "Sake Furay",
-        precio: 6490,
-        detalles: ""
+        nombre: nombre,
+        precio: precio,
+        detalles: detalles
 
     };
 
@@ -7367,7 +7431,7 @@ function acevicharRoll(){
 
 
     const precio =
-        rollPendiente.precio + 1000;
+        rollPendiente.precio + 3.490;
 
 
     const detalles =
@@ -7516,24 +7580,27 @@ class="carrito oculto">
         </button>
 
         <div class="icono-acevichado">
-            🌶️
+            
         </div>
 
         <h2>Acevicha tu Roll</h2>
 
-        <p>
-            ¿Quieres agregar nuestra
-            <strong>salsa acevichada</strong>?
-        </p>
+
+    <br><br>
+
+ <p style="text-align: center;">
+    Salmón fresco • Leche de tigre<br>
+    Cebolla morada • Perejil
+</p>
 
         <div class="precio-acevichado">
-            + $1.000
+            + $3.490
         </div>
 
         <button
             class="btn-si-acevichado"
             onclick="acevicharRoll()">
-            🌶️ Sí, acevichar mi roll
+             Sí, acevichar mi roll
         </button>
 
         <button
