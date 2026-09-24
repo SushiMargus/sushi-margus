@@ -1411,6 +1411,187 @@ footer .copyright{
     }
 
 }
+/* ==========================================
+   MODAL ACEVICHA TU ROLL
+========================================== */
+
+.modal-acevichado{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.85);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+    z-index:99999;
+
+}
+
+
+/* CONTENIDO */
+
+.contenido-acevichado{
+
+    position:relative;
+
+    width:100%;
+    max-width:360px;
+
+    background:#0d0d0d;
+
+    border:2px solid #f5c542;
+
+    border-radius:18px;
+
+    padding:30px 20px;
+
+    box-sizing:border-box;
+
+    text-align:center;
+
+    box-shadow:
+        0 0 30px rgba(245,197,66,0.30);
+
+}
+
+
+/* BOTÓN CERRAR */
+
+.cerrar-acevichado{
+
+    position:absolute;
+
+    top:10px;
+    right:12px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+/* ICONO */
+
+.icono-acevichado{
+
+    font-size:45px;
+
+    margin-bottom:5px;
+
+}
+
+
+/* TÍTULO */
+
+.contenido-acevichado h2{
+
+    color:#f5c542;
+
+    margin:5px 0 12px;
+
+    font-size:25px;
+
+}
+
+
+/* TEXTO */
+
+.contenido-acevichado p{
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    margin:0 0 15px;
+
+}
+
+
+/* PRECIO */
+
+.precio-acevichado{
+
+    color:#f5c542;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:22px;
+
+}
+
+
+/* BOTÓN SÍ */
+
+.btn-si-acevichado{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d32f2f;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin-bottom:10px;
+
+}
+
+
+/* BOTÓN NO */
+
+.btn-no-acevichado{
+
+    width:100%;
+
+    padding:11px;
+
+    border:1px solid #555;
+
+    border-radius:10px;
+
+    background:#1a1a1a;
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+}
 </style>
 </head>
 
@@ -4177,7 +4358,9 @@ footer .copyright{
             <p>Salmón • Queso Crema • Palta</p>
             <span class="precio">$6.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Furay', 6490)">
+<button
+    class="btn-agregar"
+    onclick="pruebaAcevichado()">
     🛒 Agregar
 </button>
         </div>
@@ -4837,34 +5020,17 @@ function ocultarSubcategoriasAperitivos(){
 
 function ocultarCategoriasSushi(){
 
-    const secciones = [
-
-        "nori",
-        "sesamo",
-        "palta",
-        "queso",
-        "salmon",
-        "hotrolls",
-        "especiales",
-        "sinarroz"
-
-    ];
-
-    secciones.forEach(function(id){
-
-        const elemento =
-            document.getElementById(id);
-
-        if(elemento){
+    document
+        .querySelectorAll(
+            "#nori, #sesamo, #palta, #queso, #salmon, #hotrolls, #especiales, #sinarroz"
+        )
+        .forEach(function(elemento){
 
             elemento.classList.add("oculto");
 
-        }
-
-    });
+        });
 
 }
-
 
 /* ==========================================
    CARTA PRINCIPAL
@@ -6096,6 +6262,7 @@ function agregarAlCarrito(
 
         });
 
+
     if(productoExistente){
 
         productoExistente.cantidad++;
@@ -6113,10 +6280,10 @@ function agregarAlCarrito(
 
     }
 
+
     actualizarCarrito();
 
 }
-
 
 /* ==========================================
    CANTIDADES
@@ -7121,6 +7288,127 @@ window.addEventListener(
 
     }
 );
+/* ==========================================
+   ACEVICHA TU ROLL
+========================================== */
+
+let rollPendiente = null;
+
+
+/* ==========================================
+   ABRIR MODAL
+========================================== */
+
+function pruebaAcevichado(){
+
+    rollPendiente = {
+
+        nombre: "Sake Furay",
+        precio: 6490,
+        detalles: ""
+
+    };
+
+
+    const modal =
+        document.getElementById(
+            "modal-acevichado"
+        );
+
+
+    if(modal){
+
+        modal.style.display = "flex";
+
+    }
+
+}
+
+
+/* ==========================================
+   CERRAR MODAL
+========================================== */
+
+function cerrarModalAcevichado(){
+
+    const modal =
+        document.getElementById(
+            "modal-acevichado"
+        );
+
+
+    if(modal){
+
+        modal.style.display = "none";
+
+    }
+
+
+    rollPendiente = null;
+
+}
+
+
+/* ==========================================
+   SÍ, ACEVICHAR
+========================================== */
+
+function acevicharRoll(){
+
+    if(!rollPendiente){
+
+        return;
+
+    }
+
+
+    const nombre =
+        rollPendiente.nombre;
+
+
+    const precio =
+        rollPendiente.precio + 1000;
+
+
+    const detalles =
+        "🌶️ Acevichado";
+
+
+    agregarAlCarrito(
+        nombre,
+        precio,
+        detalles
+    );
+
+
+    cerrarModalAcevichado();
+
+}
+
+
+/* ==========================================
+   NO, GRACIAS
+========================================== */
+
+function noAcevicharRoll(){
+
+    if(!rollPendiente){
+
+        return;
+
+    }
+
+
+    agregarAlCarrito(
+        rollPendiente.nombre,
+        rollPendiente.precio,
+        rollPendiente.detalles
+    );
+
+
+    cerrarModalAcevichado();
+
+}
 
 </script>
 
@@ -7210,6 +7498,48 @@ class="carrito oculto">
 
         <button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
             Pedir por WhatsApp
+        </button>
+
+    </div>
+
+</div>
+<!-- MODAL ACEVICHA TU ROLL -->
+
+<div id="modal-acevichado" class="modal-acevichado">
+
+    <div class="contenido-acevichado">
+
+        <button
+            class="cerrar-acevichado"
+            onclick="cerrarModalAcevichado()">
+            ✕
+        </button>
+
+        <div class="icono-acevichado">
+            🌶️
+        </div>
+
+        <h2>Acevicha tu Roll</h2>
+
+        <p>
+            ¿Quieres agregar nuestra
+            <strong>salsa acevichada</strong>?
+        </p>
+
+        <div class="precio-acevichado">
+            + $1.000
+        </div>
+
+        <button
+            class="btn-si-acevichado"
+            onclick="acevicharRoll()">
+            🌶️ Sí, acevichar mi roll
+        </button>
+
+        <button
+            class="btn-no-acevichado"
+            onclick="noAcevicharRoll()">
+            No, gracias
         </button>
 
     </div>
