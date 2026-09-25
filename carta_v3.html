@@ -5657,6 +5657,7 @@ function ocultarCategoriasSushi(){
 
 }
 
+
 /* ==========================================
    CARTA PRINCIPAL
 ========================================== */
@@ -6741,6 +6742,8 @@ function mostrarSinArroz(guardarHistorial = true){
     irArriba();
 
 }
+
+
 /* ==========================================
    SELECTOR DE ENVOLTURA
 ========================================== */
@@ -7026,8 +7029,248 @@ function cerrarCarrito(){
 function agregarAlCarrito(
     nombre,
     precio,
-    detalles = ""
+    detalles = "",
+    categoria = ""
 ){
+
+    /*
+        FUNCIÓN PARA SABER SI UNA SECCIÓN
+        ESTÁ VISIBLE
+    */
+
+    function seccionVisible(ids){
+
+        return ids.some(function(id){
+
+            const elemento =
+                document.getElementById(id);
+
+            return elemento &&
+                   !elemento.classList.contains("oculto");
+
+        });
+
+    }
+
+
+    /*
+        DETECTAR AUTOMÁTICAMENTE
+        LA CATEGORÍA DEL PRODUCTO
+    */
+
+    if(!categoria){
+
+        /*
+            =====================================
+            SUSHI DE CARTA
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+
+                "nori",
+                "sesamo",
+                "palta",
+                "queso",
+                "salmon",
+                "hotrolls",
+                "especiales",
+                "sinarroz"
+
+            ])
+        ){
+
+            categoria =
+                "Sushi de Carta";
+
+        }
+
+
+        /*
+            =====================================
+            APERITIVOS
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+
+                "aperitivos",
+
+                "sashimi",
+                "tataki",
+                "niguiris",
+                "gyozas",
+                "arrollados",
+                "korokes",
+                "bastones",
+                "papasfritas"
+
+            ])
+        ){
+
+            categoria =
+                "Aperitivos";
+
+        }
+
+
+        /*
+            =====================================
+            CEVICHE
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "ceviche"
+            ])
+        ){
+
+            categoria =
+                "Aperitivos";
+
+        }
+
+
+        /*
+            =====================================
+            TABLAS
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+
+                "tablas",
+                "tablaVegetariana",
+                "tablaFria",
+                "tablaCaliente",
+                "tablaMixta"
+
+            ])
+        ){
+
+            categoria =
+                "Tablas";
+
+        }
+
+
+        /*
+            =====================================
+            GOHAN
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "gohan"
+            ])
+        ){
+
+            categoria =
+                "Gohan";
+
+        }
+
+
+        /*
+            =====================================
+            SUSHI BURGER
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "sushiBurgers"
+            ])
+        ){
+
+            categoria =
+                "Sushi Burger";
+
+        }
+
+
+        /*
+            =====================================
+            CRISPY BURGER
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "burgerFuray"
+            ])
+        ){
+
+            categoria =
+                "Crispy Burger";
+
+        }
+
+
+        /*
+            =====================================
+            BURRITOS
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "burritos"
+            ])
+        ){
+
+            categoria =
+                "Burritos";
+
+        }
+
+
+        /*
+            =====================================
+            HANDROLLS
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "handrolls"
+            ])
+        ){
+
+            categoria =
+                "Handrolls";
+
+        }
+
+
+        /*
+            =====================================
+            EXTRAS
+            =====================================
+        */
+
+        if(
+            seccionVisible([
+                "extras"
+            ])
+        ){
+
+            categoria =
+                "Extras";
+
+        }
+
+    }
+
+
+    /*
+        BUSCAR PRODUCTO EXISTENTE
+    */
 
     let productoExistente =
         carrito.find(function(producto){
@@ -7038,23 +7281,41 @@ function agregarAlCarrito(
         });
 
 
+    /*
+        SI YA EXISTE,
+        AUMENTAR CANTIDAD
+    */
+
     if(productoExistente){
 
         productoExistente.cantidad++;
 
     }else{
 
+        /*
+            AGREGAR NUEVO PRODUCTO
+        */
+
         carrito.push({
 
             nombre: nombre,
+
             precio: precio,
+
             detalles: detalles,
+
+            categoria: categoria,
+
             cantidad: 1
 
         });
 
     }
 
+
+    /*
+        ACTUALIZAR CARRITO
+    */
 
     actualizarCarrito();
 
@@ -7277,7 +7538,6 @@ function actualizarCarrito(){
 }
 
 
-
 /* ==========================================
    TIPO DE PEDIDO
 ========================================== */
@@ -7354,6 +7614,10 @@ function seleccionarTipoPedido(
    ENVIAR PEDIDO POR WHATSAPP
 ========================================== */
 
+/* ==========================================
+   ENVIAR PEDIDO POR WHATSAPP
+========================================== */
+
 function enviarPedido(){
 
     if(carrito.length === 0){
@@ -7367,58 +7631,206 @@ function enviarPedido(){
     }
 
 
+    /*
+        ENCABEZADO
+    */
+
     let mensaje =
-        "🍣 *PEDIDO SUSHI MARGUS*%0A%0A";
+        "🍣 *PEDIDO SUSHI MARGUS*\n\n";
 
 
-    carrito.forEach(function(producto){
+    /*
+        ORDEN DE LAS CATEGORÍAS
+    */
 
-        mensaje +=
-            producto.cantidad +
-            " x " +
-            producto.nombre +
-            " - $" +
-            (
-                producto.precio *
-                producto.cantidad
-            ).toLocaleString("es-CL") +
-            "%0A";
+    const categorias = [
+
+        {
+            nombre: "🥟 *APERITIVOS*",
+            categoria: "Aperitivos"
+        },
+
+        {
+            nombre: "🍱 *TABLAS*",
+            categoria: "Tablas"
+        },
+
+        {
+            nombre: "🍣 *SUSHI DE CARTA*",
+            categoria: "Sushi de Carta"
+        },
+
+        {
+            nombre: "🥗 *GOHAN*",
+            categoria: "Gohan"
+        },
+
+        {
+            nombre: "🍔 *SUSHI BURGER*",
+            categoria: "Sushi Burger"
+        },
+
+        {
+            nombre: "🍔 *CRISPY BURGER*",
+            categoria: "Crispy Burger"
+        },
+
+        {
+            nombre: "🌯 *BURRITOS*",
+            categoria: "Burritos"
+        },
+
+        {
+            nombre: "🍙 *HANDROLLS*",
+            categoria: "Handrolls"
+        },
+
+        {
+            nombre: "➕ *EXTRAS*",
+            categoria: "Extras"
+        }
+
+    ];
 
 
-        if(producto.detalles){
+    /*
+        FUNCIÓN PARA MOSTRAR PRODUCTOS
+    */
+
+    function agregarProductosWhatsApp(
+        productos
+    ){
+
+        productos.forEach(function(producto){
+
+            mensaje +=
+                producto.cantidad +
+                " x " +
+                producto.nombre +
+                " - $" +
+                (
+                    producto.precio *
+                    producto.cantidad
+                ).toLocaleString("es-CL") +
+                "\n";
+
 
             /*
-                Las tablas se envían sin detalle
-                de rollitos ni envolturas
+                DETALLES DEL PRODUCTO
             */
 
-            if(
-                !producto.nombre
-                    .toLowerCase()
-                    .includes("tabla")
-            ){
+            if(producto.detalles){
 
-                let detallesWhatsApp =
-                    producto.detalles
-                    .replace(
-                        /<br>/g,
-                        "%0A"
-                    );
+                /*
+                    LAS TABLAS NO ENVÍAN
+                    SUS DETALLES
+                */
 
+                if(
+                    !producto.nombre
+                        .toLowerCase()
+                        .includes("tabla")
+                ){
+
+                    mensaje +=
+                        producto.detalles
+                        .replace(
+                            /<br>/gi,
+                            "\n"
+                        ) +
+                        "\n";
+
+                }
+
+            }
+
+
+            mensaje += "\n";
+
+        });
+
+    }
+
+
+    /*
+        MOSTRAR CADA CATEGORÍA
+        EN EL ORDEN DEFINIDO
+    */
+
+    categorias.forEach(
+        function(grupo){
+
+            const productos =
+                carrito.filter(
+                    function(producto){
+
+                        return producto.categoria ===
+                               grupo.categoria;
+
+                    }
+                );
+
+
+            /*
+                SOLO MOSTRAR LA CATEGORÍA
+                SI TIENE PRODUCTOS
+            */
+
+            if(productos.length > 0){
 
                 mensaje +=
-                    detallesWhatsApp +
-                    "%0A";
+                    grupo.nombre +
+                    "\n\n";
+
+
+                agregarProductosWhatsApp(
+                    productos
+                );
 
             }
 
         }
+    );
 
 
-        mensaje += "%0A";
+    /*
+        PRODUCTOS SIN CATEGORÍA
+        POR SEGURIDAD
+    */
 
-    });
+    const productosSinCategoria =
+        carrito.filter(
+            function(producto){
 
+                return !categorias.some(
+                    function(grupo){
+
+                        return producto.categoria ===
+                               grupo.categoria;
+
+                    }
+                );
+
+            }
+        );
+
+
+    if(productosSinCategoria.length > 0){
+
+        mensaje +=
+            "*OTROS PRODUCTOS*\n\n";
+
+
+        agregarProductosWhatsApp(
+            productosSinCategoria
+        );
+
+    }
+
+
+    /*
+        TOTAL
+    */
 
     let total =
         carrito.reduce(
@@ -7438,8 +7850,12 @@ function enviarPedido(){
     mensaje +=
         "💰 *TOTAL: $" +
         total.toLocaleString("es-CL") +
-        "*%0A%0A";
+        "*\n\n";
 
+
+    /*
+        TIPO DE PEDIDO
+    */
 
     const tipoPedido =
         document.getElementById(
@@ -7455,10 +7871,14 @@ function enviarPedido(){
         mensaje +=
             "📦 Tipo de pedido: " +
             tipoPedido.value +
-            "%0A";
+            "\n";
 
     }
 
+
+    /*
+        DIRECCIÓN
+    */
 
     const direccion =
         document.getElementById(
@@ -7474,10 +7894,14 @@ function enviarPedido(){
         mensaje +=
             "📍 Dirección: " +
             direccion.value +
-            "%0A";
+            "\n";
 
     }
 
+
+    /*
+        FORMA DE PAGO
+    */
 
     const formaPago =
         document.getElementById(
@@ -7493,10 +7917,14 @@ function enviarPedido(){
         mensaje +=
             "💳 Forma de pago: " +
             formaPago.value +
-            "%0A";
+            "\n";
 
     }
 
+
+    /*
+        OBSERVACIONES
+    */
 
     const observaciones =
         document.getElementById(
@@ -7512,7 +7940,7 @@ function enviarPedido(){
         mensaje +=
             "📝 Observaciones: " +
             observaciones.value +
-            "%0A";
+            "\n";
 
     }
 
@@ -7526,10 +7954,12 @@ function enviarPedido(){
 
 
     const urlWhatsApp =
-        "https://wa.me/" +
+        "https://api.whatsapp.com/send?phone=" +
         numeroWhatsApp +
-        "?text=" +
-        mensaje;
+        "&text=" +
+        encodeURIComponent(
+            mensaje
+        );
 
 
     window.open(
@@ -7845,8 +8275,8 @@ window.addEventListener(
         else{
 
             /*
-                Si ya no quedan vistas internas,
-                mostramos la carta principal.
+                SI YA NO QUEDAN VISTAS INTERNAS,
+                MOSTRAMOS LA CARTA PRINCIPAL
             */
 
             mostrarCarta();
@@ -7887,16 +8317,16 @@ window.addEventListener(
 
 
         /*
-
             AL CARGAR LA PÁGINA,
             EL CARRITO COMIENZA OCULTO.
-
         */
 
         ocultarBotonCarrito();
 
     }
 );
+
+
 /* ==========================================
    ACEVICHA TU ROLL
 ========================================== */
@@ -8047,6 +8477,7 @@ function noAcevicharRoll(){
     cerrarModalAcevichado();
 
 }
+
 </script>
 
 </footer>
