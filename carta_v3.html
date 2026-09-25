@@ -4016,7 +4016,7 @@ footer .copyright{
         <div class="roll">
             <h3>Nori Veggie</h3>
             <p>Champiñón • Queso Crema • Palta</p>
-            <span class="precio">$5.490</span>
+            <span class="precio">$4.990</span>
 
             <button
                 class="btn-agregar"
@@ -4029,7 +4029,7 @@ footer .copyright{
         <div class="roll">
             <h3>Nori Tory</h3>
             <p>Pollo Teriyaki • Queso Crema • Palta</p>
-            <span class="precio">$5.490</span>
+            <span class="precio">$4.990</span>
 
             <button
                 class="btn-agregar"
@@ -4042,7 +4042,7 @@ footer .copyright{
         <div class="roll">
             <h3>Nori Ebi</h3>
             <p>Camarón • Queso Crema • Palmito</p>
-            <span class="precio">$5.990</span>
+            <span class="precio">$5.490</span>
 
             <button
                 class="btn-agregar"
@@ -4055,7 +4055,7 @@ footer .copyright{
         <div class="roll">
             <h3>Nori Sake</h3>
             <p>Salmón • Queso Crema • Palta</p>
-            <span class="precio">$5.990</span>
+            <span class="precio">$5.490</span>
 
             <button
                 class="btn-agregar"
@@ -4068,7 +4068,7 @@ footer .copyright{
         <div class="roll">
             <h3>Nori Sakebi</h3>
             <p>Salmón • Queso Crema • Camarón</p>
-            <span class="precio">$6.990</span>
+            <span class="precio">$5.990</span>
 
             <button
                 class="btn-agregar"
@@ -4099,201 +4099,443 @@ footer .copyright{
     <div class="contenedor-rolls">
 
 
+        <!-- CALIFORNIA VEGGIE -->
+
         <div class="roll">
+
             <h3>California Veggie</h3>
-            <p>Champiñón • Queso Crema • Palta</p>
-            <span class="precio">$4.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('California Veggie', 4990)">
-    🛒 Agregar
-</button>
+            <p>
+                Champiñón • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $4.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('California Veggie', 4990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CALIFORNIA TORY -->
+
         <div class="roll">
+
             <h3>California Tory</h3>
-            <p>Pollo Teriyaki • Queso Crema • Palta</p>
-            <span class="precio">$4.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('California Tory', 4990)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $4.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('California Tory', 4990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CALIFORNIA EBI -->
+
         <div class="roll">
+
             <h3>California Ebi</h3>
-            <p>Camarón • Queso Crema • Palmito</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('California Ebi', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Palmito
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('California Ebi', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CALIFORNIA SAKE -->
+
         <div class="roll">
+
             <h3>California Sake</h3>
-            <p>Salmón • Queso Crema • Palta</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('California Sake', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Salmón • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('California Sake', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
-        <div class="roll">
-            <h3>California Sakebi</h3>
-            <p>Salmón • Queso Crema • Camarón</p>
-            <span class="precio">$5.990</span>
+        <!-- CALIFORNIA SAKEBI -->
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('California Sakebi', 5990)">
-    🛒 Agregar
-</button> 
+        <div class="roll">
+
+            <h3>California Sakebi</h3>
+
+            <p>
+                Salmón • Queso Crema • Camarón
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('California Sakebi', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
 
-  <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
+
+
+</div>
 
 <!-- AVOCADO -->
-</div>
+
 <div id="palta" class="oculto">
 
     <div class="contenedor-rolls">
 
+
+        <!-- AVOCADO VEGGIE -->
+
         <div class="roll">
+
             <h3>Avocado Veggie</h3>
-            <p>Champiñón • Queso Crema • Pimentón</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Veggie', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Champiñón • Queso Crema • Pimentón
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Avocado Veggie', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- AVOCADO TORY -->
+
         <div class="roll">
+
             <h3>Avocado Tory</h3>
-            <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Tory', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Avocado Tory', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- AVOCADO EBI -->
+
         <div class="roll">
+
             <h3>Avocado Ebi</h3>
-            <p>Camarón • Queso Crema • Palmito</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Ebi', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Palmito
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Avocado Ebi', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- AVOCADO SAKE -->
+
         <div class="roll">
+
             <h3>Avocado Sake</h3>
-            <p>Salmón • Queso Crema • Cebollín</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Sake', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Salmón • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Avocado Sake', 5990)">
+
+                🛒 Agregar
+
+            </button>
 
         </div>
 
-        <div class="roll">
-            <h3>Avocado Sakebi</h3>
-            <p>Salmón • Queso Crema • Camarón</p>
-            <span class="precio">$6.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Avocado Sakebi', 6490)">
-    🛒 Agregar
-</button>
+        <!-- AVOCADO SAKEBI -->
+
+        <div class="roll">
+
+            <h3>Avocado Sakebi</h3>
+
+            <p>
+                Salmón • Queso Crema • Camarón
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Avocado Sakebi', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
- <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
 
-    <!-- CHESSE -->
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
+
 
 </div>
+
+   <!-- CHEESE -->
+
 <div id="queso" class="oculto">
 
     <div class="contenedor-rolls">
 
 
+        <!-- CHEESE VEGGIE -->
+
         <div class="roll">
+
             <h3>Cheese Veggie</h3>
-            <p>Champiñón • Cebollín • Palta</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Veggie', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Champiñón • Cebollín • Palta
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Cheese Veggie', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CHEESE TORY -->
+
         <div class="roll">
+
             <h3>Cheese Tory</h3>
-            <p>Pollo Teriyaki • Cebolla Caramelo • Almendras</p>
-            <span class="precio">$5.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Tory', 5490)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Cebolla Caramelo • Almendras
+            </p>
+
+            <span class="precio">
+                $5.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Cheese Tory', 5490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CHEESE EBI -->
+
         <div class="roll">
+
             <h3>Cheese Ebi</h3>
-            <p>Camarón • Palta • Cebollín</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Ebi', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Palta • Cebollín
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Cheese Ebi', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- CHEESE SAKE -->
+
         <div class="roll">
+
             <h3>Cheese Sake</h3>
-            <p>Salmón • Palta • Palmito</p>
-            <span class="precio">$5.990</span>
 
-           <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Sake', 5990)">
-    🛒 Agregar
-</button> 
+            <p>
+                Salmón • Palta • Palmito
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Cheese Sake', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
-        <div class="roll">
-            <h3>Cheese Sakebi</h3>
-            <p>Salmón • Palta • Camarón</p>
-            <span class="precio">$6.490</span>
+        <!-- CHEESE SAKEBI -->
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Cheese Sakebi', 6490)">
-    🛒 Agregar
-</button>
+        <div class="roll">
+
+            <h3>Cheese Sakebi</h3>
+
+            <p>
+                Salmón • Palta • Camarón
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Cheese Sakebi', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
 
-   <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
 
 
 </div>
+
 <!-- SALMÓN -->
 
 <div id="salmon" class="oculto">
@@ -4301,56 +4543,122 @@ footer .copyright{
     <div class="contenedor-rolls">
 
 
+        <!-- SAKE AVOCADO -->
+
         <div class="roll">
+
             <h3>Sake Avocado</h3>
-            <p>Palta • Queso Crema • Cebollín</p>
-            <span class="precio">$6.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Avocado', 6490)">
-    🛒 Agregar
-</button>
+            <p>
+                Palta • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sake Avocado', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- SAKE EBI -->
+
         <div class="roll">
+
             <h3>Sake Ebi</h3>
-            <p>Camarón • Queso Crema • Palmito</p>
-            <span class="precio">$6.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Ebi', 6990)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Palmito
+            </p>
+
+            <span class="precio">
+                $6.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sake Ebi', 6990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- SAKE EBI FURAY -->
+
         <div class="roll">
+
             <h3>Sake Ebi Furay</h3>
-            <p>Camarón Furay • Queso Crema • Cebollín</p>
-            <span class="precio">$6.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Ebi Furay', 6990)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón Furay • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $6.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sake Ebi Furay', 6990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
-        <div class="roll">
-            <h3>Sake Sweet</h3>
-            <p>Palta • Queso Crema • Cebolla Caramelo</p>
-            <span class="precio">$7.490</span>
+        <!-- SAKE SWEET -->
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sake Sweet', 7490)">
-    🛒 Agregar
-</button>
+        <div class="roll">
+
+            <h3>Sake Sweet</h3>
+
+            <p>
+                Palta • Queso Crema • Cebolla Caramelo
+            </p>
+
+            <span class="precio">
+                $7.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sake Sweet', 7490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
 
-    <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
+
 
 </div>
+
 <!-- HOT ROLLS -->
 
 <div id="hotrolls" class="oculto">
@@ -4358,91 +4666,197 @@ footer .copyright{
     <div class="contenedor-rolls">
 
 
+        <!-- VEGGIE FURAY -->
+
         <div class="roll">
+
             <h3>Veggie Furay</h3>
-            <p>Champiñón • Queso Crema • Palta</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Veggie Furay', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Champiñón • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Veggie Furay', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- TORY FURAY -->
+
         <div class="roll">
+
             <h3>Tory Furay</h3>
-            <p>Pollo Teriyaki • Queso Crema • Palta</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Tory Furay', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Tory Furay', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- TORY TEMPURA -->
+
         <div class="roll">
+
             <h3>Tory Tempura</h3>
-            <p>Pollo Teriyaki • Queso Crema • Cebollín</p>
-            <span class="precio">$5.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Tory Tempura', 5990)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $5.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Tory Tempura', 5990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- EBI FURAY -->
+
         <div class="roll">
+
             <h3>Ebi Furay</h3>
-            <p>Camarón • Queso Crema • Palta</p>
-            <span class="precio">$6.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Ebi Furay', 6490)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Ebi Furay', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- EBI TEMPURA -->
+
         <div class="roll">
+
             <h3>Ebi Tempura</h3>
-            <p>Camarón • Queso Crema • Cebollín</p>
-            <span class="precio">$6.490</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Ebi Tempura', 6490)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Cebollín
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Ebi Tempura', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- SAKE FURAY -->
+
         <div class="roll">
+
             <h3>Sake Furay</h3>
-            <p>Salmón • Queso Crema • Palta</p>
-            <span class="precio">$6.490</span>
 
-<button
-    class="btn-agregar"
-    onclick="pruebaAcevichado()">
-    🛒 Agregar
-</button>
+            <p>
+                Salmón • Queso Crema • Palta
+            </p>
+
+            <span class="precio">
+                $6.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sake Furay', 6490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
-        <div class="roll">
-            <h3>Sakebi Furay</h3>
-            <p>Salmón • Queso Crema • Camarón</p>
-            <span class="precio">$6.990</span>
+        <!-- SAKEBI FURAY -->
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Sakebi Furay', 6990)">
-    🛒 Agregar
-</button>
+        <div class="roll">
+
+            <h3>Sakebi Furay</h3>
+
+            <p>
+                Salmón • Queso Crema • Camarón
+            </p>
+
+            <span class="precio">
+                $6.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Sakebi Furay', 6990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
 
-   <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
+
 
 </div>
+
 <!-- ROLLS ESPECIALES -->
 
 <div id="especiales" class="oculto">
@@ -4450,60 +4864,138 @@ footer .copyright{
     <div class="contenedor-rolls">
 
 
+        <!-- BANANA FURAY -->
+
         <div class="roll">
+
             <h3>Banana Furay</h3>
-            <p>Pollo Teriyaki • Queso Crema • Cebolla Caramelo</p>
-            <p>Envuelto en plátano apanado</p>
-            <span class="precio">$6.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Banana Furay', 6990)">
-    🛒 Agregar
-</button>
+            <p>
+                Pollo Teriyaki • Queso Crema • Cebolla Caramelo
+            </p>
+
+            <p>
+                Envuelto en plátano apanado
+            </p>
+
+            <span class="precio">
+                $6.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Banana Furay', 6990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- ARCOIRIS ROLL -->
+
         <div class="roll">
+
             <h3>Arcoiris Roll</h3>
-            <p>Camarón • Queso Crema • Palmito</p>
-            <p>Envuelto en salmón, atún y palta</p>
-            <span class="precio">$7.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Arcoiris Roll', 7990)">
-    🛒 Agregar
-</button>
+            <p>
+                Camarón • Queso Crema • Palmito
+            </p>
+
+            <p>
+                Envuelto en salmón, atún y palta
+            </p>
+
+            <span class="precio">
+                $7.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Arcoiris Roll', 7990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
+        <!-- MAGURO ROLL -->
+
         <div class="roll">
+
             <h3>Maguro Roll</h3>
-            <p>Salmón • Queso Crema • Palta</p>
-            <p>Envuelto en atún</p>
-            <span class="precio">$7.990</span>
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Maguro Roll', 7990)">
-    🛒 Agregar
-</button>
+            <p>
+                Salmón • Queso Crema • Palta
+            </p>
+
+            <p>
+                Envuelto en atún
+            </p>
+
+            <span class="precio">
+                $7.990
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="mostrarModalAcevichado('Maguro Roll', 7990)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
-        <div class="roll">
-            <h3>Nikkei Roll</h3>
-            <p>Camarón • Queso Crema • Pimentón</p>
-            <p>Envuelto en palta con salsa acevichada</p>
-            <span class="precio">$8.490</span>
+        <!-- NIKKEI ROLL -->
 
-            <button class="btn-agregar" onclick="agregarAlCarrito('Nikkei Roll', 8490)">
-    🛒 Agregar
-</button>
+        <div class="roll">
+
+            <h3>Nikkei Roll</h3>
+
+            <p>
+                Camarón • Queso Crema • Pimentón
+            </p>
+
+            <p>
+                Envuelto en palta con salsa acevichada
+            </p>
+
+            <span class="precio">
+                $8.490
+            </span>
+
+            <button
+                class="btn-agregar"
+                onclick="agregarAlCarrito('Nikkei Roll', 8490)">
+
+                🛒 Agregar
+
+            </button>
+
         </div>
 
 
     </div>
 
 
-  <button class="btn-volver" onclick="volverCategorias()">⬅ Volver categorías</button>
+    <!-- VOLVER -->
+
+    <button
+        class="btn-volver"
+        onclick="volverCategorias()">
+
+        ⬅ Volver categorías
+
+    </button>
+
 
 </div>
+
 <!-- SUSHI SIN ARROZ --><div id="sinarroz" class="oculto"><div class="contenedor-rolls">
 
 
@@ -6176,20 +6668,153 @@ function mostrarSinArroz(guardarHistorial = true){
     irArriba();
 
 }
+/* ==========================================
+   SELECTOR DE ENVOLTURA
+========================================== */
 
+function abrirEnvoltura(boton){
 
-function volverCategorias(){
-
-    /* OCULTAR CARRITO */
-    ocultarBotonCarrito();
-
-    ocultarCategoriasSushi();
+    const menu =
+        boton.nextElementSibling;
 
     document
-        .getElementById("carta")
-        .classList.remove("oculto");
+        .querySelectorAll(".opciones-envoltura")
+        .forEach(function(opcion){
 
-    irArriba();
+            if(opcion !== menu){
+
+                opcion.classList.add("oculto");
+
+            }
+
+        });
+
+    menu.classList.toggle("oculto");
+
+}
+
+
+function elegirEnvoltura(boton, valor){
+
+    const selector =
+        boton.closest(
+            ".selector-envoltura"
+        );
+
+    if(!selector){
+
+        return;
+
+    }
+
+
+    const botonPrincipal =
+        selector.querySelector(
+            ".boton-envoltura"
+        );
+
+
+    selector.dataset.valor = valor;
+
+
+    if(valor === "Salmón"){
+
+        botonPrincipal.innerHTML =
+            'Envuelto en Salmón +$1.500 <span>▼</span>';
+
+    }else{
+
+        botonPrincipal.innerHTML =
+            'Envuelto en ' +
+            valor +
+            ' <span>▼</span>';
+
+    }
+
+
+    const menu =
+        selector.querySelector(
+            ".opciones-envoltura"
+        );
+
+
+    if(menu){
+
+        menu.classList.add("oculto");
+
+    }
+
+}
+
+
+/* ==========================================
+   SUSHI SIN ARROZ
+========================================== */
+
+function agregarSinArroz(
+    boton,
+    producto,
+    precioBase
+){
+
+    if(!boton){
+        return;
+    }
+
+    const roll =
+        boton.closest(".roll");
+
+    if(!roll){
+        return;
+    }
+
+    const selector =
+        roll.querySelector(
+            ".selector-envoltura"
+        );
+
+    if(!selector){
+
+        alert(
+            "No se encontró la opción de envoltura."
+        );
+
+        return;
+    }
+
+    const envoltura =
+        selector.dataset.valor;
+
+    if(!envoltura){
+
+        alert(
+            "Por favor, elige una envoltura."
+        );
+
+        return;
+    }
+
+    let recargo = 0;
+
+    if(envoltura === "Salmón"){
+
+        recargo = 1500;
+
+    }
+
+    const precioFinal =
+        Math.round(
+            Number(precioBase) + recargo
+        );
+
+    const detalles =
+        "Envoltura: " + envoltura;
+
+    mostrarModalAcevichado(
+        producto,
+        precioFinal,
+        detalles
+    );
 
 }
 
@@ -6561,172 +7186,6 @@ function actualizarCarrito(){
 
 }
 
-
-/* ==========================================
-   SELECTOR DE ENVOLTURA
-========================================== */
-
-function abrirEnvoltura(boton){
-
-    const menu =
-        boton.nextElementSibling;
-
-    document
-        .querySelectorAll(".opciones-envoltura")
-        .forEach(function(opcion){
-
-            if(opcion !== menu){
-
-                opcion.classList.add("oculto");
-
-            }
-
-        });
-
-    menu.classList.toggle("oculto");
-
-}
-
-
-function elegirEnvoltura(boton, valor){
-
-    const selector =
-        boton.closest(
-            ".selector-envoltura"
-        );
-
-    if(!selector){
-
-        return;
-
-    }
-
-
-    const botonPrincipal =
-        selector.querySelector(
-            ".boton-envoltura"
-        );
-
-
-    selector.dataset.valor = valor;
-
-
-    if(valor === "Salmón"){
-
-        botonPrincipal.innerHTML =
-            'Envuelto en Salmón +$1.500 <span>▼</span>';
-
-    }else{
-
-        botonPrincipal.innerHTML =
-            'Envuelto en ' +
-            valor +
-            ' <span>▼</span>';
-
-    }
-
-
-    const menu =
-        selector.querySelector(
-            ".opciones-envoltura"
-        );
-
-
-    if(menu){
-
-        menu.classList.add("oculto");
-
-    }
-
-}
-
-
-/* ==========================================
-   SUSHI SIN ARROZ
-========================================== */
-
-function agregarSinArroz(
-    boton,
-    producto,
-    precioBase
-){
-
-    if(!boton){
-
-        return;
-
-    }
-
-
-    const roll =
-        boton.closest(".roll");
-
-
-    if(!roll){
-
-        return;
-
-    }
-
-
-    const selector =
-        roll.querySelector(
-            ".selector-envoltura"
-        );
-
-
-    if(!selector){
-
-        alert(
-            "No se encontró la opción de envoltura."
-        );
-
-        return;
-
-    }
-
-
-    const envoltura =
-        selector.dataset.valor;
-
-
-    if(!envoltura){
-
-        alert(
-            "Por favor, elige una envoltura."
-        );
-
-        return;
-
-    }
-
-
-    let recargo = 0;
-
-
-    if(envoltura === "Salmón"){
-
-        recargo = 1500;
-
-    }
-
-
-    const precioFinal =
-        precioBase + recargo;
-
-
-    const detalles =
-        "Envoltura: " +
-        envoltura;
-
-
-    agregarAlCarrito(
-        producto,
-        precioFinal,
-        detalles
-    );
-
-}
 
 
 /* ==========================================
@@ -7368,7 +7827,11 @@ function mostrarModalAcevichado(
     rollPendiente = {
 
         nombre: nombre,
-        precio: precio,
+
+        precio: Math.round(
+            Number(precio)
+        ),
+
         detalles: detalles
 
     };
@@ -7431,11 +7894,26 @@ function acevicharRoll(){
 
 
     const precio =
-        rollPendiente.precio + 3.490;
+        Math.round(
+            Number(rollPendiente.precio) + 3490
+        );
 
 
-    const detalles =
-        "🌶️ Acevichado";
+    let detalles =
+        rollPendiente.detalles || "";
+
+
+    if(detalles){
+
+        detalles +=
+            " • 🌶️ Acevichado";
+
+    }else{
+
+        detalles =
+            "🌶️ Acevichado";
+
+    }
 
 
     agregarAlCarrito(
@@ -7463,9 +7941,15 @@ function noAcevicharRoll(){
     }
 
 
+    const precio =
+        Math.round(
+            Number(rollPendiente.precio)
+        );
+
+
     agregarAlCarrito(
         rollPendiente.nombre,
-        rollPendiente.precio,
+        precio,
         rollPendiente.detalles
     );
 
@@ -7473,7 +7957,6 @@ function noAcevicharRoll(){
     cerrarModalAcevichado();
 
 }
-
 </script>
 
 </footer>
