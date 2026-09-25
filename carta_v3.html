@@ -6819,6 +6819,23 @@ function agregarSinArroz(
 }
 
 
+
+function volverCategorias(){
+
+    /* OCULTAR CARRITO */
+    ocultarBotonCarrito();
+
+    ocultarCategoriasSushi();
+
+    document
+        .getElementById("carta")
+        .classList.remove("oculto");
+
+    irArriba();
+
+}
+
+
 /* ==========================================
    VOLVER A PORTADA
 ========================================== */
