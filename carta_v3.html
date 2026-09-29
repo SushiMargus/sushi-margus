@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carta - Sushi Margus</title>
@@ -33,7 +34,7 @@ h1{
 ========================================================= */
 
 header{
-    background:linear-gradient(135deg,#000000,#000000);
+    background:#000000;
     padding:25px;
     border-bottom:3px solid #f5c542;
 }
@@ -114,7 +115,7 @@ button:hover{
 
 
 /* =========================================================
-   6. PROMOCIONES
+   6. PROMOCIONES GENERALES
 ========================================================= */
 
 .contenedor-promos{
@@ -202,7 +203,7 @@ a:hover{
 ========================================================= */
 
 .categoria-titulo{
-    background:linear-gradient(145deg,#000000,#000000);
+    background:#000000;
     color:white;
     width:320px;
     margin:30px auto;
@@ -370,7 +371,7 @@ a:hover{
 }
 
 
-  /* =========================================================
+/* =========================================================
    12. ROLLS
 ========================================================= */
 
@@ -387,7 +388,7 @@ a:hover{
 
 .roll{
     width:280px;
-    background:linear-gradient(145deg,#000000,#000000);
+    background:#000000;
     color:white;
     padding:15px;
     border:1px solid #ff0000;
@@ -452,6 +453,8 @@ a:hover{
     color:#111;
     transform:scale(1.04);
 }
+
+
 /* =========================================================
    13. TABLAS
 ========================================================= */
@@ -466,7 +469,7 @@ a:hover{
 
 .tabla{
     background:#000000;
-    color:rgb(255, 255, 255);
+    color:white;
     border:2px solid #ff0000;
     border-radius:15px;
     width:700px;
@@ -499,17 +502,12 @@ a:hover{
    14. TÍTULOS E INGREDIENTES DE TABLAS
 ========================================================= */
 
-/* Nombre de la envoltura */
-
 .tabla p:not(.mensaje-cambios) > strong{
     color:#ff0000 !important;
     display:block;
     text-align:center;
     margin-bottom:5px;
 }
-
-
-/* Ingredientes */
 
 .tabla p:not(.mensaje-cambios){
     color:white !important;
@@ -643,7 +641,31 @@ a:hover{
 
 
 /* =========================================================
-   20. BOTONES PRINCIPALES
+   20. BOTONES DE PROMOCIONES
+   MISMO DISEÑO QUE "VER DETALLES"
+========================================================= */
+
+#promociones .categoria-titulo button{
+    background:linear-gradient(135deg,#d90000,#b71c1c);
+    color:white;
+    border:1px solid #f5c542;
+    padding:10px 20px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#promociones .categoria-titulo button:hover{
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color:#111;
+    transform:scale(1.05);
+}
+
+
+/* =========================================================
+   21. BOTONES PRINCIPALES
    CARTA / WHATSAPP / INSTAGRAM
 ========================================================= */
 
@@ -673,7 +695,7 @@ a:hover{
 
 
 /* =========================================================
-   21. OCULTAR / MOSTRAR SECCIONES
+   22. OCULTAR / MOSTRAR SECCIONES
 ========================================================= */
 
 .oculto{
@@ -697,7 +719,7 @@ a:hover{
 
 
 /* =========================================================
-   22. CARRITO FLOTANTE
+   23. CARRITO FLOTANTE
 ========================================================= */
 
 #boton-carrito{
@@ -713,10 +735,11 @@ a:hover{
     font-weight:bold;
     cursor:pointer;
     box-shadow:0 4px 12px rgba(0,0,0,.4);
-    z-index:1000;
-    transition:transform .25s ease,
-               background .25s ease,
-               box-shadow .25s ease;
+    z-index:9999;
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
 }
 
 #boton-carrito:hover{
@@ -736,7 +759,7 @@ a:hover{
 
 
 /* =========================================================
-   23. VENTANA DEL CARRITO
+   24. VENTANA DEL CARRITO
 ========================================================= */
 
 .carrito{
@@ -856,7 +879,7 @@ a:hover{
 
 
 /* =========================================================
-   24. BOTÓN ENVIAR PEDIDO
+   25. BOTÓN ENVIAR PEDIDO
 ========================================================= */
 
 .enviar-pedido{
@@ -884,7 +907,7 @@ a:hover{
 
 
 /* =========================================================
-   25. TIPO DE PEDIDO
+   26. TIPO DE PEDIDO
 ========================================================= */
 
 .tipo-pedido-botones{
@@ -939,7 +962,7 @@ a:hover{
 
 
 /* =========================================================
-   26. CAMPOS DEL PEDIDO
+   27. CAMPOS DEL PEDIDO
 ========================================================= */
 
 .campo-pedido{
@@ -972,7 +995,7 @@ textarea.campo-pedido{
 
 
 /* =========================================================
-   27. SUSHI SIN ARROZ
+   28. SUSHI SIN ARROZ
    SELECTOR DE ENVOLTURA
 ========================================================= */
 
@@ -1046,8 +1069,7 @@ textarea.campo-pedido{
 
 
 /* =========================================================
-   28. SELECTOR NATIVO DE ENVOLTURA
-   (POR SI ALGÚN PRODUCTO TODAVÍA LO UTILIZA)
+   29. SELECTOR NATIVO DE ENVOLTURA
 ========================================================= */
 
 .envoltura{
@@ -1088,7 +1110,7 @@ textarea.campo-pedido{
 
 
 /* =========================================================
-   29. TÍTULO DE TAMAÑO DE HANDROLL
+   30. TÍTULO DE TAMAÑO DE HANDROLL
 ========================================================= */
 
 .titulo-tamano-handroll{
@@ -1104,7 +1126,7 @@ textarea.campo-pedido{
 
 
 /* =========================================================
-   30. FOOTER
+   31. FOOTER
 ========================================================= */
 
 footer{
@@ -1131,7 +1153,156 @@ footer .copyright{
 
 
 /* =========================================================
-   31. TABLET
+   32. DETALLES DEL CARRITO
+========================================================= */
+
+.detalles-carrito{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+    line-height:1.4;
+}
+
+.producto-info{
+    min-width:0;
+    max-width:100%;
+}
+
+
+/* =========================================================
+   33. MODAL ACEVICHA TU ROLL
+========================================================= */
+
+.modal-acevichado{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    box-sizing:border-box;
+    z-index:99999;
+}
+
+.contenido-acevichado{
+    position:relative;
+    width:100%;
+    max-width:360px;
+    background:#0d0d0d;
+    border:1px solid #ff0000;
+    border-radius:16px;
+    padding:30px 20px;
+    box-sizing:border-box;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.7);
+    transition:.3s;
+}
+
+.contenido-acevichado:hover{
+    transform:translateY(-6px);
+    border-color:#00ff22;
+    box-shadow:0 12px 28px rgba(0,0,0,.8);
+}
+
+.cerrar-acevichado{
+    position:absolute;
+    top:10px;
+    right:12px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.cerrar-acevichado:hover{
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color:#ffffff;
+}
+
+.icono-acevichado{
+    font-size:45px;
+    margin-bottom:5px;
+}
+
+.contenido-acevichado h2{
+    color:#ff8800;
+    margin:5px 0 12px;
+    font-size:30px;
+}
+
+.contenido-acevichado p{
+    width:100%;
+    box-sizing:border-box;
+    color:#ffffff;
+    font-size:18px;
+    line-height:1.5;
+    margin:0 0 15px;
+    overflow-wrap:anywhere;
+    word-break:normal;
+    white-space:normal;
+}
+
+.descripcion-acevichado{
+    text-align:center;
+    margin-top:0;
+}
+
+.precio-acevichado{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:22px;
+}
+
+.btn-si-acevichado{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#d90000,#b71c1c);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:10px;
+    border:2px solid #ff8800;
+    transition:.2s;
+}
+
+.btn-si-acevichado:hover{
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color:#ffffff;
+    border-color:#ff8800;
+}
+
+.btn-no-acevichado{
+    width:100%;
+    padding:11px;
+    border:1px solid #ff8800;
+    border-radius:10px;
+    background:#1a1a1a;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.btn-no-acevichado:hover{
+    background:linear-gradient(135deg,#f5c542,#d90000);
+    color:#ffffff;
+    border-color:#ff8800;
+}
+
+
+/* =========================================================
+   34. TABLET
 ========================================================= */
 
 @media (min-width:601px) and (max-width:900px){
@@ -1151,14 +1322,10 @@ footer .copyright{
 
 
 /* =========================================================
-   32. CELULAR
+   35. CELULAR
 ========================================================= */
 
 @media (max-width:600px){
-
-    /* -----------------------------------------
-       INICIO DE CARTA
-    ----------------------------------------- */
 
     #inicio-carta{
         grid-template-columns:repeat(2,1fr);
@@ -1196,10 +1363,6 @@ footer .copyright{
     }
 
 
-    /* -----------------------------------------
-       CATEGORÍAS GENERALES
-    ----------------------------------------- */
-
     .categoria-titulo{
         width:94%;
         max-width:350px;
@@ -1214,10 +1377,6 @@ footer .copyright{
         transform:none !important;
     }
 
-
-    /* -----------------------------------------
-       APERITIVOS Y CARTA
-    ----------------------------------------- */
 
     #aperitivos .contenedor-categorias,
     #carta .contenedor-categorias{
@@ -1236,10 +1395,6 @@ footer .copyright{
         padding:15px;
     }
 
-
-    /* -----------------------------------------
-       BOTONES VOLVER
-    ----------------------------------------- */
 
     #carta .contenedor-categorias > .btn-volver{
         flex:none !important;
@@ -1263,9 +1418,7 @@ footer .copyright{
     }
 
 
-    /* -----------------------------------------
-       ROLLS
-    ----------------------------------------- */
+    /* ROLLS */
 
     .contenedor-rolls{
         display:flex;
@@ -1316,9 +1469,15 @@ footer .copyright{
     }
 
 
-    /* -----------------------------------------
-       TABLAS
-    ----------------------------------------- */
+    /* PROMOCIONES */
+
+    #promociones .categoria-titulo button{
+        font-size:13px;
+        padding:8px 12px;
+    }
+
+
+    /* TABLAS */
 
     .tabla{
         width:calc(100% - 20px) !important;
@@ -1365,9 +1524,7 @@ footer .copyright{
     }
 
 
-    /* -----------------------------------------
-       CARRITO
-    ----------------------------------------- */
+    /* CARRITO */
 
     .carrito-contenido{
         width:94%;
@@ -1402,286 +1559,7 @@ footer .copyright{
     }
 
 
-    /* -----------------------------------------
-       TIPO DE PEDIDO
-    ----------------------------------------- */
-
-    .tipo-pedido-botones{
-        gap:10px;
-    }
-
-}
-/* ==========================================
-   MODAL ACEVICHA TU ROLL
-========================================== */
-
-.modal-acevichado{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.85);
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-
-    box-sizing:border-box;
-
-    z-index:99999;
-
-}
-
-
-/* CONTENIDO */
-
-.contenido-acevichado{
-
-    position:relative;
-
-    width:100%;
-    max-width:360px;
-
-    background:#0d0d0d;
-
-    border:2px solid #ff8800;
-
-    border-radius:18px;
-
-    padding:30px 20px;
-
-    box-sizing:border-box;
-
-    text-align:center;
-
-    box-shadow:
-        0 0 30px rgba(245,197,66,0.30);
-
-}
-
-
-/* BOTÓN CERRAR */
-
-.cerrar-acevichado{
-
-    position:absolute;
-
-    top:10px;
-    right:12px;
-
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-}
-.cerrar-acevichado:hover {
-    background:linear-gradient(135deg,#f5c542,#d90000);
-    color: #ffffff;
-    border-color: #ff8800;
-}
-
-
-/* ICONO */
-
-.icono-acevichado{
-
-    font-size:45px;
-
-    margin-bottom:5px;
-
-}
-
-
-/* TÍTULO */
-
-.contenido-acevichado h2{
-
-    color:#ff8800;
-
-    margin:5px 0 12px;
-
-    font-size:30px;
-
-}
-
-
-/* TEXTO */
-
-.contenido-acevichado p{
-
-    color:#ffffff;
-
-    font-size:18px;
-
-    line-height:1.5;
-
-    margin:0 0 15px;
-.descripcion-acevichado {
-    text-align: center;
-    margin-top: 0;
-}
-}
-
-
-/* PRECIO */
-
-.precio-acevichado{
-
-    color:#ffffff;
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    margin-bottom:22px;
-
-}
-
-
-/* BOTÓN SÍ */
-
-.btn-si-acevichado{
-
-    width:100%;
-
-    padding:13px;
-
-    border:none;
-
-    border-radius:10px;
-
-   background:linear-gradient(135deg,#d90000,#b71c1c);
-
-    color:white;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    margin-bottom:10px;
-
-
-}
-.btn-si-acevichado {
-    background:linear-gradient(135deg,#d90000,#b71c1c);
-    color: #ffffff;
-    border: 2px solid #ff8800;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn-si-acevichado:hover {
-    background:linear-gradient(135deg,#f5c542,#d90000);
-    color: #ffffff;
-    border-color: #ff8800;
-}
-
-
-/* BOTÓN NO */
-
-.btn-no-acevichado{
-
-    width:100%;
-
-    padding:11px;
-
-    border:1px solid #ff8800;
-
-    border-radius:10px;
-
-    background:#1a1a1a;
-
-    color:white;
-
-    font-size:15px;
-
-    cursor:pointer;
-
-}
-.btn-no-acevichado:hover {
-    background:linear-gradient(135deg,#f5c542,#d90000);
-    color: #ffffff;
-    border-color: #ff8800;
-}
-/* =========================
-   MODAL ACEVICHA TU ROLL
-========================= */
-
-.contenido-acevichado {
-    transition: .3s;
-    border: 1px solid #ff0000;
-    border-radius: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.7);
-}
-
-.contenido-acevichado:hover {
-    transform: translateY(-6px);
-    border-color: #00ff22;
-    box-shadow: 0 12px 28px rgba(0,0,0,.8);
-}
-/* ==========================================
-   AJUSTE TEXTO ACEVICHADO Y CARRITO - CELULAR
-========================================== */
-
-.contenido-acevichado p{
-    width:100%;
-    box-sizing:border-box;
-    overflow-wrap:anywhere;
-    word-break:normal;
-    white-space:normal;
-}
-
-
-/* ==========================================
-   DETALLES DEL PRODUCTO EN EL CARRITO
-========================================== */
-
-.detalles-carrito{
-    width:100%;
-    max-width:100%;
-    box-sizing:border-box;
-
-    white-space:normal;
-    overflow-wrap:anywhere;
-    word-break:normal;
-
-    line-height:1.4;
-}
-
-
-/* ==========================================
-   INFORMACIÓN DEL PRODUCTO
-========================================== */
-
-.producto-info{
-    min-width:0;
-    max-width:100%;
-}
-
-
-/* ==========================================
-   AJUSTES PARA CELULAR
-========================================== */
-
-@media (max-width:600px){
+    /* ACEVICHADO */
 
     .contenido-acevichado{
         width:calc(100% - 20px);
@@ -1697,6 +1575,9 @@ footer .copyright{
         margin-right:auto;
     }
 
+
+    /* DETALLES DEL CARRITO */
+
     .detalles-carrito{
         font-size:14px;
         line-height:1.4;
@@ -1709,8 +1590,101 @@ footer .copyright{
         flex:1;
     }
 
+
+    /* TIPO DE PEDIDO */
+
+    .tipo-pedido-botones{
+        gap:10px;
+    }
+
+}
+/* =========================================================
+   PROMOCIONES EN FILA EN PC
+========================================================= */
+
+@media (min-width: 901px){
+
+    #promociones{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:25px;
+        max-width:1200px;
+        margin:0 auto;
+        padding:20px;
+    }
+
+    #promociones .categoria-titulo{
+        width:100%;
+        margin:0;
+    }
+#promociones .btn-volver{
+    grid-column:1 / -1;
+    width:auto;
+    justify-self:center;
+}
+
+}
+/* ==========================================
+   PROMOCIONES SUSHI MARGUS
+========================================== */
+
+#promociones .categoria-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMAGEN */
+
+#promociones .categoria-titulo img {
+    display: block;
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+    margin: 0 auto 15px;
+}
+
+/* TÍTULO */
+
+#promociones .categoria-titulo h2 {
+    margin: 8px 0 8px;
+    text-align: center;
+}
+
+/* DESCRIPCIÓN */
+
+#promociones .categoria-titulo p {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+/* PRECIO */
+
+#promociones .categoria-titulo .precio {
+    display: block;
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f5c542;
+}
+
+/* BOTÓN AGREGAR AL CARRITO */
+
+#promociones .categoria-titulo button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* BOTÓN VOLVER */
+
+#promociones .btn-volver {
+    display: block;
+    margin: 25px auto;
 }
 </style>
+
 </head>
 
 <body> 
@@ -1725,9 +1699,33 @@ footer .copyright{
 
 <div id="inicio-carta">
  
-<button class="btn-volver" onclick="window.location.href='index.html'">🏠 Volver al Inicio</button>
+<button class="btn-volver" onclick="window.location.href='index.html'">
+    🏠 Volver al Inicio
+</button>
 
-    <!-- APERITIVOS -->
+
+<!-- ==========================================
+     PROMOCIONES
+========================================== -->
+
+<div class="categoria-titulo">
+
+    <img src="imagenes/promociones.jpg"
+         alt="Promociones Sushi Margus"
+         style="width:371px; height:371px; object-fit:cover; transform:translate(-26px,-26px);">
+
+    <h2>🔥PROMOCIONES🔥</h2>
+
+    <p>Promociones especiales de Sushi Margus</p>
+
+    <button onclick="mostrarPromociones()">
+        Ver promociones
+    </button>
+
+</div>
+
+
+<!-- APERITIVOS -->
 
     <div class="categoria-titulo">
 
@@ -4609,126 +4607,121 @@ footer .copyright{
 
 </div>
 
-<!-- SALMÓN -->
+<!-- CONTENEDOR SAKE -->
 
-<div id="salmon" class="oculto">
-
-    <div class="contenedor-rolls">
+<div id="sake" class="contenedor-rolls oculto">
 
 
-        <!-- SAKE AVOCADO -->
 
-        <div class="roll">
+    <!-- SAKE AVOCADO -->
 
-            <h3>Sake Avocado</h3>
+    <div class="roll">
 
-            <p>
-                Palta • Queso Crema • Cebollín
-            </p>
+        <h3>Sake Avocado</h3>
 
-            <span class="precio">
-                $6.490
-            </span>
+        <p>
+            Palta • Queso Crema • Cebollín
+        </p>
 
-            <button
-                class="btn-agregar"
-                onclick="mostrarModalAcevichado('Sake Avocado', 6490)">
+        <span class="precio">
+            $6.490
+        </span>
 
-                🛒 Agregar
+        <button
+            class="btn-agregar"
+            onclick="mostrarModalAcevichado('Sake Avocado', 6490)">
 
-            </button>
+            🛒 Agregar
 
-        </div>
-
-
-        <!-- SAKE EBI -->
-
-        <div class="roll">
-
-            <h3>Sake Ebi</h3>
-
-            <p>
-                Camarón • Queso Crema • Palmito
-            </p>
-
-            <span class="precio">
-                $6.990
-            </span>
-
-            <button
-                class="btn-agregar"
-                onclick="mostrarModalAcevichado('Sake Ebi', 6990)">
-
-                🛒 Agregar
-
-            </button>
-
-        </div>
-
-
-        <!-- SAKE EBI FURAY -->
-
-        <div class="roll">
-
-            <h3>Sake Ebi Furay</h3>
-
-            <p>
-                Camarón Furay • Queso Crema • Cebollín
-            </p>
-
-            <span class="precio">
-                $6.990
-            </span>
-
-            <button
-                class="btn-agregar"
-                onclick="mostrarModalAcevichado('Sake Ebi Furay', 6990)">
-
-                🛒 Agregar
-
-            </button>
-
-        </div>
-
-
-        <!-- SAKE SWEET -->
-
-        <div class="roll">
-
-            <h3>Sake Sweet</h3>
-
-            <p>
-                Palta • Queso Crema • Cebolla Caramelo
-            </p>
-
-            <span class="precio">
-                $7.490
-            </span>
-
-            <button
-                class="btn-agregar"
-                onclick="mostrarModalAcevichado('Sake Sweet', 7490)">
-
-                🛒 Agregar
-
-            </button>
-
-        </div>
-
+        </button>
 
     </div>
 
 
-    <!-- VOLVER -->
+    <!-- SAKE SWEET -->
 
-    <button
-        class="btn-volver"
-        onclick="volverCategorias()">
+    <div class="roll">
 
-        ⬅ Volver categorías
+        <h3>Sake Sweet</h3>
 
-    </button>
+        <p>
+            Palta • Queso Crema • Cebolla Caramelo
+        </p>
 
+        <span class="precio">
+            $6.490
+        </span>
+
+        <button
+            class="btn-agregar"
+            onclick="mostrarModalAcevichado('Sake Sweet', 6490)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+    <!-- SAKE EBI -->
+
+    <div class="roll">
+
+        <h3>Sake Ebi</h3>
+
+        <p>
+            Camarón • Queso Crema • Palmito
+        </p>
+
+        <span class="precio">
+            $6.990
+        </span>
+
+        <button
+            class="btn-agregar"
+            onclick="mostrarModalAcevichado('Sake Ebi', 6990)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+    <!-- SAKE EBI FURAY -->
+
+    <div class="roll">
+
+        <h3>Sake Ebi Furay</h3>
+
+        <p>
+            Camarón Furay • Queso Crema • Cebollín
+        </p>
+
+        <span class="precio">
+            $6.990
+        </span>
+
+        <button
+            class="btn-agregar"
+            onclick="mostrarModalAcevichado('Sake Ebi Furay', 6990)">
+
+            🛒 Agregar
+
+        </button>
+
+    </div>
+
+
+<!-- VOLVER -->
+
+<button
+    class="btn-volver"
+    onclick="volverCategorias()">
+
+    ⬅ Volver categorías
+
+</button>
 
 </div>
 
@@ -5546,7 +5539,230 @@ footer .copyright{
 
 </div>
 
+<!-- ==========================================
+     PROMOCIONES SUSHI MARGUS
+========================================== -->
 
+<div id="promociones" class="oculto">
+
+    <!-- PROMOCIÓN 1 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo1.jpg"
+            alt="2 Gohan de Pollo Teriyaki + 2 Coca-Cola"
+        >
+
+        <h2>PROMO GOHAN</h2>
+
+        <p>
+            2 Gohan de Pollo Teriyaki +<br> 2 Coca-Cola 350 ml.
+        </p>
+
+        <span class="precio">
+            $12.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo 2 Gohan de Pollo Teriyaki + 2 Coca-Cola',
+                12990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+    <!-- PROMOCIÓN 2 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo2.jpg"
+            alt="2 Crispy Burger + 2 Coca-Cola + 2 Papas Fritas"
+        >
+
+        <h2>PROMO CRISPY BURGER</h2>
+
+        <p>
+            2 Crispy Burger de Pollo +<br>
+            2 Papas Fritas +
+            2 Coca-Cola 350 ml. 
+        </p>
+
+        <span class="precio">
+            $14.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo 2 Crispy Burger + 2 Coca-Cola + 2 Papas Fritas',
+                14990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+    <!-- PROMOCIÓN 3 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo3.jpg"
+            alt="4 Handrolls Pollo Teriyaki + Queso + Palta"
+        >
+
+        <h2>PROMO HANDROLLS</h2>
+
+        <p>
+            4 Handrolls<br> Pollo teriyaki,
+            Queso crema, Palta +<br> 2 Coca-Cola 350 ml.
+        </p>
+
+        <span class="precio">
+            $15.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo 4 Handrolls Pollo Teriyaki, Queso crema, Palta + 2 Coca-Cola',
+                15990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+    <!-- PROMOCIÓN 4 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo4.jpg"
+            alt="2 Burritos Pollo Teriyaki + 2 Coca-Cola + 2 Papas Fritas"
+        >
+
+        <h2>PROMO BURRITOS</h2>
+
+        <p>
+            2 Burritos de Pollo Teriyaki +<br>
+            2 Papas Fritas + 2 Coca-Cola 350 ml.
+        </p>
+
+        <span class="precio">
+            $14.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo 2 Burritos Pollo Teriyaki + 2 Coca-Cola + 2 Papas Fritas',
+                14990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+    <!-- PROMOCIÓN 5 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo5.jpg"
+            alt="Tabla Caliente 30 + 2 Coca-Cola"
+        >
+
+        <h2>PROMO TABLA CALIENTE</h2>
+
+        <p>
+            Tabla Caliente de 30 Piezas +<br>
+            2 Coca-Cola 350 ml.
+        </p>
+
+        <span class="precio">
+            $15.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo Tabla Caliente 30 Piezas + 2 Coca-Cola',
+                15990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+    <!-- PROMOCIÓN 6 -->
+
+    <div class="categoria-titulo">
+
+        <img
+            src="imagenes/promo6.jpg"
+            alt="2 Sushi Burger Pollo Teriyaki + 2 Coca-Cola + 2 Papas Fritas"
+        >
+
+        <h2>PROMO SUSHI BURGER</h2>
+
+        <p>
+            2 Sushi Burger de Pollo Teriyaki +<br>
+            2 Papas Fritas + 2 Coca-Cola 350ml.
+        </p>
+
+        <span class="precio">
+            $16.990
+        </span>
+
+        <button
+            onclick="agregarAlCarrito(
+                'Promo 2 Sushi Burger Pollo Teriyaki + 2 Coca-Cola + 2 Papas Fritas',
+                16990,
+                '',
+                'Promociones'
+            )">
+
+            🛒 Agregar al carrito
+
+        </button>
+
+        
+
+    </div>
+   <button
+        class="btn-volver"
+        onclick="volverInicioCarta()">
+
+        ⬅ Volver a Inicio de Carta
+
+    </button>
+</div>
 <script>
 
 /* ==========================================
@@ -5563,11 +5779,16 @@ function irArriba(){
 }
 
 
+/* ==========================================
+   OCULTAR SECCIONES PRINCIPALES
+========================================== */
+
 function ocultarSeccionesPrincipales(){
 
     const secciones = [
 
         "inicio-carta",
+        "promociones",
         "aperitivos",
         "ceviche",
         "gohan",
@@ -5575,7 +5796,6 @@ function ocultarSeccionesPrincipales(){
         "handrolls",
         "tablas",
 
-        /* VISTAS INDIVIDUALES DE TABLAS */
         "tablaVegetariana",
         "tablaFria",
         "tablaCaliente",
@@ -5645,15 +5865,33 @@ function ocultarSubcategoriasAperitivos(){
 
 function ocultarCategoriasSushi(){
 
-    document
-        .querySelectorAll(
-            "#nori, #sesamo, #palta, #queso, #salmon, #hotrolls, #especiales, #sinarroz"
-        )
-        .forEach(function(elemento){
+    const categorias = [
+
+        "carta",
+        "nori",
+        "sesamo",
+        "palta",
+        "queso",
+        "salmon",
+        "sake",
+        "hotrolls",
+        "especiales",
+        "sinarroz"
+
+    ];
+
+    categorias.forEach(function(id){
+
+        const elemento =
+            document.getElementById(id);
+
+        if(elemento){
 
             elemento.classList.add("oculto");
 
-        });
+        }
+
+    });
 
 }
 
@@ -5670,7 +5908,6 @@ function mostrarCarta(guardarHistorial = true){
 
     }
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5694,6 +5931,40 @@ function mostrarCarta(guardarHistorial = true){
 
 
 /* ==========================================
+   PROMOCIONES
+========================================== */
+
+function mostrarPromociones(guardarHistorial = true){
+
+    if(guardarHistorial){
+
+        guardarVista("promociones");
+
+    }
+
+    ocultarSeccionesPrincipales();
+
+    ocultarSubcategoriasAperitivos();
+
+    ocultarCategoriasSushi();
+
+    mostrarBotonCarrito();
+
+    const promociones =
+        document.getElementById("promociones");
+
+    if(promociones){
+
+        promociones.classList.remove("oculto");
+
+    }
+
+    irArriba();
+
+}
+
+
+/* ==========================================
    APERITIVOS
 ========================================== */
 
@@ -5705,7 +5976,6 @@ function mostrarAperitivos(guardarHistorial = true){
 
     }
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5738,7 +6008,6 @@ function mostrarCeviche(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5773,7 +6042,6 @@ function mostrarGohan(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5811,7 +6079,9 @@ function abrirSelectorGohan(){
         document.getElementById("selector-gohan");
 
     const mensaje =
-        document.getElementById("mensaje-selector-gohan");
+        document.getElementById(
+            "mensaje-selector-gohan"
+        );
 
     if(!selector){
 
@@ -5916,7 +6186,6 @@ function mostrarSushiBurgers(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5951,7 +6220,6 @@ function mostrarHandrolls(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -5986,7 +6254,6 @@ function mostrarTablas(guardarHistorial = true){
 
     }
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6021,7 +6288,6 @@ function mostrarTablaVegetariana(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     document
@@ -6061,7 +6327,6 @@ function mostrarTablaFria(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     document
@@ -6101,7 +6366,6 @@ function mostrarTablaCaliente(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     document
@@ -6141,7 +6405,6 @@ function mostrarTablaMixta(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     document
@@ -6175,7 +6438,6 @@ function mostrarTablaMixta(guardarHistorial = true){
 
 function volverTablas(){
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     document
@@ -6211,7 +6473,6 @@ function mostrarBurritos(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6233,7 +6494,7 @@ function mostrarBurritos(guardarHistorial = true){
 
 
 /* ==========================================
-   BURGER FURAY
+   BURGER FURAY / CRISPY BURGER
 ========================================== */
 
 function mostrarBurgerFuray(guardarHistorial = true){
@@ -6244,7 +6505,6 @@ function mostrarBurgerFuray(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6277,7 +6537,6 @@ function mostrarExtras(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6302,7 +6561,6 @@ function mostrarExtras(guardarHistorial = true){
 
 function mostrarSashimi(){
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     ocultarSubcategoriasAperitivos();
@@ -6459,7 +6717,6 @@ function mostrarPapasFritas(){
 
 function volverInicioCarta(){
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6468,25 +6725,14 @@ function volverInicioCarta(){
 
     ocultarCategoriasSushi();
 
-    document
-        .getElementById("tablaVegetariana")
-        .classList.add("oculto");
+    const inicio =
+        document.getElementById("inicio-carta");
 
-    document
-        .getElementById("tablaFria")
-        .classList.add("oculto");
+    if(inicio){
 
-    document
-        .getElementById("tablaCaliente")
-        .classList.add("oculto");
+        inicio.classList.remove("oculto");
 
-    document
-        .getElementById("tablaMixta")
-        .classList.add("oculto");
-
-    document
-        .getElementById("inicio-carta")
-        .classList.remove("oculto");
+    }
 
     irArriba();
 
@@ -6499,14 +6745,18 @@ function volverInicioCarta(){
 
 function volverAperitivos(){
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSubcategoriasAperitivos();
 
-    document
-        .getElementById("aperitivos")
-        .classList.remove("oculto");
+    const elemento =
+        document.getElementById("aperitivos");
+
+    if(elemento){
+
+        elemento.classList.remove("oculto");
+
+    }
 
     irArriba();
 
@@ -6525,7 +6775,6 @@ function mostrarCartaSushi(guardarHistorial = true){
 
     }
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6534,9 +6783,14 @@ function mostrarCartaSushi(guardarHistorial = true){
 
     ocultarCategoriasSushi();
 
-    document
-        .getElementById("carta")
-        .classList.remove("oculto");
+    const elemento =
+        document.getElementById("carta");
+
+    if(elemento){
+
+        elemento.classList.remove("oculto");
+
+    }
 
     irArriba();
 
@@ -6551,7 +6805,6 @@ function mostrarNori(guardarHistorial = true){
 
     }
 
-    /* MOSTRAR CARRITO */
     mostrarBotonCarrito();
 
     document
@@ -6783,15 +7036,12 @@ function elegirEnvoltura(boton, valor){
 
     }
 
-
     const botonPrincipal =
         selector.querySelector(
             ".boton-envoltura"
         );
 
-
     selector.dataset.valor = valor;
-
 
     if(valor === "Salmón"){
 
@@ -6807,12 +7057,10 @@ function elegirEnvoltura(boton, valor){
 
     }
 
-
     const menu =
         selector.querySelector(
             ".opciones-envoltura"
         );
-
 
     if(menu){
 
@@ -6834,14 +7082,18 @@ function agregarSinArroz(
 ){
 
     if(!boton){
+
         return;
+
     }
 
     const roll =
         boton.closest(".roll");
 
     if(!roll){
+
         return;
+
     }
 
     const selector =
@@ -6856,6 +7108,7 @@ function agregarSinArroz(
         );
 
         return;
+
     }
 
     const envoltura =
@@ -6868,6 +7121,7 @@ function agregarSinArroz(
         );
 
         return;
+
     }
 
     let recargo = 0;
@@ -6895,17 +7149,20 @@ function agregarSinArroz(
 }
 
 
-
 function volverCategorias(){
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarCategoriasSushi();
 
-    document
-        .getElementById("carta")
-        .classList.remove("oculto");
+    const elemento =
+        document.getElementById("carta");
+
+    if(elemento){
+
+        elemento.classList.remove("oculto");
+
+    }
 
     irArriba();
 
@@ -6918,7 +7175,6 @@ function volverCategorias(){
 
 function volverPortada(){
 
-    /* OCULTAR CARRITO */
     ocultarBotonCarrito();
 
     ocultarSeccionesPrincipales();
@@ -6945,7 +7201,51 @@ function volverPortada(){
    CARRITO
 ========================================== */
 
+const CLAVE_CARRITO =
+    "carritoSushiMargus";
+
+/*
+    EL CARRITO SIEMPRE COMIENZA VACÍO
+    AL CARGAR / REFRESCAR LA PÁGINA.
+*/
+
+localStorage.removeItem(CLAVE_CARRITO);
+
 let carrito = [];
+
+
+/* ==========================================
+   ACTUALIZAR CONTADOR DEL CARRITO
+========================================== */
+
+function actualizarContadorCarrito(){
+
+    const contador =
+        document.getElementById(
+            "contador-carrito"
+        );
+
+    if(!contador){
+
+        return;
+
+    }
+
+    let cantidadTotal = 0;
+
+    carrito.forEach(
+        function(producto){
+
+            cantidadTotal +=
+                Number(producto.cantidad) || 0;
+
+        }
+    );
+
+    contador.textContent =
+        cantidadTotal;
+
+}
 
 
 /* ==========================================
@@ -6957,11 +7257,17 @@ function mostrarBotonCarrito(){
     const boton =
         document.getElementById("boton-carrito");
 
-    if(boton){
+    if(!boton){
 
-        boton.classList.remove("oculto");
+        return;
 
     }
+
+    boton.classList.remove("oculto");
+
+    boton.style.display = "block";
+
+    actualizarContadorCarrito();
 
 }
 
@@ -6971,11 +7277,15 @@ function ocultarBotonCarrito(){
     const boton =
         document.getElementById("boton-carrito");
 
-    if(boton){
+    if(!boton){
 
-        boton.classList.add("oculto");
+        return;
 
     }
+
+    boton.classList.add("oculto");
+
+    boton.style.display = "none";
 
 }
 
@@ -6991,7 +7301,9 @@ function abrirCarrito(){
 
     if(!carritoElemento){
 
-        console.error("No existe #carrito");
+        console.error(
+            "No existe #carrito"
+        );
 
         return;
 
@@ -7033,11 +7345,6 @@ function agregarAlCarrito(
     categoria = ""
 ){
 
-    /*
-        FUNCIÓN PARA SABER SI UNA SECCIÓN
-        ESTÁ VISIBLE
-    */
-
     function seccionVisible(ids){
 
         return ids.some(function(id){
@@ -7053,18 +7360,11 @@ function agregarAlCarrito(
     }
 
 
-    /*
-        DETECTAR AUTOMÁTICAMENTE
-        LA CATEGORÍA DEL PRODUCTO
-    */
+    /* =====================================
+       DETECTAR CATEGORÍA
+    ===================================== */
 
     if(!categoria){
-
-        /*
-            =====================================
-            SUSHI DE CARTA
-            =====================================
-        */
 
         if(
             seccionVisible([
@@ -7074,6 +7374,7 @@ function agregarAlCarrito(
                 "palta",
                 "queso",
                 "salmon",
+                "sake",
                 "hotrolls",
                 "especiales",
                 "sinarroz"
@@ -7087,17 +7388,10 @@ function agregarAlCarrito(
         }
 
 
-        /*
-            =====================================
-            APERITIVOS
-            =====================================
-        */
-
         if(
             seccionVisible([
 
                 "aperitivos",
-
                 "sashimi",
                 "tataki",
                 "nigiris",
@@ -7116,12 +7410,6 @@ function agregarAlCarrito(
         }
 
 
-        /*
-            =====================================
-            CEVICHE
-            =====================================
-        */
-
         if(
             seccionVisible([
                 "ceviche"
@@ -7133,12 +7421,6 @@ function agregarAlCarrito(
 
         }
 
-
-        /*
-            =====================================
-            TABLAS
-            =====================================
-        */
 
         if(
             seccionVisible([
@@ -7158,12 +7440,6 @@ function agregarAlCarrito(
         }
 
 
-        /*
-            =====================================
-            GOHAN
-            =====================================
-        */
-
         if(
             seccionVisible([
                 "gohan"
@@ -7175,12 +7451,6 @@ function agregarAlCarrito(
 
         }
 
-
-        /*
-            =====================================
-            SUSHI BURGER
-            =====================================
-        */
 
         if(
             seccionVisible([
@@ -7194,12 +7464,6 @@ function agregarAlCarrito(
         }
 
 
-        /*
-            =====================================
-            CRISPY BURGER
-            =====================================
-        */
-
         if(
             seccionVisible([
                 "burgerFuray"
@@ -7211,12 +7475,6 @@ function agregarAlCarrito(
 
         }
 
-
-        /*
-            =====================================
-            BURRITOS
-            =====================================
-        */
 
         if(
             seccionVisible([
@@ -7230,12 +7488,6 @@ function agregarAlCarrito(
         }
 
 
-        /*
-            =====================================
-            HANDROLLS
-            =====================================
-        */
-
         if(
             seccionVisible([
                 "handrolls"
@@ -7247,12 +7499,6 @@ function agregarAlCarrito(
 
         }
 
-
-        /*
-            =====================================
-            EXTRAS
-            =====================================
-        */
 
         if(
             seccionVisible([
@@ -7268,9 +7514,9 @@ function agregarAlCarrito(
     }
 
 
-    /*
-        BUSCAR PRODUCTO EXISTENTE
-    */
+    /* =====================================
+       BUSCAR PRODUCTO EXISTENTE
+    ===================================== */
 
     let productoExistente =
         carrito.find(function(producto){
@@ -7281,10 +7527,9 @@ function agregarAlCarrito(
         });
 
 
-    /*
-        SI YA EXISTE,
-        AUMENTAR CANTIDAD
-    */
+    /* =====================================
+       AUMENTAR O CREAR
+    ===================================== */
 
     if(productoExistente){
 
@@ -7292,15 +7537,11 @@ function agregarAlCarrito(
 
     }else{
 
-        /*
-            AGREGAR NUEVO PRODUCTO
-        */
-
         carrito.push({
 
             nombre: nombre,
 
-            precio: precio,
+            precio: Number(precio),
 
             detalles: detalles,
 
@@ -7313,16 +7554,13 @@ function agregarAlCarrito(
     }
 
 
-    /*
-        ACTUALIZAR CARRITO
-    */
-
     actualizarCarrito();
 
 }
 
+
 /* ==========================================
-   CANTIDADES
+   AUMENTAR CANTIDAD
 ========================================== */
 
 function aumentarCantidad(index){
@@ -7339,6 +7577,10 @@ function aumentarCantidad(index){
 
 }
 
+
+/* ==========================================
+   DISMINUIR CANTIDAD
+========================================== */
 
 function disminuirCantidad(index){
 
@@ -7362,6 +7604,10 @@ function disminuirCantidad(index){
 
 }
 
+
+/* ==========================================
+   ELIMINAR PRODUCTO
+========================================== */
 
 function eliminarProducto(index){
 
@@ -7401,10 +7647,6 @@ function actualizarCarrito(){
 
     if(!contenedor){
 
-        console.error(
-            "No existe #productos-carrito"
-        );
-
         return;
 
     }
@@ -7427,11 +7669,11 @@ function actualizarCarrito(){
     carrito.forEach(function(producto,index){
 
         total +=
-            producto.precio *
-            producto.cantidad;
+            Number(producto.precio) *
+            Number(producto.cantidad);
 
         cantidadTotal +=
-            producto.cantidad;
+            Number(producto.cantidad);
 
 
         let detallesHTML = "";
@@ -7466,8 +7708,8 @@ function actualizarCarrito(){
 
                     <span>
                         $${(
-                            producto.precio *
-                            producto.cantidad
+                            Number(producto.precio) *
+                            Number(producto.cantidad)
                         ).toLocaleString("es-CL")}
                     </span>
 
@@ -7614,10 +7856,6 @@ function seleccionarTipoPedido(
    ENVIAR PEDIDO POR WHATSAPP
 ========================================== */
 
-/* ==========================================
-   ENVIAR PEDIDO POR WHATSAPP
-========================================== */
-
 function enviarPedido(){
 
     if(carrito.length === 0){
@@ -7631,19 +7869,16 @@ function enviarPedido(){
     }
 
 
-    /*
-        ENCABEZADO
-    */
-
     let mensaje =
         "🍣 *PEDIDO SUSHI MARGUS*\n\n";
 
 
-    /*
-        ORDEN DE LAS CATEGORÍAS
-    */
-
     const categorias = [
+
+        {
+            nombre: "🔥 *PROMOCIONES*",
+            categoria: "Promociones"
+        },
 
         {
             nombre: "🥟 *APERITIVOS*",
@@ -7693,13 +7928,7 @@ function enviarPedido(){
     ];
 
 
-    /*
-        FUNCIÓN PARA MOSTRAR PRODUCTOS
-    */
-
-    function agregarProductosWhatsApp(
-        productos
-    ){
+    function agregarProductosWhatsApp(productos){
 
         productos.forEach(function(producto){
 
@@ -7709,22 +7938,13 @@ function enviarPedido(){
                 producto.nombre +
                 " - $" +
                 (
-                    producto.precio *
-                    producto.cantidad
+                    Number(producto.precio) *
+                    Number(producto.cantidad)
                 ).toLocaleString("es-CL") +
                 "\n";
 
 
-            /*
-                DETALLES DEL PRODUCTO
-            */
-
             if(producto.detalles){
-
-                /*
-                    LAS TABLAS NO ENVÍAN
-                    SUS DETALLES
-                */
 
                 if(
                     !producto.nombre
@@ -7744,7 +7964,6 @@ function enviarPedido(){
 
             }
 
-
             mensaje += "\n";
 
         });
@@ -7752,67 +7971,44 @@ function enviarPedido(){
     }
 
 
-    /*
-        MOSTRAR CADA CATEGORÍA
-        EN EL ORDEN DEFINIDO
-    */
+    categorias.forEach(function(grupo){
 
-    categorias.forEach(
-        function(grupo){
+        const productos =
+            carrito.filter(function(producto){
 
-            const productos =
-                carrito.filter(
-                    function(producto){
+                return producto.categoria ===
+                       grupo.categoria;
 
-                        return producto.categoria ===
-                               grupo.categoria;
-
-                    }
-                );
+            });
 
 
-            /*
-                SOLO MOSTRAR LA CATEGORÍA
-                SI TIENE PRODUCTOS
-            */
+        if(productos.length > 0){
 
-            if(productos.length > 0){
-
-                mensaje +=
-                    grupo.nombre +
-                    "\n\n";
+            mensaje +=
+                grupo.nombre +
+                "\n\n";
 
 
-                agregarProductosWhatsApp(
-                    productos
-                );
-
-            }
+            agregarProductosWhatsApp(
+                productos
+            );
 
         }
-    );
 
+    });
 
-    /*
-        PRODUCTOS SIN CATEGORÍA
-        POR SEGURIDAD
-    */
 
     const productosSinCategoria =
-        carrito.filter(
-            function(producto){
+        carrito.filter(function(producto){
 
-                return !categorias.some(
-                    function(grupo){
+            return !categorias.some(function(grupo){
 
-                        return producto.categoria ===
-                               grupo.categoria;
+                return producto.categoria ===
+                       grupo.categoria;
 
-                    }
-                );
+            });
 
-            }
-        );
+        });
 
 
     if(productosSinCategoria.length > 0){
@@ -7828,18 +8024,14 @@ function enviarPedido(){
     }
 
 
-    /*
-        TOTAL
-    */
-
     let total =
         carrito.reduce(
             function(suma, producto){
 
                 return suma +
                     (
-                        producto.precio *
-                        producto.cantidad
+                        Number(producto.precio) *
+                        Number(producto.cantidad)
                     );
 
             },
@@ -7852,10 +8044,6 @@ function enviarPedido(){
         total.toLocaleString("es-CL") +
         "*\n\n";
 
-
-    /*
-        TIPO DE PEDIDO
-    */
 
     const tipoPedido =
         document.getElementById(
@@ -7876,10 +8064,6 @@ function enviarPedido(){
     }
 
 
-    /*
-        DIRECCIÓN
-    */
-
     const direccion =
         document.getElementById(
             "direccion-cliente"
@@ -7898,10 +8082,6 @@ function enviarPedido(){
 
     }
 
-
-    /*
-        FORMA DE PAGO
-    */
 
     const formaPago =
         document.getElementById(
@@ -7922,10 +8102,6 @@ function enviarPedido(){
     }
 
 
-    /*
-        OBSERVACIONES
-    */
-
     const observaciones =
         document.getElementById(
             "observaciones-pedido"
@@ -7944,10 +8120,6 @@ function enviarPedido(){
 
     }
 
-
-    /*
-        WHATSAPP
-    */
 
     const numeroWhatsApp =
         "56973713769";
@@ -7971,8 +8143,7 @@ function enviarPedido(){
 
 
 /* ==========================================
-   BOTÓN ATRÁS DEL CELULAR
-   NAVEGACIÓN INTERNA DE LA CARTA
+   HISTORIAL
 ========================================== */
 
 let vistaActual =
@@ -8046,80 +8217,75 @@ window.addEventListener(
 
                 case "inicio-carta":
 
-                    mostrarCarta();
+                    mostrarCarta(false);
 
                     break;
 
+                case "promociones":
+
+                    mostrarPromociones(false);
+
+                    break;
 
                 case "aperitivos":
 
-                    mostrarAperitivos();
+                    mostrarAperitivos(false);
 
                     break;
-
 
                 case "ceviche":
 
-                    mostrarCeviche();
+                    mostrarCeviche(false);
 
                     break;
-
 
                 case "gohan":
 
-                    mostrarGohan();
+                    mostrarGohan(false);
 
                     break;
-
 
                 case "sushiBurgers":
 
-                    mostrarSushiBurgers();
+                    mostrarSushiBurgers(false);
 
                     break;
-
 
                 case "handrolls":
 
-                    mostrarHandrolls();
+                    mostrarHandrolls(false);
 
                     break;
-
 
                 case "tablas":
 
-                    mostrarTablas();
+                    mostrarTablas(false);
 
                     break;
-
 
                 case "burritos":
 
-                    mostrarBurritos();
+                    mostrarBurritos(false);
 
                     break;
-
 
                 case "burgerFuray":
 
-                    mostrarBurgerFuray();
+                    mostrarBurgerFuray(false);
 
                     break;
-
 
                 case "extras":
 
-                    mostrarExtras();
+                    mostrarExtras(false);
 
                     break;
-
 
                 case "carta":
 
-                    mostrarCartaSushi();
+                    mostrarCartaSushi(false);
 
                     break;
-
 
                 case "sashimi":
 
@@ -8127,20 +8293,17 @@ window.addEventListener(
 
                     break;
 
-
                 case "tataki":
 
                     mostrarTataki();
 
                     break;
 
-
                 case "nigiris":
 
-                    mostrarNiguiris();
+                    mostrarNigiris();
 
                     break;
-
 
                 case "gyozas":
 
@@ -8148,13 +8311,11 @@ window.addEventListener(
 
                     break;
 
-
                 case "arrollados":
 
                     mostrarArrollados();
 
                     break;
-
 
                 case "korokes":
 
@@ -8162,13 +8323,11 @@ window.addEventListener(
 
                     break;
 
-
                 case "bastones":
 
                     mostrarBastones();
 
                     break;
-
 
                 case "papasfritas":
 
@@ -8176,115 +8335,97 @@ window.addEventListener(
 
                     break;
 
-
                 case "tablaVegetariana":
 
-                    mostrarTablaVegetariana();
+                    mostrarTablaVegetariana(false);
 
                     break;
-
 
                 case "tablaFria":
 
-                    mostrarTablaFria();
+                    mostrarTablaFria(false);
 
                     break;
-
 
                 case "tablaCaliente":
 
-                    mostrarTablaCaliente();
+                    mostrarTablaCaliente(false);
 
                     break;
-
 
                 case "tablaMixta":
 
-                    mostrarTablaMixta();
+                    mostrarTablaMixta(false);
 
                     break;
-
 
                 case "nori":
 
-                    mostrarNori();
+                    mostrarNori(false);
 
                     break;
-
 
                 case "sesamo":
 
-                    mostrarSesamo();
+                    mostrarSesamo(false);
 
                     break;
-
 
                 case "palta":
 
-                    mostrarPalta();
+                    mostrarPalta(false);
 
                     break;
-
 
                 case "queso":
 
-                    mostrarQueso();
+                    mostrarQueso(false);
 
                     break;
-
 
                 case "salmon":
 
-                    mostrarSalmon();
+                    mostrarSalmon(false);
 
                     break;
-
 
                 case "hotrolls":
 
-                    mostrarHotRolls();
+                    mostrarHotRolls(false);
 
                     break;
-
 
                 case "especiales":
 
-                    mostrarEspeciales();
+                    mostrarEspeciales(false);
 
                     break;
-
 
                 case "sinarroz":
 
-                    mostrarSinArroz();
+                    mostrarSinArroz(false);
 
                     break;
 
-
                 default:
 
-                    mostrarCarta();
+                    mostrarCarta(false);
 
             }
 
 
-            vistaActual = vista;
+            vistaActual =
+                vista;
 
-        }
+        }else{
 
-        else{
-
-            /*
-                SI YA NO QUEDAN VISTAS INTERNAS,
-                MOSTRAMOS LA CARTA PRINCIPAL
-            */
-
-            mostrarCarta();
+            mostrarCarta(false);
 
         }
 
 
-        restaurandoHistorial = false;
+        restaurandoHistorial =
+            false;
 
     }
 );
@@ -8317,11 +8458,21 @@ window.addEventListener(
 
 
         /*
-            AL CARGAR LA PÁGINA,
-            EL CARRITO COMIENZA OCULTO.
+            ELIMINAR CUALQUIER PEDIDO
+            QUE HUBIERA QUEDADO GUARDADO
+            ANTES DE REFRESCAR.
         */
 
+        localStorage.removeItem(
+            CLAVE_CARRITO
+        );
+
+        carrito = [];
+
+
         ocultarBotonCarrito();
+
+        actualizarContadorCarrito();
 
     }
 );
@@ -8365,7 +8516,8 @@ function mostrarModalAcevichado(
 
     if(modal){
 
-        modal.style.display = "flex";
+        modal.style.display =
+            "flex";
 
     }
 
@@ -8386,12 +8538,14 @@ function cerrarModalAcevichado(){
 
     if(modal){
 
-        modal.style.display = "none";
+        modal.style.display =
+            "none";
 
     }
 
 
-    rollPendiente = null;
+    rollPendiente =
+        null;
 
 }
 
@@ -8415,7 +8569,8 @@ function acevicharRoll(){
 
     const precio =
         Math.round(
-            Number(rollPendiente.precio) + 3490
+            Number(rollPendiente.precio) +
+            3490
         );
 
 
@@ -8463,7 +8618,9 @@ function noAcevicharRoll(){
 
     const precio =
         Math.round(
-            Number(rollPendiente.precio)
+            Number(
+                rollPendiente.precio
+            )
         );
 
 
@@ -8482,20 +8639,35 @@ function noAcevicharRoll(){
 
 </footer>
 
-<!-- BOTÓN DEL CARRITO -->
+<!-- =====================================================
+     BOTÓN FLOTANTE DEL CARRITO
+===================================================== -->
 
-<button id="boton-carrito" onclick="abrirCarrito()">
-    🛒 <span id="contador-carrito">0</span>
+<button
+    id="boton-carrito"
+    type="button"
+    onclick="abrirCarrito()"
+    style="display:none;"
+>
+    🛒
+    <span id="contador-carrito">0</span>
 </button>
 
-<!-- VENTANA DEL CARRITO -->
+<!-- =====================================================
+     VENTANA DEL CARRITO
+===================================================== -->
 
-<div id="carrito" class="carrito"
-class="carrito oculto">
+<div
+    id="carrito"
+    class="carrito"
+>
 
     <div class="carrito-contenido">
 
         <h2>🛒 Tu carrito</h2>
+
+
+        <!-- DATOS DEL PEDIDO -->
 
         <div class="datos-pedido">
 
@@ -8506,27 +8678,55 @@ class="carrito oculto">
                 placeholder="👤 Tu nombre"
             >
 
+
             <div class="tipo-pedido-botones">
 
-                <button type="button"
-                        class="boton-tipo"
-                        onclick="seleccionarTipoPedido('Delivery', this)">
+                <button
+                    type="button"
+                    class="boton-tipo"
+                    onclick="seleccionarTipoPedido(
+                        'Delivery',
+                        this
+                    )"
+                >
                     🛵 Delivery
                 </button>
 
-                <button type="button"
-                        class="boton-tipo"
-                        onclick="seleccionarTipoPedido('Retiro en local', this)">
+
+                <button
+                    type="button"
+                    class="boton-tipo"
+                    onclick="seleccionarTipoPedido(
+                        'Retiro en local',
+                        this
+                    )"
+                >
                     🏪 Retiro en local
                 </button>
 
             </div>
 
-            <select id="tipo-pedido" class="campo-pedido" style="display:none;">
-                <option value="">Tipo de pedido</option>
-                <option value="Delivery">Delivery</option>
-                <option value="Retiro en local">Retiro en local</option>
+
+            <select
+                id="tipo-pedido"
+                class="campo-pedido"
+                style="display:none;"
+            >
+
+                <option value="">
+                    Tipo de pedido
+                </option>
+
+                <option value="Delivery">
+                    Delivery
+                </option>
+
+                <option value="Retiro en local">
+                    Retiro en local
+                </option>
+
             </select>
+
 
             <input
                 type="text"
@@ -8535,12 +8735,30 @@ class="carrito oculto">
                 placeholder="📍 Dirección"
             >
 
-            <select id="forma-pago" class="campo-pedido">
-                <option value="">Forma de pago</option>
-                <option value="Transferencia">Transferencia</option>
-                <option value="Efectivo">Efectivo</option>
-                <option value="Débito">Débito</option>
+
+            <select
+                id="forma-pago"
+                class="campo-pedido"
+            >
+
+                <option value="">
+                    Forma de pago
+                </option>
+
+                <option value="Transferencia">
+                    Transferencia
+                </option>
+
+                <option value="Efectivo">
+                    Efectivo
+                </option>
+
+                <option value="Débito">
+                    Débito
+                </option>
+
             </select>
+
 
             <textarea
                 id="observaciones-pedido"
@@ -8551,20 +8769,51 @@ class="carrito oculto">
 
         </div>
 
+
+        <!-- PRODUCTOS -->
+
         <div id="productos-carrito">
-            <p>Tu carrito está vacío.</p>
+
+            <p>
+                Tu carrito está vacío.
+            </p>
+
         </div>
+
+
+        <!-- TOTAL -->
 
         <div class="carrito-total">
-            <strong>Total:</strong>
-            <span id="total-carrito">$0</span>
+
+            <strong>
+                Total:
+            </strong>
+
+            <span id="total-carrito">
+                $0
+            </span>
+
         </div>
 
-        <button class="btn-carrito" onclick="cerrarCarrito()">
+
+        <!-- SEGUIR COMPRANDO -->
+
+        <button
+            type="button"
+            class="btn-carrito"
+            onclick="cerrarCarrito()"
+        >
             Seguir comprando
         </button>
 
-        <button class="btn-carrito enviar-pedido" onclick="enviarPedido()">
+
+        <!-- WHATSAPP -->
+
+        <button
+            type="button"
+            class="btn-carrito enviar-pedido"
+            onclick="enviarPedido()"
+        >
             Pedir por WhatsApp
         </button>
 

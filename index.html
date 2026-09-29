@@ -10,7 +10,77 @@
     <title>Sushi Margus</title>
 
     <style>
+/* =========================
+   CARRITO FLOTANTE
+========================= */
 
+#boton-carrito{
+
+    position:fixed;
+
+    bottom:60px;
+    right:20px;
+
+    background:linear-gradient(
+        135deg,
+        #d32f2f,
+        #a50000
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:16px 23px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+
+    z-index:1000;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+#boton-carrito:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(
+        135deg,
+        #ff3b3b,
+        #d90000
+    );
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.6);
+}
+
+
+#contador-carrito{
+
+    background:white;
+
+    color:#d90000;
+
+    border-radius:50%;
+
+    padding:3px 8px;
+
+    font-size:20px;
+
+    margin-left:5px;
+}
 /* =========================
    ESTILO GENERAL
 ========================= */
@@ -793,35 +863,34 @@ footer .copyright{
     }
 
 }
+/* POSICIÓN BOTÓN CONTACTO */
 
-    </style>
+.boton-contacto-superior{
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:1000;
+}
+  
+  </style>
 
 </head>
 
-
+<script src="promociones.js"></script>
 <body>
+    <!-- BOTÓN DEL CARRITO -->
+
+<button
+    id="boton-carrito"
+    onclick="abrirCarrito()"
+>
+    🛒 <span id="contador-carrito">0</span>
+</button>
  <!-- =========================
      PORTADA
 ========================= -->
 
 <header>
-
-
-    <!-- =========================
-         BOTONES SUPERIORES
-    ========================= -->
-
-    <div class="botones-superiores">
-
-
-        <!-- PROMOCIONES -->
-
-        <a
-            href="promociones.html"
-            class="boton-superior boton-promociones-superior"
-        >
-            🔥 Promociones
-        </a>
 
 
         <!-- CONTACTO -->
