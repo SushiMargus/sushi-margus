@@ -1695,7 +1695,70 @@ footer .copyright{
     width:auto !important;
     margin:30px auto 20px auto !important;
 }
+/* AVISO DE PAGO - ANCHO COMPLETO */
 
+#promociones .aviso-pago-promociones {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 12px 8px;
+    background: #1a1a1a;
+    border: 1px solid #f5c542;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+#promociones .aviso-pago-promociones strong {
+    color: #f5c542;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    #promociones .aviso-pago-promociones {
+        grid-column: 1 / -1;
+        width: 100%;
+        font-size: 11px;
+        padding: 10px 4px;
+    }
+}
+/* AVISO DE PAGO - ANCHO COMPLETO */
+
+#promociones .aviso-pago-promociones {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 12px 8px;
+    background: #000000;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#promociones .aviso-pago-promociones strong {
+    color: #ff8800;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    #promociones .aviso-pago-promociones {
+        grid-column: 1 / -1;
+        width: 100%;
+        font-size: 11px;
+        padding: 10px 4px;
+    }
+}
+#promociones .aviso-pago-promociones p {
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
 </style>
 
 </head>
@@ -5887,6 +5950,20 @@ footer .copyright{
 
     </div>
     
+    <!-- FORMAS DE PAGO PROMOCIONES -->
+
+<div class="aviso-pago-promociones">
+
+    <p>
+        Todas nuestras promociones son válidas
+        exclusivamente con pago en:
+    </p>
+
+    <strong> EFECTIVO</strong>
+    <span>O</span>
+    <strong> TRANSFERENCIA</strong>
+
+</div>
    <button
         class="btn-volver"
         onclick="volverInicioCarta()">
