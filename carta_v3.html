@@ -1759,6 +1759,21 @@ footer .copyright{
     margin-bottom: 5px;
     line-height: 1.2;
 }
+/* ACOMPAÑAMIENTOS DE TABLAS */
+.acompanamientos {
+    color: #f5c542;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 0;
+    padding: 6px 0;
+    background: transparent;
+    border-left: none;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+    border-radius: 0;
+    line-height: 1.5;
+}
 </style>
 
 </head>
@@ -8845,6 +8860,7 @@ function noAcevicharRoll(){
 
 }
 
+
 </script>
 
 </footer>
@@ -9075,6 +9091,49 @@ function noAcevicharRoll(){
     </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const acompanamientos = {
+        20: "1 soya · 1 agridulce · 2 palitos",
+        30: "2 soyas · 1 agridulce · 2 palitos",
+        40: "3 soyas · 1 agridulce · 3 palitos",
+        45: "3 soyas · 1 agridulce · 3 palitos",
+        50: "2 soyas · 2 agridulces · 3 palitos",
+        70: "3 soyas · 2 agridulces · 4 palitos",
+        100: "5 soyas · 3 agridulces · 5 palitos"
+    };
+
+    document.querySelectorAll(".tabla").forEach(tabla => {
+
+        const titulo = tabla.querySelector("h3");
+
+        if (!titulo) return;
+
+        const resultado = titulo.textContent.match(/(\d+)\s*PIEZAS/i);
+
+        if (!resultado) return;
+
+        const piezas = Number(resultado[1]);
+        const incluye = acompanamientos[piezas];
+
+        if (!incluye) return;
+
+        const texto = document.createElement("p");
+
+        texto.className = "acompanamientos";
+        texto.innerHTML =
+            "<strong>INCLUYE:</strong> " + incluye;
+
+        const boton = tabla.querySelector(".btn-agregar");
+
+        if (boton) {
+            tabla.insertBefore(texto, boton);
+        }
+
+    });
+
+});
+</script>
 </body>
 </html>
