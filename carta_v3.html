@@ -8081,6 +8081,7 @@ function seleccionarTipoPedido(
 
 /* ==========================================
    ENVIAR PEDIDO POR WHATSAPP
+   DESPACHO $1.300
 ========================================== */
 
 function enviarPedido(){
@@ -8094,6 +8095,19 @@ function enviarPedido(){
         return;
 
     }
+
+
+    const tipoPedido =
+        document.getElementById(
+            "tipo-pedido"
+        );
+
+
+    const cargoDespacho =
+        tipoPedido &&
+        tipoPedido.value === "Delivery"
+            ? 1300
+            : 0;
 
 
     let mensaje =
@@ -8251,6 +8265,11 @@ function enviarPedido(){
     }
 
 
+    /* ==================================
+       CALCULAR TOTAL
+    ================================== */
+
+
     let total =
         carrito.reduce(
             function(suma, producto){
@@ -8266,16 +8285,28 @@ function enviarPedido(){
         );
 
 
+    total += cargoDespacho;
+
+
+    if(cargoDespacho > 0){
+
+        mensaje +=
+            "🛵 Cargo por despacho: $" +
+            cargoDespacho.toLocaleString("es-CL") +
+            "\n";
+
+    }
+
+
     mensaje +=
         "💰 *TOTAL: $" +
         total.toLocaleString("es-CL") +
         "*\n\n";
 
 
-    const tipoPedido =
-        document.getElementById(
-            "tipo-pedido"
-        );
+    /* ==================================
+       TIPO DE PEDIDO
+    ================================== */
 
 
     if(
@@ -8289,6 +8320,11 @@ function enviarPedido(){
             "\n";
 
     }
+
+
+    /* ==================================
+       DIRECCIÓN
+    ================================== */
 
 
     const direccion =
@@ -8310,6 +8346,11 @@ function enviarPedido(){
     }
 
 
+    /* ==================================
+       FORMA DE PAGO
+    ================================== */
+
+
     const formaPago =
         document.getElementById(
             "forma-pago"
@@ -8329,6 +8370,11 @@ function enviarPedido(){
     }
 
 
+    /* ==================================
+       OBSERVACIONES
+    ================================== */
+
+
     const observaciones =
         document.getElementById(
             "observaciones-pedido"
@@ -8346,6 +8392,11 @@ function enviarPedido(){
             "\n";
 
     }
+
+
+    /* ==================================
+       WHATSAPP
+    ================================== */
 
 
     const numeroWhatsApp =
